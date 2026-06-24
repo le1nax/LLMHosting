@@ -51,10 +51,6 @@ export VLLM_CACHE_ROOT=$JIT_CACHE/vllm
 MODEL=zai-org/GLM-5.2-FP8
 #export HF_HUB_OFFLINE=1              # Compute-Nodes haben kein Internet
 
-# --- API-Key: schuetzt den (ggf. oeffentlich erreichbaren) Endpoint. ---
-# Clients muessen "Authorization: Bearer <key>" senden (vLLM liest VLLM_API_KEY).
-export VLLM_API_KEY="51c5e1515fbdbd1e21cc1ec546e44ba470d02b8107d667a35aa9a4029278637d"
-
 # 
 
 # --- Knotenliste (zsh: 1-indiziert, ${(f)...} splittet auf Zeilen) ---
