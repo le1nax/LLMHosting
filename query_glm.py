@@ -1,26 +1,26 @@
 #!/usr/bin/env python3
-"""Minimaler Client fuer den vLLM-OpenAI-Endpoint (GLM-5.2).
+"""Minimal client for the vLLM OpenAI endpoint (GLM-5.2).
 
-Auf dem Head-Node des SLURM-Jobs ausfuehren (dort lauscht vLLM auf Port 8000):
-    python query_glm.py "Deine Frage hier"
+Run on the SLURM job's head node (vLLM listens there on port 8000):
+    python query_glm.py "Your question here"
 """
 import os
 import sys
 import requests
 
-HOST = os.environ.get("VLLM_HOST", "http://134.61.53.224:8000")   # Head-Node-IP (aendert sich pro Job: siehe "Head:" im log)
-MODEL = os.environ.get("VLLM_MODEL", "glm-5.2-fp8")           # = --served-model-name im sbatch-Skript
+HOST = os.environ.get("VLLM_HOST", "http://134.61.53.224:8000")   # head-node IP (changes per job: see "Head:" in the log)
+MODEL = os.environ.get("VLLM_MODEL", "glm-5.2-fp8")               # = --served-model-name in the sbatch script
 
-# Reasoning-Aufwand fuer GLM-5.2: "off" = kein Denken (direkte Antwort),
-# "high" = mittlerer Aufwand, "max" = voller Aufwand (Default).
-REASONING = os.environ.get("REASONING", "max")
+# Reasoning effort for GLM-5.2: "off" = no thinking (direct answer),
+# "high" = medium effort, "max" = full effort.
+REASONING = os.environ.get("REASONING", "off")
 _REASONING_KWARGS = {
     "off":  {"enable_thinking": False},
     "high": {"reasoning_effort": "high"},
     "max":  {"reasoning_effort": "max"},
 }[REASONING]
 
-prompt = " ".join(sys.argv[1:]) or "Hallo, wer bist du?"
+prompt = " ".join(sys.argv[1:]) or "Hello, who are you?"
 
 resp = requests.post(
     f"{HOST}/v1/chat/completions",
