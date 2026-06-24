@@ -8,7 +8,7 @@ import os
 import sys
 import requests
 
-HOST = os.environ.get("VLLM_HOST", "http://localhost:8000")   # ggf. Head-Node-IP statt localhost
+HOST = os.environ.get("VLLM_HOST", "http://134.61.53.224:8000")   # Head-Node-IP (aendert sich pro Job: siehe "Head:" im log)
 MODEL = os.environ.get("VLLM_MODEL", "glm-5.2-fp8")           # = --served-model-name im sbatch-Skript
 
 prompt = " ".join(sys.argv[1:]) or "Hallo, wer bist du?"
