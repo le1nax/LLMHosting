@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Minimal client for the vLLM OpenAI endpoint (GLM-5.2).
 
-Run on the SLURM job's head node (vLLM listens there on port 8000):
+Run on the SLURM job's head node (vLLM listens there on port 52223):
     python query_glm.py "Your question here"
 """
 import os
 import sys
 import requests
 
-HOST = os.environ.get("VLLM_HOST", "http://134.61.53.224:8000")   # head-node IP (changes per job: see "Head:" in the log)
+HOST = os.environ.get("VLLM_HOST", "http://134.61.53.224:52223")   # head-node IP (changes per job: see "Head:" in the log)
 MODEL = os.environ.get("VLLM_MODEL", "glm-5.2-fp8")               # = --served-model-name in the sbatch script
 
 # Reasoning effort for GLM-5.2: "off" = no thinking (direct answer),

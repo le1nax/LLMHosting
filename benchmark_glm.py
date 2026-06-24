@@ -21,7 +21,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 import requests
 
-HOST = os.environ.get("VLLM_HOST", "http://134.61.53.224:8000")   # head-node IP (see "Head:" in the log)
+HOST = os.environ.get("VLLM_HOST", "http://134.61.53.224:52223")   # head-node IP (see "Head:" in the log)
 MODEL = os.environ.get("VLLM_MODEL", "glm-5.2-fp8")
 PROMPT = os.environ.get("BENCH_PROMPT", "Write a long, detailed essay about the history of computing.")
 

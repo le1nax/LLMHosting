@@ -17,7 +17,7 @@ source .venv/bin/activate
 
 set -e
 PORT=6379
-VLLM_PORT=8000
+VLLM_PORT=52223
 
 # --- Netzwerk / NCCL (identisch zu runGLM.sbatch) ---
 export NCCL_SOCKET_IFNAME=ib1

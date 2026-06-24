@@ -5,7 +5,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --gres=gpu:4
 #SBATCH --cpus-per-task=128          # an Node-Spec anpassen
-#SBATCH --time=8:00:00
+#SBATCH --time=24:00:00
 #SBATCH --job-name=glm52_vllm
 #SBATCH --output=log.%J.txt
 
@@ -14,7 +14,7 @@ source .venv/bin/activate
 set -e
 #MODEL=$HPCWORK/models/GLM-5.2-FP8
 PORT=6379                            # Ray-Port
-VLLM_PORT=8000                       # OpenAI-API-Port
+VLLM_PORT=52223                      # OpenAI-API-Port
 
 # --- NCCL / InfiniBand: Interface auf einem Compute-Node mit `ip addr` prüfen!
 export NCCL_SOCKET_IFNAME=ib1        # ib1 ist das einzige IB-IF mit IPv4-Adresse (134.61.53.x)

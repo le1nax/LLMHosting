@@ -18,15 +18,15 @@
 #     GLM_LOGIN=cu829455@login23-g-1.hpc.itc.rwth-aachen.de
 #     GLM_WORKDIR=/hpcwork/cu829455/workspace/runLargeLLMs
 #     GLM_JOBNAME=glm52_vllm
-#     GLM_LOCAL_PORT=8000
-#     GLM_REMOTE_PORT=8000
+#     GLM_LOCAL_PORT=52222
+#     GLM_REMOTE_PORT=52223
 set -euo pipefail
 
 GLM_LOGIN="${GLM_LOGIN:-cu829455@login23-g-1.hpc.itc.rwth-aachen.de}"
 GLM_WORKDIR="${GLM_WORKDIR:-/hpcwork/cu829455/workspace/runLargeLLMs}"
 GLM_JOBNAME="${GLM_JOBNAME:-glm52_vllm}"
 GLM_LOCAL_PORT="${GLM_LOCAL_PORT:-52222}"
-GLM_REMOTE_PORT="${GLM_REMOTE_PORT:-8000}"
+GLM_REMOTE_PORT="${GLM_REMOTE_PORT:-52223}"
 
 # Discovery logic: find the running job's id, then read the head IP from its log.
 read -r -d '' DISCOVER <<'REMOTE' || true
