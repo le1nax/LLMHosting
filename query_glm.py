@@ -11,10 +11,6 @@ import requests
 HOST = os.environ.get("VLLM_HOST", "http://134.61.53.224:8000")   # head-node IP (changes per job: see "Head:" in the log)
 MODEL = os.environ.get("VLLM_MODEL", "glm-5.2-fp8")               # = --served-model-name in the sbatch script
 
-# Shared vLLM API key (must match VLLM_API_KEY in runGLM.sbatch).
-API_KEY = "51c5e1515fbdbd1e21cc1ec546e44ba470d02b8107d667a35aa9a4029278637d"
-HEADERS = {"Authorization": f"Bearer {API_KEY}"}
-
 # Reasoning effort for GLM-5.2: "off" = no thinking (direct answer),
 # "high" = medium effort, "max" = full effort.
 REASONING = os.environ.get("REASONING", "off")
@@ -28,7 +24,6 @@ prompt = " ".join(sys.argv[1:]) or "Hello, who are you? Answer short."
 
 resp = requests.post(
     f"{HOST}/v1/chat/completions",
-    headers=HEADERS,
     json={
         "model": MODEL,
         "messages": [{"role": "user", "content": prompt}],
