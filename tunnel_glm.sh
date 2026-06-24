@@ -46,6 +46,18 @@ get_head_ip() {
     fi
 }
 
+# Run a command on the cluster (locally if on a cluster node, else via the login node).
+run_there() {
+    if command -v squeue >/dev/null 2>&1; then bash -c "$1"; else ssh "$GLM_LOGIN" "$1"; fi
+}
+
+# True if vLLM actually answers on ip:GLM_REMOTE_PORT (SLURM RUNNING != server ready).
+check_ready() {
+    local code
+    code=$(run_there "curl -s -o /dev/null -w '%{http_code}' --max-time 5 http://$1:${GLM_REMOTE_PORT}/v1/models" 2>/dev/null)
+    [ "$code" = "200" ]
+}
+
 ip=$(get_head_ip) || {
     echo "Could not determine the GLM head-node IP (is the job '$GLM_JOBNAME' running?)." >&2
     exit 1
@@ -70,6 +82,19 @@ if lsof -nP -iTCP:"$GLM_LOCAL_PORT" -sTCP:LISTEN >/dev/null 2>&1 \
     echo "or pick another port:  GLM_LOCAL_PORT=<port> $0" >&2
     exit 1
 fi
+
+# SLURM RUNNING != vLLM ready: wait until the server actually answers (model load ~20 min).
+if ! check_ready "$ip"; then
+    echo "vLLM not serving yet on ${ip}:${GLM_REMOTE_PORT} (still loading). Waiting..."
+    for _ in $(seq 1 180); do          # up to ~30 min
+        sleep 10
+        if check_ready "$ip"; then break; fi
+        printf '.'
+    done
+    echo
+    check_ready "$ip" || { echo "Timed out waiting for the server." >&2; exit 1; }
+fi
+echo "Server is up."
 
 echo "Forwarding localhost:${GLM_LOCAL_PORT} -> ${ip}:${GLM_REMOTE_PORT} via ${GLM_LOGIN}"
 echo "Use it locally with:  VLLM_HOST=http://localhost:${GLM_LOCAL_PORT} python query_glm.py \"Hello\""

@@ -63,6 +63,22 @@ get_head_ip() {
     fi
 }
 
+# Run a command on the cluster (locally if on a cluster node, else via the login node).
+run_there() {
+    if command -v squeue >/dev/null 2>&1; then
+        bash -c "$1"
+    else
+        ssh "$GLM_LOGIN" "$1"
+    fi
+}
+
+# True if vLLM actually answers on ip:REMOTE_PORT (SLURM RUNNING != server ready).
+check_ready() {
+    local code
+    code=$(run_there "curl -s -o /dev/null -w '%{http_code}' --max-time 5 http://$1:${REMOTE_PORT}/v1/models" 2>/dev/null)
+    [ "$code" = "200" ]
+}
+
 open_firewall() {
     [ "$OPEN_FIREWALL" = "1" ] || return 0
     echo "[remote_tunnel] opening firewall for ${LISTEN_PORT}/tcp (needs sudo)..."
@@ -112,6 +128,16 @@ while true; do
     fi
 
     echo "[remote_tunnel] GLM head node: ${ip}:${REMOTE_PORT}"
+
+    # SLURM RUNNING != vLLM ready: wait until the server actually answers.
+    if ! check_ready "$ip"; then
+        echo "[remote_tunnel] job is running but vLLM not serving yet on ${ip}:${REMOTE_PORT} (still loading?)." >&2
+        [ "$RECONNECT" = "1" ] || { echo "give it a few minutes and retry." >&2; exit 1; }
+        echo "[remote_tunnel] waiting, recheck in 15s... (Ctrl-C to stop)"
+        sleep 15
+        continue
+    fi
+
     echo "[remote_tunnel] exposing ${LISTEN_ADDR}:${LISTEN_PORT} -> ${ip}:${REMOTE_PORT} via ${GLM_LOGIN}"
     echo "[remote_tunnel] clients use: VLLM_HOST=http://<this-pc>:${LISTEN_PORT} python query_glm.py \"Hello\""
     echo "[remote_tunnel] press Ctrl-C to stop."
