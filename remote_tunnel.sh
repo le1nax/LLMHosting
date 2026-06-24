@@ -3,7 +3,7 @@
 # remote_tunnel.sh -- run this on a PUBLIC-FACING PC to expose the HPC GLM
 # vLLM server to the outside world. The PC becomes the entry point for requests:
 #
-#   external clients --> THIS_PC:8000 --(ssh)--> login node --> compute node:8000 (GLM)
+#   external clients --> THIS_PC:52223 --(ssh)--> login node --> compute node:8000 (GLM)
 #
 # It auto-discovers the GLM head-node IP (changes per job), opens an SSH tunnel
 # bound to ALL interfaces (0.0.0.0) so external clients can reach it, and keeps
@@ -14,11 +14,11 @@
 #     ./remote_tunnel.sh --print    # only show the head IP + ssh command
 #
 # Clients anywhere then use:
-#     VLLM_HOST=http://<THIS_PC_PUBLIC_IP>:8000 python query_glm.py "Hello"
+#     VLLM_HOST=http://<THIS_PC_PUBLIC_IP>:52223 python query_glm.py "Hello"
 #
 # !!! SECURITY -- READ THIS !!!
 # This publishes the LLM endpoint on the internet WITHOUT authentication. Anyone
-# who can reach THIS_PC:8000 can use (and abuse) the model and your HPC compute
+# who can reach THIS_PC:52223 can use (and abuse) the model and your HPC compute
 # budget. Strongly recommended: restrict the firewall to known source IPs and/or
 # start vLLM with --api-key. Check your HPC center's acceptable-use policy first.
 # If the PC is behind a router/NAT, you must also port-forward 8000 to the PC.
@@ -28,7 +28,7 @@
 #     GLM_WORKDIR=/hpcwork/cu829455/workspace/runLargeLLMs
 #     GLM_JOBNAME=glm52_vllm
 #     LISTEN_ADDR=0.0.0.0      # bind address on this PC (0.0.0.0 = reachable from outside)
-#     LISTEN_PORT=8000         # public port on this PC
+#     LISTEN_PORT=52223        # public port on this PC
 #     REMOTE_PORT=8000         # vLLM port on the compute node
 #     OPEN_FIREWALL=0          # 1 = try to open LISTEN_PORT in the local firewall (needs sudo)
 #     RECONNECT=1              # 1 = keep reconnecting; 0 = run once
@@ -38,7 +38,7 @@ GLM_LOGIN="${GLM_LOGIN:-cu829455@login23-g-1.hpc.itc.rwth-aachen.de}"
 GLM_WORKDIR="${GLM_WORKDIR:-/hpcwork/cu829455/workspace/runLargeLLMs}"
 GLM_JOBNAME="${GLM_JOBNAME:-glm52_vllm}"
 LISTEN_ADDR="${LISTEN_ADDR:-0.0.0.0}"
-LISTEN_PORT="${LISTEN_PORT:-8000}"
+LISTEN_PORT="${LISTEN_PORT:-52223}"
 REMOTE_PORT="${REMOTE_PORT:-8000}"
 OPEN_FIREWALL="${OPEN_FIREWALL:-0}"
 RECONNECT="${RECONNECT:-1}"
