@@ -8,11 +8,11 @@
 # port to it through the login node.
 #
 # Usage (on your laptop):
-#     ./tunnel_glm.sh                 # open tunnel: localhost:8000 -> GLM server
+#     ./tunnel_glm.sh                 # open tunnel: localhost:8800 -> GLM server
 #     ./tunnel_glm.sh --print         # only print the head IP + ssh command
 #
 # Then, locally:
-#     VLLM_HOST=http://localhost:8000 python query_glm.py "Hello"
+#     VLLM_HOST=http://localhost:8800 python query_glm.py "Hello"
 #
 # Config via environment variables (defaults shown):
 #     GLM_LOGIN=cu829455@login23-g-1.hpc.itc.rwth-aachen.de
@@ -25,7 +25,7 @@ set -euo pipefail
 GLM_LOGIN="${GLM_LOGIN:-cu829455@login23-g-1.hpc.itc.rwth-aachen.de}"
 GLM_WORKDIR="${GLM_WORKDIR:-/hpcwork/cu829455/workspace/runLargeLLMs}"
 GLM_JOBNAME="${GLM_JOBNAME:-glm52_vllm}"
-GLM_LOCAL_PORT="${GLM_LOCAL_PORT:-8000}"
+GLM_LOCAL_PORT="${GLM_LOCAL_PORT:-8800}"
 GLM_REMOTE_PORT="${GLM_REMOTE_PORT:-8000}"
 
 # Discovery logic: find the running job's id, then read the head IP from its log.
