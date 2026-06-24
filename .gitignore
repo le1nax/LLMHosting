@@ -1,0 +1,9 @@
+# Secrets
+vllm_api.key
+
+# SLURM logs / debug output
+log.*.txt
+log.debug.*.txt
+
+# Core dumps
+core.*
