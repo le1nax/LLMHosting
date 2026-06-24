@@ -11,6 +11,15 @@ import requests
 HOST = os.environ.get("VLLM_HOST", "http://134.61.53.224:8000")   # Head-Node-IP (aendert sich pro Job: siehe "Head:" im log)
 MODEL = os.environ.get("VLLM_MODEL", "glm-5.2-fp8")           # = --served-model-name im sbatch-Skript
 
+# Reasoning-Aufwand fuer GLM-5.2: "off" = kein Denken (direkte Antwort),
+# "high" = mittlerer Aufwand, "max" = voller Aufwand (Default).
+REASONING = os.environ.get("REASONING", "max")
+_REASONING_KWARGS = {
+    "off":  {"enable_thinking": False},
+    "high": {"reasoning_effort": "high"},
+    "max":  {"reasoning_effort": "max"},
+}[REASONING]
+
 prompt = " ".join(sys.argv[1:]) or "Hallo, wer bist du?"
 
 resp = requests.post(
@@ -18,7 +27,8 @@ resp = requests.post(
     json={
         "model": MODEL,
         "messages": [{"role": "user", "content": prompt}],
-        "max_tokens": 512,
+        "max_tokens": 1024,
+        "chat_template_kwargs": _REASONING_KWARGS,
     },
     timeout=600,
 )
