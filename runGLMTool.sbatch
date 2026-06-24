@@ -89,6 +89,9 @@ vllm serve $MODEL \
     --gpu-memory-utilization 0.83 \
     --max-num-seqs 64 \
     --trust-remote-code \
+    --enable-auto-tool-choice \
+    --tool-call-parser glm47 \
+    --reasoning-parser glm45 \
     --host 0.0.0.0 --port $VLLM_PORT
 
 # source .venv/bin/activate
