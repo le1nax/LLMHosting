@@ -59,7 +59,19 @@ if [[ "${1:-}" == "--print" ]]; then
     exit 0
 fi
 
+# Bail out early with a clear message if the local port is already taken
+# (usually a previous tunnel from this script is still running).
+if lsof -nP -iTCP:"$GLM_LOCAL_PORT" -sTCP:LISTEN >/dev/null 2>&1 \
+   || ss -tlnH "( sport = :$GLM_LOCAL_PORT )" 2>/dev/null | grep -q .; then
+    echo "ERROR: local port ${GLM_LOCAL_PORT} is already in use:" >&2
+    lsof -nP -iTCP:"$GLM_LOCAL_PORT" -sTCP:LISTEN 2>/dev/null \
+        || ss -tlnp "( sport = :$GLM_LOCAL_PORT )" 2>/dev/null
+    echo "Probably an older tunnel. Close it (e.g. pkill -f 'ssh -N -L ${GLM_LOCAL_PORT}')" >&2
+    echo "or pick another port:  GLM_LOCAL_PORT=<port> $0" >&2
+    exit 1
+fi
+
 echo "Forwarding localhost:${GLM_LOCAL_PORT} -> ${ip}:${GLM_REMOTE_PORT} via ${GLM_LOGIN}"
 echo "Use it locally with:  VLLM_HOST=http://localhost:${GLM_LOCAL_PORT} python query_glm.py \"Hello\""
 echo "Press Ctrl-C to close the tunnel."
-exec ssh -N -L "${GLM_LOCAL_PORT}:${ip}:${GLM_REMOTE_PORT}" "${GLM_LOGIN}"
+exec ssh -o ExitOnForwardFailure=yes -N -L "${GLM_LOCAL_PORT}:${ip}:${GLM_REMOTE_PORT}" "${GLM_LOGIN}"
