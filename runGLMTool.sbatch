@@ -5,6 +5,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --gres=gpu:4
 #SBATCH --cpus-per-task=128          # an Node-Spec anpassen
+#SBATCH --mem=0                       # gesamtes Node-RAM anfordern: /dev/shm (vLLM ShmRingBuffer fuer Inter-Rank-Broadcast) zaehlt gegen das cgroup-Limit -> ohne --mem droht nach Stunden OOM/SIGBUS im Ray-Worker
 #SBATCH --time=49:00:00
 #SBATCH --job-name=glm52_vllm
 #SBATCH --output=log.%J.txt
@@ -88,8 +89,10 @@ vllm serve $MODEL \
     --max-model-len 128000 \
     --gpu-memory-utilization 0.83 \
     --max-num-seqs 64 \
+    --mm-processor-cache-gb 0 \
     --trust-remote-code \
     --enable-auto-tool-choice \
+    --structured-outputs-config '{"backend": "xgrammar"}' \
     --tool-call-parser glm47 \
     --reasoning-parser glm45 \
     --host 0.0.0.0 --port $VLLM_PORT
