@@ -1,0 +1,792 @@
+[2026-07-25T18:54:35.125] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+Process 325212: ray::RayWorkerProc.run
+Python v3.13.3 (/w0/tmp/slurm_cs088267.2210955/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+
+Thread 325212 (active+gil): "MainThread"
+    __enter__ (triton/compiler/code_generator.py:125)
+        Arguments:
+            self: <enter_sub_region at 0x14dd082e1f60>
+    visit_if_scf (triton/compiler/code_generator.py:864)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            cond: <tensor at 0x14dd082e0d70>
+            node: <If at 0x14db60d376d0>
+    visit_If (triton/compiler/code_generator.py:916)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60d376d0>
+        Locals:
+            cond: <tensor at 0x14dd082e0d70>
+    visit (ast.py:428)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60d376d0>
+        Locals:
+            method: "visit_If"
+            visitor: <method at 0x14db60e62ec0>
+    visit (triton/compiler/code_generator.py:1536)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60d376d0>
+        Locals:
+            last_node: <If at 0x14db60d35810>
+            last_loc: <triton._C.libtriton.ir.location at 0x14db60e60fb0>
+            here_loc: <triton._C.libtriton.ir.location at 0x14db60e60f30>
+    visit_compound_statement (triton/compiler/code_generator.py:514)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            stmts: [<If at 0x14db60d376d0>]
+        Locals:
+            stmt: <If at 0x14db60d376d0>
+    visit_then_else_blocks (triton/compiler/code_generator.py:781)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60d35810>
+            liveins: {"LOGITS": <tensor at 0x14dd141870e0>, "LOGITS_STRIDE_0": <tensor at 0x14dd14184d70>, ...}
+            then_block: <triton._C.libtriton.ir.block at 0x14db60e620b0>
+            else_block: <triton._C.libtriton.ir.block at 0x14db60e60f70>
+        Locals:
+            then_defs: {"min_range": <tensor at 0x14dd082e0050>}
+            then_vals: {"LOGITS": <tensor at 0x14dd082c7cb0>, "LOGITS_STRIDE_0": <tensor at 0x14dd082c5b00>, ...}
+            else_defs: {}
+            else_vals: {"LOGITS": <tensor at 0x14dd141870e0>, "LOGITS_STRIDE_0": <tensor at 0x14dd14184d70>, ...}
+    visit_if_scf (triton/compiler/code_generator.py:870)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            cond: <tensor at 0x14dd14185710>
+            node: <If at 0x14db60d35810>
+        Locals:
+            sr: ({"LOGITS": <tensor at 0x14dd141870e0>, "LOGITS_STRIDE_0": <tensor at 0x14dd14184d70>, ...}, ...)
+            liveins: {"LOGITS": <tensor at 0x14dd141870e0>, "LOGITS_STRIDE_0": <tensor at 0x14dd14184d70>, ...}
+            _: <triton._C.libtriton.ir.block at 0x14db60e6b070>
+            ip: <triton._C.libtriton.ir.InsertPoint at 0x14db60e61570>
+            last_loc: <triton._C.libtriton.ir.location at 0x14db60ed6570>
+            then_block: <triton._C.libtriton.ir.block at 0x14db60e620b0>
+            else_block: <triton._C.libtriton.ir.block at 0x14db60e60f70>
+    visit_If (triton/compiler/code_generator.py:916)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60d35810>
+        Locals:
+            cond: <tensor at 0x14dd14185710>
+    visit (ast.py:428)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60d35810>
+        Locals:
+            method: "visit_If"
+            visitor: <method at 0x14db60ee5ac0>
+    visit (triton/compiler/code_generator.py:1536)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60d35810>
+        Locals:
+            last_node: <While at 0x14db60d43410>
+            last_loc: <triton._C.libtriton.ir.location at 0x14db60e699f0>
+            here_loc: <triton._C.libtriton.ir.location at 0x14db60ec08b0>
+    visit_compound_statement (triton/compiler/code_generator.py:514)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            stmts: [<Assign at 0x14db60d43050>, <Assign at 0x14db60d41d10>, <Assign at 0x14db60d41e10>, <Assign at 0x14db60d41250>, ...]
+        Locals:
+            stmt: <If at 0x14db60d35810>
+    visit_While (triton/compiler/code_generator.py:1096)
+        Arguments:
+            self: <cell at 0x14dd3444f6d0>
+            node: <While at 0x14db60d43410>
+        Locals:
+            sr: ({"LOGITS": <tensor at 0x14dd14184590>, "LOGITS_STRIDE_0": <tensor at 0x14dd14186eb0>, ...}, ...)
+            liveins: {"LOGITS": <tensor at 0x14dd14184590>, "LOGITS_STRIDE_0": <tensor at 0x14dd14186eb0>, ...}
+            insert_block: <triton._C.libtriton.ir.block at 0x14db60e68af0>
+            ip: <triton._C.libtriton.ir.InsertPoint at 0x14db60eb8070>
+            last_loc: <triton._C.libtriton.ir.location at 0x14db60e6a830>
+            names: ["i", "num_iters", "num_min_larger", "found_pivot", "max_range", "min_range", "p_pivot", "min_larger_prob", ...]
+            init_handles: [<triton._C.libtriton.ir.value at 0x14db60b903b0>, <triton._C.libtriton.ir.value at 0x14db60e6b7f0>, ...]
+            init_fe_tys: [<dtype at 0x14e0ca765480>, <dtype at 0x14e0ca765480>, <dtype at 0x14e0ca73b050>, <dtype at 0x14e0ca765480>, ...]
+            init_tys: [<triton._C.libtriton.ir.type at 0x14dd341ba430>, <triton._C.libtriton.ir.type at 0x14db60b18f30>, ...]
+            while_op: <triton._C.libtriton.ir.WhileOp at 0x14db60d7dfb0>
+            before_block: <triton._C.libtriton.ir.block at 0x14db60ec26b0>
+            block_args: [<triton._C.libtriton.ir.block_argument at 0x14db60ec1eb0>, <triton._C.libtriton.ir.block_argument at 0x14db60ec0630>, ...]
+            condition_args: <generator at 0x14dd345c54e0>
+            name: "p_pivots_sum"
+            val: <tensor at 0x14dd140aeac0>
+            cond: <tensor at 0x14dd082c7150>
+            after_block: <triton._C.libtriton.ir.block at 0x14db60e6b070>
+            body_handles: [<triton._C.libtriton.ir.block_argument at 0x14db60e68f70>, <triton._C.libtriton.ir.block_argument at 0x14db60e6b9f0>, ...]
+            body_args: <generator at 0x14dd345c7e20>
+    visit (ast.py:428)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <While at 0x14db60d43410>
+        Locals:
+            method: "visit_While"
+            visitor: <method at 0x14db60c85e80>
+    visit (triton/compiler/code_generator.py:1536)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <While at 0x14db60d43410>
+        Locals:
+            last_node: <If at 0x14db60d2fa90>
+            last_loc: <triton._C.libtriton.ir.location at 0x14db60e6a230>
+            here_loc: <triton._C.libtriton.ir.location at 0x14db60c2b430>
+    visit_compound_statement (triton/compiler/code_generator.py:514)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            stmts: [<Assign at 0x14db60d2e0d0>, <Assign at 0x14db60d2f6d0>, <Assign at 0x14db60d2c550>, <Assign at 0x14db60d2f950>, ...]
+        Locals:
+            stmt: <While at 0x14db60d43410>
+    visit_then_else_blocks (triton/compiler/code_generator.py:770)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60d2fa90>
+            liveins: {"LOGITS": <tensor at 0x14dd08490750>, "LOGITS_STRIDE_0": <tensor at 0x14dd08492190>, ...}
+            then_block: <triton._C.libtriton.ir.block at 0x14db60e68af0>
+            else_block: None
+    visit_if_scf (triton/compiler/code_generator.py:870)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            cond: <tensor at 0x14dd084927b0>
+            node: <If at 0x14db60d2fa90>
+        Locals:
+            sr: ({"LOGITS": <tensor at 0x14dd08490750>, "LOGITS_STRIDE_0": <tensor at 0x14dd08492190>, ...}, ...)
+            liveins: {"LOGITS": <tensor at 0x14dd08490750>, "LOGITS_STRIDE_0": <tensor at 0x14dd08492190>, ...}
+            _: <triton._C.libtriton.ir.block at 0x14db60dd78f0>
+            ip: <triton._C.libtriton.ir.InsertPoint at 0x14db60e68ff0>
+            last_loc: <triton._C.libtriton.ir.location at 0x14db60ed5f30>
+            then_block: <triton._C.libtriton.ir.block at 0x14db60e68af0>
+            else_block: None
+    visit_If (triton/compiler/code_generator.py:916)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60d2fa90>
+        Locals:
+            cond: <tensor at 0x14dd084927b0>
+    visit (ast.py:428)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60d2fa90>
+        Locals:
+            method: "visit_If"
+            visitor: <method at 0x14db60ed1540>
+    visit (triton/compiler/code_generator.py:1536)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60d2fa90>
+        Locals:
+            last_node: <If at 0x14db60d2f190>
+            last_loc: <triton._C.libtriton.ir.location at 0x14db60ed18b0>
+            here_loc: <triton._C.libtriton.ir.location at 0x14db60ed39b0>
+    visit_compound_statement (triton/compiler/code_generator.py:514)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            stmts: [<Assign at 0x14db60d2f210>, <If at 0x14db60d2fa90>]
+        Locals:
+            stmt: <If at 0x14db60d2fa90>
+    visit_then_else_blocks (triton/compiler/code_generator.py:770)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60d2f190>
+            liveins: {"LOGITS": <tensor at 0x14dd083dfb60>, "LOGITS_STRIDE_0": <tensor at 0x14dd083de970>, ...}
+            then_block: <triton._C.libtriton.ir.block at 0x14db60dd78f0>
+            else_block: None
+    visit_if_scf (triton/compiler/code_generator.py:870)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            cond: <tensor at 0x14dd083dc9f0>
+            node: <If at 0x14db60d2f190>
+        Locals:
+            sr: ({"LOGITS": <tensor at 0x14dd083dfb60>, "LOGITS_STRIDE_0": <tensor at 0x14dd083de970>, ...}, ...)
+            liveins: {"LOGITS": <tensor at 0x14dd083dfb60>, "LOGITS_STRIDE_0": <tensor at 0x14dd083de970>, ...}
+            _: <triton._C.libtriton.ir.block at 0x14db60c078f0>
+            ip: <triton._C.libtriton.ir.InsertPoint at 0x14db60ed0670>
+            last_loc: <triton._C.libtriton.ir.location at 0x14db60df53f0>
+            then_block: <triton._C.libtriton.ir.block at 0x14db60dd78f0>
+            else_block: None
+    visit_If (triton/compiler/code_generator.py:916)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60d2f190>
+        Locals:
+            cond: <tensor at 0x14dd083dc9f0>
+    visit (ast.py:428)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60d2f190>
+        Locals:
+            method: "visit_If"
+            visitor: <method at 0x14db61c95080>
+    visit (triton/compiler/code_generator.py:1536)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60d2f190>
+        Locals:
+            last_node: <If at 0x14db60e7d6d0>
+            last_loc: <triton._C.libtriton.ir.location at 0x14db60db54b0>
+            here_loc: <triton._C.libtriton.ir.location at 0x14db60df7e30>
+    visit_compound_statement (triton/compiler/code_generator.py:514)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            stmts: [<Assign at 0x14db60e7ca90>, <Assign at 0x14db60e7ee50>, <Assign at 0x14db60e7eb50>, <Assign at 0x14db60dc3110>, ...]
+        Locals:
+            stmt: <If at 0x14db60d2f190>
+    visit_then_else_blocks (triton/compiler/code_generator.py:770)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60e7d6d0>
+            liveins: {"LOGITS": <tensor at 0x14dd14104830>, "LOGITS_STRIDE_0": <tensor at 0x14dd14107bd0>, ...}
+            then_block: <triton._C.libtriton.ir.block at 0x14db60c078f0>
+            else_block: None
+    visit_if_scf (triton/compiler/code_generator.py:870)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            cond: <tensor at 0x14dd083ce4a0>
+            node: <If at 0x14db60e7d6d0>
+        Locals:
+            sr: ({"LOGITS": <tensor at 0x14dd14104830>, "LOGITS_STRIDE_0": <tensor at 0x14dd14107bd0>, ...}, ...)
+            liveins: {"LOGITS": <tensor at 0x14dd14104830>, "LOGITS_STRIDE_0": <tensor at 0x14dd14107bd0>, ...}
+            _: <triton._C.libtriton.ir.block at 0x14db60dd6330>
+            ip: <triton._C.libtriton.ir.InsertPoint at 0x14db60ea71f0>
+            last_loc: <triton._C.libtriton.ir.location at 0x14db60d802b0>
+            then_block: <triton._C.libtriton.ir.block at 0x14db60c078f0>
+            else_block: None
+    visit_If (triton/compiler/code_generator.py:916)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60e7d6d0>
+        Locals:
+            cond: <tensor at 0x14dd083ce4a0>
+    visit (ast.py:428)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60e7d6d0>
+        Locals:
+            method: "visit_If"
+            visitor: <method at 0x14db60c48140>
+    visit (triton/compiler/code_generator.py:1536)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60e7d6d0>
+        Locals:
+            last_node: <If at 0x14db60e7fed0>
+            last_loc: <triton._C.libtriton.ir.location at 0x14db60c07130>
+            here_loc: <triton._C.libtriton.ir.location at 0x14db60efb1b0>
+    visit_compound_statement (triton/compiler/code_generator.py:514)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            stmts: [<Assign at 0x14db60e7fdd0>, <If at 0x14db60e7d6d0>]
+        Locals:
+            stmt: <If at 0x14db60e7d6d0>
+    visit_If (triton/compiler/code_generator.py:927)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60e7fed0>
+        Locals:
+            cond: True
+            active_block: [<Assign at 0x14db60e7fdd0>, <If at 0x14db60e7d6d0>]
+    visit (ast.py:428)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60e7fed0>
+        Locals:
+            method: "visit_If"
+            visitor: <method at 0x14db60de02c0>
+    visit (triton/compiler/code_generator.py:1536)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <If at 0x14db60e7fed0>
+        Locals:
+            last_node: <For at 0x14db60e7e210>
+            last_loc: <triton._C.libtriton.ir.location at 0x14db60ec34b0>
+            here_loc: <triton._C.libtriton.ir.location at 0x14db60c791f0>
+    visit_compound_statement (triton/compiler/code_generator.py:514)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            stmts: [<Assign at 0x14db60e7cf50>, <Assign at 0x14db60e7d7d0>, <Assign at 0x14db60e7e190>, <Assign at 0x14db60e7d310>, ...]
+        Locals:
+            stmt: <If at 0x14db60e7fed0>
+    visit_For (triton/compiler/code_generator.py:1237)
+        Arguments:
+            self: <cell at 0x14dd3456c0d0>
+            node: <For at 0x14db60e7e210>
+        Locals:
+            IteratorClass: 0
+            iter_args: [<tensor at 0x14dd084a6970>, <tensor at 0x14dd084a6dd0>, <tensor at 0x14dd084a70e0>]
+            iter_kwargs: {}
+            iterator: <range at 0x14dd141fd050>
+            num_stages: None
+            loop_unroll_factor: None
+            disallow_acc_multi_buffer: False
+            flatten: False
+            warp_specialize: False
+            disable_licm: False
+            lb: <triton._C.libtriton.ir.value at 0x14db60c831b0>
+            ub: <triton._C.libtriton.ir.value at 0x14db60dc3f30>
+            step: <triton._C.libtriton.ir.value at 0x14db60ec2630>
+            negative_step: False
+            iv_type: <dtype at 0x14e0ca765480>
+            iv_ir_type: <triton._C.libtriton.ir.type at 0x14db60ec26f0>
+            iv_is_signed: True
+            iv_placeholder: <triton._C.libtriton.ir.value at 0x14db60ec25f0>
+            sr: ({"LOGITS": <tensor at 0x14dd084a52b0>, "LOGITS_STRIDE_0": <tensor at 0x14dd084a55c0>, ...}, ...)
+            liveins: {"LOGITS": <tensor at 0x14dd084a52b0>, "LOGITS_STRIDE_0": <tensor at 0x14dd084a55c0>, ...}
+            insert_block: <triton._C.libtriton.ir.block at 0x14db60de9370>
+            ip: <triton._C.libtriton.ir.InsertPoint at 0x14db60ec2130>
+            last_loc: <triton._C.libtriton.ir.location at 0x14db60ec25b0>
+            names: []
+            init_handles: []
+            init_tys: []
+            for_op: <triton._C.libtriton.ir.ForOp at 0x14db61ca0f30>
+            for_op_body: <triton._C.libtriton.ir.block at 0x14db60dd6330>
+            block_handles: []
+            block_args: <generator at 0x14dd345c6e30>
+    visit (ast.py:428)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <For at 0x14db60e7e210>
+        Locals:
+            method: "visit_For"
+            visitor: <method at 0x14db60efabc0>
+    visit (triton/compiler/code_generator.py:1536)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <For at 0x14db60e7e210>
+        Locals:
+            last_node: <FunctionDef at 0x14db60e7c350>
+            last_loc: <triton._C.libtriton.ir.location at 0x14db61c37130>
+            here_loc: <triton._C.libtriton.ir.location at 0x14db60d37b30>
+    visit_compound_statement (triton/compiler/code_generator.py:514)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            stmts: [<AnnAssign at 0x14db60e7cbd0>, <Assign at 0x14db60e7e4d0>, <Assign at 0x14db60e7e6d0>, <For at 0x14db60e7e210>]
+        Locals:
+            stmt: <For at 0x14db60e7e210>
+    visit_FunctionDef (triton/compiler/code_generator.py:612)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <FunctionDef at 0x14db60e7c350>
+        Locals:
+            arg_names: ["LOGITS", "LOGITS_STRIDE_0", "BUFFER", "PERCENTILE_TO_STD_TABLE", "NORMAL_CDF_TO_SIGMA_TABLE", "K", "P", "BATCH_SIZE", ...]
+            kwarg_names: None
+            visibility: "public"
+            fn_ty: <triton._C.libtriton.ir.type at 0x14db60dc8a70>
+            entry: <triton._C.libtriton.ir.block at 0x14db60de9370>
+            arg_values: <tuple at 0x14db61667e30>
+            arg_name: "TOPP_ENABLED"
+            arg_value: <constexpr at 0x14db61667b30>
+            insert_pt: None
+    visit (ast.py:428)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <FunctionDef at 0x14db60e7c350>
+        Locals:
+            method: "visit_FunctionDef"
+            visitor: <method at 0x14db60efaf40>
+    visit (triton/compiler/code_generator.py:1536)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <FunctionDef at 0x14db60e7c350>
+        Locals:
+            last_node: <Module at 0x14db60e7c190>
+            last_loc: <triton._C.libtriton.ir.location at 0x14db60efb2b0>
+            here_loc: <triton._C.libtriton.ir.location at 0x14db60efac70>
+    generic_visit (ast.py:436)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <Module at 0x14db60e7c190>
+        Locals:
+            field: "body"
+            value: [<FunctionDef at 0x14db60e7c350>]
+            item: <FunctionDef at 0x14db60e7c350>
+    visit_Module (triton/compiler/code_generator.py:521)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <Module at 0x14db60e7c190>
+    visit (ast.py:428)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <Module at 0x14db60e7c190>
+        Locals:
+            method: "visit_Module"
+            visitor: <method at 0x14db60efbf80>
+    visit (triton/compiler/code_generator.py:1536)
+        Arguments:
+            self: <CodeGenerator at 0x14dd08143d10>
+            node: <Module at 0x14db60e7c190>
+        Locals:
+            last_node: None
+            last_loc: <triton._C.libtriton.ir.location at 0x14db60efab70>
+    ast_to_ttir (triton/compiler/code_generator.py:1631)
+        Arguments:
+            fn: <JITFunction at 0x14e08737d1d0>
+            src: <ASTSource at 0x14dd0830f1d0>
+            context: <triton._C.libtriton.ir.context at 0x14db60c079f0>
+            options: <CUDAOptions at 0x14dd9c592360>
+            codegen_fns: {"convert_custom_types": <function at 0x14e0ca61b920>, "min_dot_size": <function at 0x14dca013efc0>}
+            module_map: {"triton.language.extra.libdevice": <module at 0x14e0ca790900>}
+            module: None
+        Locals:
+            arg_types: [<pointer_type at 0x14dd34179ff0>, <dtype at 0x14e0ca765480>, <pointer_type at 0x14dd34178890>, ...]
+            k: "TOPP_ENABLED"
+            v: "constexpr"
+            idx: 13
+            path: (13)
+            value: True
+            prototype: <ASTFunction at 0x14dd9c252970>
+            file_name: "/w0/tmp/slurm_cs088267.2210955/venv/lib/python3.13/site-packages/vllm/v1/sample/ops/topk_topp_triton.py"
+            begin_line: 94
+            namedtuple: <function at 0x1510f549dd00>
+            leaves: <filter at 0x14dd3456dff0>
+            constants: {"VOCAB_SIZE": 154880, "MASK_VALUE": -inf, "BLOCK_SIZE": 8192, "BLOCK_SIZE_TRUNC": 4096, "TOPK_ENABLED": True, ...}
+            signature: {"LOGITS": "*fp32", "LOGITS_STRIDE_0": "i32", "BUFFER": "*fp32", "PERCENTILE_TO_STD_TABLE": "*fp32", ...}
+            proxy: ({"VOCAB_SIZE": 154880, "MASK_VALUE": -inf, "BLOCK_SIZE": 8192, "BLOCK_SIZE_TRUNC": 4096, "TOPK_ENABLED": True, ...}, ...)
+            generator: <CodeGenerator at 0x14dd08143d10>
+    make_ir (triton/compiler/compiler.py:80)
+        Arguments:
+            self: <ASTSource at 0x14dd0830f1d0>
+            target: <GPUTarget at 0x14e088d51850>
+            options: <CUDAOptions at 0x14dd9c592360>
+            codegen_fns: {"convert_custom_types": <function at 0x14e0ca61b920>, "min_dot_size": <function at 0x14dca013efc0>}
+            module_map: {"triton.language.extra.libdevice": <module at 0x14e0ca790900>}
+            context: <triton._C.libtriton.ir.context at 0x14db60c079f0>
+        Locals:
+            ast_to_ttir: <function at 0x14dc00de71a0>
+    compile (triton/compiler/compiler.py:304)
+        Arguments:
+            src: <ASTSource at 0x14dd0830f1d0>
+            target: <GPUTarget at 0x14e088d51850>
+            options: <CUDAOptions at 0x14dd9c592360>
+            _env_vars: None
+        Locals:
+            compilation_listener: None
+            backend: <CUDABackend at 0x14db61624470>
+            ir_source: False
+            context: <triton._C.libtriton.ir.context at 0x14db60c079f0>
+            extra_options: {}
+            env_vars: {}
+            key: "3.6.00355c3e3452fa4500122244b8fff8864f22bc05c417a3d6f5dada9f2e92f8040-c8b82f70c83ad10bc0190fa67864348b895f733d67658a3becaf1..."
+            hash: "68a18314efb7deb647ff17ab79053e3c79ab31a991fb97ad951af81d4ac2ac03"
+            fn_cache_manager: <FileCacheManager at 0x14db61624290>
+            enable_override: False
+            enable_ir_dump: False
+            store_only_binary: False
+            fn_override_manager: None
+            fn_dump_manager: None
+            file_name: "_topk_topp_kernel"
+            metadata_filename: "_topk_topp_kernel.json"
+            metadata_group: {}
+            metadata_path: None
+            always_compile: False
+            metadata: {"hash": "68a18314efb7deb647ff17ab79053e3c79ab31a991fb97ad951af81d4ac2ac03", "target": <GPUTarget at 0x14e088d51850>, ...}
+            stages: {"ttir": <function at 0x14dca013ff60>, "ttgir": <function at 0x14dca013d120>, "llir": <function at 0x14dca013ed40>, ...}
+            first_stage: 0
+            codegen_fns: {"convert_custom_types": <function at 0x14e0ca61b920>, "min_dot_size": <function at 0x14dca013efc0>}
+            module_map: {"triton.language.extra.libdevice": <module at 0x14e0ca790900>}
+    _do_compile (triton/runtime/jit.py:849)
+        Arguments:
+            self: <cell at 0x14dd14364730>
+            key: <cell at 0x14dd14367670>
+            signature: <cell at 0x14dd14364490>
+            device: <cell at 0x14dd143676d0>
+            constexprs: <cell at 0x14dd14366c20>
+            options: <cell at 0x14dd143668f0>
+            attrs: <cell at 0x14dd14367a00>
+            warmup: <cell at 0x14dd143658d0>
+        Locals:
+            _: <function at 0x14dca013cb80>
+            backend: <CUDABackend at 0x14dd0831ad50>
+            async_mode: None
+    run (triton/runtime/jit.py:720)
+        Arguments:
+            self: <JITFunction at 0x14e08737d1d0>
+        Locals:
+            grid: (64)
+            warmup: False
+            args: (<Tensor at 0x14dd0835ff20>, 154880, <Tensor at 0x14dd0835fb10>, <Tensor at 0x14dd083801e0>, <Tensor at 0x14dd0835fc00>, ...)
+            kwargs: {"BATCH_SIZE": 64, "MASK_VALUE": -inf, "VOCAB_SIZE": 154880, "BLOCK_SIZE": 8192, "BLOCK_SIZE_TRUNC": 4096, ...}
+            device: 0
+            stream: 412284368
+            kernel_cache: {}
+            kernel_key_cache: {...}
+            target: <GPUTarget at 0x14e088d51850>
+            backend: <CUDABackend at 0x14dd0831ad50>
+            binder: <function at 0x14dca013cb80>
+            bound_args: {"LOGITS": <Tensor at 0x14dd0835ff20>, "LOGITS_STRIDE_0": 154880, "BUFFER": <Tensor at 0x14dd0835fb10>, ...}
+            specialization: [("*fp32", "D"), ("i32", "D"), ("*fp32", "D"), ("*fp32", "D"), ("*fp32", "D"), ("*i32", "D"), ("*fp32", "D"), ...]
+            options: <CUDAOptions at 0x14dd9c591f20>
+            key: "[(\"*fp32\", \"D\"), (\"i32\", \"D\"), (\"*fp32\", \"D\"), (\"*fp32\", \"D\"), (\"*fp32\", \"D\"), (\"*i32\", \"D\"), (\"*f..."
+            kernel: None
+            signature: {"LOGITS": "*fp32", "LOGITS_STRIDE_0": "i32", "BUFFER": "*fp32", "PERCENTILE_TO_STD_TABLE": "*fp32", ...}
+            constexprs: {(8): 154880, (9): -inf, (10): 8192, (11): 4096, (12): True, (13): True}
+            attrs: {(0): [["tt.divisibility", 16]], (1): [["tt.divisibility", 16]], (2): [["tt.divisibility", 16]], (3): [...], ...}
+    <lambda> (triton/runtime/jit.py:370)
+        Locals:
+            args: (<Tensor at 0x14dd0835ff20>, 154880, <Tensor at 0x14dd0835fb10>, <Tensor at 0x14dd083801e0>, <Tensor at 0x14dd0835fc00>, ...)
+            kwargs: {"BATCH_SIZE": 64, "MASK_VALUE": -inf, "VOCAB_SIZE": 154880, "BLOCK_SIZE": 8192, "BLOCK_SIZE_TRUNC": 4096, ...}
+    apply_top_k_top_p_triton (vllm/v1/sample/ops/topk_topp_triton.py:937)
+        Arguments:
+            logits: <Tensor at 0x14dd0835ff20>
+            k: <Tensor at 0x14dd0835d8b0>
+            p: <Tensor at 0x14dd0835ceb0>
+            mask_value: -inf
+        Locals:
+            batch_size: 64
+            vocab_size: 154880
+            topk_enabled: True
+            topp_enabled: True
+            k_ptr: <Tensor at 0x14dd0835dea0>
+            p_ptr: <Tensor at 0x14dd0835ceb0>
+            num_sm: 132
+            NUM_PROGRAMS: 64
+            buf_key: (<torch.device at 0x14db61dffd50>, <torch.dtype at 0x14e1ec709410>, 154880)
+            buffer: <Tensor at 0x14dd0835fb10>
+            size: 64
+            tables: None
+            normal_cdf_to_sigma_table: <Tensor at 0x14dd0835fc00>
+            percentile_to_std_table: <Tensor at 0x14dd083801e0>
+            block_size: 8192
+            block_size_trunc: 4096
+    apply_top_k_top_p (vllm/v1/sample/ops/topk_topp_sampler.py:346)
+        Arguments:
+            logits: <Tensor at 0x14dd0835ff20>
+            k: <Tensor at 0x14dd0835d8b0>
+            p: <Tensor at 0x14dd0835ceb0>
+    forward_native (vllm/v1/sample/ops/topk_topp_sampler.py:143)
+        Arguments:
+            self: <TopKTopPSampler at 0x14de4e9342f0>
+            logits: <Tensor at 0x14dd0835ff20>
+            generators: {0: <torch._C.Generator at 0x14de04676d10>}
+            k: <Tensor at 0x14dd0835d8b0>
+            p: <Tensor at 0x14dd0835ceb0>
+    forward_cuda (vllm/v1/sample/ops/topk_topp_sampler.py:173)
+        Arguments:
+            self: <TopKTopPSampler at 0x14de4e9342f0>
+            logits: <Tensor at 0x14dd0835ff20>
+            generators: {0: <torch._C.Generator at 0x14de04676d10>}
+            k: <Tensor at 0x14dd0835d8b0>
+            p: <Tensor at 0x14dd0835ceb0>
+    _call_impl (torch/nn/modules/module.py:1790)
+        Arguments:
+            self: <cell at 0x14dd0843d5a0>
+        Locals:
+            args: <cell at 0x14dd0843c820>
+            kwargs: <cell at 0x14dd3456ebc0>
+    _wrapped_call_impl (torch/nn/modules/module.py:1779)
+        Arguments:
+            self: <TopKTopPSampler at 0x14de4e9342f0>
+        Locals:
+            args: (<Tensor at 0x14dd0835ff20>, {0: <torch._C.Generator at 0x14de04676d10>}, <Tensor at 0x14dd0835d8b0>, ...)
+            kwargs: {}
+    sample (vllm/v1/sample/sampler.py:290)
+        Arguments:
+            self: <Sampler at 0x14de4e9341a0>
+            logits: <Tensor at 0x14dd0835ff20>
+            sampling_metadata: <SamplingMetadata at 0x14dd7444c910>
+            logprobs_mode_override: None
+        Locals:
+            logprobs_mode: "raw_logprobs"
+            greedy_sampled: <Tensor at 0x14dd0835ffc0>
+    forward (vllm/v1/sample/sampler.py:102)
+        Arguments:
+            self: <Sampler at 0x14de4e9341a0>
+            logits: <Tensor at 0x14dd0835ff20>
+            sampling_metadata: <SamplingMetadata at 0x14dd7444c910>
+            predict_bonus_token: False
+            logprobs_mode_override: None
+        Locals:
+            logprobs_mode: "raw_logprobs"
+            num_logprobs: None
+            raw_logprobs: None
+    _call_impl (torch/nn/modules/module.py:1790)
+        Arguments:
+            self: <cell at 0x14dd6c05f130>
+        Locals:
+            args: <cell at 0x14dc00d650c0>
+            kwargs: <cell at 0x14dd343b6a40>
+    _wrapped_call_impl (torch/nn/modules/module.py:1779)
+        Arguments:
+            self: <Sampler at 0x14de4e9341a0>
+        Locals:
+            args: ()
+            kwargs: {"logits": <Tensor at 0x14dd0835e940>, "sampling_metadata": <SamplingMetadata at 0x14dd7444c910>}
+    _dummy_sampler_run (vllm/v1/worker/gpu_model_runner.py:6029)
+        Arguments:
+            self: <cell at 0x14dc0097d6f0>
+            hidden_states: <Tensor at 0x14e088d7c960>
+        Locals:
+            mm_config: None
+            logits: <Tensor at 0x14dd0835e940>
+            dummy_tensors: <function at 0x14dd74682a20>
+            dummy_metadata: <SamplingMetadata at 0x14dd7444c690>
+            sampler_output: <SamplerOutput at 0x14e091b778c0>
+    decorate_context (torch/utils/_contextlib.py:124)
+        Locals:
+            args: (<GPUModelRunner at 0x14de4e934050>, <Tensor at 0x14de0470f660>)
+            kwargs: {}
+    profile_run (vllm/v1/worker/gpu_model_runner.py:6235)
+        Arguments:
+            self: <GPUModelRunner at 0x14de4e934050>
+        Locals:
+            hidden_states: <Tensor at 0x14dd3438ae40>
+            last_hidden_states: <Tensor at 0x14de0470f660>
+    determine_available_memory (vllm/v1/worker/gpu_worker.py:410)
+        Arguments:
+            self: <Worker at 0x14e086f892b0>
+        Locals:
+            kv_cache_memory_bytes: None
+            profile_result: <MemoryProfilingResult at 0x14e091b77380>
+    decorate_context (torch/utils/_contextlib.py:124)
+        Locals:
+            args: (<Worker at 0x14e086f892b0>)
+            kwargs: {}
+    worker_busy_loop (vllm/v1/executor/multiproc_executor.py:982)
+        Arguments:
+            self: <RayWorkerProc at 0x14e0a057b620>
+        Locals:
+            method: "determine_available_memory"
+            args: ()
+            kwargs: {}
+            output_rank: None
+            func: <method at 0x14e088d84a00>
+            output: {"model.layers.59.self_attn.indexer.k_cache": <MLAAttentionSpec at 0x14e0a057b770>, ...}
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x14e0a057b620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    run (vllm/v1/executor/ray_executor_v2.py:197)
+        Arguments:
+            self: <RayWorkerProc at 0x14e0a057b620>
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x14e0a057b620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    actor_method_executor (ray/_private/function_manager.py:721)
+        Arguments:
+            _FunctionActorManager__ray_actor: <RayWorkerProc at 0x14e0a057b620>
+        Locals:
+            args: ()
+            kwargs: {}
+            is_bound: False
+    main_loop (ray/_private/worker.py:1039)
+        Arguments:
+            self: <Worker at 0x1510f1c834d0>
+        Locals:
+            sigterm_handler: <function at 0x1510f1a458a0>
+    <module> (ray/_private/workers/default_worker.py:323)
+Thread 325421 (idle): "PythonGCThread"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x1510f1adafd0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x1510f29bc850>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x1510f1adaea0>
+            timeout: None
+        Locals:
+            signaled: False
+    run (ray/_private/gc_collect_manager.py:29)
+        Arguments:
+            self: <PythonGCThread at 0x1510f1a24d70>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <PythonGCThread at 0x1510f1a24d70>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <PythonGCThread at 0x1510f1a24d70>
+Thread 326659 (idle): "tqdm_monitor"
+    wait (threading.py:363)
+        Arguments:
+            self: <Condition at 0x14de04763ee0>
+            timeout: 10
+        Locals:
+            waiter: <_thread.lock at 0x14dd94481490>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14de400debe0>
+            timeout: 10
+        Locals:
+            signaled: False
+    run (tqdm/_monitor.py:69)
+        Arguments:
+            self: <TMonitor at 0x14de4010e900>
+        Locals:
+            cur_t: 1784998467.2114837
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <TMonitor at 0x14de4010e900>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <TMonitor at 0x14de4010e900>
+Thread 344797 (idle): "WorkerAsyncOutputCopy"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x14dd9c5eebd0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x14e088d84950>
+            saved_state: None
+            gotit: False
+    get (queue.py:202)
+        Arguments:
+            self: <Queue at 0x14e091b83c50>
+            block: True
+            timeout: None
+    async_output_busy_loop (vllm/v1/executor/multiproc_executor.py:966)
+        Arguments:
+            self: <RayWorkerProc at 0x14e0a057b620>
+        Locals:
+            current_platform: <NvmlCudaPlatform at 0x14e0d8e2b230>
+            output: {"model.layers.59.self_attn.indexer.k_cache": <MLAAttentionSpec at 0x14e0a057b770>, ...}
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x14e0a057b620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x14de043e7c50>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x14de043e7c50>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x14de043e7c50>
+Thread 344860 (idle): "tqdm_monitor"
+    wait (threading.py:363)
+        Arguments:
+            self: <Condition at 0x14dd14266a30>
+            timeout: 10
+        Locals:
+            waiter: <_thread.lock at 0x14db60b32890>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14dd7419a850>
+            timeout: 10
+        Locals:
+            signaled: False
+    run (tqdm/_monitor.py:69)
+        Arguments:
+            self: <TMonitor at 0x14dd746ebb10>
+        Locals:
+            cur_t: 1784998467.6827567
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <TMonitor at 0x14dd746ebb10>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <TMonitor at 0x14dd746ebb10>

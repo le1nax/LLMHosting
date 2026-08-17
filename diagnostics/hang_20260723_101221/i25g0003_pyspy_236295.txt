@@ -1,0 +1,269 @@
+[2026-07-23T10:12:22.182] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+Process 236295: VLLM::EngineCore
+Python v3.13.3 (/w0/tmp/slurm_cs088267.2165566/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+
+Thread 236295 (idle): "MainThread"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x14ea281767b0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x14ea2800f710>
+            saved_state: None
+            gotit: False
+    get (queue.py:202)
+        Arguments:
+            self: <Queue at 0x14ea281d91d0>
+            block: True
+            timeout: None
+    _process_input_queue (vllm/v1/engine/core.py:1249)
+        Arguments:
+            self: <EngineCoreProc at 0x14eb14dd7e00>
+        Locals:
+            waited: False
+            block: True
+            req: (<EngineCoreRequestType at 0x14ea2c88c640>, [0, +bigint, "get_supported_tasks", []])
+    run_busy_loop (vllm/v1/engine/core.py:1227)
+        Arguments:
+            self: <EngineCoreProc at 0x14eb14dd7e00>
+    run_engine_core (vllm/v1/engine/core.py:1188)
+        Locals:
+            dp_rank: 0
+            local_dp_rank: 0
+            args: ()
+            kwargs: {"vllm_config": <VllmConfig at 0x14ea2c632510>, "local_client": True, ...}
+            vllm_config: <VllmConfig at 0x14ea2c632510>
+            parallel_config: <ParallelConfig at 0x14ea28d97e00>
+            data_parallel: False
+            process_title: "EngineCore"
+            wakeup_engine: <function at 0x14ea28015620>
+            signal_handler: <function at 0x14baa8ed79c0>
+    run (multiprocessing/process.py:108)
+        Arguments:
+            self: <SpawnProcess at 0x14eb14c9a3c0>
+    _bootstrap (multiprocessing/process.py:313)
+        Arguments:
+            self: <SpawnProcess at 0x14eb14c9a3c0>
+            parent_sentinel: 4
+        Locals:
+            util: <module at 0x14eb14b089a0>
+            context: <module at 0x14eb14c1d080>
+    _main (multiprocessing/spawn.py:135)
+        Arguments:
+            fd: 58
+            parent_sentinel: 4
+        Locals:
+            from_parent: <_io.BufferedReader at 0x14eb14b34f60>
+            preparation_data: {"log_to_stderr": False, "authkey": <AuthenticationString at 0x14eb14b59860>, "name": "EngineCore", "sys_path": [...], ...}
+            self: <SpawnProcess at 0x14eb14c9a3c0>
+    spawn_main (multiprocessing/spawn.py:122)
+        Arguments:
+            pipe_handle: 58
+            parent_pid: None
+            tracker_fd: 56
+        Locals:
+            fd: 58
+            parent_sentinel: 4
+            resource_tracker: <module at 0x14eb14b4f600>
+    <module> (<string>:1)
+Thread 244700 (idle): "PythonGCThread"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x14ea281ba4c0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x14ea280556d0>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14ea281beea0>
+            timeout: None
+        Locals:
+            signaled: False
+    run (ray/_private/gc_collect_manager.py:29)
+        Arguments:
+            self: <PythonGCThread at 0x14ea28025be0>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <PythonGCThread at 0x14ea28025be0>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <PythonGCThread at 0x14ea28025be0>
+Thread 244701 (idle): "ray_listen_error_messages"
+    listen_error_messages (ray/_private/worker.py:2452)
+        Arguments:
+            worker: <Worker at 0x14ea28d96660>
+            threads_stopped: <Event at 0x14ea28d85f90>
+        Locals:
+            error_message: None
+            expected_job_ids: <frozenset at 0x14ea28021d20>
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x14ea281db250>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x14ea281db250>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x14ea281db250>
+Thread 244703 (idle): "ray_print_logs"
+    print_logs (ray/_private/worker.py:1061)
+        Arguments:
+            self: <Worker at 0x14ea28d96660>
+        Locals:
+            subscriber: <ray._raylet.GcsLogSubscriber at 0x14ea23feb370>
+            exception_type: 0
+            localhost: "134.61.53.224"
+            last_polling_batch_size: 1
+            job_id_hex: "01000000"
+            data: {"ip": "134.61.53.224", "pid": "autoscaler", "job": "", "is_err": False, "actor_name": "", "task_name": "", ...}
+            lagging: False
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x14ea281db390>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x14ea281db390>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x14ea281db390>
+Thread 283250 (idle): "RayWorkerMonitor"
+    wait (ray/_private/worker.py:3227)
+        Arguments:
+            ray_waitables: [<ray.ObjectRef at 0x14e997106730>, <ray.ObjectRef at 0x14e997105b60>, <ray.ObjectRef at 0x14e997107920>, ...]
+        Locals:
+            num_returns: 1
+            timeout: 5
+            fetch_local: True
+            worker: <Worker at 0x14ea28d96660>
+            ray_waitable: <ray.ObjectRef at 0x14e9971063b0>
+            timeout_milliseconds: 5000
+    wrapper (ray/_private/client_mode_hook.py:107)
+        Locals:
+            args: ([<ray.ObjectRef at 0x14e997106730>, <ray.ObjectRef at 0x14e997105b60>, <ray.ObjectRef at 0x14e997107920>, ...])
+            kwargs: {"num_returns": 1, "timeout": 5}
+    auto_init_wrapper (ray/_private/auto_init_hook.py:22)
+        Locals:
+            args: ([<ray.ObjectRef at 0x14e997106730>, <ray.ObjectRef at 0x14e997105b60>, <ray.ObjectRef at 0x14e997107920>, ...])
+            kwargs: {"num_returns": 1, "timeout": 5}
+    monitor_workers (vllm/v1/executor/ray_executor_v2.py:450)
+        Locals:
+            done: []
+            _: [<ray.ObjectRef at 0x14e997106730>, <ray.ObjectRef at 0x14e997105b60>, <ray.ObjectRef at 0x14e997107920>, ...]
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x14e997124e90>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x14e997124e90>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x14e997124e90>
+Thread 344138 (idle): "Thread-1 (process_input_sockets)"
+    poll (zmq/sugar/poll.py:106)
+        Arguments:
+            self: <Poller at 0x14baa9013830>
+            timeout: -1
+    process_input_sockets (vllm/v1/engine/core.py:1513)
+        Arguments:
+            self: <EngineCoreProc at 0x14eb14dd7e00>
+            input_addresses: ["ipc:///w0/tmp/slurm_cs088267.2165566/412379d9-0129-4e45-9095-70a260038703"]
+            coord_input_address: None
+            identity: <bytes at 0x14ea281e3c30>
+        Locals:
+            add_request_decoder: <MsgpackDecoder at 0x14baa8fde120>
+            generic_decoder: <MsgpackDecoder at 0x14e9971587d0>
+            stack: <ExitStack at 0x14baa8ff0f30>
+            ctx: <Context at 0x14baa90128d0>
+            input_sockets: [<Socket at 0x14baa918e890>]
+            coord_socket: None
+            poller: <Poller at 0x14baa9013830>
+            ready_response: <EngineCoreReadyResponse at 0x14baa8fde3c0>
+            ready_payload: <bytes at 0x14e9971862b0>
+            input_socket: <Socket at 0x14baa918e890>
+            _: 1
+            type_frame: <Frame at 0x14baa9008520>
+            data_frames: [<Frame at 0x14baa9009860>]
+            request_type: <EngineCoreRequestType at 0x14ea2c88c640>
+            request: [0, +bigint, "get_supported_tasks", []]
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x14baa8fc42b0>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x14baa8fc42b0>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x14baa8fc42b0>
+Thread 344139 (idle): "Thread-2 (process_output_sockets)"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x14ea281ee0d0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x14ea141c7e10>
+            saved_state: None
+            gotit: False
+    get (queue.py:202)
+        Arguments:
+            self: <Queue at 0x14ea281d9450>
+            block: True
+            timeout: None
+    process_output_sockets (vllm/v1/engine/core.py:1580)
+        Arguments:
+            self: <EngineCoreProc at 0x14eb14dd7e00>
+            output_paths: ["ipc:///w0/tmp/slurm_cs088267.2165566/0f44838b-fbb3-4526-b9da-07d2530524ee"]
+            coord_output_path: None
+            engine_index: 0
+        Locals:
+            encoder: <MsgpackEncoder at 0x14baa8fde270>
+            reuse_buffers: [<bytearray at 0x14ea21f0a170>]
+            pending: <collections.deque at 0x14baa8f1f790>
+            stack: <ExitStack at 0x14baa8f35f50>
+            ctx: <Context at 0x14baa9012bd0>
+            sockets: [<Socket at 0x14ea281b74d0>]
+            coord_socket: None
+            max_reuse_bufs: 2
+            output: (0, <EngineCoreOutputs at 0x14e99718fc80>)
+            client_index: 0
+            outputs: <EngineCoreOutputs at 0x14e99718fc80>
+            buffer: <bytearray at 0x14ea21f0a170>
+            buffers: [<bytearray at 0x14ea21f0a170>]
+            tracker: <MessageTracker at 0x14ea345c1a90>
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x14ea280044d0>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x14ea280044d0>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x14ea280044d0>
+Thread 344142 (idle): "signal-callback"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x14baa8fc95d0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x14ea141c5190>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14ea28167850>
+            timeout: None
+        Locals:
+            signaled: False
+    _run (vllm/v1/engine/utils.py:272)
+        Arguments:
+            self: <SignalCallback at 0x14ea28103770>
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x14baa8ff1150>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x14baa8ff1150>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x14baa8ff1150>

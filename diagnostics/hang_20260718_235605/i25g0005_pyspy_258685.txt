@@ -1,0 +1,373 @@
+[2026-07-18T23:56:06.197] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+Process 258685: ray::RayWorkerProc.run
+Python v3.13.3 (/w0/tmp/slurm_cs088267.1926058/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+
+Thread 258685 (active): "MainThread"
+    make_llir (triton/backends/nvidia/compiler.py:417)
+        Arguments:
+            self: <CUDABackend at 0x1432a11b17f0>
+            src: <triton._C.libtriton.ir.module at 0x1432a11b1b50>
+            metadata: {"hash": "68a18314efb7deb647ff17ab79053e3c79ab31a991fb97ad951af81d4ac2ac03", "target": <GPUTarget at 0x1437bb95ec30>, ...}
+            options: <CUDAOptions at 0x14352e346360>
+            capability: 90
+        Locals:
+            ptx_version: 90
+            mod: <triton._C.libtriton.ir.module at 0x1432a11b1b50>
+            pm: <triton._C.libtriton.ir.pass_manager at 0x1432a10c4df0>
+            context: <triton._C.libtriton.llvm.context at 0x1432a10c47f0>
+            llvm_mod: <triton._C.libtriton.llvm.module at 0x1432a10c6d70>
+            proc: "sm_90a"
+            features: "+ptx86"
+            triple: "nvptx64-nvidia-cuda"
+            paths: ["/w0/tmp/slurm_cs088267.1926058/venv/lib/python3.13/site-packages/triton/backends/nvidia/lib/libdevice.10.bc"]
+    <lambda> (triton/backends/nvidia/compiler.py:544)
+        Arguments:
+            src: <triton._C.libtriton.ir.module at 0x1432a11b1b50>
+            metadata: {"hash": "68a18314efb7deb647ff17ab79053e3c79ab31a991fb97ad951af81d4ac2ac03", "target": <GPUTarget at 0x1437bb95ec30>, ...}
+    compile (triton/compiler/compiler.py:324)
+        Arguments:
+            src: <ASTSource at 0x1437bb9856d0>
+            target: <GPUTarget at 0x1437bb95ec30>
+            options: <CUDAOptions at 0x14352e346360>
+            _env_vars: None
+        Locals:
+            compilation_listener: None
+            backend: <CUDABackend at 0x1432a11b17f0>
+            ir_source: False
+            context: <triton._C.libtriton.ir.context at 0x1432a1100df0>
+            extra_options: {}
+            env_vars: {}
+            key: "3.6.00355c3e3452fa4500122244b8fff8864f22bc05c417a3d6f5dada9f2e92f8040-c8b82f70c83ad10bc0190fa67864348b895f733d67658a3becaf1..."
+            hash: "68a18314efb7deb647ff17ab79053e3c79ab31a991fb97ad951af81d4ac2ac03"
+            fn_cache_manager: <FileCacheManager at 0x1432a11b39b0>
+            enable_override: False
+            enable_ir_dump: False
+            store_only_binary: False
+            fn_override_manager: None
+            fn_dump_manager: None
+            file_name: "_topk_topp_kernel"
+            metadata_filename: "_topk_topp_kernel.json"
+            metadata_group: {...}
+            metadata_path: None
+            always_compile: False
+            metadata: {"hash": "68a18314efb7deb647ff17ab79053e3c79ab31a991fb97ad951af81d4ac2ac03", "target": <GPUTarget at 0x1437bb95ec30>, ...}
+            stages: {"ttir": <function at 0x1433e0271e40>, "ttgir": <function at 0x1433e02702c0>, "llir": <function at 0x14344049c7c0>, ...}
+            first_stage: 0
+            codegen_fns: {"convert_custom_types": <function at 0x14380118f920>, "min_dot_size": <function at 0x1433e059ab60>}
+            module_map: {"triton.language.extra.libdevice": <module at 0x1438013049a0>}
+            module: <triton._C.libtriton.ir.module at 0x1432a11b1b50>
+            ir_filename: "_topk_topp_kernel.ttgir"
+            use_ir_loc: None
+            ext: "llir"
+            compile_ir: <function at 0x14344049c7c0>
+            next_module: <triton._C.libtriton.ir.module at 0x1432a11b1b50>
+            ir_override: None
+    _do_compile (triton/runtime/jit.py:849)
+        Arguments:
+            self: <cell at 0x143460215390>
+            key: <cell at 0x143460214b80>
+            signature: <cell at 0x143460217c10>
+            device: <cell at 0x143460215db0>
+            constexprs: <cell at 0x143460215ea0>
+            options: <cell at 0x143460214730>
+            attrs: <cell at 0x143460217310>
+            warmup: <cell at 0x143460214af0>
+        Locals:
+            _: <function at 0x1433e058d6c0>
+            backend: <CUDABackend at 0x1432a1cb34d0>
+            async_mode: None
+    run (triton/runtime/jit.py:720)
+        Arguments:
+            self: <JITFunction at 0x1437b13851d0>
+        Locals:
+            grid: (64)
+            warmup: False
+            args: (<Tensor at 0x14349c2b14f0>, 154880, <Tensor at 0x143460228b40>, <Tensor at 0x1434602b6300>, <Tensor at 0x1434602b52c0>, ...)
+            kwargs: {"BATCH_SIZE": 64, "MASK_VALUE": -inf, "VOCAB_SIZE": 154880, "BLOCK_SIZE": 8192, "BLOCK_SIZE_TRUNC": 4096, ...}
+            device: 2
+            stream: 415781520
+            kernel_cache: {}
+            kernel_key_cache: {...}
+            target: <GPUTarget at 0x1437bb95ec30>
+            backend: <CUDABackend at 0x1432a1cb34d0>
+            binder: <function at 0x1433e058d6c0>
+            bound_args: {"LOGITS": <Tensor at 0x14349c2b14f0>, "LOGITS_STRIDE_0": 154880, "BUFFER": <Tensor at 0x143460228b40>, ...}
+            specialization: [("*fp32", "D"), ("i32", "D"), ("*fp32", "D"), ("*fp32", "D"), ("*fp32", "D"), ("*i32", "D"), ("*fp32", "D"), ...]
+            options: <CUDAOptions at 0x14352e345f20>
+            key: "[(\"*fp32\", \"D\"), (\"i32\", \"D\"), (\"*fp32\", \"D\"), (\"*fp32\", \"D\"), (\"*fp32\", \"D\"), (\"*i32\", \"D\"), (\"*f..."
+            kernel: None
+            signature: {"LOGITS": "*fp32", "LOGITS_STRIDE_0": "i32", "BUFFER": "*fp32", "PERCENTILE_TO_STD_TABLE": "*fp32", ...}
+            constexprs: {(8): 154880, (9): -inf, (10): 8192, (11): 4096, (12): True, (13): True}
+            attrs: {(0): [["tt.divisibility", 16]], (1): [["tt.divisibility", 16]], (2): [["tt.divisibility", 16]], (3): [...], ...}
+    <lambda> (triton/runtime/jit.py:370)
+        Locals:
+            args: (<Tensor at 0x14349c2b14f0>, 154880, <Tensor at 0x143460228b40>, <Tensor at 0x1434602b6300>, <Tensor at 0x1434602b52c0>, ...)
+            kwargs: {"BATCH_SIZE": 64, "MASK_VALUE": -inf, "VOCAB_SIZE": 154880, "BLOCK_SIZE": 8192, "BLOCK_SIZE_TRUNC": 4096, ...}
+    apply_top_k_top_p_triton (vllm/v1/sample/ops/topk_topp_triton.py:937)
+        Arguments:
+            logits: <Tensor at 0x14349c2b14f0>
+            k: <Tensor at 0x1434604cabc0>
+            p: <Tensor at 0x1434c0389f40>
+            mask_value: -inf
+        Locals:
+            batch_size: 64
+            vocab_size: 154880
+            topk_enabled: True
+            topp_enabled: True
+            k_ptr: <Tensor at 0x14346022bfc0>
+            p_ptr: <Tensor at 0x1434c0389f40>
+            num_sm: 132
+            NUM_PROGRAMS: 64
+            buf_key: (<torch.device at 0x14349c34a5b0>, <torch.dtype at 0x1438bbf013b0>, 154880)
+            buffer: <Tensor at 0x143460228b40>
+            size: 64
+            tables: None
+            normal_cdf_to_sigma_table: <Tensor at 0x1434602b52c0>
+            percentile_to_std_table: <Tensor at 0x1434602b6300>
+            block_size: 8192
+            block_size_trunc: 4096
+    apply_top_k_top_p (vllm/v1/sample/ops/topk_topp_sampler.py:346)
+        Arguments:
+            logits: <Tensor at 0x14349c2b14f0>
+            k: <Tensor at 0x1434604cabc0>
+            p: <Tensor at 0x1434c0389f40>
+    forward_native (vllm/v1/sample/ops/topk_topp_sampler.py:143)
+        Arguments:
+            self: <TopKTopPSampler at 0x143540520440>
+            logits: <Tensor at 0x14349c2b14f0>
+            generators: {0: <torch._C.Generator at 0x14349c34b870>}
+            k: <Tensor at 0x1434604cabc0>
+            p: <Tensor at 0x1434c0389f40>
+    forward_cuda (vllm/v1/sample/ops/topk_topp_sampler.py:173)
+        Arguments:
+            self: <TopKTopPSampler at 0x143540520440>
+            logits: <Tensor at 0x14349c2b14f0>
+            generators: {0: <torch._C.Generator at 0x14349c34b870>}
+            k: <Tensor at 0x1434604cabc0>
+            p: <Tensor at 0x1434c0389f40>
+    _call_impl (torch/nn/modules/module.py:1790)
+        Arguments:
+            self: <cell at 0x1434582d9630>
+        Locals:
+            args: <cell at 0x1434582da050>
+            kwargs: <cell at 0x1434582d9240>
+    _wrapped_call_impl (torch/nn/modules/module.py:1779)
+        Arguments:
+            self: <TopKTopPSampler at 0x143540520440>
+        Locals:
+            args: (<Tensor at 0x14349c2b14f0>, {0: <torch._C.Generator at 0x14349c34b870>}, <Tensor at 0x1434604cabc0>, ...)
+            kwargs: {}
+    sample (vllm/v1/sample/sampler.py:290)
+        Arguments:
+            self: <Sampler at 0x1435405202f0>
+            logits: <Tensor at 0x14349c2b14f0>
+            sampling_metadata: <SamplingMetadata at 0x1434b41f4910>
+            logprobs_mode_override: None
+        Locals:
+            logprobs_mode: "raw_logprobs"
+            greedy_sampled: <Tensor at 0x14346022a440>
+    forward (vllm/v1/sample/sampler.py:102)
+        Arguments:
+            self: <Sampler at 0x1435405202f0>
+            logits: <Tensor at 0x14349c2b14f0>
+            sampling_metadata: <SamplingMetadata at 0x1434b41f4910>
+            predict_bonus_token: False
+            logprobs_mode_override: None
+        Locals:
+            logprobs_mode: "raw_logprobs"
+            num_logprobs: None
+            raw_logprobs: None
+    _call_impl (torch/nn/modules/module.py:1790)
+        Arguments:
+            self: <cell at 0x14345823b580>
+        Locals:
+            args: <cell at 0x143458742350>
+            kwargs: <cell at 0x143460320d00>
+    _wrapped_call_impl (torch/nn/modules/module.py:1779)
+        Arguments:
+            self: <Sampler at 0x1435405202f0>
+        Locals:
+            args: ()
+            kwargs: {"logits": <Tensor at 0x1434401e0140>, "sampling_metadata": <SamplingMetadata at 0x1434b41f4910>}
+    _dummy_sampler_run (vllm/v1/worker/gpu_model_runner.py:6029)
+        Arguments:
+            self: <cell at 0x143543eea950>
+            hidden_states: <Tensor at 0x1434b44484b0>
+        Locals:
+            mm_config: None
+            logits: <Tensor at 0x1434401e0140>
+            dummy_tensors: <function at 0x1434b4436200>
+            dummy_metadata: <SamplingMetadata at 0x1434b41f4690>
+            sampler_output: <SamplerOutput at 0x1437c6e7f8c0>
+    decorate_context (torch/utils/_contextlib.py:124)
+        Locals:
+            args: (<GPUModelRunner at 0x1435405201a0>, <Tensor at 0x1434401e0190>)
+            kwargs: {}
+    profile_run (vllm/v1/worker/gpu_model_runner.py:6235)
+        Arguments:
+            self: <GPUModelRunner at 0x1435405201a0>
+        Locals:
+            hidden_states: <Tensor at 0x1434602b7020>
+            last_hidden_states: <Tensor at 0x1434401e0190>
+    determine_available_memory (vllm/v1/worker/gpu_worker.py:410)
+        Arguments:
+            self: <Worker at 0x1437b0f912b0>
+        Locals:
+            kv_cache_memory_bytes: None
+            profile_result: <MemoryProfilingResult at 0x1437c6e7f380>
+    decorate_context (torch/utils/_contextlib.py:124)
+        Locals:
+            args: (<Worker at 0x1437b0f912b0>)
+            kwargs: {}
+    worker_busy_loop (vllm/v1/executor/multiproc_executor.py:982)
+        Arguments:
+            self: <RayWorkerProc at 0x1437ca487620>
+        Locals:
+            method: "determine_available_memory"
+            args: ()
+            kwargs: {}
+            output_rank: None
+            func: <method at 0x1437ca1eca00>
+            output: {"model.layers.59.self_attn.indexer.k_cache": <MLAAttentionSpec at 0x1437ca487770>, ...}
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x1437ca487620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    run (vllm/v1/executor/ray_executor_v2.py:197)
+        Arguments:
+            self: <RayWorkerProc at 0x1437ca487620>
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x1437ca487620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    actor_method_executor (ray/_private/function_manager.py:721)
+        Arguments:
+            _FunctionActorManager__ray_actor: <RayWorkerProc at 0x1437ca487620>
+        Locals:
+            args: ()
+            kwargs: {}
+            is_bound: False
+    main_loop (ray/_private/worker.py:1039)
+        Arguments:
+            self: <Worker at 0x14681b9874d0>
+        Locals:
+            sigterm_handler: <function at 0x14681b7518a0>
+    <module> (ray/_private/workers/default_worker.py:323)
+Thread 258917 (idle): "PythonGCThread"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x14681b7defd0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x14681b84c090>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14681b7deea0>
+            timeout: None
+        Locals:
+            signaled: False
+    run (ray/_private/gc_collect_manager.py:29)
+        Arguments:
+            self: <PythonGCThread at 0x14681b724d70>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <PythonGCThread at 0x14681b724d70>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <PythonGCThread at 0x14681b724d70>
+Thread 260158 (idle): "tqdm_monitor"
+    wait (threading.py:363)
+        Arguments:
+            self: <Condition at 0x14352e57bee0>
+            timeout: 10
+        Locals:
+            waiter: <_thread.lock at 0x1434583fdcd0>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14352e6028b0>
+            timeout: 10
+        Locals:
+            signaled: False
+    run (tqdm/_monitor.py:69)
+        Arguments:
+            self: <TMonitor at 0x14352e636a50>
+        Locals:
+            cur_t: 1784411758.1938694
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <TMonitor at 0x14352e636a50>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <TMonitor at 0x14352e636a50>
+Thread 278215 (idle): "WorkerAsyncOutputCopy"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x14352e326d50>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x1437ca1ecb90>
+            saved_state: None
+            gotit: False
+    get (queue.py:202)
+        Arguments:
+            self: <Queue at 0x1437c6e87c50>
+            block: True
+            timeout: None
+    async_output_busy_loop (vllm/v1/executor/multiproc_executor.py:966)
+        Arguments:
+            self: <RayWorkerProc at 0x1437ca487620>
+        Locals:
+            current_platform: <NvmlCudaPlatform at 0x143802a43230>
+            output: {"model.layers.59.self_attn.indexer.k_cache": <MLAAttentionSpec at 0x1437ca487770>, ...}
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x1437ca487620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x14352e21bc50>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x14352e21bc50>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x14352e21bc50>
+Thread 278275 (idle): "tqdm_monitor"
+    wait (threading.py:363)
+        Arguments:
+            self: <Condition at 0x1434480ae210>
+            timeout: 10
+        Locals:
+            waiter: <_thread.lock at 0x1433404415d0>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14349c5b5b50>
+            timeout: 10
+        Locals:
+            signaled: False
+    run (tqdm/_monitor.py:69)
+        Arguments:
+            self: <TMonitor at 0x1434b4493b10>
+        Locals:
+            cur_t: 1784411757.5561829
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <TMonitor at 0x1434b4493b10>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <TMonitor at 0x1434b4493b10>

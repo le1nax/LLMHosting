@@ -1,0 +1,798 @@
+[2026-07-24T14:37:23.566] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+Process 241161: ray::RayWorkerProc.initialize_worker
+Python v3.13.3 (/w0/tmp/slurm_cs088267.2210955/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+
+Thread 241161 (active+gil): "MainThread"
+    _call_with_frames_removed (<frozen importlib._bootstrap>:488)
+        Arguments:
+            f: <builtin_function_or_method at 0x15150a4ce070>
+        Locals:
+            args: (<bytes at 0x2346f130>, ...)
+            kwds: {"dont_inherit": True, "optimize": -1}
+    source_to_code (<frozen importlib._bootstrap_external>:1090)
+        Arguments:
+            self: <SourceFileLoader at 0x14e1106785f0>
+            data: <bytes at 0x2346f130>
+            path: "/w0/tmp/slurm_cs088267.2210955/venv/lib/python3.13/site-packages/torch/_inductor/fx_passes/mkldnn_fusion.py"
+        Locals:
+            _optimize: -1
+    get_code (<frozen importlib._bootstrap_external>:1160)
+        Arguments:
+            self: <SourceFileLoader at 0x14e1106785f0>
+            fullname: "torch._inductor.fx_passes.mkldnn_fusion"
+        Locals:
+            source_path: "/w0/tmp/slurm_cs088267.2210955/venv/lib/python3.13/site-packages/torch/_inductor/fx_passes/mkldnn_fusion.py"
+            source_mtime: 1784017163
+            source_bytes: <bytes at 0x2346f130>
+            source_hash: None
+            hash_based: False
+            check_source: True
+            bytecode_path: "/w0/tmp/slurm_cs088267.2210955/venv/lib/python3.13/site-packages/torch/_inductor/fx_passes/__pycache__/mkldnn_fusion.cpytho..."
+            st: {"mtime": 1784017163, "size": 62588}
+    exec_module (<frozen importlib._bootstrap_external>:1022)
+        Arguments:
+            self: <SourceFileLoader at 0x14e1106785f0>
+            module: <module at 0x14e1110720c0>
+    _load_unlocked (<frozen importlib._bootstrap>:935)
+        Arguments:
+            spec: <ModuleSpec at 0x14e110fbd1d0>
+        Locals:
+            module: <module at 0x14e1110720c0>
+    _find_and_load_unlocked (<frozen importlib._bootstrap>:1331)
+        Arguments:
+            name: "torch._inductor.fx_passes.mkldnn_fusion"
+            import_: <builtin_function_or_method at 0x15150a4cdda0>
+        Locals:
+            path: ["/w0/tmp/slurm_cs088267.2210955/venv/lib/python3.13/site-packages/torch/_inductor/fx_passes"]
+            parent: "torch._inductor.fx_passes"
+            parent_spec: <ModuleSpec at 0x14e4dc1bab70>
+            parent_module: <module at 0x14e4dc1aa8e0>
+            child: "mkldnn_fusion"
+            spec: <ModuleSpec at 0x14e110fbd1d0>
+    _find_and_load (<frozen importlib._bootstrap>:1360)
+        Arguments:
+            name: "torch._inductor.fx_passes.mkldnn_fusion"
+            import_: <builtin_function_or_method at 0x15150a4cdda0>
+        Locals:
+            module: <object at 0x15150a4b0050>
+    lazy_init (torch/_inductor/fx_passes/post_grad.py:729)
+        Arguments:
+            input_device: None
+        Locals:
+            decompose_mem_bound_mm: <module at 0x14e4a78c0680>
+    lazy_init (torch/_inductor/pattern_matcher.py:2311)
+        Arguments:
+            input_device: None
+        Locals:
+            counters_ref: {"pattern_matcher_count": 3, "pattern_matcher_nodes": 3, "fxgraph_cache_miss": 1}
+    post_grad_passes (torch/_inductor/fx_passes/post_grad.py:166)
+        Arguments:
+            gm: <cell at 0x14e110f92ce0>
+            is_inference: True
+        Locals:
+            GraphTransformObserver: <functools.partial at 0x14e110f99a80>
+            fake_tensor_updater: <FakeTensorUpdater at 0x14e13c731550>
+            post_grad_custom_pre_pass: None
+    _recursive_post_grad_passes (torch/_inductor/compile_fx.py:583)
+        Arguments:
+            gm: <<lambda> at 0x14e13c4d6900>
+            is_inference: True
+    codegen_and_compile (torch/_inductor/compile_fx.py:1344)
+        Arguments:
+            self: <_InProcessFxCompile at 0x14e13c731010>
+            gm: <cell at 0x14e110fb8cd0>
+            example_inputs: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <FakeTensor at 0x14e13c4e7b60>, <SymInt at 0x14e19c232a50>, ...]
+            inputs_to_check: [2]
+            graph_kwargs: {"static_input_idxs": [], "cudagraphs": <BoxedBool at 0x14e13c67aba0>, "graph_id": 0, "is_inference": True, ...}
+        Locals:
+            cudagraphs: <BoxedBool at 0x14e13c67aba0>
+            static_input_idxs: []
+            is_backward: False
+            graph_id: 0
+            cpp_wrapper: False
+            fx_wrapper: False
+            aot_mode: False
+            is_inference: True
+            extern_node_serializer: None
+            sleep_sec: None
+            inductor_counters: {"pattern_matcher_count": 3, "pattern_matcher_nodes": 3, "fxgraph_cache_miss": 1}
+            fd: <_io.StringIO at 0x14e13c4b1fc0>
+            shape_env: <ShapeEnv at 0x14e19c5c5a90>
+            fake_mode: <FakeTensorMode at 0x14e13c5f60d0>
+            cuda_context: <device at 0x14e13c731160>
+    fx_codegen_and_compile (torch/_inductor/compile_fx.py:1798)
+        Arguments:
+            gm: <<lambda> at 0x14e13c4d6900>
+            example_inputs: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <FakeTensor at 0x14e13c4e7b60>, <SymInt at 0x14e19c232a50>, ...]
+            inputs_to_check: [2]
+        Locals:
+            graph_kwargs: {"static_input_idxs": [], "cudagraphs": <BoxedBool at 0x14e13c67aba0>, "graph_id": 0, "is_inference": True, ...}
+            scheme: <_InProcessFxCompile at 0x14e13c731010>
+    _compile_fx_inner (torch/_inductor/compile_fx.py:1037)
+        Arguments:
+            gm: <<lambda> at 0x14e13c4d6900>
+            example_inputs: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <FakeTensor at 0x14e13c4e7b60>, <SymInt at 0x14e19c232a50>, ...]
+        Locals:
+            graph_kwargs: {"static_input_idxs": [], "cudagraphs": <BoxedBool at 0x14e13c67aba0>, "graph_id": 0, "is_inference": True, ...}
+            aot_mode: False
+            use_pipelined_autotuning: <function at 0x14e4ce969d00>
+            static_input_idxs: []
+            inputs_to_check: [2]
+            start: 1784896643.43183
+            fx_graph_remote_cache: False
+            backends_support_caching: True
+            use_cache: True
+            local: True
+            remote: False
+            i: 4
+            input: <SymInt at 0x14e1e4163140>
+            mb_compiled_graph: None
+            key_info: ("flskaq35saeidymbkdz7gq7v6uy3gfndyx5iv5m2gindhd46g47b", [...])
+            remote_cache: None
+            constants: <CompiledFxGraphConstantsWithGm at 0x14e13c4d63c0>
+            start_time: +bigint
+            key: "flskaq35saeidymbkdz7gq7v6uy3gfndyx5iv5m2gindhd46g47b"
+            debug_lines: [...]
+    debug_wrapper (torch/_dynamo/repro/after_aot.py:273)
+        Arguments:
+            gm: <cell at 0x14e13c5044f0>
+            example_inputs: <cell at 0x14e110fa34f0>
+        Locals:
+            kwargs: {"static_input_idxs": [], "cudagraphs": <BoxedBool at 0x14e13c67aba0>, "graph_id": 0, "is_inference": True, ...}
+            compiler_fn: <functools.partial at 0x14e110ff0450>
+            get_aot_graph_name: <function at 0x14e4de1f5260>
+    compile_fx_inner (torch/_inductor/compile_fx.py:826)
+        Arguments:
+            gm: <<lambda> at 0x14e13c4d6900>
+            example_inputs: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <FakeTensor at 0x14e13c4e7b60>, <SymInt at 0x14e19c232a50>, ...]
+        Locals:
+            kwargs: {"static_input_idxs": [], "cudagraphs": <BoxedBool at 0x14e13c67aba0>, "graph_id": 0, "is_inference": True, ...}
+            stack: <ExitStack at 0x14e13c41ffc0>
+    compile_fx_forward (torch/_inductor/compile_fx.py:2390)
+        Arguments:
+            gm: <cell at 0x14e1d46c24d0>
+            example_inputs: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <FakeTensor at 0x14e13c4e7b60>, <SymInt at 0x14e19c232a50>, ...]
+            num_orig_model_outputs: 2
+            num_example_inputs: 5
+            compiler_config_extra: <CompilerConfigExtra at 0x14e13c67b620>
+            inner_compile: <function at 0x14e4a4dded40>
+            is_inference: True
+        Locals:
+            inputs_devices: [<torch.device at 0x14e13c5a1ed0>, None]
+            fixed: 0
+            model_outputs_node: <Node at 0x14e13c3cf930>
+            model_outputs: [<Node at 0x14e13c428fc0>, <Node at 0x14e13c42bad0>]
+            num_model_outputs: 2
+            context: <TracingContext at 0x14e19c5c5be0>
+            original_output_start_index: 0
+            orig_output_end_idx: 2
+    fw_compiler_base (torch/_inductor/compile_fx.py:2719)
+        Arguments:
+            gm: <<lambda> at 0x14e13c4d6900>
+            example_inputs: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <FakeTensor at 0x14e13c4e7b60>, <SymInt at 0x14e19c232a50>, ...]
+            is_inference: True
+        Locals:
+            num_orig_model_outputs: 2
+    __call__ (torch/_functorch/_aot_autograd/schemas.py:1394)
+        Arguments:
+            self: <SerializableAOTDispatchCompiler at 0x14e13c5f6d50>
+            gm: <<lambda> at 0x14e13c4d6900>
+            example_inputs: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <FakeTensor at 0x14e13c4e7b60>, <SymInt at 0x14e19c232a50>, ...]
+    _aot_stage2b_compile_forward_or_inference (torch/_functorch/_aot_autograd/graph_compile.py:2513)
+        Arguments:
+            fw_module: <<lambda> at 0x14e13c4d6900>
+            adjusted_flat_args: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <FakeTensor at 0x14e13c4e7b60>, <SymInt at 0x14e19c232a50>, ...]
+            maybe_subclass_meta: None
+            fw_metadata: <ViewAndMutationMeta at 0x14e13c4d5400>
+            aot_config: <AOTConfig at 0x14e13c67bb60>
+        Locals:
+            is_inference: True
+            num_fw_outs_saved_for_bw: None
+            grad_ctx: 0
+            autocast_ctx: 0
+            tracking_mode: "inference"
+            compiler: <SerializableAOTDispatchCompiler at 0x14e13c5f6d50>
+            fakified_out_wrapper: <FakifiedOutWrapper at 0x14e13c4d6270>
+            functionalized_rng_wrapper: <FunctionalizedRngRuntimeWrapper at 0x14e13c4d6ba0>
+            tracing_context: <TracingContext at 0x14e19c5c5be0>
+            fwd_output_strides: []
+    _aot_stage2b_inference_compile (torch/_functorch/_aot_autograd/graph_compile.py:412)
+        Arguments:
+            fw_module: <<lambda> at 0x14e13c4d6900>
+            updated_flat_args: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <FakeTensor at 0x14e13c4e7b60>, <SymInt at 0x14e19c232a50>, ...]
+            maybe_subclass_meta: None
+            fw_metadata: <ViewAndMutationMeta at 0x14e13c4d5400>
+            aot_config: <AOTConfig at 0x14e13c67bb60>
+    aot_stage2_inference (torch/_functorch/_aot_autograd/graph_compile.py:451)
+        Arguments:
+            aot_state: <AOTState at 0x14e13c4d5010>
+            aot_graph_capture: <AOTGraphCapture at 0x14e13c4d52b0>
+        Locals:
+            aot_config: <AOTConfig at 0x14e13c67bb60>
+            fw_metadata: <ViewAndMutationMeta at 0x14e13c4d5400>
+            fw_module: <<lambda> at 0x14e13c4d6900>
+            wrappers: [<AOTDedupeWrapper at 0x14e13c4d4ec0>, <AOTSyntheticBaseWrapper at 0x14e13c4d4c20>]
+            updated_flat_args: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <FakeTensor at 0x14e13c4e7b60>, <SymInt at 0x14e19c232a50>, ...]
+            maybe_subclass_meta: None
+            aot_forward_graph_str: ?
+    aot_stage2_compile (torch/_functorch/_aot_autograd/graph_compile.py:368)
+        Arguments:
+            aot_state: <AOTState at 0x14e13c4d5010>
+            aot_graph_capture: <AOTGraphCapture at 0x14e13c4d52b0>
+            partition_fn: <function at 0x14e4a4ddf880>
+            fw_compiler: <SerializableAOTDispatchCompiler at 0x14e13c67b770>
+            bw_compiler: <SerializableAOTDispatchCompiler at 0x14e13c5f7390>
+            inference_compiler: <SerializableAOTDispatchCompiler at 0x14e13c5f6d50>
+    aot_module_simplified (torch/_functorch/aot_autograd.py:1167)
+        Arguments:
+            mod: <GraphModule at 0x14e13c67a900>
+            args: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <Tensor at 0x14e1e42ba850>, <SymInt at 0x14e19c232a50>, ...]
+            fw_compiler: <SerializableAOTDispatchCompiler at 0x14e13c67b770>
+            bw_compiler: <SerializableAOTDispatchCompiler at 0x14e13c5f7390>
+            partition_fn: <function at 0x14e4a4ddf880>
+            decompositions: {<OpOverload at 0x14e4e0dbb3e0>: <function at 0x14e4e0c05d00>, ...}
+            keep_inference_input_mutations: True
+            inference_compiler: <SerializableAOTDispatchCompiler at 0x14e13c5f6d50>
+            cudagraphs: <BoxedBool at 0x14e13c67aba0>
+            boxed_forward_device_index: <BoxedDeviceIndex at 0x14e13c67a510>
+            ignore_shape_env: False
+            disable_functionalization: False
+        Locals:
+            stack: <ExitStack at 0x14e174272670>
+            functional_call: <function at 0x14e17429cd60>
+            _params_spec: []
+            _buffers_spec: []
+            fake_flat_args: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <FakeTensor at 0x14e174272990>, <SymInt at 0x14e19c232a50>, ...]
+            full_args_descs: [<PlainAOTInput at 0x14e13c67ba10>, <PlainAOTInput at 0x14e13c5f7610>, <PlainAOTInput at 0x14e13c5f7750>, ...]
+            aot_config: <AOTConfig at 0x14e13c67bb60>
+            fake_mode: <FakeTensorMode at 0x14e13c5f60d0>
+            shape_env: <ShapeEnv at 0x14e19c5c5a90>
+            _in_spec: None
+            _out_spec: None
+            local: True
+            remote: False
+            aot_state: <AOTState at 0x14e13c4d5010>
+            aot_graph_capture: <AOTGraphCapture at 0x14e13c4d52b0>
+    __call__ (torch/_dynamo/backends/common.py:124)
+        Arguments:
+            self: <AotAutograd at 0x14e13c583820>
+            gm: <GraphModule at 0x14e13c67a900>
+            example_inputs: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <Tensor at 0x14e1e42ba850>, <SymInt at 0x14e19c232a50>, ...]
+        Locals:
+            kwargs: {}
+            use_fallback: False
+            wrap_bw_compiler: <function at 0x14e17429ca40>
+            bw_compiler: <SerializableAOTDispatchCompiler at 0x14e13c5f7390>
+            nop: <function at 0x14e4ce9256c0>
+            enable_aot_logging: <function at 0x14e4ce71eb60>
+            patch_config: <nullcontext at 0x14e1743178b0>
+    _compile_fx_main (torch/_inductor/compile_fx.py:2860)
+        Arguments:
+            model_: <cell at 0x14e1d46f1a50>
+            example_inputs_: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <Tensor at 0x14e1e42ba850>, <SymInt at 0x14e19c232a50>, ...]
+            inner_compile: <cell at 0x14e1d467b250>
+            decompositions: {<OpOverload at 0x14e4e0dbb3e0>: <function at 0x14e4e0c05d00>, ...}
+            ignore_shape_env: False
+        Locals:
+            fw_compiler_base: <function at 0x14e13c602160>
+            fw_compiler: <SerializableAOTDispatchCompiler at 0x14e13c67b770>
+            inference_compiler: <SerializableAOTDispatchCompiler at 0x14e13c5f6d50>
+            bw_compiler: <SerializableAOTDispatchCompiler at 0x14e13c5f7390>
+            fake_mode: <FakeTensorMode at 0x14e13c5f60d0>
+            tracing_context: <TracingContext at 0x14e19c5c5be0>
+    _maybe_wrap_and_compile_fx_main (torch/_inductor/compile_fx.py:2660)
+        Arguments:
+            model_: <GraphModule at 0x14e13c67a900>
+            example_inputs_: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <Tensor at 0x14e1e42ba850>, <SymInt at 0x14e19c232a50>, ...]
+            inner_compile: <function at 0x14e4a4dded40>
+            decompositions: None
+            ignore_shape_env: False
+        Locals:
+            compile_gm: <functools.partial at 0x14e1741e3470>
+    compile_fx (torch/_inductor/compile_fx.py:2583)
+        Arguments:
+            model_: <GraphModule at 0x14e13c67a900>
+            example_inputs_: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <Tensor at 0x14e1e42ba850>, <SymInt at 0x14e19c232a50>, ...]
+            inner_compile: <function at 0x14e4a4dded40>
+            config_patches: {}
+            decompositions: None
+            ignore_shape_env: False
+        Locals:
+            CompilerBisector: 0
+    __call__ (torch/__init__.py:2461)
+        Arguments:
+            self: <_TorchCompileInductorWrapper at 0x14e4a783c440>
+            model_: <GraphModule at 0x14e13c67a900>
+            inputs_: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <Tensor at 0x14e1e42ba850>, <SymInt at 0x14e19c232a50>, ...]
+        Locals:
+            compile_fx: <function at 0x14e4a4de4180>
+    __call__ (torch/_dynamo/repro/after_dynamo.py:156)
+        Arguments:
+            self: <WrapBackendDebug at 0x14e4a783c590>
+            gm: <GraphModule at 0x14e13c67a900>
+            example_inputs: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <Tensor at 0x14e1e42ba850>, <SymInt at 0x14e19c232a50>, ...]
+        Locals:
+            kwargs: {}
+            compiler_fn: <functools.partial at 0x14e1741e33d0>
+    _call_user_compiler (torch/_dynamo/output_graph.py:2664)
+        Arguments:
+            self: <OutputGraph at 0x14e1d4600ad0>
+            gm: <GraphModule at 0x14e13c67a900>
+            example_inputs: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <Tensor at 0x14e1e42ba850>, <SymInt at 0x14e19c232a50>, ...]
+        Locals:
+            tot: 27
+            placeholders: [<Node at 0x14e1d4790600>, <Node at 0x14e1d4792410>, <Node at 0x14e1d47932b0>, <Node at 0x14e1d4480d50>, ...]
+            node: <Node at 0x14e174302000>
+            pl: <Node at 0x14e1d4481e60>
+            arg: <GraphArg at 0x14e1e41449d0>
+            compiler_fn: <WrapBackendDebug at 0x14e4a783c590>
+            inductor_config_override: None
+            name: "inductor"
+    call_user_compiler (torch/_dynamo/output_graph.py:2613)
+        Arguments:
+            self: <OutputGraph at 0x14e1d4600ad0>
+            gm: <GraphModule at 0x14e13c67a900>
+            example_inputs: [<SymInt at 0x14e19c2a9f20>, <SymInt at 0x1514fa7be750>, <Tensor at 0x14e1e42ba850>, <SymInt at 0x14e19c232a50>, ...]
+    compile_and_call_fx_graph (torch/_dynamo/output_graph.py:2460)
+        Arguments:
+            self: <cell at 0x14e1d464c2b0>
+            tx: <InstructionTranslator at 0x14e1d4600980>
+            rv: [<TensorVariable at 0x14e17435c9f0>, <TensorVariable at 0x14e17435c2f0>]
+            root: <FakeRootModule at 0x14e19c5c7230>
+        Locals:
+            disable: <function at 0x14e4de015ee0>
+            name: "__compiled_fn_1_76d316e0_76eb_4e03_ba5c_de52f7aa43eb"
+            output_node: <Node at 0x14e174302000>
+            sub_gms: {}
+            attr: "zero_grad"
+            subgraph: <method at 0x14e1744b0c40>
+            ncalls: 27
+            dce_hop_extra_outputs: <function at 0x14e174553740>
+            old_fake_mode: <FakeTensorMode at 0x14e19c5c5d30>
+            _config: <ConfigModuleInstance at 0x15148c168310>
+            backend_fake_mode: <FakeTensorMode at 0x14e13c5f60d0>
+    compile_subgraph (torch/_dynamo/output_graph.py:1889)
+        Arguments:
+            self: <OutputGraph at 0x14e1d4600ad0>
+            tx: <InstructionTranslator at 0x14e1d4600980>
+            reason: <GraphCompileReason at 0x14e13c67a3c0>
+            stack_pops: 1
+        Locals:
+            prefix_insts: [<Instruction at 0x14e17431d040>]
+            inst: <Instruction at 0x14e1d44cd640>
+            all_stack_values: [[<TupleVariable at 0x14e13c655590>]]
+            all_stack_locals_metas: [<StackLocalsMetadata at 0x14e19c5c7380>]
+            cur_tx: None
+            stack_values: [<TupleVariable at 0x14e13c655590>]
+            meta: <StackLocalsMetadata at 0x14e19c5c7380>
+            alias_insts: []
+            overridden_sources: {}
+            nn_modules_proxies: {}
+            root: <FakeRootModule at 0x14e19c5c7230>
+            disable: <function at 0x14e4de015ee0>
+            val: <TupleVariable at 0x14e13c655590>
+            stack_values_flat: [<TupleVariable at 0x14e13c655590>]
+            stored_graph_output_var: False
+            graph_output_var: "graph_out_0"
+            pass1: <PyCodegen at 0x14e19c5c70e0>
+            tempvars: {}
+            count: 1
+            pass2: <PyCodegen at 0x14e19c131310>
+            output: []
+    _return (torch/_dynamo/symbolic_convert.py:5552)
+        Arguments:
+            self: <InstructionTranslator at 0x14e1d4600980>
+            inst: <Instruction at 0x14e1d4401bc0>
+    RETURN_VALUE (torch/_dynamo/symbolic_convert.py:5570)
+        Arguments:
+            self: <InstructionTranslator at 0x14e1d4600980>
+            inst: <Instruction at 0x14e1d4401bc0>
+    step (torch/_dynamo/symbolic_convert.py:1459)
+        Arguments:
+            self: <InstructionTranslator at 0x14e1d4600980>
+        Locals:
+            ip: 132
+            inst: <Instruction at 0x14e1d4401bc0>
+    run (torch/_dynamo/symbolic_convert.py:1794)
+        Arguments:
+            self: <InstructionTranslator at 0x14e1d4600980>
+    run_tracer (torch/_dynamo/convert_frame.py:844)
+    trace_frame (torch/_dynamo/convert_frame.py:863)
+        Arguments:
+            code: <code at 0xe1e8ed0>
+            globals: {"__name__": "vllm.utils.deep_gemm", ...}
+            locals: {"x": <Tensor at 0x14e1e42ba850>, "block_size": [128, 128], "use_ue8m0": True}
+            builtins: {"__name__": "builtins", ...}
+            closure: ()
+            compiler_fn: <WrapBackendDebug at 0x14e4a783c590>
+            tf_mode_stack: []
+            one_graph: False
+            speculation_log: <cell at 0x14e22c0606d0>
+            instructions: [<Instruction at 0x14e1d44cd640>, <Instruction at 0x14e1d44cd540>, <Instruction at 0x14e1d44cda40>, ...]
+            code_options: {"co_argcount": 3, "co_posonlyargcount": 0, "co_kwonlyargcount": 0, "co_nlocals": 15, "co_stacksize": 7, "co_flags": 3, ...}
+        Locals:
+            export: False
+            export_constraints: None
+            frame_state: {"_id": 0}
+            distributed_state: None
+            package: None
+            exn_vt_stack: <ExceptionStack at 0x14e1d4603230>
+            run_tracer: <function at 0x14e1d4204e00>
+    _fn (torch/_dynamo/convert_frame.py:341)
+        Locals:
+            args: (<code at 0xe1e8ed0>, {"__name__": "vllm.utils.deep_gemm", ...}, {"x": <Tensor at 0x14e1e42ba850>, ...}, {...}, (), ...)
+            kwargs: {"export": False, "export_constraints": None, "frame_state": {"_id": 0}, "distributed_state": None, "package": None}
+            guards: <torch._C._dynamo.guards.GlobalStateGuard at 0x14e19c5014b0>
+            prior_grad_mode: True
+            prior_inference_mode: False
+            prior_deterministic: False
+            prior_warn_only: False
+            prior_mobile_allocator_state: False
+            py_rng_state: (3, (2147483648, 766982754, 497961170, 3952298588, 2331775348, 1811986599, 3100132149, 3188119873, 3937547222, ...), ...)
+            prior_dtype: <torch.dtype at 0x14e5f420d710>
+            torch_rng_state: <Tensor at 0x14e19c4b38e0>
+            cuda_rng_state: <Tensor at 0x14e19c4b3ac0>
+            cuda_matmul_fp32_prec: "ieee"
+            prior_fwd_from_src: <function at 0x14e4e1b8afc0>
+            cleanup: <ExitStack at 0x14e20e047410>
+            exit_stack: <ExitStack at 0x14e19c320950>
+    transform (torch/_dynamo/convert_frame.py:1380)
+        Arguments:
+            instructions: [<Instruction at 0x14e1d44cd640>, <Instruction at 0x14e1d44cd540>, <Instruction at 0x14e1d44cda40>, ...]
+            code_options: {"co_argcount": 3, "co_posonlyargcount": 0, "co_kwonlyargcount": 0, "co_nlocals": 15, "co_stacksize": 7, "co_flags": 3, ...}
+        Locals:
+            tf_mode_stack: []
+    transform_code_object (torch/_dynamo/bytecode_transformation.py:1608)
+        Arguments:
+            code: <code at 0xe1e8ed0>
+            transformations: <function at 0x14e1d4204b80>
+            safe: False
+        Locals:
+            keys: ["co_argcount", "co_posonlyargcount", "co_kwonlyargcount", "co_nlocals", "co_stacksize", "co_flags", "co_code", ...]
+            code_options: {"co_argcount": 3, "co_posonlyargcount": 0, "co_kwonlyargcount": 0, "co_nlocals": 15, "co_stacksize": 7, "co_flags": 3, ...}
+            instructions: [<Instruction at 0x14e1d44cd640>, <Instruction at 0x14e1d44cd540>, <Instruction at 0x14e1d44cda40>, ...]
+    compile_frame (torch/_dynamo/convert_frame.py:1408)
+        Arguments:
+            code: <cell at 0x14e21d785090>
+            globals: <cell at 0x14e20e1f57e0>
+            locals: <cell at 0x14e20e1f6ad0>
+            builtins: <cell at 0x14e21d7bf8e0>
+            closure: <cell at 0x14e21d7bf5e0>
+            compiler_fn: <cell at 0x14e21d78fcd0>
+            one_graph: <cell at 0x14e20e033970>
+            restart_reasons: <set at 0x14e19c5e7300>
+        Locals:
+            export: <cell at 0x14e20e0337f0>
+            export_constraints: <cell at 0x14e20e033a00>
+            frame_state: <cell at 0x14e20e0339d0>
+            distributed_state: <cell at 0x14e20e033be0>
+            package: <cell at 0x14e20e033b80>
+            transform: <function at 0x14e1d4204b80>
+            last_attempt_start_time: None
+            attempt: 0
+    _compile_inner (torch/_dynamo/convert_frame.py:1534)
+        Arguments:
+            code: <code at 0xe1e8ed0>
+            one_graph: False
+            hooks: <Hooks at 0x14e4a79a9f90>
+        Locals:
+            last_attempt_start_time: 1784896638.2165134
+            start_time: 1784896638.2165134
+            log_bytecode: <function at 0x14e1d4204a40>
+            out_code: None
+    compile_inner (torch/_dynamo/convert_frame.py:1500)
+        Arguments:
+            code: <code at 0xe1e8ed0>
+            one_graph: False
+            hooks: <Hooks at 0x14e4a79a9f90>
+        Locals:
+            stack: <ExitStack at 0x14e19c5e7930>
+    wrapper_function (torch/_utils_internal.py:96)
+        Locals:
+            args: (<code at 0xe1e8ed0>, False, <Hooks at 0x14e4a79a9f90>)
+            kwargs: {}
+    _compile (torch/_dynamo/convert_frame.py:1827)
+        Arguments:
+            code: <code at 0xe1e8ed0>
+            globals: <cell at 0x14e22c060370>
+            locals: <cell at 0x14e237fa2fb0>
+            builtins: <cell at 0x14e20e644c40>
+            closure: <cell at 0x14e20e6466b0>
+            compiler_fn: <cell at 0x14e20e645030>
+            one_graph: False
+            export: <cell at 0x14e20e6446d0>
+            export_constraints: <cell at 0x14e20e644fa0>
+            hooks: <Hooks at 0x14e4a79a9f90>
+            cache_entry: <cell at 0x14e20e6476d0>
+            cache_size: <CacheSizeRelevantForFrame at 0x14e22c0d8ad0>
+            frame: <torch._C._dynamo.eval_frame._PyInterpreterFrame at 0x14e19c1ebab0>
+            frame_state: <cell at 0x14e20e6471f0>
+        Locals:
+            compile_id: <cell at 0x14e20e645e40>
+            skip: 3
+            package: <cell at 0x14e20e644f10>
+            convert_frame_box: <ConvertFrameBox at 0x14e4a783cad0>
+            BisectValidationException: 0
+            ValidationException: 0
+            compile_inner: <function at 0x14e1d4204220>
+            metrics_context: <MetricsContext at 0x14e20e0d1a90>
+            code_context: <nullcontext at 0x14e20e05bce0>
+            compile_pg: None
+            recompile_reason: None
+            inline_inbuilt_nn_modules_candidate: False
+            recompile_user_contexts: None
+            exceeded: False
+            stack_trace: [...]
+            start_time_ns: +bigint
+            fail_type: None
+            fail_reason: None
+            exception_stack_trace: None
+            fail_user_frame_filename: None
+            fail_user_frame_lineno: None
+            guarded_code: None
+            tracer_output: None
+    __call__ (torch/_dynamo/convert_frame.py:729)
+        Arguments:
+            self: <ConvertFrameAssert at 0x14e4a783c980>
+            frame: <torch._C._dynamo.eval_frame._PyInterpreterFrame at 0x14e19c1ebab0>
+            cache_entry: None
+            hooks: <Hooks at 0x14e4a79a9f90>
+            frame_state: {"_id": 0}
+        Locals:
+            skip: 2
+            code: <code at 0xe1e8ed0>
+            cache_size: <CacheSizeRelevantForFrame at 0x14e22c0d8ad0>
+            prev_frame: <frame at 0x14e20e6262a0>
+            prev_initial_global_state: None
+            compile_id: <CompileId at 0x14e20e075500>
+            frame_id: 0
+            info: "per_block_cast_to_fp8 /w0/tmp/slurm_cs088267.2210955/venv/lib/python3.13/site-packages/vllm/utils/deep_gemm.py:504"
+    __call__ (torch/_dynamo/convert_frame.py:2052)
+        Arguments:
+            self: <ConvertFrame at 0x14e4a783c830>
+            frame: <torch._C._dynamo.eval_frame._PyInterpreterFrame at 0x14e19c1ebab0>
+            cache_entry: None
+            hooks: <Hooks at 0x14e4a79a9f90>
+            frame_state: {"_id": 0}
+            skip: 1
+    __call__ (torch/_dynamo/convert_frame.py:2316)
+        Arguments:
+            self: <CatchErrorsWrapper at 0x14e4a783cd70>
+            frame: <torch._C._dynamo.eval_frame._PyInterpreterFrame at 0x14e19c1ebab0>
+            cache_entry: None
+            frame_state: {"_id": 0}
+        Locals:
+            is_skipfile: False
+            has_started_execution: False
+            should_skip_for_dispatch_mode: False
+            ddp_module: None
+    compile_wrapper (torch/_dynamo/eval_frame.py:1024)
+        Locals:
+            args: (<Tensor at 0x14e1e42ba850>, [128, 128])
+            kwargs: {"use_ue8m0": True}
+            prior: None
+            prior_eval_frame_override: None
+            tracing_context: None
+            cleanups: [<function at 0x14e20e0fa340>, <function at 0x14e4de8ab600>]
+            prior_skip_guard_eval_unsafe: False
+            prior_error_on_graph_break: None
+            saved_dynamic_layer_stack_depth: 0
+    requant_weight_ue8m0_inplace (vllm/model_executor/layers/quantization/utils/fp8_utils.py:984)
+        Arguments:
+            weight: <Parameter at 0x14e1e42baad0>
+            weight_scale: <Parameter at 0x14e1e42ba350>
+            block_size: (128, 128)
+        Locals:
+            per_block_cast_to_fp8: <function at 0x14e4a4de5ee0>
+            block_m: 128
+            block_k: 128
+            leading_shape: ()
+            w_view: <Tensor at 0x14e22c0e66c0>
+            s_view: <Tensor at 0x14e1e42bacb0>
+            num_mats: 1
+            idx: 0
+            w_q: <Tensor at 0x14e1e42bbb10>
+            s_old: <Tensor at 0x14e1e42ba5d0>
+            m_cur: 2624
+            k_cur: 6144
+            s_float: <Tensor at 0x14e1e42ba5d0>
+            s_exp_r: <Tensor at 0x14e1e42ba6c0>
+            s_exp: <Tensor at 0x14e1e42ba670>
+            w_dq: <Tensor at 0x14e1e42ba850>
+    deepgemm_post_process_fp8_weight_block (vllm/model_executor/layers/quantization/utils/fp8_utils.py:1028)
+        Arguments:
+            wq: <Parameter at 0x14e1e42baad0>
+            ws: <Parameter at 0x14e1e42ba350>
+            quant_block_shape: (128, 128)
+            use_e8m0: True
+            is_bmm: False
+            bmm_batch_size: 0
+    process_weights_after_loading (vllm/model_executor/kernels/linear/scaled_mm/deep_gemm.py:96)
+        Arguments:
+            self: <DeepGemmFp8BlockScaledMMKernel at 0x14e22c0da270>
+            layer: <DeepSeekV2FusedQkvAProjLinear at 0x14e22c0d9550>
+        Locals:
+            params: <FP8BlockParams at 0x14e20e11cb90>
+            weight_scale_invs: <Parameter at 0x14e1e42ba350>
+            scale_attr: "weight_scale_inv"
+    process_weights_after_loading (vllm/model_executor/kernels/linear/scaled_mm/flashinfer.py:175)
+        Arguments:
+            self: <FlashInferFp8DeepGEMMDynamicBlockScaledKernel at 0x14e22c0d9e80>
+            layer: <DeepSeekV2FusedQkvAProjLinear at 0x14e22c0d9550>
+    process_weights_after_loading (vllm/model_executor/layers/quantization/fp8.py:428)
+        Arguments:
+            self: <Fp8LinearMethod at 0x14e22c0d96a0>
+            layer: <DeepSeekV2FusedQkvAProjLinear at 0x14e22c0d9550>
+        Locals:
+            input_scale: None
+    process_weights_after_loading (vllm/model_executor/model_loader/utils.py:111)
+        Arguments:
+            model: <GlmMoeDsaForCausalLM at 0x14e22c0d8d70>
+            model_config: <ModelConfig at 0x14e4a7dc7e00>
+            target_device: <torch.device at 0x14e22d181b30>
+        Locals:
+            _: "model.layers.39.self_attn.fused_qkv_a_proj"
+            module: <DeepSeekV2FusedQkvAProjLinear at 0x14e22c0d9550>
+            quant_method: <Fp8LinearMethod at 0x14e22c0d96a0>
+    load_model (vllm/model_executor/model_loader/base_loader.py:80)
+        Arguments:
+            self: <DefaultModelLoader at 0x14e22c0d8980>
+            vllm_config: <VllmConfig at 0x14e4a7dc78c0>
+            model_config: <ModelConfig at 0x14e4a7dc7e00>
+            prefix: ""
+        Locals:
+            device_config: <DeviceConfig at 0x14e4a7b016a0>
+            load_config: <LoadConfig at 0x14e4a7b017f0>
+            load_device: <torch.device at 0x14e4a7c62dd0>
+            target_device: <torch.device at 0x14e22d181b30>
+            model: <GlmMoeDsaForCausalLM at 0x14e22c0d8d70>
+            peak_memory: 51213174784
+    sync_wrapper (vllm/tracing/otel.py:178)
+        Locals:
+            args: (<DefaultModelLoader at 0x14e22c0d8980>)
+            kwargs: {"vllm_config": <VllmConfig at 0x14e4a7dc78c0>, "model_config": <ModelConfig at 0x14e4a7dc7e00>}
+            tracer: <ProxyTracer at 0x14e2267ef360>
+            ctx: {}
+    load_model (vllm/v1/worker/gpu_model_runner.py:5108)
+        Arguments:
+            self: <GPUModelRunner at 0x14e21d77e510>
+            load_dummy_weights: False
+        Locals:
+            m: <DeviceMemoryProfiler at 0x14e4993f4980>
+            time_before_load: 880704.085123899
+            model_loader: <DefaultModelLoader at 0x14e22c0d8980>
+    sync_wrapper (vllm/tracing/otel.py:178)
+        Locals:
+            args: (<GPUModelRunner at 0x14e21d77e510>)
+            kwargs: {"load_dummy_weights": False}
+            tracer: <ProxyTracer at 0x14e2267ef6f0>
+            ctx: {}
+    load_model (vllm/v1/worker/gpu_worker.py:356)
+        Arguments:
+            self: <Worker at 0x14e48e9a2270>
+        Locals:
+            load_dummy_weights: False
+    __init__ (vllm/v1/executor/multiproc_executor.py:634)
+        Arguments:
+            self: <RayWorkerProc at 0x14e4a7e43770>
+            vllm_config: <VllmConfig at 0x14e4a7dc78c0>
+            local_rank: 2
+            rank: 10
+            distributed_init_method: "tcp://134.61.53.224:35143"
+            input_shm_handle: <Handle at 0x14e4a4867e00>
+            shared_worker_lock: None
+            is_driver_worker: False
+        Locals:
+            wrapper: <WorkerWrapperBase at 0x14e4993f46e0>
+            all_kwargs: [{}, {}, {"vllm_config": <VllmConfig at 0x14e4a7dc78c0>, "local_rank": 2, "rank": 10, ...}, {}, {}, {}, {}, {}, {}, {}, ...]
+    sync_wrapper (vllm/tracing/otel.py:178)
+        Locals:
+            args: (<RayWorkerProc at 0x14e4a7e43770>)
+            kwargs: {"local_rank": 2, "vllm_config": <VllmConfig at 0x14e4a7dc78c0>, "rank": 10, ...}
+            tracer: <ProxyTracer at 0x14e4993f41a0>
+            ctx: {}
+    initialize_worker (vllm/v1/executor/ray_executor_v2.py:153)
+        Arguments:
+            self: <RayWorkerProc at 0x14e4a7e43770>
+            local_rank: 2
+            env_vars: {"CUDA_VISIBLE_DEVICES": "0,1,2,3"}
+            driver_env_vars: {"OMPI_MCA_plm_slurm_args": "--external-launcher", "PRTE_MCA_plm_slurm_args": "--external-launcher", ...}
+        Locals:
+            key: "CUDA_VISIBLE_DEVICES"
+            value: "0,1,2,3"
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x14e4a7e43770>
+        Locals:
+            _ray_trace_ctx: None
+            _args: (2, {"CUDA_VISIBLE_DEVICES": "0,1,2,3"}, {"OMPI_MCA_plm_slurm_args": "--external-launcher", ...})
+            _kwargs: {}
+    actor_method_executor (ray/_private/function_manager.py:721)
+        Arguments:
+            _FunctionActorManager__ray_actor: <RayWorkerProc at 0x14e4a7e43770>
+        Locals:
+            args: (2, {"CUDA_VISIBLE_DEVICES": "0,1,2,3"}, {"OMPI_MCA_plm_slurm_args": "--external-launcher", ...})
+            kwargs: {}
+            is_bound: False
+    main_loop (ray/_private/worker.py:1039)
+        Arguments:
+            self: <Worker at 0x1514f938b4d0>
+        Locals:
+            sigterm_handler: <function at 0x1514f914d8a0>
+    <module> (ray/_private/workers/default_worker.py:323)
+Thread 241529 (idle): "PythonGCThread"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x1514f91aefd0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x1514f924b910>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x1514f91aeea0>
+            timeout: None
+        Locals:
+            signaled: False
+    run (ray/_private/gc_collect_manager.py:29)
+        Arguments:
+            self: <PythonGCThread at 0x1514f9128d70>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <PythonGCThread at 0x1514f9128d70>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <PythonGCThread at 0x1514f9128d70>
+Thread 242746 (idle): "tqdm_monitor"
+    wait (threading.py:363)
+        Arguments:
+            self: <Condition at 0x14e1e4233110>
+            timeout: 10
+        Locals:
+            waiter: <_thread.lock at 0x14e20e31c490>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14e20e2bbf00>
+            timeout: 10
+        Locals:
+            signaled: False
+    run (tqdm/_monitor.py:69)
+        Arguments:
+            self: <TMonitor at 0x14e20e0d1550>
+        Locals:
+            cur_t: 1784896635.424807
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <TMonitor at 0x14e20e0d1550>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <TMonitor at 0x14e20e0d1550>
+Thread 284982 (idle): "tqdm_monitor"
+    wait (threading.py:363)
+        Arguments:
+            self: <Condition at 0x14e13c4b0050>
+            timeout: 10
+        Locals:
+            waiter: <_thread.lock at 0x14e17432c550>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14e13c4d9b50>
+            timeout: 10
+        Locals:
+            signaled: False
+    run (tqdm/_monitor.py:69)
+        Arguments:
+            self: <TMonitor at 0x14e174117390>
+        Locals:
+            cur_t: 1784896641.9887161
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <TMonitor at 0x14e174117390>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <TMonitor at 0x14e174117390>

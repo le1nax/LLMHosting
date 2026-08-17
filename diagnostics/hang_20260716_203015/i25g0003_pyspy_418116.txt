@@ -1,0 +1,122 @@
+[2026-07-16T20:30:18.056] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+Process 418116: /w0/tmp/slurm_cs088267.1926058/venv/bin/python3 /w0/tmp/slurm_cs088267.1926058/venv/bin/vllm serve zai-org/GLM-5.2-FP8 --served-model-name glm-5.2-fp8 --tensor-parallel-size 4 --pipeline-parallel-size 4 --distributed-executor-backend ray --disable-custom-all-reduce --kv-cache-dtype fp8 --max-model-len 128000 --gpu-memory-utilization 0.83 --max-num-seqs 64 --mm-processor-cache-gb 0 --trust-remote-code --enable-auto-tool-choice --structured-outputs-config {"backend": "xgrammar"} --tool-call-parser glm47 --reasoning-parser glm45 --host 0.0.0.0 --port 52223
+Python v3.13.3 (/w0/tmp/slurm_cs088267.1926058/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+
+Thread 418116 (idle): "MainThread"
+    run (asyncio/runners.py:118)
+        Arguments:
+            self: <Runner at 0x15020bd1a510>
+            coro: <coroutine at 0x15020bdbcba0>
+        Locals:
+            context: <_contextvars.Context at 0x15020bde3a40>
+            task: <_asyncio.Task at 0x15020bde6990>
+            sigint_handler: <functools.partial at 0x15020bdc8360>
+    run (asyncio/runners.py:195)
+        Arguments:
+            main: <coroutine at 0x15020bdbcba0>
+        Locals:
+            debug: None
+            loop_factory: <function at 0x15021654efc0>
+            runner: <Runner at 0x15020bd1a510>
+    run (uvloop/__init__.py:96)
+        Arguments:
+            main: <cell at 0x150212792a10>
+        Locals:
+            loop_factory: <function at 0x15021654efc0>
+            debug: None
+            run_kwargs: {}
+            wrapper: <function at 0x15020bd92b60>
+            vi: (3, 13)
+    cmd (vllm/entrypoints/cli/serve.py:148)
+        Arguments:
+            args: <Namespace at 0x15020bd1a3c0>
+        Locals:
+            is_external_lb: False
+            is_hybrid_lb: False
+            is_multi_port: False
+    main (vllm/entrypoints/cli/main.py:95)
+        Locals:
+            vllm: <module at 0x1502fec1d030>
+            VLLM_SUBCMD_PARSER_EPILOG: "For full list:            vllm {subcmd} --help=all\nFor a section:            vllm {subcmd} --help=ModelConfig    (case-ins..."
+            cli_env_setup: <function at 0x150215de4ae0>
+            FlexibleArgumentParser: 0
+            CMD_MODULES: [<module at 0x1502123a46d0>, <module at 0x1502123a5210>, <module at 0x150215dc35b0>, <module at 0x15022f74e1b0>, ...]
+            parser: <FlexibleArgumentParser at 0x15020bfeacf0>
+            subparsers: <_SubParsersAction at 0x15020bfeb230>
+            cmds: {"chat": <ChatCommand at 0x15020bfeb380>, "complete": <CompleteCommand at 0x15020bfeb620>, ...}
+            cmd_module: <module at 0x1502123a4ef0>
+            new_cmds: [<RunBatchSubcommand at 0x15020bd1a270>]
+            cmd: <RunBatchSubcommand at 0x15020bd1a270>
+            args: <Namespace at 0x15020bd1a3c0>
+    <module> (vllm:10)
+Thread 467258 (idle): "MPClientEngineMonitor"
+    select (selectors.py:398)
+        Arguments:
+            self: <PollSelector at 0x1501d5944230>
+            timeout: 1000
+        Locals:
+            ready: []
+    wait (multiprocessing/connection.py:1148)
+        Arguments:
+            object_list: <set at 0x1501efc059a0>
+            timeout: 1
+        Locals:
+            selector: <PollSelector at 0x1501d5944230>
+            obj: 55
+            deadline: 278929.053043722
+    monitor_engine_liveness (vllm/v1/engine/utils.py:230)
+        Arguments:
+            self: <CoreEngineProcManager at 0x1501f330d550>
+        Locals:
+            sentinel_to_proc: {55: <SpawnProcess at 0x1501f330d6a0>}
+            sentinels: <set at 0x1501efc059a0>
+            died_sentinels: []
+    monitor_engine_cores (vllm/v1/engine/core_client.py:694)
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x1501f34a2c10>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x1501f34a2c10>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x1501f34a2c10>
+Thread 467259 (idle): "ThreadPoolExecutor-2_0"
+    _worker (concurrent/futures/thread.py:90)
+        Arguments:
+            executor_reference: <weakref.ReferenceType at 0x1501ef335cb0>
+            work_queue: <_queue.SimpleQueue at 0x1501f2300ee0>
+            initializer: None
+            initargs: ()
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x1501f34a3890>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x1501f34a3890>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x1501f34a3890>
+Thread 383149 (idle): "AnyIO worker thread"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x1501d70286d0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x1501ee6749d0>
+            saved_state: None
+            gotit: False
+    get (queue.py:202)
+        Arguments:
+            self: <Queue at 0x1501d7e37110>
+            block: True
+            timeout: None
+    run (anyio/_backends/_asyncio.py:1018)
+        Arguments:
+            self: <WorkerThread at 0x1501f330de80>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <WorkerThread at 0x1501f330de80>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <WorkerThread at 0x1501f330de80>

@@ -1,0 +1,948 @@
+[2026-07-15T13:52:34.596] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+Process 424187: ray::RayWorkerProc.run
+Python v3.13.3 (/w0/tmp/slurm_cs088267.1926058/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+
+Thread 424187 (active): "MainThread"
+    __torch_function__ (vllm/model_executor/parameter.py:126)
+        Arguments:
+            cls: 0
+            func: <builtin_function_or_method at 0x1509e5d7bc90>
+            types: (0)
+            args: (<Tensor at 0x14d67becb9d0>, <ModelWeightParameter at 0x14d7901c7980>, None)
+            kwargs: {}
+    default_unquantized_gemm (vllm/model_executor/layers/utils.py:98)
+        Arguments:
+            layer: <GateLinear at 0x14d7905d5e80>
+            x: <Tensor at 0x14d67becb9d0>
+            weight: <ModelWeightParameter at 0x14d7901c7980>
+            bias: None
+    apply (vllm/model_executor/layers/linear.py:225)
+        Arguments:
+            self: <UnquantizedLinearMethod at 0x14d7905b9f90>
+            layer: <GateLinear at 0x14d7905d5e80>
+            x: <Tensor at 0x14d67becb9d0>
+            bias: None
+    forward (vllm/model_executor/layers/linear.py:391)
+        Arguments:
+            self: <GateLinear at 0x14d7905d5e80>
+            x: <Tensor at 0x14d67becb9d0>
+        Locals:
+            bias: None
+    forward (vllm/model_executor/layers/fused_moe/router/gate_linear.py:141)
+        Arguments:
+            self: <GateLinear at 0x14d7905d5e80>
+            x: <Tensor at 0x14d67becb9d0>
+    _call_impl (torch/nn/modules/module.py:1790)
+        Arguments:
+            self: <cell at 0x14d67be56890>
+        Locals:
+            args: <cell at 0x14d67be246a0>
+            kwargs: <cell at 0x14d67be24fd0>
+    _wrapped_call_impl (torch/nn/modules/module.py:1779)
+        Arguments:
+            self: <GateLinear at 0x14d7905d5e80>
+        Locals:
+            args: (<Tensor at 0x14d67becb9d0>)
+            kwargs: {}
+    _forward_impl (vllm/model_executor/layers/fused_moe/runner/moe_runner.py:778)
+        Arguments:
+            self: <MoERunner at 0x14d7905d6a50>
+            layer: <FusedMoE at 0x14d7905d6270>
+            hidden_states: <Tensor at 0x14d67becb9d0>
+            router_logits: <Tensor at 0x14d67becb520>
+            shared_experts_input: <Tensor at 0x14d67becb110>
+            input_ids: None
+    _moe_forward_shared (vllm/model_executor/layers/fused_moe/runner/moe_runner.py:139)
+        Arguments:
+            hidden_states: <Tensor at 0x14d67becb9d0>
+            router_logits: <Tensor at 0x14d67becb520>
+            shared_experts_input: <Tensor at 0x14d67becb110>
+            input_ids: None
+            layer_name: <LayerName at 0x14d67be05b30>
+            hidden_dim_unpadded: 0
+        Locals:
+            layer: <FusedMoE at 0x14d7905d6270>
+    __call__ (torch/_ops.py:865)
+        Arguments:
+            self: <OpOverload at 0x14d6946dc230>
+        Locals:
+            args: (<Tensor at 0x14d67becb9d0>, <Tensor at 0x14d67becb520>, <Tensor at 0x14d67becb110>, None, ...)
+            kwargs: {}
+    call (cvyx4yrkaqorvf4ohtr7hxt6om7x2vs2ctayf2ijar7qytgkswsb.py:1303)
+        Arguments:
+            self: <Runner at 0x14d6940dc830>
+            args: []
+        Locals:
+            arg1_1: 2792
+            arg4_1: 2792
+            arg6_1: <Tensor at 0x14d67bec8c80>
+            arg7_1: <LayerName at 0x14d67be05b30>
+            arg8_1: <Parameter at 0x14d7901f94f0>
+            arg9_1: <Parameter at 0x14d79058c140>
+            arg10_1: <Parameter at 0x14d6f01885f0>
+            arg11_1: <Parameter at 0x14d7901f8230>
+            arg12_1: <Parameter at 0x14d790741040>
+            arg13_1: <Parameter at 0x14d6f0188500>
+            arg14_1: <Parameter at 0x14d7901f8460>
+            arg15_1: <Tensor at 0x14d67bd0bc00>
+            arg16_1: <Tensor at 0x14d790740aa0>
+            s98: 2792
+            s26: 2792
+            buf3: <Tensor at 0x14d67bebe7b0>
+            buf5: <Tensor at 0x14d67becb9d0>
+            buf6: <Tensor at 0x14d67becb520>
+            buf7: <Tensor at 0x14d67becb110>
+            stream3: 415647088
+    run (torch/_inductor/utils.py:3401)
+        Arguments:
+            new_inputs: []
+        Locals:
+            old_tensors: []
+            new_tensors: []
+    __call__ (torch/_inductor/output_code.py:656)
+        Arguments:
+            self: <CompiledFxGraph at 0x14d694097ed0>
+            inputs: []
+    wrapper (torch/_functorch/_aot_autograd/runtime_wrappers.py:783)
+        Arguments:
+            runtime_args: []
+    call_func_at_runtime_with_args (torch/_functorch/_aot_autograd/utils.py:138)
+        Arguments:
+            f: <function at 0x14d69410f100>
+            args: []
+            steal_args: True
+            disable_amp: False
+        Locals:
+            context: 0
+    runtime_wrapper (torch/_functorch/_aot_autograd/runtime_wrappers.py:580)
+        Arguments:
+            args: <cell at 0x14d67be54e80>
+        Locals:
+            cm: None
+            orig_inputs: {}
+            mutated_args: <generator at 0x14d67853b5e0>
+            grad_enabled: False
+    <lambda> (torch/_inductor/standalone_compile.py:236)
+        Locals:
+            args: (<Tensor at 0x14d67beca170>, 2792, <Parameter at 0x14d766766ad0>, <Parameter at 0x14d766765b30>, 2792, ...)
+    __call__ (torch/_inductor/standalone_compile.py:122)
+        Arguments:
+            self: <CacheCompiledArtifact at 0x14d694154190>
+        Locals:
+            args: (<Tensor at 0x14d67beca170>, 2792, <Parameter at 0x14d766766ad0>, <Parameter at 0x14d766765b30>, 2792, ...)
+    compiled_graph_wrapper (vllm/compilation/compiler_interface.py:437)
+        Locals:
+            args: (<Tensor at 0x14d67beca170>, 2792, <Parameter at 0x14d766766ad0>, <Parameter at 0x14d766765b30>, 2792, ...)
+    __call__ (vllm/compilation/piecewise_backend.py:380)
+        Arguments:
+            self: <PiecewiseBackend at 0x14d694097c50>
+        Locals:
+            args: (<Tensor at 0x14d67beca170>, 2792, <Parameter at 0x14d766766ad0>, <Parameter at 0x14d766765b30>, 2792, ...)
+            runtime_shape: 2792
+            range_entry: <RangeEntry at 0x14d694097d90>
+    __call__ (vllm/compilation/cuda_graph.py:254)
+        Arguments:
+            self: <CUDAGraphWrapper at 0x14d694097250>
+        Locals:
+            args: (<Tensor at 0x14d67beca170>, 2792, <Parameter at 0x14d766766ad0>, <Parameter at 0x14d766765b30>, 2792, ...)
+            kwargs: {}
+            forward_context: <ForwardContext at 0x14d6d40e01b0>
+            batch_descriptor: <BatchDescriptor at 0x14d67bd142f0>
+            cudagraph_runtime_mode: <CUDAGraphMode at 0x14da39c1b0e0>
+    execution_fn (<string>:187)
+        Arguments:
+            s98: 2792
+            s26: 2792
+            l_self_modules_layers_modules_19_modules_self_attn_modules_mla_attn_modules_rotary_emb_buffers_cos_sin_cache_: <Tensor at 0x14d790740aa0>
+            l_positions_: <Tensor at 0x14d67bd0bc00>
+            l_self_modules_layers_modules_19_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d766766ad0>
+            l_self_modules_layers_modules_19_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d766765b30>
+            l_self_modules_layers_modules_19_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d7901f8050>
+            synthetic_local_tmp_2_: <LayerName at 0x14d67be05b30>
+            l_self_modules_layers_modules_20_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d7901f94f0>
+            l_self_modules_layers_modules_20_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d79058c140>
+            l_self_modules_layers_modules_20_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d6f01885f0>
+            l_self_modules_layers_modules_20_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d7901f8230>
+            l_self_modules_layers_modules_20_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d790741040>
+            l_self_modules_layers_modules_20_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d6f0188500>
+            l_self_modules_layers_modules_20_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d7901f8460>
+            l_self_modules_layers_modules_20_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d7901f8d70>
+            synthetic_local_tmp_4_: <LayerName at 0x14d67be06a30>
+            l_self_modules_layers_modules_20_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d7901f85f0>
+            l_self_modules_layers_modules_20_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d790742080>
+            l_self_modules_layers_modules_20_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d7901f9b30>
+            synthetic_local_tmp_6_: <LayerName at 0x14d67be07ed0>
+            l_self_modules_layers_modules_21_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d7901f9770>
+            l_self_modules_layers_modules_21_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d7901f99f0>
+            l_self_modules_layers_modules_21_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d7901f8f50>
+            l_self_modules_layers_modules_21_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d7901f9d60>
+            l_self_modules_layers_modules_21_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d7901f9ae0>
+            l_self_modules_layers_modules_21_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d73c14ae40>
+            l_self_modules_layers_modules_21_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d7901f9fe0>
+            l_self_modules_layers_modules_21_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d7901fa710>
+            synthetic_local_tmp_8_: <LayerName at 0x14d67be05770>
+            l_self_modules_layers_modules_21_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d7901f9f40>
+            l_self_modules_layers_modules_21_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d7901f9c70>
+            l_self_modules_layers_modules_21_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d7901f8b90>
+            synthetic_local_tmp_10_: <LayerName at 0x14d67be05310>
+            l_self_modules_layers_modules_22_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d7902645a0>
+            l_self_modules_layers_modules_22_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d7901fb0c0>
+            l_self_modules_layers_modules_22_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d7901f9a90>
+            l_self_modules_layers_modules_22_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d7901fb520>
+            l_self_modules_layers_modules_22_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d6f0188870>
+            l_self_modules_layers_modules_22_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d7901fb340>
+            l_self_modules_layers_modules_22_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d7901fa990>
+            l_self_modules_layers_modules_22_modules_self_attn_modules_mla_attn_modules_indexer_modules_wq_b_parameters_weight_: <Parameter at 0x14d7901fb250>
+            l_self_modules_layers_modules_22_modules_self_attn_modules_mla_attn_modules_indexer_modules_wq_b_parameters_weight_scale_inv_: <Parameter at 0x14d7901fbb60>
+            l_self_modules_layers_modules_22_modules_self_attn_modules_mla_attn_modules_indexer_modules_wk_weights_proj_parameters_weight_: <ModelWeightParameter at 0x14d7901fbc00>
+            l_self_modules_layers_modules_22_modules_self_attn_modules_mla_attn_modules_indexer_modules_k_norm_parameters_weight_: <Parameter at 0x14d7901fbc50>
+            l_self_modules_layers_modules_22_modules_self_attn_modules_mla_attn_modules_indexer_modules_k_norm_parameters_bias_: <Parameter at 0x14d7901fbca0>
+            l_self_modules_layers_modules_22_modules_self_attn_modules_mla_attn_modules_indexer_modules_indexer_op_modules_k_cache_kv_cache: <Tensor at 0x14d668107b10>
+            l_self_modules_layers_modules_22_modules_self_attn_modules_mla_attn_modules_indexer_modules_indexer_op_topk_indices_buffer: <Tensor at 0x14d7907428a0>
+            synthetic_local_tmp_12_: <LayerName at 0x14d67be05400>
+            l_self_modules_layers_modules_22_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d7901fbd90>
+            synthetic_local_tmp_14_: <LayerName at 0x14d67be04c30>
+            l_self_modules_layers_modules_22_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d7901fb430>
+            l_self_modules_layers_modules_22_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d7901fb7f0>
+            l_self_modules_layers_modules_22_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d790264a00>
+            synthetic_local_tmp_16_: <LayerName at 0x14d67be04190>
+            l_self_modules_layers_modules_23_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d790265cc0>
+            l_self_modules_layers_modules_23_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d7901fb980>
+            l_self_modules_layers_modules_23_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d7902648c0>
+            l_self_modules_layers_modules_23_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d7901c5f40>
+            l_self_modules_layers_modules_23_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d7902649b0>
+            l_self_modules_layers_modules_23_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d7901fb930>
+            l_self_modules_layers_modules_23_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d790264dc0>
+            l_self_modules_layers_modules_23_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d790265680>
+            synthetic_local_tmp_18_: <LayerName at 0x14d67be07e80>
+            l_self_modules_layers_modules_23_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d790264910>
+            l_self_modules_layers_modules_23_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d790265180>
+            l_self_modules_layers_modules_23_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d790266350>
+            synthetic_local_tmp_20_: <LayerName at 0x14d67be06350>
+            l_self_modules_layers_modules_24_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d790267ca0>
+            l_self_modules_layers_modules_24_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d790266210>
+            l_self_modules_layers_modules_24_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d790265f40>
+            l_self_modules_layers_modules_24_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d790266580>
+            l_self_modules_layers_modules_24_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d7902661c0>
+            l_self_modules_layers_modules_24_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d7902666c0>
+            l_self_modules_layers_modules_24_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d790266760>
+            l_self_modules_layers_modules_24_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d790267020>
+            synthetic_local_tmp_22_: <LayerName at 0x14d67bebc550>
+            l_self_modules_layers_modules_24_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d790266300>
+            l_self_modules_layers_modules_24_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d790266b20>
+            l_self_modules_layers_modules_24_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d790267750>
+            synthetic_local_tmp_24_: <LayerName at 0x14d67bebc190>
+            l_self_modules_layers_modules_25_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d7900cd590>
+            l_self_modules_layers_modules_25_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d790267c50>
+            l_self_modules_layers_modules_25_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d790267c00>
+            l_self_modules_layers_modules_25_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d790267fc0>
+            l_self_modules_layers_modules_25_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d790267ed0>
+            l_self_modules_layers_modules_25_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d7901fa530>
+            l_self_modules_layers_modules_25_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d7900cc280>
+            l_self_modules_layers_modules_25_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d7900cca00>
+            synthetic_local_tmp_26_: <LayerName at 0x14d67bebff20>
+            l_self_modules_layers_modules_25_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d790267f20>
+            l_self_modules_layers_modules_25_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d7900cc4b0>
+            l_self_modules_layers_modules_25_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d7900cd310>
+            synthetic_local_tmp_28_: <LayerName at 0x14d67bebe3a0>
+            l_self_modules_layers_modules_26_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d7900ce490>
+            l_self_modules_layers_modules_26_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d7900cd540>
+            l_self_modules_layers_modules_26_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d7900cc9b0>
+            l_self_modules_layers_modules_26_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d7900cd860>
+            l_self_modules_layers_modules_26_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d7900cd630>
+            l_self_modules_layers_modules_26_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d6f022f1b0>
+            l_self_modules_layers_modules_26_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d7900cdae0>
+            l_self_modules_layers_modules_26_modules_self_attn_modules_mla_attn_modules_indexer_modules_wq_b_parameters_weight_: <Parameter at 0x14d7900ce170>
+            l_self_modules_layers_modules_26_modules_self_attn_modules_mla_attn_modules_indexer_modules_wq_b_parameters_weight_scale_inv_: <Parameter at 0x14d6f01663a0>
+            l_self_modules_layers_modules_26_modules_self_attn_modules_mla_attn_modules_indexer_modules_wk_weights_proj_parameters_weight_: <ModelWeightParameter at 0x14d7900ce210>
+            l_self_modules_layers_modules_26_modules_self_attn_modules_mla_attn_modules_indexer_modules_k_norm_parameters_weight_: <Parameter at 0x14d7900ce260>
+            l_self_modules_layers_modules_26_modules_self_attn_modules_mla_attn_modules_indexer_modules_k_norm_parameters_bias_: <Parameter at 0x14d7900ce2b0>
+            l_self_modules_layers_modules_26_modules_self_attn_modules_mla_attn_modules_indexer_modules_indexer_op_modules_k_cache_kv_cache: <Tensor at 0x14d668106170>
+            synthetic_local_tmp_30_: <LayerName at 0x14d67bebee90>
+            l_self_modules_layers_modules_26_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d7900ce3a0>
+            synthetic_local_tmp_32_: <LayerName at 0x14d67bebf430>
+            l_self_modules_layers_modules_26_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d7900cd220>
+            l_self_modules_layers_modules_26_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d7900cdea0>
+            l_self_modules_layers_modules_26_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d7900cecb0>
+            synthetic_local_tmp_34_: <LayerName at 0x14d67bebc3c0>
+            l_self_modules_layers_modules_27_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d7900cdb80>
+            l_self_modules_layers_modules_27_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d7900cec60>
+            l_self_modules_layers_modules_27_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d7900cec10>
+            l_self_modules_layers_modules_27_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d7900cefd0>
+            l_self_modules_layers_modules_27_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d7900ced50>
+            l_self_modules_layers_modules_27_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d6f022e6c0>
+            l_self_modules_layers_modules_27_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d7900cf250>
+            l_self_modules_layers_modules_27_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d7900cfa70>
+            synthetic_local_tmp_36_: <LayerName at 0x14d67bebdc20>
+            l_self_modules_layers_modules_27_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d7900ceb20>
+            l_self_modules_layers_modules_27_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d7900cf5c0>
+            l_self_modules_layers_modules_27_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d790124690>
+            synthetic_local_tmp_38_: <LayerName at 0x14d67bebf390>
+            l_self_modules_layers_modules_28_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d790125a90>
+            l_self_modules_layers_modules_28_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d6f0165b80>
+            l_self_modules_layers_modules_28_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d6f0167f70>
+            l_self_modules_layers_modules_28_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d7901248c0>
+            l_self_modules_layers_modules_28_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d7901245f0>
+            l_self_modules_layers_modules_28_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d790124640>
+            l_self_modules_layers_modules_28_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d790124b40>
+            l_self_modules_layers_modules_28_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d790125270>
+            synthetic_local_tmp_40_: <LayerName at 0x14d67bebec60>
+            l_self_modules_layers_modules_28_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d790124cd0>
+            l_self_modules_layers_modules_28_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d6f018a850>
+            l_self_modules_layers_modules_28_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d7901243c0>
+            synthetic_local_tmp_42_: <LayerName at 0x14d67bebcb40>
+            l_self_modules_layers_modules_29_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d790127250>
+            l_self_modules_layers_modules_29_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d7901245a0>
+            l_self_modules_layers_modules_29_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d790125f90>
+            l_self_modules_layers_modules_29_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d7901262b0>
+            l_self_modules_layers_modules_29_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d790126080>
+            l_self_modules_layers_modules_29_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d790124870>
+            l_self_modules_layers_modules_29_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d7901264e0>
+            l_self_modules_layers_modules_29_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d7901260d0>
+            synthetic_local_tmp_44_: <LayerName at 0x14d67bebf250>
+            l_self_modules_layers_modules_29_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d790126670>
+            l_self_modules_layers_modules_29_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d7901261c0>
+            l_self_modules_layers_modules_29_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d7901277f0>
+            synthetic_local_tmp_46_: <LayerName at 0x14d67bebde00>
+            l_self_modules_layers_modules_30_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d79018cbe0>
+            l_self_modules_layers_modules_30_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d790127430>
+            l_self_modules_layers_modules_30_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d7901254f0>
+            l_self_modules_layers_modules_30_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d790127a20>
+            l_self_modules_layers_modules_30_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d790127930>
+            l_self_modules_layers_modules_30_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d790125f40>
+            l_self_modules_layers_modules_30_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d790127c00>
+            l_self_modules_layers_modules_30_modules_self_attn_modules_mla_attn_modules_indexer_modules_wq_b_parameters_weight_: <Parameter at 0x14d790127fc0>
+            l_self_modules_layers_modules_30_modules_self_attn_modules_mla_attn_modules_indexer_modules_wq_b_parameters_weight_scale_inv_: <Parameter at 0x14d790127980>
+            l_self_modules_layers_modules_30_modules_self_attn_modules_mla_attn_modules_indexer_modules_wk_weights_proj_parameters_weight_: <ModelWeightParameter at 0x14d79018c320>
+            l_self_modules_layers_modules_30_modules_self_attn_modules_mla_attn_modules_indexer_modules_k_norm_parameters_weight_: <Parameter at 0x14d79018c370>
+            l_self_modules_layers_modules_30_modules_self_attn_modules_mla_attn_modules_indexer_modules_k_norm_parameters_bias_: <Parameter at 0x14d79018c3c0>
+            l_self_modules_layers_modules_30_modules_self_attn_modules_mla_attn_modules_indexer_modules_indexer_op_modules_k_cache_kv_cache: <Tensor at 0x14d6681059a0>
+            synthetic_local_tmp_48_: <LayerName at 0x14d67bebc410>
+            l_self_modules_layers_modules_30_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d79018c460>
+            synthetic_local_tmp_50_: <LayerName at 0x14d67bebfca0>
+            l_self_modules_layers_modules_30_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d790127d90>
+            l_self_modules_layers_modules_30_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d790127bb0>
+            l_self_modules_layers_modules_30_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d79018d130>
+            synthetic_local_tmp_52_: <LayerName at 0x14d67bebdd10>
+            l_self_modules_layers_modules_31_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d79018dd10>
+            l_self_modules_layers_modules_31_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d79018d040>
+            l_self_modules_layers_modules_31_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d79018cdc0>
+            l_self_modules_layers_modules_31_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d79018d3b0>
+            l_self_modules_layers_modules_31_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d79018cff0>
+            l_self_modules_layers_modules_31_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d79018d310>
+            l_self_modules_layers_modules_31_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d79018d5e0>
+            l_self_modules_layers_modules_31_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d79018c550>
+            synthetic_local_tmp_54_: <LayerName at 0x14d67bebe580>
+            l_self_modules_layers_modules_31_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d79018d0e0>
+            l_self_modules_layers_modules_31_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d79018d950>
+            l_self_modules_layers_modules_31_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d79018ea30>
+            synthetic_local_tmp_56_: <LayerName at 0x14d67bebe5d0>
+            l_self_modules_layers_modules_32_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d79018fd90>
+            l_self_modules_layers_modules_32_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d79018e8f0>
+            l_self_modules_layers_modules_32_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d79018db30>
+            l_self_modules_layers_modules_32_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d79018ec60>
+            l_self_modules_layers_modules_32_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d790125e00>
+            l_self_modules_layers_modules_32_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d79018e8a0>
+            l_self_modules_layers_modules_32_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d79018eee0>
+            l_self_modules_layers_modules_32_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d79018f700>
+            synthetic_local_tmp_58_: <LayerName at 0x14d67bebe210>
+            l_self_modules_layers_modules_32_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d790264960>
+            l_self_modules_layers_modules_32_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d79018ebc0>
+            l_self_modules_layers_modules_32_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d790742300>
+            synthetic_local_tmp_60_: <LayerName at 0x14d67bebd4a0>
+            l_self_modules_layers_modules_33_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d78bf49950>
+            l_self_modules_layers_modules_33_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d78bf481e0>
+            l_self_modules_layers_modules_33_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d78bf48280>
+            l_self_modules_layers_modules_33_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d78bf484b0>
+            l_self_modules_layers_modules_33_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d79018f430>
+            l_self_modules_layers_modules_33_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d6f01883c0>
+            l_self_modules_layers_modules_33_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d78bf48730>
+            l_self_modules_layers_modules_33_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d78bf48fa0>
+            synthetic_local_tmp_62_: <LayerName at 0x14d67bebf930>
+            l_self_modules_layers_modules_33_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d78bf488c0>
+            l_self_modules_layers_modules_33_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d78bf48640>
+            l_self_modules_layers_modules_33_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d78bf49f40>
+            synthetic_local_tmp_64_: <LayerName at 0x14d67bebefd0>
+            l_self_modules_layers_modules_34_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d78bf4b340>
+            l_self_modules_layers_modules_34_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d78bf48690>
+            l_self_modules_layers_modules_34_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d78bf49ea0>
+            l_self_modules_layers_modules_34_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d78bf4a030>
+            l_self_modules_layers_modules_34_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d78bf4a080>
+            l_self_modules_layers_modules_34_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d78bf49ef0>
+            l_self_modules_layers_modules_34_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d78bf4a350>
+            l_self_modules_layers_modules_34_modules_self_attn_modules_mla_attn_modules_indexer_modules_wq_b_parameters_weight_: <Parameter at 0x14d78bf4a0d0>
+            l_self_modules_layers_modules_34_modules_self_attn_modules_mla_attn_modules_indexer_modules_wq_b_parameters_weight_scale_inv_: <Parameter at 0x14d6f018b340>
+            l_self_modules_layers_modules_34_modules_self_attn_modules_mla_attn_modules_indexer_modules_wk_weights_proj_parameters_weight_: <ModelWeightParameter at 0x14d78bf49720>
+            l_self_modules_layers_modules_34_modules_self_attn_modules_mla_attn_modules_indexer_modules_k_norm_parameters_weight_: <Parameter at 0x14d78bf4aa30>
+            l_self_modules_layers_modules_34_modules_self_attn_modules_mla_attn_modules_indexer_modules_k_norm_parameters_bias_: <Parameter at 0x14d78bf4aa80>
+            l_self_modules_layers_modules_34_modules_self_attn_modules_mla_attn_modules_indexer_modules_indexer_op_modules_k_cache_kv_cache: <Tensor at 0x14d66815ce10>
+            synthetic_local_tmp_66_: <LayerName at 0x14d67bebd950>
+            l_self_modules_layers_modules_34_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d78bf4ab20>
+            synthetic_local_tmp_68_: <LayerName at 0x14d67bebc9b0>
+            l_self_modules_layers_modules_34_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d78bf4a2b0>
+            l_self_modules_layers_modules_34_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d78bf48ff0>
+            l_self_modules_layers_modules_34_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d78bf4b930>
+            synthetic_local_tmp_70_: <LayerName at 0x14d67bebe9e0>
+            l_self_modules_layers_modules_35_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d78bfa4e60>
+            l_self_modules_layers_modules_35_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d78bf4b7f0>
+            l_self_modules_layers_modules_35_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d78bf4b7a0>
+            l_self_modules_layers_modules_35_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d78bf4bb60>
+            l_self_modules_layers_modules_35_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d78bf4ba70>
+            l_self_modules_layers_modules_35_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d78bf4b890>
+            l_self_modules_layers_modules_35_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d78bf4bde0>
+            l_self_modules_layers_modules_35_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d78bfa4690>
+            synthetic_local_tmp_72_: <LayerName at 0x14d67bebf4d0>
+            l_self_modules_layers_modules_35_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d78bf4b610>
+            l_self_modules_layers_modules_35_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d78bf4bac0>
+            l_self_modules_layers_modules_35_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d78bfa54a0>
+            synthetic_local_tmp_74_: <LayerName at 0x14d67bebde50>
+            l_self_modules_layers_modules_36_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d78bfa6760>
+            l_self_modules_layers_modules_36_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d78bf4b4d0>
+            l_self_modules_layers_modules_36_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d78bf48dc0>
+            l_self_modules_layers_modules_36_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d78bfa54f0>
+            l_self_modules_layers_modules_36_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d78bfa5360>
+            l_self_modules_layers_modules_36_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d78bfa5630>
+            l_self_modules_layers_modules_36_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d78bfa56d0>
+            l_self_modules_layers_modules_36_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d78bfa5fe0>
+            synthetic_local_tmp_76_: <LayerName at 0x14d67bebea80>
+            l_self_modules_layers_modules_36_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d78bfa5680>
+            l_self_modules_layers_modules_36_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d78bfa5a90>
+            l_self_modules_layers_modules_36_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d78bfa6df0>
+            synthetic_local_tmp_78_: <LayerName at 0x14d67bebe620>
+            l_self_modules_layers_modules_37_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d78290c5f0>
+            l_self_modules_layers_modules_37_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d78bfa6ad0>
+            l_self_modules_layers_modules_37_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d78bfa6da0>
+            l_self_modules_layers_modules_37_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d78bfa7020>
+            l_self_modules_layers_modules_37_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d78bfa68f0>
+            l_self_modules_layers_modules_37_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d6f0166a30>
+            l_self_modules_layers_modules_37_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d78bfa7250>
+            l_self_modules_layers_modules_37_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d78bfa7a70>
+            synthetic_local_tmp_80_: <LayerName at 0x14d67bebcfa0>
+            l_self_modules_layers_modules_37_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d78bfa7200>
+            l_self_modules_layers_modules_37_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d78bfa7570>
+            l_self_modules_layers_modules_37_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d78290c0f0>
+            synthetic_local_tmp_82_: <LayerName at 0x14d67bebd0e0>
+            l_self_modules_layers_modules_38_modules_input_layernorm_parameters_weight_: <Parameter at 0x14d78290da90>
+            l_self_modules_layers_modules_38_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14d78bfa77f0>
+            l_self_modules_layers_modules_38_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14d78290c5a0>
+            l_self_modules_layers_modules_38_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14d78290c8c0>
+            l_self_modules_layers_modules_38_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x14d6f025fc00>
+            l_self_modules_layers_modules_38_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x14d78290c640>
+            l_self_modules_layers_modules_38_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14d78290caf0>
+            l_self_modules_layers_modules_38_modules_self_attn_modules_mla_attn_modules_indexer_modules_wq_b_parameters_weight_: <Parameter at 0x14d78290ccd0>
+            l_self_modules_layers_modules_38_modules_self_attn_modules_mla_attn_modules_indexer_modules_wq_b_parameters_weight_scale_inv_: <Parameter at 0x14d78290d130>
+            l_self_modules_layers_modules_38_modules_self_attn_modules_mla_attn_modules_indexer_modules_wk_weights_proj_parameters_weight_: <ModelWeightParameter at 0x14d78290d270>
+            l_self_modules_layers_modules_38_modules_self_attn_modules_mla_attn_modules_indexer_modules_k_norm_parameters_weight_: <Parameter at 0x14d78290d2c0>
+            l_self_modules_layers_modules_38_modules_self_attn_modules_mla_attn_modules_indexer_modules_k_norm_parameters_bias_: <Parameter at 0x14d78290d310>
+            l_self_modules_layers_modules_38_modules_self_attn_modules_mla_attn_modules_indexer_modules_indexer_op_modules_k_cache_kv_cache: <Tensor at 0x14d66815cdc0>
+            synthetic_local_tmp_84_: <LayerName at 0x14d67bebf660>
+            l_self_modules_layers_modules_38_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14d78290d3b0>
+            synthetic_local_tmp_86_: <LayerName at 0x14d67bebdef0>
+            l_self_modules_layers_modules_38_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14d78290cc80>
+            l_self_modules_layers_modules_38_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14d78290c820>
+            l_self_modules_layers_modules_38_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14d78290e0d0>
+            synthetic_local_tmp_88_: <LayerName at 0x14d67bebceb0>
+        Locals:
+            __vllm_submods__: [<CUDAGraphWrapper at 0x14d694097750>, <GraphModule at 0x14d6f02d2e40>, <GraphModule at 0x14d6f02d2cf0>, ...]
+            getitem_3: <Tensor at 0x14d67beca170>
+            getitem_4: <Tensor at 0x14d67bec8c80>
+            submod_3: ()
+    __call__ (vllm/compilation/caching.py:217)
+        Arguments:
+            self: <VllmSerializableFunction at 0x14d6f86b6900>
+        Locals:
+            args: (2792, <Tensor at 0x14d67bec4e10>, <Parameter at 0x14d7901c7fc0>, 2792, <Tensor at 0x14d67bec54f0>, ...)
+            kwargs: {}
+    forward (vllm/model_executor/models/deepseek_v2.py:1286)
+        Arguments:
+            self: <DeepseekV2Model at 0x14d79050e660>
+            input_ids: <Tensor at 0x14d67bd0be30>
+            positions: <Tensor at 0x14d67bd0bc00>
+            intermediate_tensors: <IntermediateTensors at 0x14d67bec58b0>
+            inputs_embeds: None
+        Locals:
+            tmp_0: <LayerName at 0x14d67be05450>
+            tmp_1: 0
+            tmp_2: <LayerName at 0x14d67be05b30>
+            tmp_3: 0
+            tmp_4: <LayerName at 0x14d67be06a30>
+            tmp_5: 0
+            tmp_6: <LayerName at 0x14d67be07ed0>
+            tmp_7: 0
+            tmp_8: <LayerName at 0x14d67be05770>
+            tmp_9: 0
+            tmp_10: <LayerName at 0x14d67be05310>
+            tmp_11: 0
+            tmp_12: <LayerName at 0x14d67be05400>
+            tmp_13: 0
+            tmp_14: <LayerName at 0x14d67be04c30>
+            tmp_15: 0
+            tmp_16: <LayerName at 0x14d67be04190>
+            tmp_17: 0
+            tmp_18: <LayerName at 0x14d67be07e80>
+            tmp_19: 0
+            tmp_20: <LayerName at 0x14d67be06350>
+            tmp_21: 0
+            tmp_22: <LayerName at 0x14d67bebc550>
+            tmp_23: 0
+            tmp_24: <LayerName at 0x14d67bebc190>
+            tmp_25: 0
+            tmp_26: <LayerName at 0x14d67bebff20>
+            tmp_27: 0
+            tmp_28: <LayerName at 0x14d67bebe3a0>
+            tmp_29: 0
+            tmp_30: <LayerName at 0x14d67bebee90>
+            tmp_31: 0
+            tmp_32: <LayerName at 0x14d67bebf430>
+            tmp_33: 0
+            tmp_34: <LayerName at 0x14d67bebc3c0>
+            tmp_35: 0
+            tmp_36: <LayerName at 0x14d67bebdc20>
+            tmp_37: 0
+            tmp_38: <LayerName at 0x14d67bebf390>
+            tmp_39: 0
+            tmp_40: <LayerName at 0x14d67bebec60>
+            tmp_41: 0
+            tmp_42: <LayerName at 0x14d67bebcb40>
+            tmp_43: 0
+            tmp_44: <LayerName at 0x14d67bebf250>
+            tmp_45: 0
+            tmp_46: <LayerName at 0x14d67bebde00>
+            tmp_47: 0
+            tmp_48: <LayerName at 0x14d67bebc410>
+            tmp_49: 0
+            tmp_50: <LayerName at 0x14d67bebfca0>
+            tmp_51: 0
+            tmp_52: <LayerName at 0x14d67bebdd10>
+            tmp_53: 0
+            tmp_54: <LayerName at 0x14d67bebe580>
+            tmp_55: 0
+            tmp_56: <LayerName at 0x14d67bebe5d0>
+            tmp_57: 0
+            tmp_58: <LayerName at 0x14d67bebe210>
+            tmp_59: 0
+            tmp_60: <LayerName at 0x14d67bebd4a0>
+            tmp_61: 0
+            tmp_62: <LayerName at 0x14d67bebf930>
+            tmp_63: 0
+            tmp_64: <LayerName at 0x14d67bebefd0>
+            tmp_65: 0
+            tmp_66: <LayerName at 0x14d67bebd950>
+            tmp_67: 0
+            tmp_68: <LayerName at 0x14d67bebc9b0>
+            tmp_69: 0
+            tmp_70: <LayerName at 0x14d67bebe9e0>
+            tmp_71: 0
+            tmp_72: <LayerName at 0x14d67bebf4d0>
+            tmp_73: 0
+            tmp_74: <LayerName at 0x14d67bebde50>
+            tmp_75: 0
+            tmp_76: <LayerName at 0x14d67bebea80>
+            tmp_77: 0
+            tmp_78: <LayerName at 0x14d67bebe620>
+            tmp_79: 0
+            tmp_80: <LayerName at 0x14d67bebcfa0>
+            tmp_81: 0
+            tmp_82: <LayerName at 0x14d67bebd0e0>
+            tmp_83: 0
+            tmp_84: <LayerName at 0x14d67bebf660>
+            tmp_85: 0
+            tmp_86: <LayerName at 0x14d67bebdef0>
+            tmp_87: 0
+            tmp_88: <LayerName at 0x14d67bebceb0>
+            tmp_89: 0
+            tmp_95: <function at 0x14da38450ae0>
+            tmp_96: <nullcontext at 0x14d67bebe940>
+            tmp_97: <function at 0x14da38443b00>
+            tmp_98: {"hidden_states": <Tensor at 0x14d67bec54f0>, "residual": <Tensor at 0x14d67bec4e10>}
+            tmp_99: <Tensor at 0x14d67bec4e10>
+            tmp_100: {"0": <PPMissingLayer at 0x14d9fde53d90>, "1": <PPMissingLayer at 0x14d79064b250>, ...}
+            tmp_101: {"self_attn": <DeepseekV2MLAAttention at 0x14d79050ea50>, "mlp": <DeepseekV2MoE at 0x14d7905d4ad0>, ...}
+            tmp_102: <Tensor at 0x14d67bec54f0>
+            tmp_103: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d79050eba0>, "q_a_layernorm": <RMSNorm at 0x14d79050fa10>, ...}
+            tmp_104: {"weight": <Parameter at 0x14d766766760>, "weight_scale_inv": <Parameter at 0x14d766766620>, "bias": None}
+            tmp_105: {"weight": <Parameter at 0x14d79058c460>, "weight_scale_inv": <Parameter at 0x14d766765450>, "bias": None}
+            tmp_106: {"weight": <Parameter at 0x14d766766ad0>, "weight_scale_inv": <Parameter at 0x14d766765b30>, "bias": None}
+            tmp_107: {"self_attn": <DeepseekV2MLAAttention at 0x14d7905bbed0>, "mlp": <DeepseekV2MoE at 0x14d7905bb390>, ...}
+            tmp_108: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d7901fc050>, "q_a_layernorm": <RMSNorm at 0x14d7905cd6e0>, ...}
+            tmp_109: {"weight": <Parameter at 0x14d79058c140>, "weight_scale_inv": <Parameter at 0x14d6f01885f0>, "bias": None}
+            tmp_110: {"weight": <Parameter at 0x14d790741040>, "weight_scale_inv": <Parameter at 0x14d6f0188500>, "bias": None}
+            tmp_111: {"weight": <Parameter at 0x14d7901f85f0>, "weight_scale_inv": <Parameter at 0x14d790742080>, "bias": None}
+            tmp_112: {"self_attn": <DeepseekV2MLAAttention at 0x14d7902242d0>, "mlp": <DeepseekV2MoE at 0x14d790226990>, ...}
+            tmp_113: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d790224410>, "q_a_layernorm": <RMSNorm at 0x14d7905cdba0>, ...}
+            tmp_114: {"weight": <Parameter at 0x14d7901f99f0>, "weight_scale_inv": <Parameter at 0x14d7901f8f50>, "bias": None}
+            tmp_115: {"weight": <Parameter at 0x14d7901f9ae0>, "weight_scale_inv": <Parameter at 0x14d73c14ae40>, "bias": None}
+            tmp_116: {"weight": <Parameter at 0x14d7901f9f40>, "weight_scale_inv": <Parameter at 0x14d7901f9c70>, "bias": None}
+            tmp_117: {"self_attn": <DeepseekV2MLAAttention at 0x14d790248cd0>, "mlp": <DeepseekV2MoE at 0x14d79024a990>, ...}
+            tmp_118: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d790248e10>, "q_a_layernorm": <RMSNorm at 0x14d7905ce2c0>, ...}
+            tmp_119: {"weight": <Parameter at 0x14d7901fb0c0>, "weight_scale_inv": <Parameter at 0x14d7901f9a90>, "bias": None}
+            tmp_120: {"weight": <Parameter at 0x14d6f0188870>, "weight_scale_inv": <Parameter at 0x14d7901fb340>, "bias": None}
+            tmp_121: {"wq_b": <ReplicatedLinear at 0x14d790249bd0>, "wk_weights_proj": <MergedColumnParallelLinear at 0x14d79024a210>, ...}
+            tmp_122: {"weight": <Parameter at 0x14d7901fb250>, "weight_scale_inv": <Parameter at 0x14d7901fbb60>, "bias": None}
+            tmp_123: {"weight": <Parameter at 0x14d7901fbc50>, "bias": <Parameter at 0x14d7901fbca0>}
+            tmp_124: <SparseAttnIndexer at 0x14d79024a350>
+            tmp_125: {"weight": <Parameter at 0x14d7901fb430>, "weight_scale_inv": <Parameter at 0x14d7901fb7f0>, "bias": None}
+            tmp_126: {"self_attn": <DeepseekV2MLAAttention at 0x14d79024bb10>, "mlp": <DeepseekV2MoE at 0x14d79027e490>, ...}
+            tmp_127: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d79024bc50>, "q_a_layernorm": <RMSNorm at 0x14d7905cf6f0>, ...}
+            tmp_128: {"weight": <Parameter at 0x14d7901fb980>, "weight_scale_inv": <Parameter at 0x14d7902648c0>, "bias": None}
+            tmp_129: {"weight": <Parameter at 0x14d7902649b0>, "weight_scale_inv": <Parameter at 0x14d7901fb930>, "bias": None}
+            tmp_130: {"weight": <Parameter at 0x14d790264910>, "weight_scale_inv": <Parameter at 0x14d790265180>, "bias": None}
+            tmp_131: {"self_attn": <DeepseekV2MLAAttention at 0x14d79027e850>, "mlp": <DeepseekV2MoE at 0x14d7900a91d0>, ...}
+            tmp_132: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d79027e990>, "q_a_layernorm": <RMSNorm at 0x14d790294b00>, ...}
+            tmp_133: {"weight": <Parameter at 0x14d790266210>, "weight_scale_inv": <Parameter at 0x14d790265f40>, "bias": None}
+            tmp_134: {"weight": <Parameter at 0x14d7902661c0>, "weight_scale_inv": <Parameter at 0x14d7902666c0>, "bias": None}
+            tmp_135: {"weight": <Parameter at 0x14d790266300>, "weight_scale_inv": <Parameter at 0x14d790266b20>, "bias": None}
+            tmp_136: {"self_attn": <DeepseekV2MLAAttention at 0x14d7900aa350>, "mlp": <DeepseekV2MoE at 0x14d7900abed0>, ...}
+            tmp_137: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d7900aa490>, "q_a_layernorm": <RMSNorm at 0x14d790294fc0>, ...}
+            tmp_138: {"weight": <Parameter at 0x14d790267c50>, "weight_scale_inv": <Parameter at 0x14d790267c00>, "bias": None}
+            tmp_139: {"weight": <Parameter at 0x14d790267ed0>, "weight_scale_inv": <Parameter at 0x14d7901fa530>, "bias": None}
+            tmp_140: {"weight": <Parameter at 0x14d790267f20>, "weight_scale_inv": <Parameter at 0x14d7900cc4b0>, "bias": None}
+            tmp_141: {"self_attn": <DeepseekV2MLAAttention at 0x14d7900dd090>, "mlp": <DeepseekV2MoE at 0x14d7900df9d0>, ...}
+            tmp_142: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d7900dd1d0>, "q_a_layernorm": <RMSNorm at 0x14d790295480>, ...}
+            tmp_143: {"weight": <Parameter at 0x14d7900cd540>, "weight_scale_inv": <Parameter at 0x14d7900cc9b0>, "bias": None}
+            tmp_144: {"weight": <Parameter at 0x14d7900cd630>, "weight_scale_inv": <Parameter at 0x14d6f022f1b0>, "bias": None}
+            tmp_145: {"wq_b": <ReplicatedLinear at 0x14d7900dec10>, "wk_weights_proj": <MergedColumnParallelLinear at 0x14d7900df250>, ...}
+            tmp_146: {"weight": <Parameter at 0x14d7900ce170>, "weight_scale_inv": <Parameter at 0x14d6f01663a0>, "bias": None}
+            tmp_147: {"weight": <Parameter at 0x14d7900ce260>, "bias": <Parameter at 0x14d7900ce2b0>}
+            tmp_148: {"weight": <Parameter at 0x14d7900cd220>, "weight_scale_inv": <Parameter at 0x14d7900cdea0>, "bias": None}
+            tmp_149: {"self_attn": <DeepseekV2MLAAttention at 0x14d7900ab4d0>, "mlp": <DeepseekV2MoE at 0x14d790106850>, ...}
+            tmp_150: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d7900a9e50>, "q_a_layernorm": <RMSNorm at 0x14d790295940>, ...}
+            tmp_151: {"weight": <Parameter at 0x14d7900cec60>, "weight_scale_inv": <Parameter at 0x14d7900cec10>, "bias": None}
+            tmp_152: {"weight": <Parameter at 0x14d7900ced50>, "weight_scale_inv": <Parameter at 0x14d6f022e6c0>, "bias": None}
+            tmp_153: {"weight": <Parameter at 0x14d7900ceb20>, "weight_scale_inv": <Parameter at 0x14d7900cf5c0>, "bias": None}
+            tmp_154: {"self_attn": <DeepseekV2MLAAttention at 0x14d7901079d0>, "mlp": <DeepseekV2MoE at 0x14d79013d590>, ...}
+            tmp_155: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d790107b10>, "q_a_layernorm": <RMSNorm at 0x14d790295e00>, ...}
+            tmp_156: {"weight": <Parameter at 0x14d6f0165b80>, "weight_scale_inv": <Parameter at 0x14d6f0167f70>, "bias": None}
+            tmp_157: {"weight": <Parameter at 0x14d7901245f0>, "weight_scale_inv": <Parameter at 0x14d790124640>, "bias": None}
+            tmp_158: {"weight": <Parameter at 0x14d790124cd0>, "weight_scale_inv": <Parameter at 0x14d6f018a850>, "bias": None}
+            tmp_159: {"self_attn": <DeepseekV2MLAAttention at 0x14d79013e710>, "mlp": <DeepseekV2MoE at 0x14d790171090>, ...}
+            tmp_160: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d79013e850>, "q_a_layernorm": <RMSNorm at 0x14d7902962c0>, ...}
+            tmp_161: {"weight": <Parameter at 0x14d7901245a0>, "weight_scale_inv": <Parameter at 0x14d790125f90>, "bias": None}
+            tmp_162: {"weight": <Parameter at 0x14d790126080>, "weight_scale_inv": <Parameter at 0x14d790124870>, "bias": None}
+            tmp_163: {"weight": <Parameter at 0x14d790126670>, "weight_scale_inv": <Parameter at 0x14d7901261c0>, "bias": None}
+            tmp_164: {"self_attn": <DeepseekV2MLAAttention at 0x14d79013f250>, "mlp": <DeepseekV2MoE at 0x14d790173ed0>, ...}
+            tmp_165: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d79013ec10>, "q_a_layernorm": <RMSNorm at 0x14d790296780>, ...}
+            tmp_166: {"weight": <Parameter at 0x14d790127430>, "weight_scale_inv": <Parameter at 0x14d7901254f0>, "bias": None}
+            tmp_167: {"weight": <Parameter at 0x14d790127930>, "weight_scale_inv": <Parameter at 0x14d790125f40>, "bias": None}
+            tmp_168: {"wq_b": <ReplicatedLinear at 0x14d790173110>, "wk_weights_proj": <MergedColumnParallelLinear at 0x14d790173750>, ...}
+            tmp_169: {"weight": <Parameter at 0x14d790127fc0>, "weight_scale_inv": <Parameter at 0x14d790127980>, "bias": None}
+            tmp_170: {"weight": <Parameter at 0x14d79018c370>, "bias": <Parameter at 0x14d79018c3c0>}
+            tmp_171: {"weight": <Parameter at 0x14d790127d90>, "weight_scale_inv": <Parameter at 0x14d790127bb0>, "bias": None}
+            tmp_172: {"self_attn": <DeepseekV2MLAAttention at 0x14d78bf01090>, "mlp": <DeepseekV2MoE at 0x14d78bf00550>, ...}
+            tmp_173: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d78bf011d0>, "q_a_layernorm": <RMSNorm at 0x14d790296c40>, ...}
+            tmp_174: {"weight": <Parameter at 0x14d79018d040>, "weight_scale_inv": <Parameter at 0x14d79018cdc0>, "bias": None}
+            tmp_175: {"weight": <Parameter at 0x14d79018cff0>, "weight_scale_inv": <Parameter at 0x14d79018d310>, "bias": None}
+            tmp_176: {"weight": <Parameter at 0x14d79018d0e0>, "weight_scale_inv": <Parameter at 0x14d79018d950>, "bias": None}
+            tmp_177: {"self_attn": <DeepseekV2MLAAttention at 0x14d78bf03d90>, "mlp": <DeepseekV2MoE at 0x14d78bf2e710>, ...}
+            tmp_178: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d78bf03ed0>, "q_a_layernorm": <RMSNorm at 0x14d790297100>, ...}
+            tmp_179: {"weight": <Parameter at 0x14d79018e8f0>, "weight_scale_inv": <Parameter at 0x14d79018db30>, "bias": None}
+            tmp_180: {"weight": <Parameter at 0x14d790125e00>, "weight_scale_inv": <Parameter at 0x14d79018e8a0>, "bias": None}
+            tmp_181: {"weight": <Parameter at 0x14d790264960>, "weight_scale_inv": <Parameter at 0x14d79018ebc0>, "bias": None}
+            tmp_182: {"self_attn": <DeepseekV2MLAAttention at 0x14d790172710>, "mlp": <DeepseekV2MoE at 0x14d78bf61590>, ...}
+            tmp_183: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d78bf2f390>, "q_a_layernorm": <RMSNorm at 0x14d7902975c0>, ...}
+            tmp_184: {"weight": <Parameter at 0x14d78bf481e0>, "weight_scale_inv": <Parameter at 0x14d78bf48280>, "bias": None}
+            tmp_185: {"weight": <Parameter at 0x14d79018f430>, "weight_scale_inv": <Parameter at 0x14d6f01883c0>, "bias": None}
+            tmp_186: {"weight": <Parameter at 0x14d78bf488c0>, "weight_scale_inv": <Parameter at 0x14d78bf48640>, "bias": None}
+            tmp_187: {"self_attn": <DeepseekV2MLAAttention at 0x14d78bf62710>, "mlp": <DeepseekV2MoE at 0x14d78bf61bd0>, ...}
+            tmp_188: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d78bf62850>, "q_a_layernorm": <RMSNorm at 0x14d790297a80>, ...}
+            tmp_189: {"weight": <Parameter at 0x14d78bf48690>, "weight_scale_inv": <Parameter at 0x14d78bf49ea0>, "bias": None}
+            tmp_190: {"weight": <Parameter at 0x14d78bf4a080>, "weight_scale_inv": <Parameter at 0x14d78bf49ef0>, "bias": None}
+            tmp_191: {"wq_b": <ReplicatedLinear at 0x14d78bf882d0>, "wk_weights_proj": <MergedColumnParallelLinear at 0x14d78bf88910>, ...}
+            tmp_192: {"weight": <Parameter at 0x14d78bf4a0d0>, "weight_scale_inv": <Parameter at 0x14d6f018b340>, "bias": None}
+            tmp_193: {"weight": <Parameter at 0x14d78bf4aa30>, "bias": <Parameter at 0x14d78bf4aa80>}
+            tmp_194: {"weight": <Parameter at 0x14d78bf4a2b0>, "weight_scale_inv": <Parameter at 0x14d78bf48ff0>, "bias": None}
+            tmp_195: {"self_attn": <DeepseekV2MLAAttention at 0x14d78bf89090>, "mlp": <DeepseekV2MoE at 0x14d78bf8b9d0>, ...}
+            tmp_196: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d78bf891d0>, "q_a_layernorm": <RMSNorm at 0x14d78bf98050>, ...}
+            tmp_197: {"weight": <Parameter at 0x14d78bf4b7f0>, "weight_scale_inv": <Parameter at 0x14d78bf4b7a0>, "bias": None}
+            tmp_198: {"weight": <Parameter at 0x14d78bf4ba70>, "weight_scale_inv": <Parameter at 0x14d78bf4b890>, "bias": None}
+            tmp_199: {"weight": <Parameter at 0x14d78bf4b610>, "weight_scale_inv": <Parameter at 0x14d78bf4bac0>, "bias": None}
+            tmp_200: {"self_attn": <DeepseekV2MLAAttention at 0x14d78bfc0b90>, "mlp": <DeepseekV2MoE at 0x14d78bfc2990>, ...}
+            tmp_201: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d78bf8afd0>, "q_a_layernorm": <RMSNorm at 0x14d78bf98510>, ...}
+            tmp_202: {"weight": <Parameter at 0x14d78bf4b4d0>, "weight_scale_inv": <Parameter at 0x14d78bf48dc0>, "bias": None}
+            tmp_203: {"weight": <Parameter at 0x14d78bfa5360>, "weight_scale_inv": <Parameter at 0x14d78bfa5630>, "bias": None}
+            tmp_204: {"weight": <Parameter at 0x14d78bfa5680>, "weight_scale_inv": <Parameter at 0x14d78bfa5a90>, "bias": None}
+            tmp_205: {"self_attn": <DeepseekV2MLAAttention at 0x14d78bfc3b10>, "mlp": <DeepseekV2MoE at 0x14d78bfc1f90>, ...}
+            tmp_206: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d78bfc3c50>, "q_a_layernorm": <RMSNorm at 0x14d78bf989d0>, ...}
+            tmp_207: {"weight": <Parameter at 0x14d78bfa6ad0>, "weight_scale_inv": <Parameter at 0x14d78bfa6da0>, "bias": None}
+            tmp_208: {"weight": <Parameter at 0x14d78bfa68f0>, "weight_scale_inv": <Parameter at 0x14d6f0166a30>, "bias": None}
+            tmp_209: {"weight": <Parameter at 0x14d78bfa7200>, "weight_scale_inv": <Parameter at 0x14d78bfa7570>, "bias": None}
+            tmp_210: {"self_attn": <DeepseekV2MLAAttention at 0x14d78bff2710>, "mlp": <DeepseekV2MoE at 0x14d782925090>, ...}
+            tmp_211: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14d78bff2850>, "q_a_layernorm": <RMSNorm at 0x14d78bf98e90>, ...}
+            tmp_212: {"weight": <Parameter at 0x14d78bfa77f0>, "weight_scale_inv": <Parameter at 0x14d78290c5a0>, "bias": None}
+            tmp_213: {"weight": <Parameter at 0x14d6f025fc00>, "weight_scale_inv": <Parameter at 0x14d78290c640>, "bias": None}
+            tmp_214: {"wq_b": <ReplicatedLinear at 0x14d7829242d0>, "wk_weights_proj": <MergedColumnParallelLinear at 0x14d782924910>, ...}
+            tmp_215: {"weight": <Parameter at 0x14d78290ccd0>, "weight_scale_inv": <Parameter at 0x14d78290d130>, "bias": None}
+            tmp_216: {"weight": <Parameter at 0x14d78290d2c0>, "bias": <Parameter at 0x14d78290d310>}
+            tmp_217: {"weight": <Parameter at 0x14d78290cc80>, "weight_scale_inv": <Parameter at 0x14d78290c820>, "bias": None}
+            tmp_218: <function at 0x14da38450c20>
+    __call__ (torch/_dynamo/aot_compile.py:224)
+        Arguments:
+            self: <AOTCompiledFunction at 0x14d6f86b63c0>
+        Locals:
+            args: (<DeepseekV2Model at 0x14d79050e660>, <Tensor at 0x14d67bd0be30>, <Tensor at 0x14d67bd0bc00>, ...)
+            kwargs: {}
+    __call__ (vllm/compilation/decorators.py:520)
+        Arguments:
+            self: <cell at 0x14d67bd42f20>
+        Locals:
+            args: (<Tensor at 0x14d67bd0be30>, <Tensor at 0x14d67bd0bc00>, <IntermediateTensors at 0x14d67bec58b0>, None)
+            kwargs: {}
+    forward (vllm/model_executor/models/deepseek_v2.py:1714)
+        Arguments:
+            self: <GlmMoeDsaForCausalLM at 0x14d79050e3c0>
+            input_ids: <Tensor at 0x14d67bd0be30>
+            positions: <Tensor at 0x14d67bd0bc00>
+            intermediate_tensors: <IntermediateTensors at 0x14d67bec58b0>
+            inputs_embeds: None
+    _call_impl (torch/nn/modules/module.py:1790)
+        Arguments:
+            self: <cell at 0x14d67be7d540>
+        Locals:
+            args: <cell at 0x14d67be54c70>
+            kwargs: <cell at 0x14d67be57580>
+    _wrapped_call_impl (torch/nn/modules/module.py:1779)
+        Arguments:
+            self: <GlmMoeDsaForCausalLM at 0x14d79050e3c0>
+        Locals:
+            args: ()
+            kwargs: {"input_ids": <Tensor at 0x14d67bd0be30>, "positions": <Tensor at 0x14d67bd0bc00>, ...}
+    __call__ (vllm/compilation/cuda_graph.py:254)
+        Arguments:
+            self: <CUDAGraphWrapper at 0x14d79050e270>
+        Locals:
+            args: ()
+            kwargs: {"input_ids": <Tensor at 0x14d67bd0be30>, "positions": <Tensor at 0x14d67bd0bc00>, ...}
+            forward_context: <ForwardContext at 0x14d6d40e01b0>
+            batch_descriptor: <BatchDescriptor at 0x14d67bd142f0>
+            cudagraph_runtime_mode: <CUDAGraphMode at 0x14da39c1b0e0>
+    _model_forward (vllm/v1/worker/gpu_model_runner.py:3742)
+        Arguments:
+            self: <GPUModelRunner at 0x14d79050c1a0>
+            input_ids: <Tensor at 0x14d67bd0be30>
+            positions: <Tensor at 0x14d67bd0bc00>
+            intermediate_tensors: <IntermediateTensors at 0x14d67bec58b0>
+            inputs_embeds: None
+        Locals:
+            model_kwargs: {}
+    execute_model (vllm/v1/worker/gpu_model_runner.py:4281)
+        Arguments:
+            self: <cell at 0x14d67be27100>
+            scheduler_output: <SchedulerOutput at 0x14d67be44ad0>
+            intermediate_tensors: <IntermediateTensors at 0x14d67bec58b0>
+        Locals:
+            num_scheduled_tokens: 2792
+            deferred_state_corrections_fn: None
+            ec_connector_output: None
+            num_reqs: 30
+            req_ids: ["chatcmpl-bf8334be3b51707b-96d962e4", "chatcmpl-bb3f318f7ef96a32-874251ca", "chatcmpl-b4333a199d8d7555-99c733fb", ...]
+            tokens: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1367, 1397]
+            num_scheduled_tokens_np: <numpy.ndarray at 0x14d67be760d0>
+            max_num_scheduled_tokens: 1397
+            num_tokens_unpadded: 2792
+            logits_indices: <Tensor at 0x14d67bec6bc0>
+            spec_decode_metadata: None
+            cascade_attn_prefix_lens: None
+            cudagraph_mode: <CUDAGraphMode at 0x14da39c1b0e0>
+            batch_desc: <BatchDescriptor at 0x14d67bd142f0>
+            should_ubatch: False
+            num_tokens_across_dp: None
+            cudagraph_stats: None
+            num_tokens_padded: 2792
+            num_reqs_padded: 30
+            ubatch_slices: None
+            ubatch_slices_padded: None
+            has_separate_kv_update: False
+            pad_attn: False
+            use_spec_decode: False
+            ubatch_slices_attn: None
+            slot_mappings_by_group: {0: <Tensor at 0x14d67be02c10>}
+            slot_mappings: {"model.layers.19.self_attn.indexer.k_cache": <Tensor at 0x14d67be02c10>, ...}
+            attn_metadata: {"model.layers.19.self_attn.indexer.k_cache": <DeepseekV32IndexerMetadata at 0x14d66827bd90>, ...}
+            spec_decode_common_attn_metadata: None
+            input_ids: <Tensor at 0x14d67bd0be30>
+            inputs_embeds: None
+            positions: <Tensor at 0x14d67bd0bc00>
+            model_kwargs: {}
+            num_encoder_reqs: 0
+            has_encoder_input: False
+            defer_kv_connector_finalize: False
+            kv_connector_output: None
+    decorate_context (torch/utils/_contextlib.py:124)
+        Locals:
+            args: (<GPUModelRunner at 0x14d79050c1a0>, <SchedulerOutput at 0x14d67be44ad0>, <AsyncIntermediateTensors at 0x14d67bd14360>)
+            kwargs: {}
+    execute_model (vllm/v1/worker/gpu_worker.py:867)
+        Arguments:
+            self: <Worker at 0x14d9e7f512b0>
+            scheduler_output: <SchedulerOutput at 0x14d67be44ad0>
+        Locals:
+            handle: <torch._C._distributed_c10d.Work at 0x14d67beee670>
+            intermediate_tensors: <AsyncIntermediateTensors at 0x14d67bd14360>
+            forward_pass: True
+            num_scheduled_tokens: 2792
+            all_gather_tensors: {}
+            compilation_config: <CompilationConfig at 0x14d9fde46ba0>
+            parallel_config: <ParallelConfig at 0x14da01115010>
+            tensor_dict: {"hidden_states": <Tensor at 0x14d67bec5f90>, "residual": <Tensor at 0x14d67bec6ad0>}
+            comm_handles: [<torch._C._distributed_c10d.Work at 0x14d67a2a1230>, <torch._C._distributed_c10d.Work at 0x14d6682507b0>]
+            comm_postprocess: [<function at 0x14d6942260c0>, <function at 0x14d7907ebf60>]
+    decorate_context (torch/utils/_contextlib.py:124)
+        Locals:
+            args: (<Worker at 0x14d9e7f512b0>, <SchedulerOutput at 0x14d67be44ad0>)
+            kwargs: {}
+    execute_model (vllm/v1/worker/worker_base.py:345)
+        Arguments:
+            self: <WorkerWrapperBase at 0x14d9fde47a10>
+            scheduler_output: <SchedulerOutput at 0x14d67be44ad0>
+    worker_busy_loop (vllm/v1/executor/multiproc_executor.py:982)
+        Arguments:
+            self: <RayWorkerProc at 0x14da0144f620>
+        Locals:
+            method: "execute_model"
+            args: (<SchedulerOutput at 0x14d67be44ad0>)
+            kwargs: {}
+            output_rank: 12
+            func: <method at 0x14d67bdf5880>
+            output: <ModelRunnerOutput at 0x14da02b86510>
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x14da0144f620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    run (vllm/v1/executor/ray_executor_v2.py:197)
+        Arguments:
+            self: <RayWorkerProc at 0x14da0144f620>
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x14da0144f620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    actor_method_executor (ray/_private/function_manager.py:721)
+        Arguments:
+            _FunctionActorManager__ray_actor: <RayWorkerProc at 0x14da0144f620>
+        Locals:
+            args: ()
+            kwargs: {}
+            is_bound: False
+    main_loop (ray/_private/worker.py:1039)
+        Arguments:
+            self: <Worker at 0x150a52b834d0>
+        Locals:
+            sigterm_handler: <function at 0x150a5294d8a0>
+    <module> (ray/_private/workers/default_worker.py:323)
+Thread 424473 (idle): "PythonGCThread"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x150a529a6fd0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x150a52cc58d0>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x150a529a6ea0>
+            timeout: None
+        Locals:
+            signaled: False
+    run (ray/_private/gc_collect_manager.py:29)
+        Arguments:
+            self: <PythonGCThread at 0x150a52920d70>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <PythonGCThread at 0x150a52920d70>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <PythonGCThread at 0x150a52920d70>
+Thread 425662 (idle): "tqdm_monitor"
+    wait (threading.py:363)
+        Arguments:
+            self: <Condition at 0x14d76678c050>
+            timeout: 10
+        Locals:
+            waiter: <_thread.lock at 0x14d67bdf5f10>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14d782972cf0>
+            timeout: 10
+        Locals:
+            signaled: False
+    run (tqdm/_monitor.py:69)
+        Arguments:
+            self: <TMonitor at 0x14d78299e660>
+        Locals:
+            cur_t: 1784116344.9477181
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <TMonitor at 0x14d78299e660>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <TMonitor at 0x14d78299e660>
+Thread 442805 (idle): "WorkerAsyncOutputCopy"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x14d766637590>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x14d6cc381fd0>
+            saved_state: None
+            gotit: False
+    get (queue.py:202)
+        Arguments:
+            self: <Queue at 0x14d9fde53c50>
+            block: True
+            timeout: None
+    async_output_busy_loop (vllm/v1/executor/multiproc_executor.py:966)
+        Arguments:
+            self: <RayWorkerProc at 0x14da0144f620>
+        Locals:
+            current_platform: <NvmlCudaPlatform at 0x14da39c1b230>
+            output: ("generate")
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x14da0144f620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x14d76624b890>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x14d76624b890>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x14d76624b890>
+Thread 444583 (idle): "tqdm_monitor"
+    wait (threading.py:363)
+        Arguments:
+            self: <Condition at 0x14d6944b9c70>
+            timeout: 10
+        Locals:
+            waiter: <_thread.lock at 0x14d67a29e910>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14d6f02b9d50>
+            timeout: 10
+        Locals:
+            signaled: False
+    run (tqdm/_monitor.py:69)
+        Arguments:
+            self: <TMonitor at 0x14d6f02c9e50>
+        Locals:
+            cur_t: 1784116351.535197
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <TMonitor at 0x14d6f02c9e50>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <TMonitor at 0x14d6f02c9e50>

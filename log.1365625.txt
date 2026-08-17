@@ -1,0 +1,10 @@
+Bereinige /w0/tmp/slurm_cu829455.1365625/glm52_run auf allen 4 Knoten ...
+[n25g0011.hpc.itc.rwth-aachen.de] /w0/tmp/slurm_cu829455.1365625/glm52_run bereit
+[n25g0012.hpc.itc.rwth-aachen.de] /w0/tmp/slurm_cu829455.1365625/glm52_run bereit
+[n25g0013.hpc.itc.rwth-aachen.de] /w0/tmp/slurm_cu829455.1365625/glm52_run bereit
+[n25g0009.hpc.itc.rwth-aachen.de] /w0/tmp/slurm_cu829455.1365625/glm52_run bereit
+Head: n25g0009 (134.61.53.224)
+Staging /hpcwork/p0021834/workspace_patrick/hf_home/hub/models--zai-org--GLM-5.2-FP8/snapshots/70311cfa0158cce7dd2cf5d2e04f68e3fdc3efc1 -> /w0/tmp/slurm_cu829455.1365625/glm52_run/model auf allen 4 Knoten ...
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+[2026-06-25T15:44:04.368] error: *** JOB 1365625 ON n25g0009 CANCELLED AT 2026-06-25T15:44:04 DUE to SIGNAL Terminated ***
+[2026-06-25T15:44:04.386] error: *** STEP 1365625.2 ON n25g0009 CANCELLED AT 2026-06-25T15:44:04 DUE to SIGNAL Terminated ***

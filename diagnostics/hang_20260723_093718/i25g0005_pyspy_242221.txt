@@ -1,0 +1,276 @@
+[2026-07-23T09:37:25.027] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+Process 242221: ray::RayWorkerProc.initialize_worker
+Python v3.13.3 (/w0/tmp/slurm_cs088267.2165566/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+
+Thread 242221 (active): "MainThread"
+    _load_w13 (vllm/model_executor/layers/fused_moe/layer.py:762)
+        Arguments:
+            self: <FusedMoE at 0x1446d6956ad0>
+            expert_data: <Tensor at 0x1446543006e0>
+            shard_dim: 0
+            shard_id: "w1"
+            loaded_weight: <Tensor at 0x1446543004b0>
+            tp_rank: 3
+            load_full: False
+        Locals:
+            shard_size: 512
+            tp_size: 4
+            loaded_per_rank: 512
+            start_offset: 1536
+            available: 512
+            narrow_size: 512
+            hidden_dim: 1
+    _load_model_weight_or_group_weight_scale (vllm/model_executor/layers/fused_moe/layer.py:623)
+        Arguments:
+            self: <FusedMoE at 0x1446d6956ad0>
+            shard_dim: 0
+            expert_data: <Tensor at 0x1446543002d0>
+            shard_id: "w1"
+            loaded_weight: <Tensor at 0x144654628050>
+            tp_rank: 3
+            load_full_w2: False
+    weight_loader (vllm/model_executor/layers/fused_moe/layer.py:1138)
+        Arguments:
+            self: <FusedMoE at 0x1446d6956ad0>
+            param: <Parameter at 0x1446d69592c0>
+            loaded_weight: <Tensor at 0x144654628050>
+            weight_name: "layers.77.mlp.experts.w13_weight"
+            shard_id: "w1"
+            expert_id: 187
+            return_success: True
+        Locals:
+            quant_config_name: "fp8"
+            quant_method_name: "Fp8MoEMethod"
+            global_expert_id: 187
+            use_global_sf: False
+            is_transposed: False
+            SHARD_ID_TO_SHARDED_DIM: {"w1": 0, "w2": 1, "w3": 0}
+            is_gguf_weight: False
+            is_gguf_weight_type: False
+            use_bitsandbytes_4bit: False
+            shard_dim: 0
+            expert_data: <Tensor at 0x1446543002d0>
+            full_load: False
+    load_weights (vllm/model_executor/models/deepseek_v2.py:1526)
+        Arguments:
+            self: <DeepseekV2Model at 0x1446e467cad0>
+            weights: <generator at 0x1446cd952ce0>
+        Locals:
+            rocm_aiter_moe_shared_expert_enabled: None
+            stacked_params_mapping: [("gate_up_proj", "gate_proj", 0), ("gate_up_proj", "up_proj", 1), ("wk_weights_proj", "wk", 0), ...]
+            mla_params_mapping: [("fused_qkv_a_proj", "q_a_proj", 0), ("fused_qkv_a_proj", "kv_a_proj_with_mqa", 1)]
+            mha_params_mapping: [("qkv_proj", "q_proj", "q"), ("qkv_proj", "k_proj", "k"), ("qkv_proj", "v_proj", "v")]
+            _pending_wk_fp8: {}
+            indexer_fused_mapping: [("wk_weights_proj", "wk", 0), ("wk_weights_proj", "weights_proj", 1)]
+            expert_params_mapping: [("experts.w13_", "experts.0.gate_proj.", 0, "w1"), ("experts.w2_", "experts.0.down_proj.", 0, "w2"), ...]
+            pp_missing_layer_names: ["embed_tokens.", "layers.0.", "layers.1.", "layers.2.", "layers.3.", "layers.4.", "layers.5.", "layers.6.", ...]
+            params_dict: {"layers.59.self_attn.fused_qkv_a_proj.weight": <ModelWeightParameter at 0x1446e465fa20>, ...}
+            loaded_params: <set at 0x1446cd952a40>
+            name: "layers.77.mlp.experts.187.gate_proj.weight"
+            loaded_weight: <Tensor at 0x144654628050>
+            spec_layer: None
+            is_fusion_moe_shared_experts_layer: None
+            param_name: "experts.w13_"
+            weight_name: "experts.187.gate_proj."
+            shard_id: "w1"
+            name_mapped: "layers.77.mlp.experts.w13_weight"
+            param: <Parameter at 0x1446d69592c0>
+            weight_loader: <method at 0x1446d693b840>
+            is_expert_weight: True
+            num_chunks: 1
+            j: 0
+            chunk_name: "layers.77.mlp.experts.187.gate_proj.weight"
+            weight_to_load: <Tensor at 0x144654628050>
+            mapping: ("experts.w13_", "experts.187.gate_proj.", 187, "w1")
+            expert_id: 187
+            success: True
+    _load_module (vllm/model_executor/models/utils.py:274)
+        Arguments:
+            self: <cell at 0x1446e43d2b60>
+            base_prefix: <cell at 0x1446e45a11b0>
+            module: <DeepseekV2Model at 0x1446e467cad0>
+            weights: <generator at 0x1446cd952ce0>
+        Locals:
+            module_load_weights: <method at 0x1446d690a240>
+    _load_module (vllm/model_executor/models/utils.py:301)
+        Arguments:
+            self: <cell at 0x1446e470e8c0>
+            base_prefix: <cell at 0x1446e45a9630>
+            module: <GlmMoeDsaForCausalLM at 0x1446e467c830>
+            weights: <generator at 0x1446cd952500>
+        Locals:
+            child_modules: {"model": <DeepseekV2Model at 0x1446e467cad0>, "lm_head": <ParallelLMHead at 0x1446cd9bc050>, ...}
+            child_params: {}
+            child_prefix: "model"
+            child_weights: <generator at 0x1446cd952ce0>
+            prefix: "model"
+    load_weights (vllm/model_executor/models/utils.py:368)
+        Arguments:
+            self: <cell at 0x144704414790>
+            weights: <generator at 0x1446cd952500>
+        Locals:
+            mapper: <WeightsMapper at 0x1446cd9bcad0>
+            modules: (<GlmMoeDsaForCausalLM at 0x1446e467c830>, <DeepseekV2Model at 0x1446e467cad0>, <ParallelLMHead at 0x1446cd9bc050>, ...)
+            iterator: <generator at 0x1446cd952880>
+            quant_config: <Fp8Config at 0x14494fb2a7b0>
+            cache_scale_mapper: <WeightsMapper at 0x1446cd9bcad0>
+    patched_model_load_weights (vllm/model_executor/model_loader/reload/torchao_decorator.py:50)
+        Arguments:
+            self: <AutoWeightsLoader at 0x1446e467c590>
+            weights: <generator at 0x1446d69df940>
+        Locals:
+            args: ()
+            kwargs: {}
+            model: <GlmMoeDsaForCausalLM at 0x1446e467c830>
+    load_weights (vllm/model_executor/models/deepseek_v2.py:1739)
+        Arguments:
+            self: <GlmMoeDsaForCausalLM at 0x1446e467c830>
+            weights: <generator at 0x1446d69df940>
+        Locals:
+            loader: <AutoWeightsLoader at 0x1446e467c590>
+    load_weights (vllm/model_executor/model_loader/default_loader.py:394)
+        Arguments:
+            self: <DefaultModelLoader at 0x1446e467c440>
+            model: <GlmMoeDsaForCausalLM at 0x1446e467c830>
+            model_config: <ModelConfig at 0x14494fde38c0>
+    sync_wrapper (vllm/tracing/otel.py:178)
+        Locals:
+            args: (<DefaultModelLoader at 0x1446e467c440>, <GlmMoeDsaForCausalLM at 0x1446e467c830>, <ModelConfig at 0x14494fde38c0>)
+            kwargs: {}
+            tracer: <ProxyTracer at 0x1446d698c160>
+            ctx: {}
+    load_model (vllm/model_executor/model_loader/base_loader.py:64)
+        Arguments:
+            self: <DefaultModelLoader at 0x1446e467c440>
+            vllm_config: <VllmConfig at 0x14494fde3a10>
+            model_config: <ModelConfig at 0x14494fde38c0>
+            prefix: ""
+        Locals:
+            device_config: <DeviceConfig at 0x14494fb29550>
+            load_config: <LoadConfig at 0x14494fb296a0>
+            load_device: <torch.device at 0x14494fc7d670>
+            target_device: <torch.device at 0x1446e50337d0>
+            model: <GlmMoeDsaForCausalLM at 0x1446e467c830>
+    sync_wrapper (vllm/tracing/otel.py:178)
+        Locals:
+            args: (<DefaultModelLoader at 0x1446e467c440>)
+            kwargs: {"vllm_config": <VllmConfig at 0x14494fde3a10>, "model_config": <ModelConfig at 0x14494fde38c0>}
+            tracer: <ProxyTracer at 0x1446e4604180>
+            ctx: {}
+    load_model (vllm/v1/worker/gpu_model_runner.py:5108)
+        Arguments:
+            self: <GPUModelRunner at 0x1446e474e270>
+            load_dummy_weights: False
+        Locals:
+            m: <DeviceMemoryProfiler at 0x144938514ad0>
+            time_before_load: 774464.600979164
+            model_loader: <DefaultModelLoader at 0x1446e467c440>
+    sync_wrapper (vllm/tracing/otel.py:178)
+        Locals:
+            args: (<GPUModelRunner at 0x1446e474e270>)
+            kwargs: {"load_dummy_weights": False}
+            tracer: <ProxyTracer at 0x1446e46043e0>
+            ctx: {}
+    load_model (vllm/v1/worker/gpu_worker.py:356)
+        Arguments:
+            self: <Worker at 0x1449369ee270>
+        Locals:
+            load_dummy_weights: False
+    __init__ (vllm/v1/executor/multiproc_executor.py:634)
+        Arguments:
+            self: <RayWorkerProc at 0x14494fe63770>
+            vllm_config: <VllmConfig at 0x14494fde3a10>
+            local_rank: 3
+            rank: 15
+            distributed_init_method: "tcp://134.61.53.224:58219"
+            input_shm_handle: <Handle at 0x144938514050>
+            shared_worker_lock: None
+            is_driver_worker: False
+        Locals:
+            wrapper: <WorkerWrapperBase at 0x144938514830>
+            all_kwargs: [{}, {}, {}, {"vllm_config": <VllmConfig at 0x14494fde3a10>, "local_rank": 3, "rank": 15, ...}, {}, {}, {}, {}, {}, {}, ...]
+    sync_wrapper (vllm/tracing/otel.py:178)
+        Locals:
+            args: (<RayWorkerProc at 0x14494fe63770>)
+            kwargs: {"local_rank": 3, "vllm_config": <VllmConfig at 0x14494fde3a10>, "rank": 15, ...}
+            tracer: <ProxyTracer at 0x1449385142f0>
+            ctx: {}
+    initialize_worker (vllm/v1/executor/ray_executor_v2.py:153)
+        Arguments:
+            self: <RayWorkerProc at 0x14494fe63770>
+            local_rank: 3
+            env_vars: {"CUDA_VISIBLE_DEVICES": "0,1,2,3"}
+            driver_env_vars: {"OMPI_MCA_plm_slurm_args": "--external-launcher", "PRTE_MCA_plm_slurm_args": "--external-launcher", ...}
+        Locals:
+            key: "CUDA_VISIBLE_DEVICES"
+            value: "0,1,2,3"
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x14494fe63770>
+        Locals:
+            _ray_trace_ctx: None
+            _args: (3, {"CUDA_VISIBLE_DEVICES": "0,1,2,3"}, {"OMPI_MCA_plm_slurm_args": "--external-launcher", ...})
+            _kwargs: {}
+    actor_method_executor (ray/_private/function_manager.py:721)
+        Arguments:
+            _FunctionActorManager__ray_actor: <RayWorkerProc at 0x14494fe63770>
+        Locals:
+            args: (3, {"CUDA_VISIBLE_DEVICES": "0,1,2,3"}, {"OMPI_MCA_plm_slurm_args": "--external-launcher", ...})
+            kwargs: {}
+            is_bound: False
+    main_loop (ray/_private/worker.py:1039)
+        Arguments:
+            self: <Worker at 0x1479a13874d0>
+        Locals:
+            sigterm_handler: <function at 0x1479a11498a0>
+    <module> (ray/_private/workers/default_worker.py:323)
+Thread 242548 (idle): "PythonGCThread"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x1479a11aafd0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x1479a199f510>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x1479a11aaea0>
+            timeout: None
+        Locals:
+            signaled: False
+    run (ray/_private/gc_collect_manager.py:29)
+        Arguments:
+            self: <PythonGCThread at 0x1479a1128d70>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <PythonGCThread at 0x1479a1128d70>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <PythonGCThread at 0x1479a1128d70>
+Thread 243714 (idle): "tqdm_monitor"
+    wait (threading.py:363)
+        Arguments:
+            self: <Condition at 0x1446cc126f70>
+            timeout: 10
+        Locals:
+            waiter: <_thread.lock at 0x1446cd9d9d50>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x1446d698d9d0>
+            timeout: 10
+        Locals:
+            signaled: False
+    run (tqdm/_monitor.py:69)
+        Arguments:
+            self: <TMonitor at 0x1446cd9bd160>
+        Locals:
+            cur_t: 1784792240.8327334
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <TMonitor at 0x1446cd9bd160>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <TMonitor at 0x1446cd9bd160>

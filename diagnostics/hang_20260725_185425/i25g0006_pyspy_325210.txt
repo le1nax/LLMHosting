@@ -1,0 +1,306 @@
+[2026-07-25T18:54:31.595] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+Process 325210: ray::RayWorkerProc.run
+Python v3.13.3 (/w0/tmp/slurm_cs088267.2210955/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+
+Thread 325210 (idle): "MainThread"
+    _poll_until_acquired (filelock/_api.py:552)
+        Arguments:
+            self: <UnixFileLock at 0x147624708910>
+        Locals:
+            blocking: True
+            cancel_check: None
+            timeout: -1
+            poll_interval: 0.05
+            start_time: 984743.709413515
+            lock_id: 22497650051344
+            lock_filename: "/w0/tmp/slurm_cs088267.2210955/vllm_jit/.cache/flashinfer/0.6.12/90a/cached_ops/tmp/sampling.lock"
+            msg: "Lock %s not acquired on %s, waiting %s seconds ..."
+    acquire (filelock/_api.py:506)
+        Arguments:
+            self: <UnixFileLock at 0x147624708910>
+            timeout: -1
+            poll_interval: 0.05
+        Locals:
+            poll_intervall: None
+            blocking: True
+            cancel_check: None
+            lock_id: 22497650051344
+            lock_filename: "/w0/tmp/slurm_cs088267.2210955/vllm_jit/.cache/flashinfer/0.6.12/90a/cached_ops/tmp/sampling.lock"
+            canonical: "/w0/tmp/slurm_cs088267.2210955/vllm_jit/.cache/flashinfer/0.6.12/90a/cached_ops/tmp/sampling.lock"
+            would_block: True
+            existing: None
+            start_time: 984743.709413515
+    __enter__ (filelock/_api.py:581)
+        Arguments:
+            self: <UnixFileLock at 0x147624708910>
+    build_and_load (flashinfer/jit/core.py:313)
+        Arguments:
+            self: <JitSpec at 0x14793c31f4d0>
+    get_sampling_module (flashinfer/sampling.py:68)
+    top_k_mask_logits (flashinfer/sampling.py:1820)
+        Arguments:
+            logits: <Tensor at 0x1475aa58c460>
+            top_k: <Tensor at 0x1475aa58c2d0>
+        Locals:
+            buffer_bytes: 1048576
+            row_states_buffer: <Tensor at 0x1476404b9900>
+    _auto_dump_wrapper (flashinfer/api_logging.py:2333)
+        Locals:
+            args: (<Tensor at 0x1475aa58c460>, <Tensor at 0x1475aa58c2d0>)
+            kwargs: {}
+    top_k_top_p_sampling_from_logits (flashinfer/sampling.py:1414)
+        Arguments:
+            logits: <Tensor at 0x1475aa58c460>
+            top_k: <Tensor at 0x1475aa58c2d0>
+            top_p: <Tensor at 0x1475aa58c140>
+            indices: None
+            filter_apply_order: "top_k_first"
+            deterministic: True
+            generator: None
+            check_nan: False
+            seed: None
+            offset: None
+    _auto_dump_wrapper (flashinfer/api_logging.py:2333)
+        Locals:
+            args: (<Tensor at 0x1475aa58c460>, <Tensor at 0x1475aa58c2d0>, <Tensor at 0x1475aa58c140>)
+            kwargs: {"deterministic": True}
+    flashinfer_sample (vllm/v1/sample/ops/topk_topp_sampler.py:493)
+        Arguments:
+            logits: <Tensor at 0x1475aa58c460>
+            k: <Tensor at 0x1475aa58c2d0>
+            p: <Tensor at 0x1475aa58c140>
+            generators: {}
+        Locals:
+            flashinfer: <module at 0x1479317bc900>
+    forward_cuda (vllm/v1/sample/ops/topk_topp_sampler.py:182)
+        Arguments:
+            self: <TopKTopPSampler at 0x1476c45d4440>
+            logits: <Tensor at 0x1475aa58c460>
+            generators: {}
+            k: <Tensor at 0x1475aa58c2d0>
+            p: <Tensor at 0x1475aa58c140>
+    _call_impl (torch/nn/modules/module.py:1790)
+        Arguments:
+            self: <cell at 0x1475e02a7100>
+        Locals:
+            args: <cell at 0x1475e02a5240>
+            kwargs: <cell at 0x1475e02a5bd0>
+    _wrapped_call_impl (torch/nn/modules/module.py:1779)
+        Arguments:
+            self: <TopKTopPSampler at 0x1476c45d4440>
+        Locals:
+            args: (<Tensor at 0x1475aa58c460>, {}, <Tensor at 0x1475aa58c2d0>, <Tensor at 0x1475aa58c140>)
+            kwargs: {}
+    sample (vllm/v1/sample/sampler.py:290)
+        Arguments:
+            self: <Sampler at 0x1476c45d42f0>
+            logits: <Tensor at 0x1475aa58c460>
+            sampling_metadata: <SamplingMetadata at 0x147624708690>
+            logprobs_mode_override: None
+        Locals:
+            logprobs_mode: "raw_logprobs"
+            greedy_sampled: <Tensor at 0x1474c1a34320>
+    forward (vllm/v1/sample/sampler.py:102)
+        Arguments:
+            self: <Sampler at 0x1476c45d42f0>
+            logits: <Tensor at 0x1475aa58c460>
+            sampling_metadata: <SamplingMetadata at 0x147624708690>
+            predict_bonus_token: False
+            logprobs_mode_override: None
+        Locals:
+            logprobs_mode: "raw_logprobs"
+            num_logprobs: None
+            raw_logprobs: None
+    _call_impl (torch/nn/modules/module.py:1790)
+        Arguments:
+            self: <cell at 0x1475b2373ee0>
+        Locals:
+            args: <cell at 0x1475e0141240>
+            kwargs: <cell at 0x1475e06d7ca0>
+    _wrapped_call_impl (torch/nn/modules/module.py:1779)
+        Arguments:
+            self: <Sampler at 0x1476c45d42f0>
+        Locals:
+            args: ()
+            kwargs: {"logits": <Tensor at 0x1475aa16eda0>, "sampling_metadata": <SamplingMetadata at 0x147624708690>}
+    _dummy_sampler_run (vllm/v1/worker/gpu_model_runner.py:6015)
+        Arguments:
+            self: <cell at 0x1476b26d18a0>
+            hidden_states: <Tensor at 0x1475aa58c050>
+        Locals:
+            mm_config: None
+            logits: <Tensor at 0x1475aa16eda0>
+            dummy_tensors: <function at 0x147624532200>
+            dummy_metadata: <SamplingMetadata at 0x147624708690>
+    decorate_context (torch/utils/_contextlib.py:124)
+        Locals:
+            args: (<GPUModelRunner at 0x1476c45d41a0>, <Tensor at 0x1476401cab70>)
+            kwargs: {}
+    profile_run (vllm/v1/worker/gpu_model_runner.py:6235)
+        Arguments:
+            self: <GPUModelRunner at 0x1476c45d41a0>
+        Locals:
+            hidden_states: <Tensor at 0x1475e05e72a0>
+            last_hidden_states: <Tensor at 0x1476401cab70>
+    determine_available_memory (vllm/v1/worker/gpu_worker.py:410)
+        Arguments:
+            self: <Worker at 0x1479317312b0>
+        Locals:
+            kv_cache_memory_bytes: None
+            profile_result: <MemoryProfilingResult at 0x14793c31f380>
+    decorate_context (torch/utils/_contextlib.py:124)
+        Locals:
+            args: (<Worker at 0x1479317312b0>)
+            kwargs: {}
+    worker_busy_loop (vllm/v1/executor/multiproc_executor.py:982)
+        Arguments:
+            self: <RayWorkerProc at 0x14794ad27620>
+        Locals:
+            method: "determine_available_memory"
+            args: ()
+            kwargs: {}
+            output_rank: None
+            func: <method at 0x14794aa8d180>
+            output: {"model.layers.59.self_attn.indexer.k_cache": <MLAAttentionSpec at 0x14794ad27770>, ...}
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x14794ad27620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    run (vllm/v1/executor/ray_executor_v2.py:197)
+        Arguments:
+            self: <RayWorkerProc at 0x14794ad27620>
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x14794ad27620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    actor_method_executor (ray/_private/function_manager.py:721)
+        Arguments:
+            _FunctionActorManager__ray_actor: <RayWorkerProc at 0x14794ad27620>
+        Locals:
+            args: ()
+            kwargs: {}
+            is_bound: False
+    main_loop (ray/_private/worker.py:1039)
+        Arguments:
+            self: <Worker at 0x14a99c3874d0>
+        Locals:
+            sigterm_handler: <function at 0x14a99c1498a0>
+    <module> (ray/_private/workers/default_worker.py:323)
+Thread 325445 (idle): "PythonGCThread"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x14a99c1e2fd0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x14a99d2000d0>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14a99c1e2ea0>
+            timeout: None
+        Locals:
+            signaled: False
+    run (ray/_private/gc_collect_manager.py:29)
+        Arguments:
+            self: <PythonGCThread at 0x14a99c124d70>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <PythonGCThread at 0x14a99c124d70>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <PythonGCThread at 0x14a99c124d70>
+Thread 326657 (idle): "tqdm_monitor"
+    wait (threading.py:363)
+        Arguments:
+            self: <Condition at 0x1476b2423ee0>
+            timeout: 10
+        Locals:
+            waiter: <_thread.lock at 0x147421ba2090>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x1476b24aebe0>
+            timeout: 10
+        Locals:
+            signaled: False
+    run (tqdm/_monitor.py:69)
+        Arguments:
+            self: <TMonitor at 0x1476b24e2a50>
+        Locals:
+            cur_t: 1784998467.2257082
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <TMonitor at 0x1476b24e2a50>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <TMonitor at 0x1476b24e2a50>
+Thread 344787 (idle): "WorkerAsyncOutputCopy"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x1476b20ded50>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x14794aa8ced0>
+            saved_state: None
+            gotit: False
+    get (queue.py:202)
+        Arguments:
+            self: <Queue at 0x14793c32bc50>
+            block: True
+            timeout: None
+    async_output_busy_loop (vllm/v1/executor/multiproc_executor.py:966)
+        Arguments:
+            self: <RayWorkerProc at 0x14794ad27620>
+        Locals:
+            current_platform: <NvmlCudaPlatform at 0x1479835f3230>
+            output: {"model.layers.59.self_attn.indexer.k_cache": <MLAAttentionSpec at 0x14794ad27770>, ...}
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x14794ad27620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x1476b2357c50>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x1476b2357c50>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x1476b2357c50>
+Thread 344859 (idle): "tqdm_monitor"
+    wait (threading.py:363)
+        Arguments:
+            self: <Condition at 0x1475b2086210>
+            timeout: 10
+        Locals:
+            waiter: <_thread.lock at 0x147560f1e490>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14762414a150>
+            timeout: 10
+        Locals:
+            signaled: False
+    run (tqdm/_monitor.py:69)
+        Arguments:
+            self: <TMonitor at 0x147624397b10>
+        Locals:
+            cur_t: 1784998467.5974844
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <TMonitor at 0x147624397b10>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <TMonitor at 0x147624397b10>

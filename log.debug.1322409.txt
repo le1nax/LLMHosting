@@ -1,0 +1,774 @@
+Head: n25g0009 (134.61.53.224)
+Worker: n25g0010
+Worker: n25g0011
+Worker: n25g0012
+2026-06-24 09:18:53,653	INFO usage_lib.py:474 -- Usage stats collection is enabled by default without user confirmation because this terminal is detected to be non-interactive. To disable this, add `--disable-usage-stats` to the command that starts the cluster, or run the following command: `ray disable-usage-stats` before starting the cluster. See https://docs.ray.io/en/master/cluster/usage-stats.html for more details.
+2026-06-24 09:18:53,692	INFO scripts.py:940 -- [37mLocal node IP[39m: [1m134.61.53.224[22m
+2026-06-24 09:19:10,471	SUCC scripts.py:979 -- [32m--------------------[39m
+2026-06-24 09:19:10,471	SUCC scripts.py:980 -- [32mRay runtime started.[39m
+2026-06-24 09:19:10,471	SUCC scripts.py:981 -- [32m--------------------[39m
+2026-06-24 09:19:10,471	INFO scripts.py:983 -- [36mNext steps[39m
+2026-06-24 09:19:10,471	INFO scripts.py:986 -- To add another node to this Ray cluster, run
+2026-06-24 09:19:10,471	INFO scripts.py:989 -- [1m  ray start --address='134.61.53.224:6379'[22m
+2026-06-24 09:19:10,471	INFO scripts.py:1000 -- To connect to this Ray cluster:
+2026-06-24 09:19:10,471	INFO scripts.py:1002 -- [35mimport[39m[26m ray
+2026-06-24 09:19:10,471	INFO scripts.py:1003 -- ray[35m.[39m[26minit(_node_ip_address[35m=[39m[26m[33m'134.61.53.224'[39m[26m)
+2026-06-24 09:19:10,472	INFO scripts.py:1017 -- To submit a Ray job using the Ray Jobs CLI:
+2026-06-24 09:19:10,472	INFO scripts.py:1018 -- [1m  RAY_API_SERVER_ADDRESS='http://127.0.0.1:8265' ray job submit --working-dir . -- python my_script.py[22m
+2026-06-24 09:19:10,472	INFO scripts.py:1027 -- See https://docs.ray.io/en/latest/cluster/running-applications/job-submission/index.html 
+2026-06-24 09:19:10,472	INFO scripts.py:1031 -- for more information on submitting Ray jobs to the Ray cluster.
+2026-06-24 09:19:10,472	INFO scripts.py:1036 -- To terminate the Ray runtime, run
+2026-06-24 09:19:10,472	INFO scripts.py:1037 -- [1m  ray stop[22m
+2026-06-24 09:19:10,472	INFO scripts.py:1040 -- To view the status of the cluster, use
+2026-06-24 09:19:10,472	INFO scripts.py:1041 --   [1mray status[22m[26m
+2026-06-24 09:19:10,472	INFO scripts.py:1045 -- To monitor and debug Ray, view the dashboard at 
+2026-06-24 09:19:10,472	INFO scripts.py:1046 --   [1m127.0.0.1:8265[22m[26m
+2026-06-24 09:19:10,472	INFO scripts.py:1053 -- [4mIf connection to the dashboard fails, check your firewall settings and network configuration.[24m
+2026-06-24 09:19:10,472	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-06-24 09:19:10,472	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-06-24 09:19:10,472	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-06-24 09:19:10,472	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cu829455.1322409/ray/session_2026-06-24_09-18-53_693318_436645/logs/ray_process_exit.log[22m[26m
+No cluster status. It may take a few seconds for the Ray internal services to start up.
+2026-06-24 09:18:54,969	INFO scripts.py:1128 -- [37mLocal node IP[39m: [1m134.61.53.227[22m
+2026-06-24 09:19:16,342	SUCC scripts.py:1144 -- [32m--------------------[39m
+2026-06-24 09:19:16,342	SUCC scripts.py:1145 -- [32mRay runtime started.[39m
+2026-06-24 09:19:16,342	SUCC scripts.py:1146 -- [32m--------------------[39m
+2026-06-24 09:19:16,342	INFO scripts.py:1148 -- To terminate the Ray runtime, run
+2026-06-24 09:19:16,342	INFO scripts.py:1149 -- [1m  ray stop[22m
+2026-06-24 09:19:16,342	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-06-24 09:19:16,342	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-06-24 09:19:16,342	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-06-24 09:19:16,342	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cu829455.1322409/ray/session_2026-06-24_09-18-53_693318_436645/logs/ray_process_exit.log[22m[26m
+2026-06-24 09:18:53,690	INFO scripts.py:1128 -- [37mLocal node IP[39m: [1m134.61.53.226[22m
+2026-06-24 09:19:16,342	SUCC scripts.py:1144 -- [32m--------------------[39m
+2026-06-24 09:19:16,342	SUCC scripts.py:1145 -- [32mRay runtime started.[39m
+2026-06-24 09:19:16,342	SUCC scripts.py:1146 -- [32m--------------------[39m
+2026-06-24 09:19:16,342	INFO scripts.py:1148 -- To terminate the Ray runtime, run
+2026-06-24 09:19:16,342	INFO scripts.py:1149 -- [1m  ray stop[22m
+2026-06-24 09:19:16,342	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-06-24 09:19:16,342	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-06-24 09:19:16,342	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-06-24 09:19:16,342	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cu829455.1322409/ray/session_2026-06-24_09-18-53_693318_436645/logs/ray_process_exit.log[22m[26m
+2026-06-24 09:18:53,691	INFO scripts.py:1128 -- [37mLocal node IP[39m: [1m134.61.53.225[22m
+2026-06-24 09:19:16,349	SUCC scripts.py:1144 -- [32m--------------------[39m
+2026-06-24 09:19:16,349	SUCC scripts.py:1145 -- [32mRay runtime started.[39m
+2026-06-24 09:19:16,349	SUCC scripts.py:1146 -- [32m--------------------[39m
+2026-06-24 09:19:16,349	INFO scripts.py:1148 -- To terminate the Ray runtime, run
+2026-06-24 09:19:16,349	INFO scripts.py:1149 -- [1m  ray stop[22m
+2026-06-24 09:19:16,349	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-06-24 09:19:16,349	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-06-24 09:19:16,349	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-06-24 09:19:16,349	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cu829455.1322409/ray/session_2026-06-24_09-18-53_693318_436645/logs/ray_process_exit.log[22m[26m
+(APIServer pid=438833) INFO 06-24 09:22:18 [api_utils.py:339] 
+(APIServer pid=438833) INFO 06-24 09:22:18 [api_utils.py:339]        █     █     █▄   ▄█
+(APIServer pid=438833) INFO 06-24 09:22:18 [api_utils.py:339]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.23.0
+(APIServer pid=438833) INFO 06-24 09:22:18 [api_utils.py:339]   █▄█▀ █     █     █     █  model   deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+(APIServer pid=438833) INFO 06-24 09:22:18 [api_utils.py:339]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=438833) INFO 06-24 09:22:18 [api_utils.py:339] 
+(APIServer pid=438833) INFO 06-24 09:22:18 [api_utils.py:273] non-default args: {'model_tag': 'deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B', 'host': '0.0.0.0', 'model': 'deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B', 'trust_remote_code': True, 'max_model_len': 4096, 'served_model_name': ['debug'], 'distributed_executor_backend': 'ray', 'pipeline_parallel_size': 4, 'tensor_parallel_size': 4, 'disable_custom_all_reduce': True, 'gpu_memory_utilization': 0.85}
+(APIServer pid=438833) INFO 06-24 09:22:56 [model.py:611] Resolved architecture: Qwen2ForCausalLM
+(APIServer pid=438833) INFO 06-24 09:22:56 [model.py:1745] Using max model len 4096
+(APIServer pid=438833) INFO 06-24 09:22:56 [scheduler.py:239] Chunked prefill is enabled with max_num_batched_tokens=8192.
+(APIServer pid=438833) INFO 06-24 09:22:56 [vllm.py:999] Asynchronous scheduling is enabled.
+(APIServer pid=438833) INFO 06-24 09:22:56 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+(EngineCore pid=443198) INFO 06-24 09:23:18 [core.py:113] Initializing a V1 LLM engine (v0.23.0) with config: model='deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B', speculative_config=None, tokenizer='deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=auto, tensor_parallel_size=4, pipeline_parallel_size=4, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=True, quantization=None, quantization_config=None, enforce_eager=False, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=debug, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['none'], 'ir_enable_torch_wrap': True, 'splitting_ops': ['vllm::unified_attention_with_output', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::linear_attention', 'vllm::plamo2_mamba_mixer', 'vllm::qwen_gdn_attention_core', 'vllm::gdn_attention_core_xpu', 'vllm::olmo_hybrid_gdn_full_forward', 'vllm::kda_attention', 'vllm::sparse_attn_indexer', 'vllm::rocm_aiter_sparse_attn_indexer', 'vllm::deepseek_v4_attention', 'vllm::unified_kv_cache_update', 'vllm::unified_mla_kv_cache_update'], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [8192], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400, 416, 432, 448, 464, 480, 496, 512], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': False, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False}, 'max_cudagraph_capture_size': 512, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native']), enable_flashinfer_autotune=True, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=443198) WARNING 06-24 09:23:18 [ray_utils.py:557] Tensor parallel size (16) exceeds available GPUs (4). This may result in Ray placement group allocation failures. Consider reducing tensor_parallel_size to 4 or less, or ensure your Ray cluster has 16 GPUs available.
+(EngineCore pid=443198) 2026-06-24 09:23:18,493	INFO worker.py:1814 -- Connecting to existing Ray cluster at address: 134.61.53.224:6379...
+(EngineCore pid=443198) 2026-06-24 09:23:18,535	INFO worker.py:2003 -- Connected to Ray cluster. View the dashboard at [1m[32mhttp://127.0.0.1:8265 [39m[22m
+(EngineCore pid=443198) /rwthfs/rz/cluster/hpcwork/cu829455/workspace/runLargeLLMs/.venv/lib/python3.13/site-packages/ray/_private/worker.py:2051: FutureWarning: Tip: In future versions of Ray, Ray will no longer override accelerator visible devices env var if num_gpus=0 or num_gpus=None (default). To enable this behavior and turn off this error message, set RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO=0
+(EngineCore pid=443198)   warnings.warn(
+(EngineCore pid=443198) INFO 06-24 09:23:21 [ray_utils.py:622] No current placement group found. Creating a new placement group.
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450963)[0m [W624 09:26:19.352748277 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [n25g0009.hpc.itc.rwth-aachen.de]:54707 (errno: 97 - Address family not supported by protocol).
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m [W624 09:26:24.166842043 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [n25g0009.hpc.itc.rwth-aachen.de]:54707 (errno: 97 - Address family not supported by protocol).[32m [repeated 4x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509333, ip=134.61.53.225)[0m [W624 09:26:25.694869906 socket.cpp:764] [c10d] The client socket cannot be initialized to connect to [n25g0009.hpc.itc.rwth-aachen.de]:54707 (errno: 97 - Address family not supported by protocol).[32m [repeated 11x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.06s/it]
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:01<00:00,  1.06s/it]
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) 
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m WARNING 06-24 09:26:13 [worker_base.py:300] Missing `shared_worker_lock` argument from executor. This argument is needed for mm_processor_cache_type='shm'.
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker pid=450964) INFO 06-24 09:26:18 [parallel_state.py:1568] world_size=16 rank=0 local_rank=0 distributed_init_method=tcp://134.61.53.224:54707 backend=nccl
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450966)[0m WARNING 06-24 09:26:13 [worker_base.py:300] Missing `shared_worker_lock` argument from executor. This argument is needed for mm_processor_cache_type='shm'.[32m [repeated 3x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#log-deduplication for more options.)[0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m (Worker pid=497343) INFO 06-24 09:26:24 [parallel_state.py:1568] world_size=16 rank=12 local_rank=0 distributed_init_method=tcp://134.61.53.224:54707 backend=nccl[32m [repeated 4x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m WARNING 06-24 09:26:20 [worker_base.py:300] Missing `shared_worker_lock` argument from executor. This argument is needed for mm_processor_cache_type='shm'.[32m [repeated 12x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m (Worker pid=497343) INFO 06-24 09:26:58 [pynccl.py:113] vLLM is using nccl==2.28.9
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509333, ip=134.61.53.225)[0m (Worker pid=509333) INFO 06-24 09:26:25 [parallel_state.py:1568] world_size=16 rank=11 local_rank=3 distributed_init_method=tcp://134.61.53.224:54707 backend=nccl[32m [repeated 11x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO ENV/Plugin: Could not find: libnccl-env.so
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Stack size limit (unlimited) is unsafe; will use 8192KB for newly launched threads
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO NCCL_SOCKET_FAMILY set by environment to AF_INET
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ib1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO NCCL_SOCKET_IFNAME set to ib1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO cudaDriverVersion 13000
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO NCCL version 2.28.9+cuda13.0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO NCCL_NET_PLUGIN set by environment to none
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO transport/net_ib.cc:852 -> 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Failed to initialize NET plugin IB
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO NCCL_SOCKET_FAMILY set by environment to AF_INET
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ib1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO NET/Socket : Using [0]ib1:134.61.53.225<0>
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Initialized NET plugin Socket
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Assigned NET plugin Socket to comm
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Using network Socket
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO ncclCommInitRank comm 0xfc5fc30 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 16000 commId 0x328d76279a49330d - Init START
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO RAS client listening socket at 127.0.0.1<28028>
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'ib1'
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO ncclTopoGetCpuAffinity: Affinity for GPU 0 is 0-63. (GPU affinity = 0-63 ; CPU affinity = 0-127).
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO NVLS multicast support is not available on dev 0 (NVLS_NCHANNELS 0)
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO comm 0xfc5fc30 rank 0 nRanks 4 nNodes 1 localRanks 4 localRank 0 MNNVL 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 00/24 : 0 1 2 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 01/24 : 0 1 3 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 02/24 : 0 2 3 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 03/24 : 0 2 1 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 04/24 : 0 3 1 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 05/24 : 0 3 2 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 06/24 : 0 1 2 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 07/24 : 0 1 3 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 08/24 : 0 2 3 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 09/24 : 0 2 1 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 10/24 : 0 3 1 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 11/24 : 0 3 2 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 12/24 : 0 1 2 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 13/24 : 0 1 3 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 14/24 : 0 2 3 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 15/24 : 0 2 1 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 16/24 : 0 3 1 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 17/24 : 0 3 2 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 18/24 : 0 1 2 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 19/24 : 0 1 3 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 20/24 : 0 2 3 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 21/24 : 0 2 1 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 22/24 : 0 3 1 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 23/24 : 0 3 2 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1 [2] 1/-1/-1->0->-1 [3] 1/-1/-1->0->-1 [4] 2/-1/-1->0->-1 [5] 2/-1/-1->0->-1 [6] 2/-1/-1->0->-1 [7] 2/-1/-1->0->-1 [8] 3/-1/-1->0->1 [9] 3/-1/-1->0->1 [10] 3/-1/-1->0->1 [11] 3/-1/-1->0->1 [12] 1/-1/-1->0->-1 [13] 1/-1/-1->0->-1 [14] 1/-1/-1->0->-1 [15] 1/-1/-1->0->-1 [16] 2/-1/-1->0->-1 [17] 2/-1/-1->0->-1 [18] 2/-1/-1->0->-1 [19] 2/-1/-1->0->-1 [20] 3/-1/-1->0->1 [21] 3/-1/-1->0->1 [22] 3/-1/-1->0->1 [23] 3/-1/-1->0->1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO P2P Chunksize set to 524288
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m n25g0011:68255:68255 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m n25g0011:68255:68255 [0] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0 isAllCu
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0 isAllCudaP2p 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [0] NCCL INFO [Proxy Service] Device 1 CPU core 5
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515166 [0] NCCL INFO [Proxy Service UDS] Device 1 CPU core 19
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO 24 coll channels, 24 collnet channels, 0 nvls channels, 32 p2p channels, 16 p2p channels per peer
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO ncclCommInitRank comm 0xfc5d4b0 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 66000 commId 0x328d76279a49330d - Init COMPLETE
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Init timings - ncclCommInitRank: rank 1 nranks 4 total 3.30 (kernels 1.11, alloc 2.00, bootstrap 0.02, allgathers 0.00, topo 0.04, graphs 0.01, connections 0.08, rest 0.03)
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 0 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130004f60
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 1 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130004fd8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 2 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005050
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 3 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x1421300050c8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 4 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005140
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 5 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x1421300051b8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 6 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005230
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 7 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x1421300052a8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Channel 00/0 : 1[1] -> 2[2] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy send connection 8 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005320
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Channel 04/0 : 1[1] -> 2[2] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy send connection 9 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005398
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Channel 06/0 : 1[1] -> 2[2] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy send connection 10 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005410
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Channel 10/0 : 1[1] -> 2[2] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy send connection 11 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005488
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Channel 12/0 : 1[1] -> 2[2] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy send connection 12 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005500
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Channel 16/0 : 1[1] -> 2[2] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy send connection 13 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005578
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Channel 18/0 : 1[1] -> 2[2] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy send connection 14 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x1421300055f0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Channel 22/0 : 1[1] -> 2[2] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy send connection 15 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005668
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 16 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x1421300056e0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 17 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005758
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 18 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x1421300057d0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 19 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005848
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 20 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x1421300058c0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 21 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005938
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 22 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x1421300059b0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 23 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005a28
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Channel 01/0 : 1[1] -> 3[3] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy send connection 24 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005aa0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Channel 03/0 : 1[1] -> 3[3] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy send connection 25 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005b18
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Channel 07/0 : 1[1] -> 3[3] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy send connection 26 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005b90
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Channel 09/0 : 1[1] -> 3[3] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy send connection 27 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005c08
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Channel 13/0 : 1[1] -> 3[3] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy send connection 28 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005c80
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Channel 15/0 : 1[1] -> 3[3] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy send connection 29 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005cf8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Channel 19/0 : 1[1] -> 3[3] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy send connection 30 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005d70
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Channel 21/0 : 1[1] -> 3[3] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy send connection 31 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005de8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 32 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005e60
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 33 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005ed8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 34 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005f50
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 35 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130005fc8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 36 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x142130006040
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 37 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected to proxy localRank 1 -> connection 0x1421300060b8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515165 [1] NCCL INFO New proxy recv connection 38 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509331, ip=134.61.53.225)[0m n25g
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68257, ip=134.61.53.226)[0m n25g0011:68257:68257 [3] NCCL INFO Connected to proxy local
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509333, ip=134.61.53.225)[0m n25g0010:509333:515171 [3] NCCL INFO New proxy recv connection 38 from local rank 3, transpo
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m daP2p 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m n25g0011:68255:68255 [0] NCCL INFO CC Off, workFifoBytes 1048576
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m n25g0011:
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m -profiler.so
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68259, ip=134.61.53.226)[0m n25g0011:68259:68259 [1] NCCL INFO Connected to proxy localRank 1 -> con
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68256, ip=134.61.53.226)[0m n25g0011:68256:68256 [2] NCCL INFO Connected to proxy localRank 2 ->
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m n25g0009:4509
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450963)[0m n25g0009:450963:450963 [1] NCCL INFO
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450967)[0m n25g0009:450967:450967 [2] NCCL
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450966)[0m n25g0009:450966:450966
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:503618 [0] NCCL INFO New proxy send connection 48 from local rank 3, trans
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497341, ip=134.61.53.227)[0m n25g0012
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497344, ip=134.61.53.227)[0m n25g0012:497344:503620 [3] NCCL INFO New proxy recv connection 38 from local rank 3, transpor
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450963)[0m  Connected to proxy localRank 1 -> connection 0x14bf780058c0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450963)[0m n25g0009
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450967)[0m  INFO Connected to proxy localRank 2 -> connection 0x146f640058c0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450967)[0m n25
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450966)[0m n25g0009:450966:459917 [3] NCCL INFO New proxy recv connection 38 from local rank 3, transp
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m n25g0011:68255:73876 [0] NCCL INFO New proxy send connection 50 from 
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m (Worker pid=509332) WARNING 06-24 09:27:03 [symm_mem.py:106] SymmMemCommunicator: symmetric memory multicast operations are not supported.
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker pid=450964) INFO 06-24 09:27:03 [cuda_communicator.py:237] Using ['PYNCCL'] all-reduce backends (in dispatch order) for group 'tp:0' out of potential backends: ['NCCL_SYMM_MEM', 'QUICK_REDUCE', 'FLASHINFER', 'CUSTOM', 'SYMM_MEM', 'PYNCCL'].
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:509332 [1] NCCL INFO Connected all rings, use ring PXN 0 GDR 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m n25g0010:509332:515839 [0] NCCL INFO [
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509331, ip=134.61.53.225)[0m n25g0010:509331:515835 [0] N
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68257, ip=134.61.53.226)[0m Rank 3 -> connection 0x14d7180061a8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68257, ip=134.61.53.226)[0m n25
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509333, ip=134.61.53.225)[0m rt 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509333, ip=134.61.53.225)[0m n25g0010:509333:5158
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m local rank 2, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m n25g0011:68255:74553 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 33
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m n25g0011:68255:68255 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m n25g0011:68255:68255 [0] NCCL INFO Channel 00/0 : 1[0] -> 2[0] [send] via NET/Socket/0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m n25g0011:68255:68255 [0] NCCL INFO Channel 01/0 : 1[0] -> 2[0] [send] via NET/Socket/0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m n25g0011:68255:68255 [0] NCCL INFO Channel 01/0 : 3[0] -> 1[0] [receive] via NET/Socket/0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m n25g0011:68255:68255 [0] NCCL INFO Channel 01/0 : 1[0] -> 3[0] [send] via NET/Socket/0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m n25g0011:68255:68255 [0] NCCL INFO Channel 00/0 : 2[0] -> 1[0] [receive] via NET/Socket/0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m n25g0011:68255:68255 [0] NCCL INFO Channel 01/0 : 2[0] -> 1[0] [receive] via NET/Socket/0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m n25g0011:68255:68255 [0] NCCL INFO Channel 01/0 : 1[0] -
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m 0065e0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:515841 [0] NCCL INFO New proxy send connection 6 from local ra
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68259, ip=134.61.53.226)[0m nection 0x14beac0061a8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68259, ip=134.61.53.226)[0m n25g0011:68259:68259 
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68256, ip=134.61.53.226)[0m  connection 0x14260c0061a8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68256, ip=134.61.53.226)[0m n25g0011:682
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450963)[0m n25g0009:4
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450966)[0m ort 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker pid=450964) INFO 06-24 09:27:03 [cuda_communicator.py:237] Using ['PYNCCL'] all-reduce backends (in dispatch order) for group 'pp:0' out of potential backends: ['NCCL_SYMM_MEM', 'QUICK_REDUCE', 'FLASHINFER', 'CUSTOM', 'SYMM_MEM', 'PYNCCL'].
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497341, ip=134.61.53.227)[0m n25g0012:497341:504286 [0] NCCL INF
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497344, ip=134.61.53.227)[0m t 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497344, ip=134.61.53.227)[0m n25g0012:497344:504
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:504285 [
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m (Worker pid=509330) INFO 06-24 09:27:03 [parallel_state.py:1903] rank 8 in world size 16 is assigned as DP rank 0, PP rank 2, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker pid=450964) INFO 06-24 09:27:04 [topk_topp_sampler.py:55] Using FlashInfer for top-p & top-k sampling.
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m (Worker pid=68255) INFO 06-24 09:26:58 [pynccl.py:113] vLLM is using nccl==2.28.9[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) INFO 06-24 09:27:05 [gpu_model_runner.py:5092] Starting to load model deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B...
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) INFO 06-24 09:27:07 [cuda.py:378] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) INFO 06-24 09:27:07 [flash_attn.py:636] Using FlashAttention version 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO ENV/Plugin: Could not find: libnccl-env.so[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Stack size limit (unlimited) is unsafe; will use 8192KB for newly launched threads[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO NCCL_SOCKET_FAMILY set by environment to AF_INET[32m [repeated 30x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ib1[32m [repeated 30x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO NCCL_SOCKET_IFNAME set to ib1[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO cudaDriverVersion 13000[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO NCCL version 2.28.9+cuda13.0[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO NCCL_NET_PLUGIN set by environment to none[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO NCCL_IB_DISABLE set by environment to 1.[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO transport/net_ib.cc:852 -> 3[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Failed to initialize NET plugin IB[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO NET/Socket : Using [0]ib1:134.61.53.227<0>[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Initialized NET plugin Socket[32m [repeated 29x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Assigned NET plugin Socket to comm[32m [repeated 29x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Using network Socket[32m [repeated 29x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO ncclCommInitRank comm 0x18427f40 rank 3 nranks 4 cudaDev 2 nvmlDev 2 busId 96000 commId 0x4ec501a1f15e31cd - Init START[32m [repeated 29x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO RAS client listening socket at 127.0.0.1<28028>[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'ib1'[32m [repeated 29x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO ncclTopoGetCpuAffinity: Affinity for GPU 2 is 64-127. (GPU affinity = 64-127 ; CPU affinity = 0-127).[32m [repeated 29x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO NVLS multicast support is not available on dev 2 (NVLS_NCHANNELS 0)[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO comm 0x18427f40 rank 3 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0[32m [repeated 29x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450966)[0m n25g0009:450966:450966 [3] NCCL INFO Channel 01/02 : 0 1 2 3[32m [repeated 78x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] 1/-1/-1->3->-1[32m [repeated 29x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO P2P Chunksize set to 131072[32m [repeated 29x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m n25g0009:450964:450964 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl[32m [repeated 2x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so[32m [repeated 12x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0 isAllCudaP2p 1[32m [repeated 25x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68256, ip=134.61.53.226)[0m n25g0011:68256:74542 [0] NCCL INFO [Proxy Service] Device 2 CPU core 96[32m [repeated 20x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68256, ip=134.61.53.226)[0m n25g0011:68256:74543 [0] NCCL INFO [Proxy Service UDS] Device 2 CPU core 78[32m [repeated 20x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68256, ip=134.61.53.226)[0m n25g0011:68256:68256 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512[32m [repeated 20x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68256, ip=134.61.53.226)[0m n25g0011:68256:68256 [2] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer[32m [repeated 20x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO ncclCommInitRank comm 0x184362b0 rank 2 nranks 4 cudaDev 0 nvmlDev 0 busId 16000 commId 0x598614707a523246 - Init COMPLETE[32m [repeated 17x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Init timings - ncclCommInitRank: rank 2 nranks 4 total 0.02 (kernels 0.00, alloc 0.00, bootstrap 0.00, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.00, rest 0.00)[32m [repeated 17x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:503614 [2] NCCL INFO New proxy recv connection 39 from local rank 2, transport 0[32m [repeated 366x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Connected to proxy localRank 0 -> connection 0x1438000066d0[32m [repeated 782x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Channel 23/0 : 2[2] -> 1[1] via P2P/CUMEM[32m [repeated 368x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:503614 [2] NCCL INFO New proxy send connection 50 from local rank 0, transport 0[32m [repeated 415x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO CC Off, workFifoBytes 1048576[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m -profiler.so[32m [repeated 2x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450967)[0m (Worker_PP0_TP2 pid=450967) INFO 06-24 09:27:16 [weight_utils.py:603] Time spent downloading weights for deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B: 7.131489 seconds
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m (Worker pid=497342) WARNING 06-24 09:27:03 [symm_mem.py:106] SymmMemCommunicator: symmetric memory multicast operations are not supported.[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Connected all rings, use ring PXN 0 GDR 1[32m [repeated 13x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:515846 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 41
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 00/0 : 3[0] -> 2[0] [receive] via NET/Socket/0[32m [repeated 4x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m n25g0010:509330:509330 [0] NCCL INFO Channel 00/0 : 2[0] -> 0[0] [send] via NET/Socket/0[32m [repeated 2x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m (Worker pid=497343) INFO 06-24 09:27:03 [parallel_state.py:1903] rank 12 in world size 16 is assigned as DP rank 0, PP rank 3, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m (Worker_PP3_TP0 pid=497343) INFO 06-24 09:27:07 [cuda.py:378] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m (Worker_PP3_TP0 pid=497343) INFO 06-24 09:27:07 [flash_attn.py:636] Using FlashAttention version 3[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450967)[0m (Worker_PP0_TP2 pid=450967) INFO 06-24 09:27:16 [weight_utils.py:647] No model.safetensors.index.json found in remote.
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450967)[0m (Worker_PP0_TP2 pid=450967) INFO 06-24 09:27:16 [weight_utils.py:884] Prefetching checkpoint files into page cache started (in background, num_threads=8, block_size=16777216 bytes)
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450967)[0m (Worker_PP0_TP2 pid=450967) INFO 06-24 09:27:16 [weight_utils.py:879] Prefetching checkpoint files into page cache finished in 0.01s
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m (Worker_PP2_TP0 pid=509330) INFO 06-24 09:27:16 [weight_utils.py:922] Filesystem type for checkpoints: LUSTRE. Checkpoint size: 3.31 GiB. Available RAM: 734.35 GiB.
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) INFO 06-24 09:27:18 [default_loader.py:397] Loading weights took 1.07 seconds
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) INFO 06-24 09:27:18 [gpu_model_runner.py:5187] Model loading took 0.3 GiB memory and 12.404853 seconds
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) INFO 06-24 09:27:19 [weight_utils.py:856] Prefetching checkpoint files: 10% (1/1)
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m (Worker_PP1_TP0 pid=68255) INFO 06-24 09:27:55 [backends.py:1089] Using cache directory: /home/cu829455/.cache/vllm/torch_compile_cache/718854513b/rank_4_0/backbone for vLLM's torch.compile
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m (Worker_PP1_TP0 pid=68255) INFO 06-24 09:27:55 [backends.py:1148] Dynamo bytecode transform time: 35.41 s
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m (Worker_PP3_TP2 pid=497342) INFO 06-24 09:27:16 [weight_utils.py:603] Time spent downloading weights for deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B: 7.199867 seconds[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497341, ip=134.61.53.227)[0m (Worker_PP3_TP1 pid=497341) INFO 06-24 09:27:17 [weight_utils.py:647] No model.safetensors.index.json found in remote.[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497341, ip=134.61.53.227)[0m (Worker_PP3_TP1 pid=497341) INFO 06-24 09:27:17 [weight_utils.py:884] Prefetching checkpoint files into page cache started (in background, num_threads=8, block_size=16777216 bytes)[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) INFO 06-24 09:27:19 [weight_utils.py:879] Prefetching checkpoint files into page cache finished in 2.46s[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) INFO 06-24 09:27:17 [weight_utils.py:922] Filesystem type for checkpoints: LUSTRE. Checkpoint size: 3.31 GiB. Available RAM: 720.13 GiB.[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m (Worker_PP2_TP0 pid=509330) INFO 06-24 09:27:18 [default_loader.py:397] Loading weights took 2.39 seconds[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m (Worker_PP2_TP0 pid=509330) INFO 06-24 09:27:19 [gpu_model_runner.py:5187] Model loading took 0.19 GiB memory and 13.172719 seconds[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m (Worker_PP3_TP0 pid=497343) INFO 06-24 09:28:00 [backends.py:378] Cache the graph of compile range (1, 8192) for later use
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m (Worker_PP3_TP0 pid=497343) INFO 06-24 09:27:55 [backends.py:1089] Using cache directory: /home/cu829455/.cache/vllm/torch_compile_cache/10e6293183/rank_12_0/backbone for vLLM's torch.compile[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m (Worker_PP3_TP0 pid=497343) INFO 06-24 09:27:55 [backends.py:1148] Dynamo bytecode transform time: 35.40 s[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m (Worker_PP1_TP0 pid=68255) INFO 06-24 09:28:03 [backends.py:393] Compiling a graph for compile range (1, 8192) takes 7.61 s
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m (Worker_PP1_TP0 pid=68255) INFO 06-24 09:28:03 [decorators.py:708] saved AOT compiled function to /home/cu829455/.cache/vllm/torch_compile_cache/torch_aot_compile/7a5fb99cd409b7075449389217020229ba31bb30d626421c64d4192b736ec954/rank_4_0/model
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m (Worker_PP1_TP0 pid=68255) INFO 06-24 09:28:03 [monitor.py:53] torch.compile took 43.73 s in total
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m (Worker_PP3_TP0 pid=497343) INFO 06-24 09:28:06 [monitor.py:81] Initial profiling/warmup run took 2.75 s
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) INFO 06-24 09:28:00 [backends.py:378] Cache the graph of compile range (1, 8192) for later use[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) INFO 06-24 09:28:06 [gpu_model_runner.py:6412] Profiling CUDA graph memory: PIECEWISE=51 (largest=512), FULL=51 (largest=512)
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m port 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 1 -> connection 0x1470b40065e0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 3 -> connection 0x148bdc006658
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:503618 [0] NCCL INFO New proxy send connection 49 from local rank 1, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:503618 [0] NCCL INFO New proxy send connection 50 from local rank 2, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 2 -> connection 0x1513a00066d0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Initialized NET plugin Socket
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Assigned NET plugin Socket to comm
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Using network Socket
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO ncclCommInitRank comm 0x18433fe0 rank 3 nranks 4 cudaDev 0 nvmlDev 0 busId 16000 commId 0x598614707a523246 - Init START
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'ib1'
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO ncclTopoGetCpuAffinity: Affinity for GPU 0 is 0-63. (GPU affinity = 0-63 ; CPU affinity = 0-127).
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO comm 0x18433fe0 rank 3 nRanks 4 nNodes 4 localRanks 1 localRank 0 MNNVL 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] 1/-1/-1->3->-1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO P2P Chunksize set to 131072
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0 isAllCudaP2p 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:504290 [0] NCCL INFO [Proxy Service] Device 0 CPU core 60
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:504291 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 18
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO 2 coll channels, 2 collnet channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO ncclCommInitRank comm 0x18433fe0 rank 3 nranks 4 cudaDev 0 nvmlDev 0 busId 16000 commId 0x598614707a523246 - Init COMPLETE
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Init timings - ncclCommInitRank: rank 3 nranks 4 total 0.02 (kernels 0.00, alloc 0.00, bootstrap 0.00, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.00, rest 0.00)
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:504290 [0] NCCL INFO New proxy recv connection 0 from local rank 0, transport 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:504295 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 37
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x1437a4004f30
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 00/0 : 2[0] -> 3[0] [receive] via NET/Socket/0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:504290 [0] NCCL INFO New proxy recv connection 1 from local rank 0, transport 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x1437a4004fa8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 01/0 : 1[0] -> 3[0] [receive] via NET/Socket/0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:504290 [0] NCCL INFO New proxy send connection 2 from local rank 0, transport 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x1437a4005020
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 01/0 : 3[0] -> 1[0] [send] via NET/Socket/0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:504290 [0] NCCL INFO New proxy send connection 3 from local rank 0, transport 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x1437a4005098
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 00/0 : 3[0] -> 2[0] [send] via NET/Socket/0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected all trees
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Comm config Blocking set to 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Initialized NET plugin Socket
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Assigned NET plugin Socket to comm
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Using network Socket
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO ncclCommInitRankConfig comm 0x28431a50 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 16000 commId 0xab78adc1812ac286 - Init START
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'ib1'
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO ncclTopoGetCpuAffinity: Affinity f
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m or GPU 0 is 0-63. (GPU affinity = 0-63 ; CPU affinity = 0-127).
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO NVLS multicast support is not available on dev 0 (NVLS_NCHANNELS 0)
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO comm 0x28431a50 rank 0 nRanks 4 nNodes 1 localRanks 4 localRank 0 MNNVL 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 00/24 : 0 1 2 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 01/24 : 0 1 3 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 02/24 : 0 2 3 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 03/24 : 0 2 1 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 04/24 : 0 3 1 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 05/24 : 0 3 2 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 06/24 : 0 1 2 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 07/24 : 0 1 3 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 08/24 : 0 2 3 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 09/24 : 0 2 1 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 10/24 : 0 3 1 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 11/24 : 0 3 2 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 12/24 : 0 1 2 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 13/24 : 0 1 3 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 14/24 : 0 2 3 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 15/24 : 0 2 1 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 16/24 : 0 3 1 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 17/24 : 0 3 2 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 18/24 : 0 1 2 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 19/24 : 0 1 3 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 20/24 : 0 2 3 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 21/24 : 0 2 1 3
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 22/24 : 0 3 1 2
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 23/24 : 0 3 2 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] 1/-1/-1->0->-1 [2] 1/-1/-1->0->-1 [3] 1/-1/-1->0->-1 [4] 2/-1/-1->0->-1 [5] 2/-1/-1->0->-1 [6] 2/-1/-1->0->-1 [7] 2/-1/-1->0->-1 [8] 3/-1/-1->0->1 [9] 3/-1/-1->0->1 [10] 3/-1/-1->0->1 [11] 3/-1/-1->0->1 [12] 1/-1/-1->0->-1 [13] 1/-1/-1->0->-1 [14] 1/-1/-1->0->-1 [15] 1/-1/-1->0->-1 [16] 2/-1/-1->0->-1 [17] 2/-1/-1->0->-1 [18] 2/-1/-1->0->-1 [19] 2/-1/-1->0->-1 [20] 3/-1/-1->0->1 [21] 3/-1/-1->0->1 [22] 3/-1/-1->0->1 [23] 3/-1/-1->0->1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO P2P Chunksize set to 524288
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0 isAllCudaP2p 1
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO [Proxy Service] Device 0 CPU core 39
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506124 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 40
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO 24 coll channels, 24 collnet channels, 0 nvls channels, 32 p2p channels, 16 p2p channels per peer
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO CC Off, workFifoBytes 1048576
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO ncclCommInitRankConfig comm 0x28431a50 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 16000 commId 0xab78adc1812ac286 - Init COMPLETE
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 4 total 0.05 (kernels 0.00, alloc 0.00, bootstrap 0.00, allgathers 0.00, topo 0.02, graphs 0.01, connections 0.02, rest 0.01)
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 0 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424004f80
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 1 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424004ff8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 2 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005070
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 3 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x1434240050e8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 4 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005160
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 5 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x1434240051d8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 6 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005250
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 7 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x1434240052c8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[1] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy send connection 8 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005340
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[1] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy send connection 9 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x1434240053b8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 06/0 : 0[0] -> 1[1] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy send connection 10 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005430
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 07/0 : 0[0] -> 1[1] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy send connection 11 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x1434240054a8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 12/0 : 0[0] -> 1[1] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy send connection 12 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005520
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 13/0 : 0[0] -> 1[1] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy send connection 13 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005598
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 18/0 : 0[0] -> 1[1] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy send connection 14 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005610
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 19/0 : 0[0] -> 1[1] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy send connection 15 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005688
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 16 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005700
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 17 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005778
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 18 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x1434240057f0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 19 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005868
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 20 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x1434240058e0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 21 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005958
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 22 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x1434240059d0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 23 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005a48
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 02/0 : 0[0] -> 2[2] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy send connection 24 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005ac0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 03/0 : 0[0] -> 2[2] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy send connection 25 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005b38
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 08/0 : 0[0] -> 2[2] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy send connection 26 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005bb0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 09/0 : 0[0] -> 2[2] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy send connection 27 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005c28
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 14/0 : 0[0] -> 2[2] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy send connection 28 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005ca0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 15/0 : 0[0] -> 2[2] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy send connection 29 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005d18
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 20/0 : 0[0] -> 2[2] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy send connection 30 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005d90
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel 21/0 : 0[0] -> 2[2] via P2P/CUMEM
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy send connection 31 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005e08
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 32 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005e80
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 33 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005ef8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 34 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005f70
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 35 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424005fe8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 36 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424006060
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 37 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x1434240060d8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 38 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x143424006150
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:506123 [0] NCCL INFO New proxy recv connection 39 from local rank 0, transport 0
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x1434240061c8
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m n25g0012:497343:497343 [0] NCCL INFO Channel
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497341, ip=134.61.53.227)[0m O [Proxy Service] Device 1 CPU core 43
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497344, ip=134.61.53.227)[0m n25g0012:497344:497344 [3] NCCL INFO Connected to proxy localRank
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Connected to proxy localRank 2 -> connec
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450963)[0m (Worker_PP0_TP1 pid=450963) INFO 06-24 09:28:08 [gpu_model_runner.py:6517] Estimated CUDA graph memory: 0.21 GiB total
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m (Worker_PP3_TP0 pid=497343) INFO 06-24 09:28:03 [backends.py:393] Compiling a graph for compile range (1, 8192) takes 7.87 s[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m (Worker_PP3_TP0 pid=497343) INFO 06-24 09:28:03 [decorators.py:708] saved AOT compiled function to /home/cu829455/.cache/vllm/torch_compile_cache/torch_aot_compile/1ab5321e7892743b15f41bedf37aac1a2cb0892ebb6e98ab2868e4be8e117856/rank_12_0/model[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m (Worker_PP3_TP0 pid=497343) INFO 06-24 09:28:03 [monitor.py:53] torch.compile took 43.84 s in total[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450963)[0m (Worker_PP0_TP1 pid=450963) INFO 06-24 09:28:09 [gpu_worker.py:495] CUDA graph memory profiling is enabled (default since v0.21.0). The current --gpu-memory-utilization=0.8500 is equivalent to --gpu-memory-utilization=0.8474 without CUDA graph memory profiling. To maintain the same effective KV cache size as before, increase --gpu-memory-utilization to 0.8526. To disable, set VLLM_MEMORY_PROFILER_ESTIMATE_CUDAGRAPHS=0.
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m (Worker_PP1_TP0 pid=68255) INFO 06-24 09:28:09 [gpu_worker.py:480] Available KV cache memory: 66.59 GiB
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m (Worker_PP2_TP0 pid=509330) INFO 06-24 09:28:06 [monitor.py:81] Initial profiling/warmup run took 2.85 s[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m (Worker_PP3_TP0 pid=497343) INFO 06-24 09:28:17 [gpu_model_runner.py:6412] Profiling CUDA graph memory: PIECEWISE=51 (largest=512), FULL=51 (largest=512)[32m [repeated 12x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Connected to proxy localRank 2 -> connection 0x150eec005ef8[32m [repeated 115x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:506125 [2] NCCL INFO New proxy send connection 31 from local rank 2, transport 0[32m [repeated 54x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Initialized NET plugin Socket[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Assigned NET plugin Socket to comm[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Using network Socket[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'ib1'[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO ncclTopoGetCpuAffinity: Affinity for GPU 2 is 64-127. (GPU affinity = 64-127 ; CPU affinity = 0-127).[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO comm 0x2847e380 rank 2 nRanks 4 nNodes 1 localRanks 4 localRank 2 MNNVL 0[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 3/-1/-1->2->1 [2] 3/-1/-1->2->1 [3] 3/-1/-1->2->1 [4] 1/-1/-1->2->0 [5] 1/-1/-1->2->0 [6] 1/-1/-1->2->0 [7] 1/-1/-1->2->0 [8] -1/-1/-1->2->3 [9] -1/-1/-1->2->3 [10] -1/-1/-1->2->3 [11] -1/-1/-1->2->3 [12] 3/-1/-1->2->1 [13] 3/-1/-1->2->1 [14] 3/-1/-1->2->1 [15] 3/-1/-1->2->1 [16] 1/-1/-1->2->0 [17] 1/-1/-1->2->0 [18] 1/-1/-1->2->0 [19] 1/-1/-1->2->0 [20] -1/-1/-1->2->3 [21] -1/-1/-1->2->3 [22] -1/-1/-1->2->3 [23] -1/-1/-1->2->3[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO P2P Chunksize set to 524288[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0 isAllCudaP2p 1[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:506125 [0] NCCL INFO [Proxy Service] Device 2 CPU core 95[32m [repeated 5x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:506126 [0] NCCL INFO [Proxy Service UDS] Device 2 CPU core 111[32m [repeated 6x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512[32m [repeated 6x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO 24 coll channels, 24 collnet channels, 0 nvls channels, 32 p2p channels, 16 p2p channels per peer[32m [repeated 6x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO ncclCommInitRank comm 0x18427f40 rank 3 nranks 4 cudaDev 2 nvmlDev 2 busId 96000 commId 0x4ec501a1f15e31cd - Init COMPLETE[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Init timings - ncclCommInitRank: rank 3 nranks 4 total 0.01 (kernels 0.00, alloc 0.00, bootstrap 0.00, allgathers 0.00, topo 0.01, graphs 0.00, connections 0.00, rest 0.00)[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:506125 [2] NCCL INFO New proxy recv connection 34 from local rank 2, transport 0[32m [repeated 63x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:504292 [0] NCCL INFO [Proxy Progress] Device 2 CPU core 94[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Channel 01/0 : 1[2] -> 3[2] [receive] via NET/Socket/0[32m [repeated 6x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Channel 00/0 : 3[2] -> 2[2] [send] via NET/Socket/0[32m [repeated 6x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Connected all trees[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Comm config Blocking set to 1[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO ncclCommInitRankConfig comm 0x2847e380 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 96000 commId 0xab78adc1812ac286 - Init START[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO NVLS multicast support is not available on dev 2 (NVLS_NCHANNELS 0)[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO ncclCommInitRankConfig comm 0x2847e380 rank 2 nranks 4 cudaDev 2 nvmlDev 2 busId 96000 commId 0xab78adc1812ac286 - Init COMPLETE[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Init timings - ncclCommInitRankConfig: rank 2 nranks 4 total 0.05 (kernels 0.00, alloc 0.00, bootstrap 0.00, allgathers 0.00, topo 0.02, graphs 0.01, connections 0.02, rest 0.01)[32m [repeated 3x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497342, ip=134.61.53.227)[0m n25g0012:497342:497342 [2] NCCL INFO Channel 22/0 : 2[2] -> 0[0] via P2P/CUMEM[32m [repeated 48x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450966)[0m (Worker_PP0_TP3 pid=450966) INFO 06-24 09:28:08 [gpu_model_runner.py:6517] Estimated CUDA graph memory: 0.21 GiB total[32m [repeated 11x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450966)[0m (Worker_PP0_TP3 pid=450966) INFO 06-24 09:28:09 [gpu_worker.py:495] CUDA graph memory profiling is enabled (default since v0.21.0). The current --gpu-memory-utilization=0.8500 is equivalent to --gpu-memory-utilization=0.8474 without CUDA graph memory profiling. To maintain the same effective KV cache size as before, increase --gpu-memory-utilization to 0.8526. To disable, set VLLM_MEMORY_PROFILER_ESTIMATE_CUDAGRAPHS=0.[32m [repeated 11x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) INFO 06-24 09:28:09 [gpu_worker.py:480] Available KV cache memory: 66.48 GiB[32m [repeated 2x across cluster][0m
+(EngineCore pid=443198) INFO 06-24 09:28:19 [kv_cache_utils.py:1744] GPU KV cache size: 19,161,888 tokens
+(EngineCore pid=443198) INFO 06-24 09:28:19 [kv_cache_utils.py:1745] Maximum concurrency for 4,096 tokens per request: 4678.20x
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509332, ip=134.61.53.225)[0m (Worker_PP2_TP1 pid=509332) 2026-06-24 09:28:19,599 - INFO - autotuner.py:622 - flashinfer.jit: [Autotuner]: Autotuning process starts ...
+(EngineCore pid=443198) [36m(RayWorkerProc pid=497343, ip=134.61.53.227)[0m (Worker_PP3_TP0 pid=497343) 2026-06-24 09:28:19,602 - INFO - autotuner.py:641 - flashinfer.jit: [Autotuner]: Autotuning process ends
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/51 [00:00<?, ?it/s]
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  24%|██▎       | 12/51 [00:00<00:00, 114.29it/s]
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  47%|████▋     | 24/51 [00:00<00:00, 107.24it/s]
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  71%|███████   | 36/51 [00:00<00:00, 111.67it/s]
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  96%|█████████▌| 49/51 [00:00<00:00, 117.27it/s]Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 51/51 [00:00<00:00, 116.33it/s]
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) Capturing CUDA graphs (decode, FULL):   0%|          | 0/51 [00:00<?, ?it/s]
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m Capturing CUDA graphs (decode, FULL):  29%|██▉       | 15/51 [00:00<00:00, 144.61it/s]
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m Capturing CUDA graphs (decode, FULL):  59%|█████▉    | 30/51 [00:00<00:00, 147.26it/s]
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m Capturing CUDA graphs (decode, FULL):  92%|█████████▏| 47/51 [00:00<00:00, 157.49it/s]Capturing CUDA graphs (decode, FULL): 100%|██████████| 51/51 [00:00<00:00, 157.23it/s]
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68257, ip=134.61.53.226)[0m (Worker_PP1_TP3 pid=68257) INFO 06-24 09:28:21 [gpu_worker.py:639] CUDA graph pool memory: 0.34 GiB (actual), 0.16 GiB (estimated), difference: 0.18 GiB (53.4%).
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68257, ip=134.61.53.226)[0m (Worker_PP1_TP3 pid=68257) INFO 06-24 09:28:21 [jit_monitor.py:54] Kernel JIT monitor activated — Triton JIT compilations during inference will be logged as warnings.
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68255, ip=134.61.53.226)[0m (Worker_PP1_TP0 pid=68255) INFO 06-24 09:28:21 [gpu_model_runner.py:6585] Graph capturing finished in 2 secs, took 0.34 GiB
+(EngineCore pid=443198) INFO 06-24 09:28:21 [core.py:306] init engine (profile, create kv cache, warmup model) took 62.17 s (compilation: 43.84 s)
+(EngineCore pid=443198) INFO 06-24 09:28:26 [vllm.py:999] Asynchronous scheduling is enabled.
+(EngineCore pid=443198) INFO 06-24 09:28:26 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+(APIServer pid=438833) INFO 06-24 09:28:26 [api_server.py:579] Supported tasks: ['generate']
+(APIServer pid=438833) WARNING 06-24 09:28:27 [model.py:1502] Default vLLM sampling parameters have been overridden by the model's `generation_config.json`: `{'temperature': 0.6, 'top_p': 0.95}`. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+(APIServer pid=438833) INFO 06-24 09:28:29 [hf.py:548] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+(APIServer pid=438833) INFO 06-24 09:28:30 [api_server.py:583] Starting vLLM server on http://0.0.0.0:8000
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:37] Available routes are:
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /openapi.json, Methods: GET, HEAD
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /docs, Methods: GET, HEAD
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /docs/oauth2-redirect, Methods: GET, HEAD
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /redoc, Methods: GET, HEAD
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /load, Methods: GET
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /version, Methods: GET
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /health, Methods: GET
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /metrics, Methods: GET
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /tokenize, Methods: POST
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /detokenize, Methods: POST
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /v1/models, Methods: GET
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /ping, Methods: GET
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /ping, Methods: POST
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /invocations, Methods: POST
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /v1/chat/completions, Methods: POST
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /v1/chat/completions/batch, Methods: POST
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /v1/responses, Methods: POST
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /v1/responses/{response_id}, Methods: GET
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /v1/responses/{response_id}/cancel, Methods: POST
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /v1/completions, Methods: POST
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /v1/messages, Methods: POST
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /v1/messages/count_tokens, Methods: POST
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /generative_scoring, Methods: POST
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /inference/v1/generate, Methods: POST
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /scale_elastic_ep, Methods: POST
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /is_scaling_elastic_ep, Methods: POST
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /v1/chat/completions/render, Methods: POST
+(APIServer pid=438833) INFO 06-24 09:28:30 [launcher.py:46] Route: /v1/completions/render, Methods: POST
+(APIServer pid=438833) INFO:     Started server process [438833]
+(APIServer pid=438833) INFO:     Waiting for application startup.
+(APIServer pid=438833) INFO:     Application startup complete.
+(APIServer pid=438833) INFO:     127.0.0.1:53062 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:39140 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:39140 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:45340 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:45340 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:34488 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:34488 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:34162 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:34162 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:45106 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:45106 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:42386 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:42386 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:54312 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:54312 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:56202 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:56202 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:33926 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:33926 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:44402 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:44402 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:57590 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:57590 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:53870 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:53870 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:44540 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:44540 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:44432 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:44432 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:37232 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:37232 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:37240 - "GET /v1/models HTTP/1.1" 200 OK
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964) /rwthfs/rz/cluster/hpcwork/cu829455/workspace/runLargeLLMs/.venv/lib/python3.13/site-packages/vllm/distributed/parallel_state.py:779: UserWarning: The given buffer is not writable, and PyTorch does not support non-writable tensors. This means you can write to the underlying (supposedly non-writable) buffer using the tensor. You may want to copy the buffer to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:1586.)
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m (Worker_PP0_TP0 pid=450964)   object_tensor = torch.frombuffer(pickle.dumps(obj), dtype=torch.uint8)
+(EngineCore pid=443198) [36m(RayWorkerProc pid=450964)[0m [rank0]:[W624 09:31:12.185354041 ProcessGroupNCCL.cpp:4094] Warning: An unbatched P2P op (send/recv) was called on this ProcessGroup with size 4.  In lazy initialization mode, this will result in a new 2-rank NCCL communicator to be created. (function operator())
+(EngineCore pid=443198) [36m(RayWorkerProc pid=68256, ip=134.61.53.226)[0m (Worker_PP1_TP2 pid=68256) 2026-06-24 09:28:19,598 - INFO - autotuner.py:622 - flashinfer.jit: [Autotuner]: Autotuning process starts ...[32m [repeated 15x across cluster][0m
+(EngineCore pid=443198) [36m(RayWorkerProc pid=509330, ip=134.61.53.225)[0m (Worker_PP2_TP0 pid=509330) 2026-06-24 09:28:19,603 - INFO - autotuner.py:641 - flashinfer.jit: [Autotuner]: Autotuning process ends[32m [repeated 15x across cluster][0m
+(APIServer pid=438833) INFO:     127.0.0.1:37254 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:34668 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:34668 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO 06-24 09:31:21 [loggers.py:271] Engine 000: Avg prompt throughput: 1.3 tokens/s, Avg generation throughput: 5.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=438833) INFO:     127.0.0.1:40240 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:40240 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO 06-24 09:31:31 [loggers.py:271] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=438833) INFO:     127.0.0.1:34040 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:34040 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:48074 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:48074 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:41836 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:41836 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:53190 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:53190 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:35426 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:35426 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:33400 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:33400 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:51272 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:51272 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:41154 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:41154 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:46474 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:46474 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:55708 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:55708 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:38364 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:38364 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:50156 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:50156 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:36220 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:36220 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:39146 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:39146 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:38626 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:38626 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:40148 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:40148 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:41754 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:41754 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:57114 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:57114 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:56316 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:56316 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:55198 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:55198 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:48106 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:48106 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:49156 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:49156 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:36284 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:36284 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:45758 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:45758 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:37290 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:37290 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:59422 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:59422 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:56294 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:56294 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:59438 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO 06-24 09:36:01 [loggers.py:271] Engine 000: Avg prompt throughput: 2.2 tokens/s, Avg generation throughput: 407.4 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=438833) INFO:     127.0.0.1:39476 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:39476 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO 06-24 09:36:11 [loggers.py:271] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=438833) INFO:     127.0.0.1:42362 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:42362 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:36608 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=438833) INFO:     127.0.0.1:36608 - "GET /metrics HTTP/1.1" 200 OK
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+[2026-06-24T09:36:35.835] error: *** STEP 1322409.3 ON n25g0011 CANCELLED AT 2026-06-24T09:36:35 DUE to SIGNAL Terminated ***
+[2026-06-24T09:36:35.835] error: *** STEP 1322409.2 ON n25g0010 CANCELLED AT 2026-06-24T09:36:35 DUE to SIGNAL Terminated ***
+[2026-06-24T09:36:35.836] error: *** STEP 1322409.4 ON n25g0012 CANCELLED AT 2026-06-24T09:36:35 DUE to SIGNAL Terminated ***
+[2026-06-24T09:36:35.845] error: *** JOB 1322409 ON n25g0009 CANCELLED AT 2026-06-24T09:36:35 DUE to SIGNAL Terminated ***
+[2026-06-24T09:36:35.846] error: *** STEP 1322409.1 ON n25g0009 CANCELLED AT 2026-06-24T09:36:35 DUE to SIGNAL Terminated ***

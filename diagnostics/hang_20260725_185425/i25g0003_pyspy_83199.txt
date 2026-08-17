@@ -1,0 +1,239 @@
+[2026-07-25T18:54:29.470] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+Process 83199: VLLM::EngineCore
+Python v3.13.3 (/w0/tmp/slurm_cs088267.2210955/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+
+Thread 83199 (idle): "MainThread"
+    poll (zmq/sugar/poll.py:106)
+        Arguments:
+            self: <Poller at 0x154045ba7ee0>
+            timeout: -1
+    poll (zmq/sugar/socket.py:1062)
+        Arguments:
+            self: <Socket at 0x154045ba5630>
+            timeout: None
+            flags: 1
+        Locals:
+            p: <Poller at 0x154045ba7ee0>
+    recv (vllm/distributed/device_communicators/shm_broadcast.py:802)
+        Arguments:
+            socket: <Socket at 0x154045ba5630>
+            timeout: None
+        Locals:
+            timeout_ms: None
+    dequeue (vllm/distributed/device_communicators/shm_broadcast.py:794)
+        Arguments:
+            self: <MessageQueue at 0x154045b6f310>
+            timeout: None
+            indefinite: False
+    get_response (vllm/v1/executor/multiproc_executor.py:387)
+        Locals:
+            responses: [25091172537, 25091172537, 25091172537, 25091172537, 14780896953, 14780896953, 14780896953, 14780896953, 14780896953, ...]
+            mq: <MessageQueue at 0x154045b6f310>
+            dequeue_timeout: None
+            status: <ResponseStatus at 0x1540ce2f3380>
+            result: 14780896953
+    _wait_for_response (vllm/v1/executor/multiproc_executor.py:95)
+        Arguments:
+            self: <FutureWrapper at 0x1540459fc190>
+    result (vllm/v1/executor/multiproc_executor.py:90)
+        Arguments:
+            self: <FutureWrapper at 0x1540459fc190>
+            timeout: None
+        Locals:
+            future: <FutureWrapper at 0x1540459fc190>
+    collective_rpc (vllm/v1/executor/multiproc_executor.py:404)
+        Arguments:
+            self: <RayExecutorV2 at 0x1540b9f14590>
+            method: <cell at 0x154045e7e410>
+            timeout: None
+            args: ()
+            kwargs: {}
+            non_block: False
+            unique_reply_rank: None
+            kv_output_aggregator: None
+        Locals:
+            aggregate: <function at 0x1541c354bf60>
+            send_method: "determine_available_memory"
+            get_response: <function at 0x154045b94b80>
+            future: <FutureWrapper at 0x1540459fc190>
+    determine_available_memory (vllm/v1/executor/abstract.py:147)
+        Arguments:
+            self: <RayExecutorV2 at 0x1540b9f14590>
+    _initialize_kv_caches (vllm/v1/engine/core.py:257)
+        Arguments:
+            self: <EngineCoreProc at 0x1541c36d3e00>
+            vllm_config: <VllmConfig at 0x1540daf1e510>
+        Locals:
+            start: 1784998332.8161156
+            kv_cache_specs: [{"model.layers.0.self_attn.indexer.k_cache": <MLAAttentionSpec at 0x154045bad2b0>, ...}, {...}, {...}, {...}, {...}, ...]
+            has_kv_cache: True
+    sync_wrapper (vllm/tracing/otel.py:178)
+        Locals:
+            args: (<EngineCoreProc at 0x1541c36d3e00>, <VllmConfig at 0x1540daf1e510>)
+            kwargs: {}
+            tracer: <ProxyTracer at 0x1540c2ddd950>
+            ctx: {}
+    __init__ (vllm/v1/engine/core.py:132)
+        Arguments:
+            self: <EngineCoreProc at 0x1541c36d3e00>
+            vllm_config: <VllmConfig at 0x1540daf1e510>
+            executor_class: 0
+            log_stats: True
+            executor_fail_callback: <function at 0x1540b9f09760>
+            include_finished_set: False
+        Locals:
+            load_general_plugins: <function at 0x1540e2d98180>
+    __init__ (vllm/v1/engine/core.py:935)
+        Arguments:
+            self: <cell at 0x1540c2dd7a30>
+            vllm_config: <VllmConfig at 0x1540daf1e510>
+            local_client: True
+            handshake_address: "ipc:///w0/tmp/slurm_cs088267.2210955/20ab1c96-e753-40bd-b472-745144497791"
+            executor_class: 0
+            log_stats: True
+            client_handshake_address: None
+            tensor_queue: None
+        Locals:
+            engine_index: 0
+            executor_fail_callback: <function at 0x1540b9f09760>
+            identity: <bytes at 0x1540c2dd6d30>
+            addresses: <EngineZmqAddresses at 0x1540b9f14050>
+            internal_dp_balancing: False
+    sync_wrapper (vllm/tracing/otel.py:178)
+        Locals:
+            args: (<EngineCoreProc at 0x1541c36d3e00>)
+            kwargs: {"engine_index": 0, "vllm_config": <VllmConfig at 0x1540daf1e510>, "local_client": True, ...}
+            tracer: <ProxyTracer at 0x1540ce2f3770>
+            ctx: {}
+    run_engine_core (vllm/v1/engine/core.py:1164)
+        Locals:
+            dp_rank: 0
+            local_dp_rank: 0
+            args: ()
+            kwargs: {"vllm_config": <VllmConfig at 0x1540daf1e510>, "local_client": True, ...}
+            vllm_config: <VllmConfig at 0x1540daf1e510>
+            parallel_config: <ParallelConfig at 0x1540d168be00>
+            data_parallel: False
+            process_title: "EngineCore"
+    run (multiprocessing/process.py:108)
+        Arguments:
+            self: <SpawnProcess at 0x1541c35963c0>
+    _bootstrap (multiprocessing/process.py:313)
+        Arguments:
+            self: <SpawnProcess at 0x1541c35963c0>
+            parent_sentinel: 4
+        Locals:
+            util: <module at 0x1541c34049f0>
+            context: <module at 0x1541c3519120>
+    _main (multiprocessing/spawn.py:135)
+        Arguments:
+            fd: 58
+            parent_sentinel: 4
+        Locals:
+            from_parent: <_io.BufferedReader at 0x1541c3430f60>
+            preparation_data: {"log_to_stderr": False, "authkey": <AuthenticationString at 0x1541c3455860>, "name": "EngineCore", "sys_path": [...], ...}
+            self: <SpawnProcess at 0x1541c35963c0>
+    spawn_main (multiprocessing/spawn.py:122)
+        Arguments:
+            pipe_handle: 58
+            parent_pid: None
+            tracker_fd: 56
+        Locals:
+            fd: 58
+            parent_sentinel: 4
+            resource_tracker: <module at 0x1541c344b650>
+    <module> (<string>:1)
+Thread 91610 (idle): "PythonGCThread"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x1540c2dada70>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x1540b9fad350>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x1540c2db2650>
+            timeout: None
+        Locals:
+            signaled: False
+    run (ray/_private/gc_collect_manager.py:29)
+        Arguments:
+            self: <PythonGCThread at 0x1540b9f15a90>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <PythonGCThread at 0x1540b9f15a90>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <PythonGCThread at 0x1540b9f15a90>
+Thread 91611 (idle): "ray_listen_error_messages"
+    listen_error_messages (ray/_private/worker.py:2452)
+        Arguments:
+            worker: <Worker at 0x1540d168a660>
+            threads_stopped: <Event at 0x1540d1679f90>
+        Locals:
+            error_message: None
+            expected_job_ids: <frozenset at 0x1540b9f117e0>
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x1540c2ddf110>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x1540c2ddf110>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x1540c2ddf110>
+Thread 91613 (idle): "ray_print_logs"
+    print_logs (ray/_private/worker.py:1061)
+        Arguments:
+            self: <Worker at 0x1540d168a660>
+        Locals:
+            subscriber: <ray._raylet.GcsLogSubscriber at 0x1540b9cf0570>
+            exception_type: 0
+            localhost: "134.61.53.224"
+            last_polling_batch_size: 1
+            job_id_hex: "01000000"
+            data: {"ip": "134.61.53.224", "pid": "autoscaler", "job": "", "is_err": False, "actor_name": "", "task_name": "", ...}
+            lagging: False
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x1540c2ddf250>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x1540c2ddf250>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x1540c2ddf250>
+Thread 127894 (idle): "RayWorkerMonitor"
+    wait (ray/_private/worker.py:3227)
+        Arguments:
+            ray_waitables: [<ray.ObjectRef at 0x154045ba65e0>, <ray.ObjectRef at 0x154045ba6b90>, <ray.ObjectRef at 0x154045ba5bd0>, ...]
+        Locals:
+            num_returns: 1
+            timeout: 5
+            fetch_local: True
+            worker: <Worker at 0x1540d168a660>
+            ray_waitable: <ray.ObjectRef at 0x154045ba5cb0>
+            timeout_milliseconds: 5000
+    wrapper (ray/_private/client_mode_hook.py:107)
+        Locals:
+            args: ([<ray.ObjectRef at 0x154045ba65e0>, <ray.ObjectRef at 0x154045ba6b90>, <ray.ObjectRef at 0x154045ba5bd0>, ...])
+            kwargs: {"num_returns": 1, "timeout": 5}
+    auto_init_wrapper (ray/_private/auto_init_hook.py:22)
+        Locals:
+            args: ([<ray.ObjectRef at 0x154045ba65e0>, <ray.ObjectRef at 0x154045ba6b90>, <ray.ObjectRef at 0x154045ba5bd0>, ...])
+            kwargs: {"num_returns": 1, "timeout": 5}
+    monitor_workers (vllm/v1/executor/ray_executor_v2.py:450)
+        Locals:
+            done: []
+            _: [<ray.ObjectRef at 0x154045ba65e0>, <ray.ObjectRef at 0x154045ba6b90>, <ray.ObjectRef at 0x154045ba5bd0>, ...]
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x1540459f43e0>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x1540459f43e0>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x1540459f43e0>

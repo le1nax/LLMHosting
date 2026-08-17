@@ -1,0 +1,241 @@
+[2026-07-25T18:54:29.215] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+Process 82702: /w0/tmp/slurm_cs088267.2210955/venv/bin/python3 /w0/tmp/slurm_cs088267.2210955/venv/bin/vllm serve zai-org/GLM-5.2-FP8 --served-model-name glm-5.2-fp8 --tensor-parallel-size 4 --pipeline-parallel-size 4 --distributed-executor-backend ray --disable-custom-all-reduce --kv-cache-dtype fp8 --max-model-len 128000 --gpu-memory-utilization 0.83 --max-num-seqs 64 --mm-processor-cache-gb 0 --trust-remote-code --enable-auto-tool-choice --structured-outputs-config {"backend": "xgrammar"} --tool-call-parser glm47 --reasoning-parser glm45 --host 0.0.0.0 --port 52223
+Python v3.13.3 (/w0/tmp/slurm_cs088267.2210955/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+
+Thread 82702 (idle): "MainThread"
+    poll (zmq/sugar/poll.py:106)
+        Arguments:
+            self: <Poller at 0x14a63cf35a90>
+            timeout: 10000
+    wait_for_engine_startup (vllm/v1/engine/utils.py:1231)
+        Arguments:
+            handshake_socket: <Socket at 0x14a638fe3230>
+            addresses: <EngineZmqAddresses at 0x14a63cf352b0>
+            core_engines: [<CoreEngine at 0x14a63cf35400>]
+            parallel_config: <ParallelConfig at 0x14a652d5f410>
+            coordinated_dp: False
+            cache_config: <CacheConfig at 0x14a63dd61cd0>
+            proc_manager: <CoreEngineProcManager at 0x14a63cf35550>
+            coord_process: None
+        Locals:
+            local_count: 1
+            remote_count: 0
+            conn_pending: [0, 0]
+            start_pending: [1, 0]
+            poller: <Poller at 0x14a63cf35a90>
+            remote_should_be_headless: True
+            sentinel: 55
+            events: []
+            ready_msg_bytes: <bytes at 0x14a63dd8a4b0>
+            eng_index: 0
+            engine: <CoreEngine at 0x14a63cf35400>
+            msg: {"status": "HELLO", "local": True, "headless": False}
+            status: "HELLO"
+            local: True
+            headless: False
+            init_message: <bytes at 0x14a63ceb9b80>
+    launch_core_engines (vllm/v1/engine/utils.py:1198)
+        Arguments:
+            vllm_config: <VllmConfig at 0x14a63dc316a0>
+            executor_class: 0
+            log_stats: True
+            addresses: <EngineZmqAddresses at 0x14a63cf352b0>
+            num_api_servers: 1
+        Locals:
+            parallel_config: <ParallelConfig at 0x14a652d5f410>
+            dp_size: 1
+            local_engine_count: 1
+            local_start_index: 0
+            dp_rank: 0
+            host: "127.0.0.1"
+            local_engines_only: False
+            offline_mode: True
+            tensor_queue: None
+            multimodal_config: None
+            run_coordinator: False
+            coordinator: None
+            engines_to_handshake: [<CoreEngine at 0x14a63cf35400>]
+            handshake_local_only: True
+            rpc_port: 29550
+            handshake_address: "ipc:///w0/tmp/slurm_cs088267.2210955/20ab1c96-e753-40bd-b472-745144497791"
+            local_handshake_address: "ipc:///w0/tmp/slurm_cs088267.2210955/20ab1c96-e753-40bd-b472-745144497791"
+            client_handshake_address: None
+            handshake_socket: <Socket at 0x14a638fe3230>
+            local_engine_manager: <CoreEngineProcManager at 0x14a63cf35550>
+    __exit__ (contextlib.py:148)
+        Arguments:
+            self: <_GeneratorContextManager at 0x14a638fe3150>
+            typ: None
+            value: None
+            traceback: None
+    __init__ (vllm/v1/engine/core_client.py:570)
+        Arguments:
+            self: <AsyncMPClient at 0x14a63cf34d70>
+            asyncio_mode: True
+            vllm_config: <VllmConfig at 0x14a63dc316a0>
+            executor_class: 0
+            log_stats: True
+            client_addresses: {}
+        Locals:
+            sync_ctx: <Context at 0x14a638e476b0>
+            success: False
+            parallel_config: <ParallelConfig at 0x14a652d5f410>
+            enable_input_socket_handover: False
+            tensor_queue: None
+            addresses: <EngineZmqAddresses at 0x14a63cf352b0>
+            engine_manager: <CoreEngineProcManager at 0x14a63cf35550>
+            coordinator: None
+    __init__ (vllm/v1/engine/core_client.py:948)
+        Arguments:
+            self: <AsyncMPClient at 0x14a63cf34d70>
+            vllm_config: <VllmConfig at 0x14a63dc316a0>
+            executor_class: 0
+            log_stats: True
+            client_addresses: {}
+            client_count: 1
+            client_index: 0
+    sync_wrapper (vllm/tracing/otel.py:178)
+        Locals:
+            args: (<AsyncMPClient at 0x14a63cf34d70>, <VllmConfig at 0x14a63dc316a0>, 0, True, {}, 1, 0)
+            kwargs: {}
+            tracer: <ProxyTracer at 0x14a63ced25d0>
+            ctx: {}
+    make_async_mp_client (vllm/v1/engine/core_client.py:131)
+        Arguments:
+            vllm_config: <VllmConfig at 0x14a63dc316a0>
+            executor_class: 0
+            log_stats: True
+            client_addresses: {}
+            client_count: 1
+            client_index: 0
+        Locals:
+            parallel_config: <ParallelConfig at 0x14a652d5f410>
+            client_args: (<VllmConfig at 0x14a63dc316a0>, 0, True, {}, 1, 0)
+    sync_wrapper (vllm/tracing/otel.py:178)
+        Locals:
+            args: ()
+            kwargs: {"vllm_config": <VllmConfig at 0x14a63dc316a0>, "executor_class": 0, "log_stats": True, "client_addresses": {}, ...}
+            tracer: <ProxyTracer at 0x14a63ced2210>
+            ctx: {}
+    __init__ (vllm/v1/engine/async_llm.py:146)
+        Arguments:
+            self: <AsyncLLM at 0x14a63dc33620>
+            vllm_config: <VllmConfig at 0x14a63dc316a0>
+            executor_class: 0
+            log_stats: True
+            usage_context: "OPENAI_API_SERVER"
+            mm_registry: <MultiModalRegistry at 0x14a6604256a0>
+            log_requests: False
+            start_engine_loop: True
+            stat_loggers: None
+            aggregate_engine_logging: False
+            client_addresses: {}
+            client_count: 1
+            client_index: 0
+        Locals:
+            tracing_endpoint: None
+            custom_stat_loggers: []
+            has_custom_loggers: False
+            renderer: <HfRenderer at 0x14a63cf34050>
+    from_vllm_config (vllm/v1/engine/async_llm.py:217)
+        Arguments:
+            cls: 0
+            vllm_config: <VllmConfig at 0x14a63dc316a0>
+            start_engine_loop: True
+            usage_context: "OPENAI_API_SERVER"
+            stat_loggers: None
+            enable_log_requests: False
+            aggregate_engine_logging: False
+            disable_log_stats: False
+            client_addresses: {}
+            client_count: 1
+            client_index: 0
+    build_async_engine_client_from_engine_args (vllm/entrypoints/openai/api_server.py:135)
+        Arguments:
+            engine_args: <AsyncEngineArgs at 0x14a655a46900>
+        Locals:
+            usage_context: "OPENAI_API_SERVER"
+            client_config: {}
+            vllm_config: <VllmConfig at 0x14a63dc316a0>
+            AsyncLLM: 0
+            async_llm: None
+            client_count: 1
+            client_index: 0
+    __aenter__ (contextlib.py:214)
+        Arguments:
+            self: <_AsyncGeneratorContextManager at 0x14a655a0ae90>
+    build_async_engine_client (vllm/entrypoints/openai/api_server.py:99)
+        Arguments:
+            args: <Namespace at 0x14a655a463c0>
+        Locals:
+            usage_context: "OPENAI_API_SERVER"
+            client_config: None
+            engine_args: <AsyncEngineArgs at 0x14a655a46900>
+    __aenter__ (contextlib.py:214)
+        Arguments:
+            self: <_AsyncGeneratorContextManager at 0x14a655a467b0>
+    run_server_worker (vllm/entrypoints/openai/api_server.py:679)
+        Arguments:
+            listen_address: "http://0.0.0.0:52223"
+            sock: <socket at 0x14a655ac1390>
+            args: <Namespace at 0x14a655a463c0>
+            client_config: None
+        Locals:
+            uvicorn_kwargs: {}
+    run_server (vllm/entrypoints/openai/api_server.py:665)
+        Arguments:
+            args: <Namespace at 0x14a655a463c0>
+        Locals:
+            uvicorn_kwargs: {}
+            _interrupt_init: <function at 0x14a655abf240>
+            listen_address: "http://0.0.0.0:52223"
+            sock: <socket at 0x14a655ac1390>
+    wrapper (uvloop/__init__.py:48)
+        Locals:
+            loop: <Loop at 0xe9f1e60>
+    run (asyncio/runners.py:118)
+        Arguments:
+            self: <Runner at 0x14a655a46510>
+            coro: <coroutine at 0x14a655ae8c70>
+        Locals:
+            context: <_contextvars.Context at 0x14a65590f980>
+            task: <_asyncio.Task at 0x14a655912990>
+            sigint_handler: <functools.partial at 0x14a655aec3b0>
+    run (asyncio/runners.py:195)
+        Arguments:
+            main: <coroutine at 0x14a655ae8c70>
+        Locals:
+            debug: None
+            loop_factory: <function at 0x14a66037efc0>
+            runner: <Runner at 0x14a655a46510>
+    run (uvloop/__init__.py:96)
+        Arguments:
+            main: <cell at 0x14a655dc3430>
+        Locals:
+            loop_factory: <function at 0x14a66037efc0>
+            debug: None
+            run_kwargs: {}
+            wrapper: <function at 0x14a655abeb60>
+            vi: (3, 13)
+    cmd (vllm/entrypoints/cli/serve.py:148)
+        Arguments:
+            args: <Namespace at 0x14a655a463c0>
+        Locals:
+            is_external_lb: False
+            is_hybrid_lb: False
+            is_multi_port: False
+    main (vllm/entrypoints/cli/main.py:95)
+        Locals:
+            vllm: <module at 0x14a748a1d030>
+            VLLM_SUBCMD_PARSER_EPILOG: "For full list:            vllm {subcmd} --help=all\nFor a section:            vllm {subcmd} --help=ModelConfig    (case-ins..."
+            cli_env_setup: <function at 0x14a65fc18ae0>
+            FlexibleArgumentParser: 0
+            CMD_MODULES: [<module at 0x14a65c1d87c0>, <module at 0x14a65c1d9300>, <module at 0x14a65fbf7600>, <module at 0x14a67d65dd00>, ...]
+            parser: <FlexibleArgumentParser at 0x14a655b16cf0>
+            subparsers: <_SubParsersAction at 0x14a655b17230>
+            cmds: {"chat": <ChatCommand at 0x14a655b17380>, "complete": <CompleteCommand at 0x14a655b17620>, ...}
+            cmd_module: <module at 0x14a65c1d8fe0>
+            new_cmds: [<RunBatchSubcommand at 0x14a655a46270>]
+            cmd: <RunBatchSubcommand at 0x14a655a46270>
+            args: <Namespace at 0x14a655a463c0>
+    <module> (vllm:10)

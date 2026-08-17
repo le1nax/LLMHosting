@@ -1,0 +1,14 @@
+Haenge-Monitor gestartet (PID 65583), beobachtet /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/log.heldrun.20260728_145917.txt, Snapshots nach diagnostics/
+Haenge an Job 2463491 an: Nodes=i25g[0005-0006,0008-0009] NumNodes=4 CpusPerTask=128
+TMPDIR (node-lokal, alle Nodes): /w0/tmp/slurm_cs088267.2463491
+Kopiere venv + Interpreter auf node-lokales NVMe (alle Nodes)...
+[2026-07-28T14:59:18.105] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[2026-07-28T14:59:18.265] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[2026-07-28T14:59:18.282] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[2026-07-28T14:59:18.359] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+[2026-07-28T15:00:41.488] error: *** STEP 2463491.22 ON i25g0005 CANCELLED AT 2026-07-28T15:00:41 DUE to SIGNAL Terminated ***
+srun: error: i25g0009: task 3: Terminated
+srun: error: i25g0005: task 0: Terminated
+srun: error: i25g0006: task 1: Terminated
+srun: error: i25g0008: task 2: Terminated

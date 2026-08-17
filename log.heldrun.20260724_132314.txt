@@ -1,0 +1,18 @@
+Haenge-Monitor gestartet (PID 39694), beobachtet /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/log.heldrun.20260724_132314.txt, Snapshots nach diagnostics/
+Haenge an Job 2165566 an: Nodes=i25g[0003-0006] NumNodes=4 CpusPerTask=128
+TMPDIR (node-lokal, alle Nodes): /w0/tmp/slurm_cs088267.2165566
+Kopiere venv + Interpreter auf node-lokales NVMe (alle Nodes)...
+srun: Job 2165566 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 2165566 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 2165566 step creation still disabled, retrying (Requested nodes are busy)
+srun: Step created for StepId=2165566.150
+[2026-07-24T13:27:06.610] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[2026-07-24T13:27:06.672] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[2026-07-24T13:27:06.719] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[2026-07-24T13:27:16.922] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+[2026-07-24T13:27:33.487] error: *** STEP 2165566.150 ON i25g0003 CANCELLED AT 2026-07-24T13:27:33 DUE to SIGNAL Terminated ***
+srun: error: i25g0006: task 3: Terminated
+srun: error: i25g0004: task 1: Terminated
+srun: error: i25g0003: task 0: Terminated
+srun: error: i25g0005: task 2: Terminated

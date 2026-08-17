@@ -1,0 +1,117 @@
+[2026-07-18T23:52:28.974] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+Process 354644: ray::RayWorkerProc
+Python v3.13.3 (/w0/tmp/slurm_cs088267.1926058/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+
+Thread 354644 (active): "MainThread"
+    main_loop (ray/_private/worker.py:1039)
+        Arguments:
+            self: <Worker at 0x14ac8a5874d0>
+        Locals:
+            sigterm_handler: <function at 0x14ac8a3498a0>
+    <module> (ray/_private/workers/default_worker.py:323)
+Thread 354850 (idle): "PythonGCThread"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x14ac8a3defd0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x14ac8a3e0b10>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14ac8a3deea0>
+            timeout: None
+        Locals:
+            signaled: False
+    run (ray/_private/gc_collect_manager.py:29)
+        Arguments:
+            self: <PythonGCThread at 0x14ac8a324d70>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <PythonGCThread at 0x14ac8a324d70>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <PythonGCThread at 0x14ac8a324d70>
+Thread 357313 (idle): "Thread-1 (_report_usage_worker)"
+    _report_continuous_usage (vllm/usage/usage_lib.py:256)
+        Arguments:
+            self: <UsageMessage at 0x147c39141be0>
+        Locals:
+            data: {"uuid": "a42c2000-d4e6-4c32-bba3-a734aa55f9a0", "log_time": +bigint}
+    _report_usage_worker (vllm/usage/usage_lib.py:174)
+        Arguments:
+            self: <UsageMessage at 0x147c39141be0>
+            model_architecture: "GlmMoeDsaForCausalLM"
+            usage_context: "ENGINE_CONTEXT"
+            extra_kvs: {"dtype": "torch.bfloat16", "block_size": 16, "gpu_memory_utilization": 0.83, "kv_cache_memory_bytes": None, ...}
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x1479d064b250>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x1479d064b250>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x1479d064b250>
+Thread 357365 (idle): "tqdm_monitor"
+    wait (threading.py:363)
+        Arguments:
+            self: <Condition at 0x14799e5e7540>
+            timeout: 10
+        Locals:
+            waiter: <_thread.lock at 0x147c35ec48d0>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14799e5d29c0>
+            timeout: 10
+        Locals:
+            signaled: False
+    run (tqdm/_monitor.py:69)
+        Arguments:
+            self: <TMonitor at 0x14799e5b34d0>
+        Locals:
+            cur_t: 1784411540.5925488
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <TMonitor at 0x14799e5b34d0>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <TMonitor at 0x14799e5b34d0>
+Thread 384268 (idle): "WorkerAsyncOutputCopy"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x14790c5c0af0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x1479d0573d90>
+            saved_state: None
+            gotit: False
+    get (queue.py:202)
+        Arguments:
+            self: <Queue at 0x147c35a53c50>
+            block: True
+            timeout: None
+    async_output_busy_loop (vllm/v1/executor/multiproc_executor.py:966)
+        Arguments:
+            self: <RayWorkerProc at 0x147c39047620>
+        Locals:
+            current_platform: <NvmlCudaPlatform at 0x147c6d403230>
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x147c39047620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x147934693b10>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x147934693b10>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x147934693b10>

@@ -1,0 +1,710 @@
+[2026-07-15T13:52:37.871] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+Process 426695: ray::RayWorkerProc.run
+Python v3.13.3 (/w0/tmp/slurm_cs088267.1926058/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+
+Thread 426695 (active): "MainThread"
+    __call__ (torch/_ops.py:1269)
+        Arguments:
+            self: <OpOverloadPacket at 0x1481c0252670>
+        Locals:
+            args: (<Tensor at 0x148271294230>, <Tensor at 0x148271294320>, <Tensor at 0x148271294af0>, None, None, ...)
+            kwargs: {}
+    flash_mla_with_kvcache (vllm/third_party/flashmla/flash_mla_interface.py:162)
+        Arguments:
+            q: <Tensor at 0x148271294230>
+            k_cache: <Tensor at 0x148271294320>
+            block_table: <Tensor at 0x148272ea45f0>
+            cache_seqlens: <Tensor at 0x148272ea4050>
+            head_dim_v: 512
+            tile_scheduler_metadata: <FlashMLASchedMeta at 0x148272cf8bb0>
+            num_splits: None
+            softmax_scale: 0.0625
+            causal: False
+            is_fp8_kvcache: True
+            indices: <Tensor at 0x148271294af0>
+            attn_sink: None
+            extra_k_cache: None
+            extra_indices_in_kvcache: None
+            topk_length: None
+            extra_topk_length: None
+            out: None
+        Locals:
+            sched_meta: <FlashMLASchedMeta at 0x148272cf8bb0>
+            indices_in_kvcache: <Tensor at 0x148271294af0>
+            topk: 2048
+            extra_k_page_block_size: None
+            extra_topk: None
+            helper_msg: " Your input arguments are inconsistent with sched_meta. Please make sure the input arguments are consistent across differen..."
+    _fp8_flash_mla_kernel (vllm/v1/attention/backends/mla/flashmla_sparse.py:794)
+        Arguments:
+            self: <FlashMLASparseImpl at 0x14835a31b450>
+            q: <Tensor at 0x148271294230>
+            kv_c_and_k_pe_cache: <Tensor at 0x1481c0189770>
+            topk_indices: <Tensor at 0x148271294af0>
+            kernel_metadata: <FP8KernelMetadata at 0x148272eefa70>
+        Locals:
+            actual_num_heads: 16
+            padded_num_heads: 64
+            q_padded: <Tensor at 0x148271294230>
+    _forward_fp8_kv_mixed_batch (vllm/v1/attention/backends/mla/flashmla_sparse.py:763)
+        Arguments:
+            self: <FlashMLASparseImpl at 0x14835a31b450>
+            q: <Tensor at 0x148272eeb480>
+            kv_c_and_k_pe_cache: <Tensor at 0x1481c0189770>
+            topk_indices: <Tensor at 0x148272d2d360>
+            attn_metadata: <FlashMLASparseMetadata at 0x1482683712e0>
+        Locals:
+            fp8_metadata: <FP8KernelMetadata at 0x148272eefa70>
+    forward_mqa (vllm/v1/attention/backends/mla/flashmla_sparse.py:873)
+        Arguments:
+            self: <FlashMLASparseImpl at 0x14835a31b450>
+            q: <Tensor at 0x148272eeb480>
+            kv_c_and_k_pe_cache: <Tensor at 0x1481c0189770>
+            attn_metadata: <FlashMLASparseMetadata at 0x1482683712e0>
+            layer: <MLAAttention at 0x14833027e350>
+        Locals:
+            ql_nope: <Tensor at 0x148272d2c8c0>
+            q_pe: <Tensor at 0x148272d2f480>
+            num_actual_toks: 1219
+            topk_indices: <Tensor at 0x148272d2d450>
+            use_fp8_cache: True
+    forward_impl (vllm/model_executor/layers/attention/mla_attention.py:774)
+        Arguments:
+            self: <MLAAttention at 0x14833027e350>
+            q: <Tensor at 0x148272eaa5d0>
+            k_c_normed: <Tensor at 0x148272eacc30>
+            k_pe: <Tensor at 0x148272ea4be0>
+            kv_cache: <Tensor at 0x1481c0189770>
+            attn_metadata: <FlashMLASparseMetadata at 0x1482683712e0>
+            output: <Tensor at 0x1481c01becb0>
+            output_scale: None
+            output_block_scale: None
+            quant_group_size: None
+            quant_scale_ue8m0: None
+            quant_col_major: None
+            quant_tma_aligned: None
+        Locals:
+            quant_key: None
+            _: 192
+            fp8_attention: True
+            num_actual_toks: 1219
+            output_padded: <Tensor at 0x1481c01e7520>
+            is_sparse_impl: True
+            num_mqa_tokens: 1219
+            num_mha_tokens: 0
+            mqa_q: (<Tensor at 0x148272d2c8c0>, <Tensor at 0x148272d2f480>)
+            mqa_output_slice: <Tensor at 0x148272eebd40>
+            mqa_q_nope: <Tensor at 0x148272d2d7c0>
+            mqa_q_pe: <Tensor at 0x148272d2f480>
+            B: 1219
+            N: 16
+            L: 512
+            mqa_ql_nope: <Tensor at 0x148272d2c8c0>
+            P: 192
+    unified_mla_attention_with_output (vllm/model_executor/layers/attention/mla_attention.py:1062)
+        Arguments:
+            q: <Tensor at 0x148272ea4140>
+            kv_c_normed: <Tensor at 0x148272ead130>
+            k_pe: <Tensor at 0x148272ea6710>
+            output: <Tensor at 0x1481c01e7520>
+            layer_name: "model.layers.16.self_attn.attn"
+            output_scale: None
+            output_block_scale: None
+            quant_group_size: None
+            quant_scale_ue8m0: None
+            quant_col_major: None
+            quant_tma_aligned: None
+        Locals:
+            attn_metadata: <FlashMLASparseMetadata at 0x1482683712e0>
+            layer: <MLAAttention at 0x14833027e350>
+            kv_cache: <Tensor at 0x1481c0189770>
+            _: <Tensor at 0x148272eaad00>
+    wrapper (vllm/model_executor/layers/attention/kv_transfer_utils.py:40)
+        Locals:
+            args: (<Tensor at 0x148272ea4140>, <Tensor at 0x148272ead130>, <Tensor at 0x148272ea6710>, <Tensor at 0x1481c01e7520>, ...)
+            kwargs: {}
+    __call__ (torch/_ops.py:1269)
+        Arguments:
+            self: <OpOverloadPacket at 0x148330186d50>
+        Locals:
+            args: (<Tensor at 0x148272ea4140>, <Tensor at 0x148272ead130>, <Tensor at 0x148272ea6710>, <Tensor at 0x1481c01e7520>, ...)
+            kwargs: {"kv_cache_dummy_dep": <Tensor at 0x1481c01e79d0>}
+    __vllm_inlined_submods__50 (<string>:149)
+        Arguments:
+            q_34: <Tensor at 0x148272ea4140>
+            s72: 1219
+            kv_c_normed_16: <Tensor at 0x148272ead130>
+            key_45: <Tensor at 0x148272ea6710>
+            output_150: <Tensor at 0x1481c01e7520>
+            synthetic_local_tmp_70_: <LayerName at 0x148272e93890>
+            kv_cache_dummy_dep_16: <Tensor at 0x1481c01e79d0>
+    execution_fn (<string>:398)
+        Arguments:
+            s72: 1219
+            l_self_modules_layers_modules_0_modules_self_attn_modules_mla_attn_modules_rotary_emb_buffers_cos_sin_cache_: <Tensor at 0x14835a6f8d70>
+            s80: 1219
+            l_positions_: <Tensor at 0x1481c01ac910>
+            l_self_modules_layers_modules_0_modules_self_attn_modules_mla_attn_modules_indexer_modules_indexer_op_topk_indices_buffer: <Tensor at 0x14837a32b480>
+            synthetic_local_tmp_70_: <LayerName at 0x148272e93890>
+            l_self_modules_layers_modules_16_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x14833023f7a0>
+            l_self_modules_layers_modules_16_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14833023fbb0>
+            l_self_modules_layers_modules_16_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x148330298d20>
+            synthetic_local_tmp_72_: <LayerName at 0x148272e911d0>
+            l_self_modules_layers_modules_17_modules_input_layernorm_parameters_weight_: <Parameter at 0x14833029a0d0>
+            l_self_modules_layers_modules_17_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x148330298e10>
+            l_self_modules_layers_modules_17_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x1482c04d0e60>
+            l_self_modules_layers_modules_17_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x148330298eb0>
+            l_self_modules_layers_modules_17_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x148330299040>
+            l_self_modules_layers_modules_17_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x1482c04d1fe0>
+            l_self_modules_layers_modules_17_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x148330299130>
+            l_self_modules_layers_modules_17_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x1483302998b0>
+            synthetic_local_tmp_74_: <LayerName at 0x148272e90190>
+            l_self_modules_layers_modules_17_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x148330299090>
+            l_self_modules_layers_modules_17_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x1483302994f0>
+            l_self_modules_layers_modules_17_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x14833029a6c0>
+            synthetic_local_tmp_76_: <LayerName at 0x148272e90f00>
+            l_self_modules_layers_modules_18_modules_input_layernorm_parameters_weight_: <Parameter at 0x14833029bf20>
+            l_self_modules_layers_modules_18_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_: <Parameter at 0x14833029a620>
+            l_self_modules_layers_modules_18_modules_self_attn_modules_mla_attn_modules_fused_qkv_a_proj_parameters_weight_scale_inv_: <Parameter at 0x14833023d9f0>
+            l_self_modules_layers_modules_18_modules_self_attn_modules_mla_attn_modules_q_a_layernorm_parameters_weight_: <Parameter at 0x14833029a940>
+            l_self_modules_layers_modules_18_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_: <Parameter at 0x1482c04d2c60>
+            l_self_modules_layers_modules_18_modules_self_attn_modules_mla_attn_modules_q_b_proj_parameters_weight_scale_inv_: <Parameter at 0x1482c04d2ee0>
+            l_self_modules_layers_modules_18_modules_self_attn_modules_mla_attn_modules_kv_a_layernorm_parameters_weight_: <Parameter at 0x14833029ab20>
+            l_self_modules_layers_modules_18_modules_self_attn_modules_mla_attn_modules_indexer_modules_wq_b_parameters_weight_: <Parameter at 0x14833029a580>
+            l_self_modules_layers_modules_18_modules_self_attn_modules_mla_attn_modules_indexer_modules_wq_b_parameters_weight_scale_inv_: <Parameter at 0x14833029b0c0>
+            l_self_modules_layers_modules_18_modules_self_attn_modules_mla_attn_modules_indexer_modules_wk_weights_proj_parameters_weight_: <ModelWeightParameter at 0x14833029b1b0>
+            l_self_modules_layers_modules_18_modules_self_attn_modules_mla_attn_modules_indexer_modules_k_norm_parameters_weight_: <Parameter at 0x14833029b160>
+            l_self_modules_layers_modules_18_modules_self_attn_modules_mla_attn_modules_indexer_modules_k_norm_parameters_bias_: <Parameter at 0x14833029b200>
+            l_self_modules_layers_modules_18_modules_self_attn_modules_mla_attn_modules_indexer_modules_indexer_op_modules_k_cache_kv_cache: <Tensor at 0x1481c018b840>
+            synthetic_local_tmp_78_: <LayerName at 0x148272e91f90>
+            l_self_modules_layers_modules_18_modules_self_attn_modules_mla_attn_modules_mla_attn_buffers_k_scale_: <Tensor at 0x14833029b250>
+            synthetic_local_tmp_80_: <LayerName at 0x148272e90410>
+            l_self_modules_layers_modules_18_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_: <Parameter at 0x1482c04d1860>
+            l_self_modules_layers_modules_18_modules_self_attn_modules_mla_attn_modules_o_proj_parameters_weight_scale_inv_: <Parameter at 0x14833029a850>
+            l_self_modules_layers_modules_18_modules_post_attention_layernorm_parameters_weight_: <Parameter at 0x148330299b30>
+            synthetic_local_tmp_82_: <LayerName at 0x148272e92f80>
+        Locals:
+            __vllm_submods__: [<CUDAGraphWrapper at 0x14823a49b610>, <GraphModule at 0x1482e85e0ec0>, <GraphModule at 0x1482e85e0d70>, ...]
+            getitem_9: 39008
+            submod_3: ()
+            submod_7: ()
+            submod_11: ()
+            submod_15: ()
+            submod_19: ()
+            submod_23: ()
+            submod_27: ()
+            submod_31: ()
+            submod_35: ()
+            submod_39: ()
+            submod_43: ()
+            submod_47: ()
+            submod_51: ()
+            submod_55: ()
+            submod_59: ()
+            submod_63: ()
+            getitem_105: <Tensor at 0x148272ead130>
+            getitem_106: <Tensor at 0x148272ea6710>
+            getitem_107: <Tensor at 0x148272ea4140>
+            getitem_108: <Tensor at 0x1481c01e7520>
+            getitem_109: <Tensor at 0x148272eacd20>
+            submod_65: <Tensor at 0x1481c01e79d0>
+    __call__ (vllm/compilation/caching.py:217)
+        Arguments:
+            self: <VllmSerializableFunction at 0x1482e816eba0>
+        Locals:
+            args: (1219, <Tensor at 0x1481c01bf2f0>, <Parameter at 0x14835a524eb0>, <Parameter at 0x14835a2c7de0>, ...)
+            kwargs: {}
+    forward (vllm/model_executor/models/deepseek_v2.py:1286)
+        Arguments:
+            self: <DeepseekV2Model at 0x14835a4ba660>
+            input_ids: <Tensor at 0x1481c01bf2f0>
+            positions: <Tensor at 0x1481c01ac910>
+            intermediate_tensors: None
+            inputs_embeds: None
+        Locals:
+            tmp_0: <LayerName at 0x1481c01ac370>
+            tmp_1: 0
+            tmp_2: <LayerName at 0x148272ea7cf0>
+            tmp_3: 0
+            tmp_4: <LayerName at 0x148272ea5a40>
+            tmp_5: 0
+            tmp_6: <LayerName at 0x148272ea6bc0>
+            tmp_7: 0
+            tmp_8: <LayerName at 0x148272ea51d0>
+            tmp_9: 0
+            tmp_10: <LayerName at 0x148272ea77f0>
+            tmp_11: 0
+            tmp_12: <LayerName at 0x148272ea4820>
+            tmp_13: 0
+            tmp_14: <LayerName at 0x148272ea5b30>
+            tmp_15: 0
+            tmp_16: <LayerName at 0x148272ea6c60>
+            tmp_17: 0
+            tmp_18: <LayerName at 0x148272ea4780>
+            tmp_19: 0
+            tmp_20: <LayerName at 0x148272ea7250>
+            tmp_21: 0
+            tmp_22: <LayerName at 0x148272ea77a0>
+            tmp_23: 0
+            tmp_24: <LayerName at 0x148272ea7ed0>
+            tmp_25: 0
+            tmp_26: <LayerName at 0x148272ea5090>
+            tmp_27: 0
+            tmp_28: <LayerName at 0x148272ea4e10>
+            tmp_29: 0
+            tmp_30: <LayerName at 0x148272ea44b0>
+            tmp_31: 0
+            tmp_32: <LayerName at 0x148272ea54a0>
+            tmp_33: 0
+            tmp_34: <LayerName at 0x148272ea4500>
+            tmp_35: 0
+            tmp_36: <LayerName at 0x148272ea75c0>
+            tmp_37: 0
+            tmp_38: <LayerName at 0x148272ea6850>
+            tmp_39: 0
+            tmp_40: <LayerName at 0x148272ea5310>
+            tmp_41: 0
+            tmp_42: <LayerName at 0x148272ea5270>
+            tmp_43: 0
+            tmp_44: <LayerName at 0x148272ea6620>
+            tmp_45: 0
+            tmp_46: <LayerName at 0x148272e939d0>
+            tmp_47: 0
+            tmp_48: <LayerName at 0x148272e916d0>
+            tmp_49: 0
+            tmp_50: <LayerName at 0x148272e93fc0>
+            tmp_51: 0
+            tmp_52: <LayerName at 0x148272e90e10>
+            tmp_53: 0
+            tmp_54: <LayerName at 0x148272e92670>
+            tmp_55: 0
+            tmp_56: <LayerName at 0x148272e92170>
+            tmp_57: 0
+            tmp_58: <LayerName at 0x148272e90500>
+            tmp_59: 0
+            tmp_60: <LayerName at 0x148272e928f0>
+            tmp_61: 0
+            tmp_62: <LayerName at 0x148272e93e30>
+            tmp_63: 0
+            tmp_64: <LayerName at 0x148272e937f0>
+            tmp_65: 0
+            tmp_66: <LayerName at 0x148272e900f0>
+            tmp_67: 0
+            tmp_68: <LayerName at 0x148272e917c0>
+            tmp_69: 0
+            tmp_70: <LayerName at 0x148272e93890>
+            tmp_71: 0
+            tmp_72: <LayerName at 0x148272e911d0>
+            tmp_73: 0
+            tmp_74: <LayerName at 0x148272e90190>
+            tmp_75: 0
+            tmp_76: <LayerName at 0x148272e90f00>
+            tmp_77: 0
+            tmp_78: <LayerName at 0x148272e91f90>
+            tmp_79: 0
+            tmp_80: <LayerName at 0x148272e90410>
+            tmp_81: 0
+            tmp_82: <LayerName at 0x148272e92f80>
+            tmp_83: 0
+            tmp_89: <function at 0x14862535cae0>
+            tmp_90: <nullcontext at 0x148272e92fd0>
+            tmp_91: <function at 0x148625553b00>
+            tmp_92: <Tensor at 0x1481c01bf2f0>
+            tmp_93: {"embed_tokens": <VocabParallelEmbedding at 0x14835a4ba7b0>, "layers": <ModuleList at 0x14835a5730e0>, ...}
+            tmp_94: {"0": <DeepseekV2DecoderLayer at 0x14835a4baba0>, "1": <DeepseekV2DecoderLayer at 0x14835a56b9d0>, ...}
+            tmp_95: {"self_attn": <DeepseekV2MLAAttention at 0x14835a4bacf0>, "mlp": <DeepseekV2MLP at 0x14835a570d70>, ...}
+            tmp_96: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14835a4bae40>, "q_a_layernorm": <RMSNorm at 0x14835a4bbcb0>, ...}
+            tmp_97: {"weight": <Parameter at 0x1482e035e3f0>, "weight_scale_inv": <Parameter at 0x1482f471ada0>, "bias": None}
+            tmp_98: {"weight": <Parameter at 0x14835a53d5e0>, "weight_scale_inv": <Parameter at 0x1482f479fbb0>, "bias": None}
+            tmp_99: <Tensor at 0x1481c01ac910>
+            tmp_100: {"wq_b": <ReplicatedLinear at 0x14835a570590>, "wk_weights_proj": <MergedColumnParallelLinear at 0x14835a5706e0>, ...}
+            tmp_101: {"weight": <Parameter at 0x1482e0248410>, "weight_scale_inv": <Parameter at 0x14835a564fa0>, "bias": None}
+            tmp_102: {"weight": <Parameter at 0x14835a5256d0>, "bias": <Parameter at 0x14835a525ae0>}
+            tmp_103: <SparseAttnIndexer at 0x14835a570c20>
+            tmp_104: {"weight": <Parameter at 0x1482c074b5c0>, "weight_scale_inv": <Parameter at 0x1482f479e3a0>, "bias": None}
+            tmp_105: {"gate_up_proj": <MergedColumnParallelLinear at 0x14835a569f90>, "down_proj": <RowParallelLinear at 0x14835a56b250>, ...}
+            tmp_106: {"weight": <Parameter at 0x148330299ae0>, "weight_scale_inv": <Parameter at 0x1482c074a260>, "bias": None}
+            tmp_107: {"weight": <Parameter at 0x14835a5249b0>, "weight_scale_inv": <Parameter at 0x14835a2c78e0>, "bias": None}
+            tmp_108: {"self_attn": <DeepseekV2MLAAttention at 0x14835a56bb10>, "mlp": <DeepseekV2MLP at 0x14835a302350>, ...}
+            tmp_109: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14835a56bc50>, "q_a_layernorm": <RMSNorm at 0x14835a579480>, ...}
+            tmp_110: {"weight": <Parameter at 0x14835a50a670>, "weight_scale_inv": <Parameter at 0x14835a2c7930>, "bias": None}
+            tmp_111: {"weight": <Parameter at 0x14835a2c7c00>, "weight_scale_inv": <Parameter at 0x14835a2f8050>, "bias": None}
+            tmp_112: {"wq_b": <ReplicatedLinear at 0x14835a3016d0>, "wk_weights_proj": <MergedColumnParallelLinear at 0x14835a301d10>, ...}
+            tmp_113: {"weight": <Parameter at 0x1482c0577a70>, "weight_scale_inv": <Parameter at 0x14835a2f8500>, "bias": None}
+            tmp_114: {"weight": <Parameter at 0x14835a2f8a50>, "bias": <Parameter at 0x14835a2f8aa0>}
+            tmp_115: {"weight": <Parameter at 0x1482f479d040>, "weight_scale_inv": <Parameter at 0x14835a2f84b0>, "bias": None}
+            tmp_116: {"gate_up_proj": <MergedColumnParallelLinear at 0x14835a302c10>, "down_proj": <RowParallelLinear at 0x14835a303250>, ...}
+            tmp_117: {"weight": <Parameter at 0x14835a2f86e0>, "weight_scale_inv": <Parameter at 0x1482e8533430>, "bias": None}
+            tmp_118: {"weight": <Parameter at 0x1482e032ff20>, "weight_scale_inv": <Parameter at 0x1482e035e440>, "bias": None}
+            tmp_119: {"self_attn": <DeepseekV2MLAAttention at 0x14835a56afd0>, "mlp": <DeepseekV2MLP at 0x14835a32d810>, ...}
+            tmp_120: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14835a303610>, "q_a_layernorm": <RMSNorm at 0x14835a579810>, ...}
+            tmp_121: {"weight": <Parameter at 0x1482c0576f80>, "weight_scale_inv": <Parameter at 0x14835a2f8730>, "bias": None}
+            tmp_122: {"weight": <Parameter at 0x14835a2f9810>, "weight_scale_inv": <Parameter at 0x14835a2f9860>, "bias": None}
+            tmp_123: {"wq_b": <ReplicatedLinear at 0x14835a32cb90>, "wk_weights_proj": <MergedColumnParallelLinear at 0x14835a32d1d0>, ...}
+            tmp_124: {"weight": <Parameter at 0x1482c05afed0>, "weight_scale_inv": <Parameter at 0x1482e032fde0>, "bias": None}
+            tmp_125: {"weight": <Parameter at 0x14835a2fa210>, "bias": <Parameter at 0x14835a2fa260>}
+            tmp_126: {"weight": <Parameter at 0x14835a2f9ae0>, "weight_scale_inv": <Parameter at 0x14835a2f9ea0>, "bias": None}
+            tmp_127: {"gate_up_proj": <MergedColumnParallelLinear at 0x14835a32e0d0>, "down_proj": <RowParallelLinear at 0x14835a32e710>, ...}
+            tmp_128: {"weight": <Parameter at 0x14835a2fa120>, "weight_scale_inv": <Parameter at 0x14835a2faa30>, "bias": None}
+            tmp_129: {"weight": <Parameter at 0x1482e0248140>, "weight_scale_inv": <Parameter at 0x14835a2f9ef0>, "bias": None}
+            tmp_130: {"self_attn": <DeepseekV2MLAAttention at 0x14835a32ee90>, "mlp": <DeepseekV2MoE at 0x14835a572270>, ...}
+            tmp_131: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14835a32efd0>, "q_a_layernorm": <RMSNorm at 0x14835a579e00>, ...}
+            tmp_132: {"weight": <Parameter at 0x1482f47405f0>, "weight_scale_inv": <Parameter at 0x14835a2faa80>, "bias": None}
+            tmp_133: {"weight": <Parameter at 0x14835a2fad50>, "weight_scale_inv": <Parameter at 0x14835a2fb2a0>, "bias": None}
+            tmp_134: {"weight": <Parameter at 0x14835a2fb0c0>, "weight_scale_inv": <Parameter at 0x14835a2fb070>, "bias": None}
+            tmp_135: {"self_attn": <DeepseekV2MLAAttention at 0x14835a351590>, "mlp": <DeepseekV2MoE at 0x14835a353ed0>, ...}
+            tmp_136: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14835a3516d0>, "q_a_layernorm": <RMSNorm at 0x14835a57ad70>, ...}
+            tmp_137: {"weight": <Parameter at 0x14835a3686e0>, "weight_scale_inv": <Parameter at 0x1482c04d14a0>, "bias": None}
+            tmp_138: {"weight": <Parameter at 0x14835a3688c0>, "weight_scale_inv": <Parameter at 0x14835a368aa0>, "bias": None}
+            tmp_139: {"weight": <Parameter at 0x14835a3689b0>, "weight_scale_inv": <Parameter at 0x14835a368780>, "bias": None}
+            tmp_140: {"self_attn": <DeepseekV2MLAAttention at 0x14835a031810>, "mlp": <DeepseekV2MoE at 0x14835a033610>, ...}
+            tmp_141: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14835a031950>, "q_a_layernorm": <RMSNorm at 0x14835a57b950>, ...}
+            tmp_142: {"weight": <Parameter at 0x14835a369d10>, "weight_scale_inv": <Parameter at 0x14835a369f90>, "bias": None}
+            tmp_143: {"weight": <Parameter at 0x14835a36a120>, "weight_scale_inv": <Parameter at 0x14835a369ea0>, "bias": None}
+            tmp_144: {"weight": <Parameter at 0x14835a36a2b0>, "weight_scale_inv": <Parameter at 0x14835a36a710>, "bias": None}
+            tmp_145: {"self_attn": <DeepseekV2MLAAttention at 0x14835a050f50>, "mlp": <DeepseekV2MoE at 0x14835a032c10>, ...}
+            tmp_146: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14835a051090>, "q_a_layernorm": <RMSNorm at 0x14835a57be10>, ...}
+            tmp_147: {"weight": <Parameter at 0x14835a36b7f0>, "weight_scale_inv": <Parameter at 0x14835a36adf0>, "bias": None}
+            tmp_148: {"weight": <Parameter at 0x14835a36b430>, "weight_scale_inv": <Parameter at 0x14835a36bc50>, "bias": None}
+            tmp_149: {"wq_b": <ReplicatedLinear at 0x14835a052ad0>, "wk_weights_proj": <MergedColumnParallelLinear at 0x14835a053110>, ...}
+            tmp_150: {"weight": <Parameter at 0x14835a06c140>, "weight_scale_inv": <Parameter at 0x14835a36bed0>, "bias": None}
+            tmp_151: {"weight": <Parameter at 0x14835a06c460>, "bias": <Parameter at 0x14835a06c4b0>}
+            tmp_152: {"weight": <Parameter at 0x14835a36b8e0>, "weight_scale_inv": <Parameter at 0x1482c0577980>, "bias": None}
+            tmp_153: {"self_attn": <DeepseekV2MLAAttention at 0x14835a053c50>, "mlp": <DeepseekV2MoE at 0x14835a08e5d0>, ...}
+            tmp_154: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14835a053d90>, "q_a_layernorm": <RMSNorm at 0x14835a068b00>, ...}
+            tmp_155: {"weight": <Parameter at 0x14835a06d0e0>, "weight_scale_inv": <Parameter at 0x14835a36ba70>, "bias": None}
+            tmp_156: {"weight": <Parameter at 0x14835a06d090>, "weight_scale_inv": <Parameter at 0x14835a06d4f0>, "bias": None}
+            tmp_157: {"weight": <Parameter at 0x1482c04b2b70>, "weight_scale_inv": <Parameter at 0x14835a06d2c0>, "bias": None}
+            tmp_158: {"self_attn": <DeepseekV2MLAAttention at 0x14835a08f750>, "mlp": <DeepseekV2MoE at 0x14835a0b1450>, ...}
+            tmp_159: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14835a08f890>, "q_a_layernorm": <RMSNorm at 0x14835a0696e0>, ...}
+            tmp_160: {"weight": <Parameter at 0x14835a06eb20>, "weight_scale_inv": <Parameter at 0x14835a06e0d0>, "bias": None}
+            tmp_161: {"weight": <Parameter at 0x14835a06ed50>, "weight_scale_inv": <Parameter at 0x14835a06eda0>, "bias": None}
+            tmp_162: {"weight": <Parameter at 0x1482e070b700>, "weight_scale_inv": <Parameter at 0x14835a06ebc0>, "bias": None}
+            tmp_163: {"self_attn": <DeepseekV2MLAAttention at 0x14835a0b25d0>, "mlp": <DeepseekV2MoE at 0x14835a0e8f50>, ...}
+            tmp_164: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14835a0b2710>, "q_a_layernorm": <RMSNorm at 0x14835a069ba0>, ...}
+            tmp_165: {"weight": <Parameter at 0x14835a0c4320>, "weight_scale_inv": <Parameter at 0x14835a0c42d0>, "bias": None}
+            tmp_166: {"weight": <Parameter at 0x1482c04d3480>, "weight_scale_inv": <Parameter at 0x14835a0c4500>, "bias": None}
+            tmp_167: {"weight": <Parameter at 0x14835a0c4780>, "weight_scale_inv": <Parameter at 0x14835a0c4910>, "bias": None}
+            tmp_168: {"self_attn": <DeepseekV2MLAAttention at 0x14835a0e9310>, "mlp": <DeepseekV2MoE at 0x14835a0ebc50>, ...}
+            tmp_169: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14835a0e9450>, "q_a_layernorm": <RMSNorm at 0x14835a06a060>, ...}
+            tmp_170: {"weight": <Parameter at 0x14835a0c5130>, "weight_scale_inv": <Parameter at 0x14835a0c4d20>, "bias": None}
+            tmp_171: {"weight": <Parameter at 0x14835a0c4c30>, "weight_scale_inv": <Parameter at 0x1482e0248320>, "bias": None}
+            tmp_172: {"wq_b": <ReplicatedLinear at 0x14835a0eae90>, "wk_weights_proj": <MergedColumnParallelLinear at 0x14835a0eb4d0>, ...}
+            tmp_173: {"weight": <Parameter at 0x14835a0c6260>, "weight_scale_inv": <Parameter at 0x1482c04c8e10>, "bias": None}
+            tmp_174: {"weight": <Parameter at 0x14835a0c6620>, "bias": <Parameter at 0x14835a0c6670>}
+            tmp_175: {"weight": <Parameter at 0x14835a0c5e50>, "weight_scale_inv": <Parameter at 0x14835a0c6210>, "bias": None}
+            tmp_176: {"self_attn": <DeepseekV2MLAAttention at 0x14835a118e10>, "mlp": <DeepseekV2MoE at 0x14835a11a990>, ...}
+            tmp_177: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14835a118f50>, "q_a_layernorm": <RMSNorm at 0x14835a06a520>, ...}
+            tmp_178: {"weight": <Parameter at 0x14835a0c5e00>, "weight_scale_inv": <Parameter at 0x14835a0c73e0>, "bias": None}
+            tmp_179: {"weight": <Parameter at 0x14835a0c7520>, "weight_scale_inv": <Parameter at 0x14835a0c77a0>, "bias": None}
+            tmp_180: {"weight": <Parameter at 0x14835a0c77f0>, "weight_scale_inv": <Parameter at 0x14835a0c7b60>, "bias": None}
+            tmp_181: {"self_attn": <DeepseekV2MLAAttention at 0x14835a11bb10>, "mlp": <DeepseekV2MoE at 0x1483301f6490>, ...}
+            tmp_182: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14835a11bc50>, "q_a_layernorm": <RMSNorm at 0x14835a06a9e0>, ...}
+            tmp_183: {"weight": <Parameter at 0x1482c04d0550>, "weight_scale_inv": <Parameter at 0x14835a12cb90>, "bias": None}
+            tmp_184: {"weight": <Parameter at 0x14835a12cc80>, "weight_scale_inv": <Parameter at 0x14835a12cff0>, "bias": None}
+            tmp_185: {"weight": <Parameter at 0x14835a12cfa0>, "weight_scale_inv": <Parameter at 0x14835a12d400>, "bias": None}
+            tmp_186: {"self_attn": <DeepseekV2MLAAttention at 0x1483301f5310>, "mlp": <DeepseekV2MoE at 0x14833021d1d0>, ...}
+            tmp_187: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x1483301f4cd0>, "q_a_layernorm": <RMSNorm at 0x14835a06aea0>, ...}
+            tmp_188: {"weight": <Parameter at 0x14835a12e4e0>, "weight_scale_inv": <Parameter at 0x14835a36b890>, "bias": None}
+            tmp_189: {"weight": <Parameter at 0x14835a12de00>, "weight_scale_inv": <Parameter at 0x14835a12e8f0>, "bias": None}
+            tmp_190: {"weight": <Parameter at 0x14835a12e670>, "weight_scale_inv": <Parameter at 0x14835a12e440>, "bias": None}
+            tmp_191: {"self_attn": <DeepseekV2MLAAttention at 0x14833021e350>, "mlp": <DeepseekV2MoE at 0x14833021fed0>, ...}
+            tmp_192: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14833021e490>, "q_a_layernorm": <RMSNorm at 0x14835a06b360>, ...}
+            tmp_193: {"weight": <Parameter at 0x14835a12ffc0>, "weight_scale_inv": <Parameter at 0x14833023c140>, "bias": None}
+            tmp_194: {"weight": <Parameter at 0x14833023c230>, "weight_scale_inv": <Parameter at 0x14833023c460>, "bias": None}
+            tmp_195: {"wq_b": <ReplicatedLinear at 0x14833021ee90>, "wk_weights_proj": <MergedColumnParallelLinear at 0x14833021c050>, ...}
+            tmp_196: {"weight": <Parameter at 0x14833023c9b0>, "weight_scale_inv": <Parameter at 0x1482c04d3660>, "bias": None}
+            tmp_197: {"weight": <Parameter at 0x14833023caa0>, "bias": <Parameter at 0x14833023caf0>}
+            tmp_198: {"weight": <Parameter at 0x14833023c050>, "weight_scale_inv": <Parameter at 0x14835a12fe30>, "bias": None}
+            tmp_199: {"self_attn": <DeepseekV2MLAAttention at 0x148330251090>, "mlp": <DeepseekV2MoE at 0x1483302539d0>, ...}
+            tmp_200: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x1483302511d0>, "q_a_layernorm": <RMSNorm at 0x14835a06b820>, ...}
+            tmp_201: {"weight": <Parameter at 0x14833023c6e0>, "weight_scale_inv": <Parameter at 0x14833023c870>, "bias": None}
+            tmp_202: {"weight": <Parameter at 0x14833023da40>, "weight_scale_inv": <Parameter at 0x14833023de50>, "bias": None}
+            tmp_203: {"weight": <Parameter at 0x14833023dea0>, "weight_scale_inv": <Parameter at 0x14833023e2b0>, "bias": None}
+            tmp_204: {"self_attn": <DeepseekV2MLAAttention at 0x148330252210>, "mlp": <DeepseekV2MoE at 0x14833027e710>, ...}
+            tmp_205: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x148330251bd0>, "q_a_layernorm": <RMSNorm at 0x14835a06bce0>, ...}
+            tmp_206: {"weight": <Parameter at 0x14833023f340>, "weight_scale_inv": <Parameter at 0x14833023f390>, "bias": None}
+            tmp_207: {"weight": <Parameter at 0x14833023f4d0>, "weight_scale_inv": <Parameter at 0x14833023f750>, "bias": None}
+            tmp_208: {"weight": <Parameter at 0x14833023f7a0>, "weight_scale_inv": <Parameter at 0x14833023fbb0>, "bias": None}
+            tmp_209: {"self_attn": <DeepseekV2MLAAttention at 0x14833027f890>, "mlp": <DeepseekV2MoE at 0x1483302b8410>, ...}
+            tmp_210: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x14833027f9d0>, "q_a_layernorm": <RMSNorm at 0x1483302ac2b0>, ...}
+            tmp_211: {"weight": <Parameter at 0x148330298e10>, "weight_scale_inv": <Parameter at 0x1482c04d0e60>, "bias": None}
+            tmp_212: {"weight": <Parameter at 0x148330299040>, "weight_scale_inv": <Parameter at 0x1482c04d1fe0>, "bias": None}
+            tmp_213: {"weight": <Parameter at 0x148330299090>, "weight_scale_inv": <Parameter at 0x1483302994f0>, "bias": None}
+            tmp_214: {"self_attn": <DeepseekV2MLAAttention at 0x1483302ba5d0>, "mlp": <DeepseekV2MoE at 0x1483300e8f50>, ...}
+            tmp_215: {"fused_qkv_a_proj": <DeepSeekV2FusedQkvAProjLinear at 0x1483302ba710>, "q_a_layernorm": <RMSNorm at 0x1483302ac770>, ...}
+            tmp_216: {"weight": <Parameter at 0x14833029a620>, "weight_scale_inv": <Parameter at 0x14833023d9f0>, "bias": None}
+            tmp_217: {"weight": <Parameter at 0x1482c04d2c60>, "weight_scale_inv": <Parameter at 0x1482c04d2ee0>, "bias": None}
+            tmp_218: {"wq_b": <ReplicatedLinear at 0x1483300e8190>, "wk_weights_proj": <MergedColumnParallelLinear at 0x1483300e87d0>, ...}
+            tmp_219: {"weight": <Parameter at 0x14833029a580>, "weight_scale_inv": <Parameter at 0x14833029b0c0>, "bias": None}
+            tmp_220: {"weight": <Parameter at 0x14833029b160>, "bias": <Parameter at 0x14833029b200>}
+            tmp_221: {"weight": <Parameter at 0x1482c04d1860>, "weight_scale_inv": <Parameter at 0x14833029a850>, "bias": None}
+            tmp_222: <function at 0x14862535cc20>
+    __call__ (torch/_dynamo/aot_compile.py:224)
+        Arguments:
+            self: <AOTCompiledFunction at 0x1482e816e900>
+        Locals:
+            args: (<DeepseekV2Model at 0x14835a4ba660>, <Tensor at 0x1481c01bf2f0>, <Tensor at 0x1481c01ac910>, None, None)
+            kwargs: {}
+    __call__ (vllm/compilation/decorators.py:520)
+        Arguments:
+            self: <cell at 0x148272ed87f0>
+        Locals:
+            args: (<Tensor at 0x1481c01bf2f0>, <Tensor at 0x1481c01ac910>, None, None)
+            kwargs: {}
+    forward (vllm/model_executor/models/deepseek_v2.py:1714)
+        Arguments:
+            self: <GlmMoeDsaForCausalLM at 0x14835a4ba3c0>
+            input_ids: <Tensor at 0x1481c01bf2f0>
+            positions: <Tensor at 0x1481c01ac910>
+            intermediate_tensors: None
+            inputs_embeds: None
+    _call_impl (torch/nn/modules/module.py:1790)
+        Arguments:
+            self: <cell at 0x148272edb580>
+        Locals:
+            args: <cell at 0x148272edbc70>
+            kwargs: <cell at 0x148272edba60>
+    _wrapped_call_impl (torch/nn/modules/module.py:1779)
+        Arguments:
+            self: <GlmMoeDsaForCausalLM at 0x14835a4ba3c0>
+        Locals:
+            args: ()
+            kwargs: {"input_ids": <Tensor at 0x1481c01bf2f0>, "positions": <Tensor at 0x1481c01ac910>, "intermediate_tensors": None, ...}
+    __call__ (vllm/compilation/cuda_graph.py:254)
+        Arguments:
+            self: <CUDAGraphWrapper at 0x14835a4ba270>
+        Locals:
+            args: ()
+            kwargs: {"input_ids": <Tensor at 0x1481c01bf2f0>, "positions": <Tensor at 0x1481c01ac910>, "intermediate_tensors": None, ...}
+            forward_context: <ForwardContext at 0x148268371c80>
+            batch_descriptor: <BatchDescriptor at 0x148272cf89f0>
+            cudagraph_runtime_mode: <CUDAGraphMode at 0x148626e430e0>
+    _model_forward (vllm/v1/worker/gpu_model_runner.py:3742)
+        Arguments:
+            self: <GPUModelRunner at 0x14835a4b81a0>
+            input_ids: <Tensor at 0x1481c01bf2f0>
+            positions: <Tensor at 0x1481c01ac910>
+            intermediate_tensors: None
+            inputs_embeds: None
+        Locals:
+            model_kwargs: {}
+    execute_model (vllm/v1/worker/gpu_model_runner.py:4281)
+        Arguments:
+            self: <cell at 0x1481c02a6020>
+            scheduler_output: <SchedulerOutput at 0x148272e43d90>
+            intermediate_tensors: None
+        Locals:
+            num_scheduled_tokens: 1219
+            deferred_state_corrections_fn: None
+            ec_connector_output: None
+            num_reqs: 30
+            req_ids: ["chatcmpl-af7b9991cb328d0e-94910358", "chatcmpl-bb3f318f7ef96a32-874251ca", "chatcmpl-b4333a199d8d7555-99c733fb", ...]
+            tokens: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1190]
+            num_scheduled_tokens_np: <numpy.ndarray at 0x148272e3cdb0>
+            max_num_scheduled_tokens: 1190
+            num_tokens_unpadded: 1219
+            logits_indices: <Tensor at 0x1481c0135950>
+            spec_decode_metadata: None
+            cascade_attn_prefix_lens: None
+            cudagraph_mode: <CUDAGraphMode at 0x148626e430e0>
+            batch_desc: <BatchDescriptor at 0x148272cf89f0>
+            should_ubatch: False
+            num_tokens_across_dp: None
+            cudagraph_stats: None
+            num_tokens_padded: 1219
+            num_reqs_padded: 30
+            ubatch_slices: None
+            ubatch_slices_padded: None
+            has_separate_kv_update: False
+            pad_attn: False
+            use_spec_decode: False
+            ubatch_slices_attn: None
+            slot_mappings_by_group: {0: <Tensor at 0x148272eaad00>}
+            slot_mappings: {"model.layers.0.self_attn.indexer.k_cache": <Tensor at 0x148272eaad00>, ...}
+            attn_metadata: {"model.layers.0.self_attn.indexer.k_cache": <DeepseekV32IndexerMetadata at 0x1481c013a7b0>, ...}
+            spec_decode_common_attn_metadata: None
+            input_ids: <Tensor at 0x1481c01bf2f0>
+            inputs_embeds: None
+            positions: <Tensor at 0x1481c01ac910>
+            model_kwargs: {}
+            num_encoder_reqs: 0
+            has_encoder_input: False
+            defer_kv_connector_finalize: False
+            kv_connector_output: None
+    decorate_context (torch/utils/_contextlib.py:124)
+        Locals:
+            args: (<GPUModelRunner at 0x14835a4b81a0>, <SchedulerOutput at 0x148272e43d90>, None)
+            kwargs: {}
+    execute_model (vllm/v1/worker/gpu_worker.py:867)
+        Arguments:
+            self: <Worker at 0x1485d93652b0>
+            scheduler_output: <SchedulerOutput at 0x148272e43d90>
+        Locals:
+            handle: <torch._C._distributed_c10d.Work at 0x148272e4faf0>
+            intermediate_tensors: None
+            forward_pass: True
+            num_scheduled_tokens: 1219
+            all_gather_tensors: {}
+            compilation_config: <CompilationConfig at 0x1485ef252ba0>
+            parallel_config: <ParallelConfig at 0x1485f2521010>
+    decorate_context (torch/utils/_contextlib.py:124)
+        Locals:
+            args: (<Worker at 0x1485d93652b0>, <SchedulerOutput at 0x148272e43d90>)
+            kwargs: {}
+    execute_model (vllm/v1/worker/worker_base.py:345)
+        Arguments:
+            self: <WorkerWrapperBase at 0x1485ef253a10>
+            scheduler_output: <SchedulerOutput at 0x148272e43d90>
+    worker_busy_loop (vllm/v1/executor/multiproc_executor.py:982)
+        Arguments:
+            self: <RayWorkerProc at 0x1485f285b620>
+        Locals:
+            method: "execute_model"
+            args: (<SchedulerOutput at 0x148272e43d90>)
+            kwargs: {}
+            output_rank: 12
+            func: <method at 0x1481c010f5c0>
+            output: <ModelRunnerOutput at 0x1485f3f92510>
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x1485f285b620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    run (vllm/v1/executor/ray_executor_v2.py:197)
+        Arguments:
+            self: <RayWorkerProc at 0x1485f285b620>
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x1485f285b620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    actor_method_executor (ray/_private/function_manager.py:721)
+        Arguments:
+            _FunctionActorManager__ray_actor: <RayWorkerProc at 0x1485f285b620>
+        Locals:
+            args: ()
+            kwargs: {}
+            is_bound: False
+    main_loop (ray/_private/worker.py:1039)
+        Arguments:
+            self: <Worker at 0x14b643f874d0>
+        Locals:
+            sigterm_handler: <function at 0x14b643d518a0>
+    <module> (ray/_private/workers/default_worker.py:323)
+Thread 427047 (idle): "PythonGCThread"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x14b643daafd0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x14b643d22050>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14b643daaea0>
+            timeout: None
+        Locals:
+            signaled: False
+    run (ray/_private/gc_collect_manager.py:29)
+        Arguments:
+            self: <PythonGCThread at 0x14b643d24d70>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <PythonGCThread at 0x14b643d24d70>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <PythonGCThread at 0x14b643d24d70>
+Thread 429399 (idle): "tqdm_monitor"
+    wait (threading.py:363)
+        Arguments:
+            self: <Condition at 0x1482f47e3ee0>
+            timeout: 10
+        Locals:
+            waiter: <_thread.lock at 0x1481c01e1a90>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x1483301468b0>
+            timeout: 10
+        Locals:
+            signaled: False
+    run (tqdm/_monitor.py:69)
+        Arguments:
+            self: <TMonitor at 0x14833015aa50>
+        Locals:
+            cur_t: 1784116353.538606
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <TMonitor at 0x14833015aa50>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <TMonitor at 0x14833015aa50>
+Thread 458906 (idle): "WorkerAsyncOutputCopy"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x1482f4516750>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x1481c02d9990>
+            saved_state: None
+            gotit: False
+    get (queue.py:202)
+        Arguments:
+            self: <Queue at 0x1485ef263c50>
+            block: True
+            timeout: None
+    async_output_busy_loop (vllm/v1/executor/multiproc_executor.py:966)
+        Arguments:
+            self: <RayWorkerProc at 0x1485f285b620>
+        Locals:
+            current_platform: <NvmlCudaPlatform at 0x148626e43230>
+            output: ("generate")
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x1485f285b620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x1482e876b890>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x1482e876b890>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x1482e876b890>
+Thread 464386 (idle): "tqdm_monitor"
+    wait (threading.py:363)
+        Arguments:
+            self: <Condition at 0x1482886b4190>
+            timeout: 10
+        Locals:
+            waiter: <_thread.lock at 0x1481c07f6090>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x1482c060e850>
+            timeout: 10
+        Locals:
+            signaled: False
+    run (tqdm/_monitor.py:69)
+        Arguments:
+            self: <TMonitor at 0x1482c05d2210>
+        Locals:
+            cur_t: 1784116348.2589037
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <TMonitor at 0x1482c05d2210>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <TMonitor at 0x1482c05d2210>

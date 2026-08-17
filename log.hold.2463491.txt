@@ -1,0 +1,5 @@
+Holding nodes i25g0005
+i25g0006
+i25g0008
+i25g0009 for job glm52_vllm placeholder.
+[2026-07-28T15:00:41.486] error: *** JOB 2463491 ON i25g0005 CANCELLED AT 2026-07-28T15:00:41 DUE to SIGNAL Terminated ***

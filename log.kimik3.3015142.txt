@@ -1,0 +1,169 @@
+[2026-08-17 13:26:59] === runKimiK3.sbatch startet: Job=3015142 Nodes=i25g[0001,0003-0009] ===
+[2026-08-17 13:26:59] SIF=/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/kimi-k3.sif HF_HOME=/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/hf_home MODEL=moonshotai/Kimi-K3 TMPDIR=/w0/tmp/slurm_cs088267.3015142
+[2026-08-17 13:26:59] TP=4 DP=8 (EP=32 implizit) MAX_RESTARTS=3 STARTUP_TIMEOUT=10800s
+[2026-08-17 13:26:59] Vorab-Checks OK: SIF und Gewichte-Verzeichnis vorhanden.
+[2026-08-17 13:26:59] Kopiere Container-Image (7921852416 bytes) auf node-lokales NVMe (alle Nodes)...
+[2026-08-17T13:26:59.923] error: Can't propagate RLIMIT_NPROC of 3091715 from submit host: Invalid argument
+[2026-08-17T13:26:59.926] error: Can't propagate RLIMIT_NPROC of 3091715 from submit host: Invalid argument
+[2026-08-17 13:26:59] [i25g0007.hpc.itc.rwth-aachen.de] GPU-Sichtbarkeitscheck:
+[2026-08-17 13:26:59] [i25g0001.hpc.itc.rwth-aachen.de] GPU-Sichtbarkeitscheck:
+[2026-08-17 13:26:59] [i25g0003.hpc.itc.rwth-aachen.de] GPU-Sichtbarkeitscheck:
+[2026-08-17 13:26:59] [i25g0009.hpc.itc.rwth-aachen.de] GPU-Sichtbarkeitscheck:
+[2026-08-17 13:26:59] [i25g0008.hpc.itc.rwth-aachen.de] GPU-Sichtbarkeitscheck:
+[2026-08-17 13:26:59] [i25g0006.hpc.itc.rwth-aachen.de] GPU-Sichtbarkeitscheck:
+[2026-08-17T13:26:59.983] error: Can't propagate RLIMIT_NPROC of 3091715 from submit host: Invalid argument
+[2026-08-17 13:27:00] [i25g0005.hpc.itc.rwth-aachen.de] GPU-Sichtbarkeitscheck:
+[2026-08-17 13:27:00] [i25g0004.hpc.itc.rwth-aachen.de] GPU-Sichtbarkeitscheck:
+GPU 0: NVIDIA H100 80GB HBM3 (UUID: GPU-87f7254a-c8b9-8a15-405c-de2d68f11422)
+GPU 1: NVIDIA H100 80GB HBM3 (UUID: GPU-3398f201-ead9-07c8-c515-34c64df15b31)
+GPU 2: NVIDIA H100 80GB HBM3 (UUID: GPU-5d9bb6eb-1a5e-175e-12a8-812dc963103f)
+GPU 3: NVIDIA H100 80GB HBM3 (UUID: GPU-0807922c-bd09-cbba-e18b-96be3eff54f9)
+GPU 0: NVIDIA H100 80GB HBM3 (UUID: GPU-0f4c40e2-dec5-ca97-c9de-de679e3bfd08)
+GPU 1: NVIDIA H100 80GB HBM3 (UUID: GPU-f7a73ca9-a2f2-df84-8b35-e1d797a5fc0d)
+GPU 2: NVIDIA H100 80GB HBM3 (UUID: GPU-c91893c8-1716-91b0-f6f7-4aa5bee73974)
+GPU 3: NVIDIA H100 80GB HBM3 (UUID: GPU-a3275e73-2b57-5d00-337c-314c56dade50)
+GPU 0: NVIDIA H100 80GB HBM3 (UUID: GPU-aed5346b-baa6-a619-4b06-f640c7a5c190)
+GPU 1: NVIDIA H100 80GB HBM3 (UUID: GPU-e8122912-c1e3-8169-41e5-d372927c5f03)
+GPU 2: NVIDIA H100 80GB HBM3 (UUID: GPU-e6c0a6b7-0ed2-2f9d-4ef5-b79443be224b)
+GPU 3: NVIDIA H100 80GB HBM3 (UUID: GPU-b605909e-64d1-85e2-718b-a48404b6deec)
+GPU 0: NVIDIA H100 80GB HBM3 (UUID: GPU-0fef8a60-3544-ad33-0c86-b47d11706440)
+GPU 1: NVIDIA H100 80GB HBM3 (UUID: GPU-29524df4-2090-6cef-ad71-30aca84988f1)
+GPU 2: NVIDIA H100 80GB HBM3 (UUID: GPU-cd0993fa-4d1a-b480-51ba-d1ad0e776120)
+GPU 3: NVIDIA H100 80GB HBM3 (UUID: GPU-584078bf-dedf-cdc3-f382-15ccff5134de)
+GPU 0: NVIDIA H100 80GB HBM3 (UUID: GPU-529355b4-ae35-523c-6b32-08a42d2979be)
+GPU 1: NVIDIA H100 80GB HBM3 (UUID: GPU-bef598d2-b629-63b8-b353-fad5a0d996f7)
+GPU 2: NVIDIA H100 80GB HBM3 (UUID: GPU-94498e6f-4d34-5d8b-279a-77e9c038e632)
+GPU 3: NVIDIA H100 80GB HBM3 (UUID: GPU-a90503d9-096a-9dac-3b9b-5fdeb0ed99fe)
+GPU 0: NVIDIA H100 80GB HBM3 (UUID: GPU-d3c2ad65-0a20-507b-f286-655434016f8e)
+GPU 1: NVIDIA H100 80GB HBM3 (UUID: GPU-11cacf70-0705-cacc-367f-bb55f7dafaf2)
+GPU 2: NVIDIA H100 80GB HBM3 (UUID: GPU-98b7acda-71cf-6e7b-582a-51a5b2348a17)
+GPU 3: NVIDIA H100 80GB HBM3 (UUID: GPU-6eace14e-df1d-0064-a5e5-9f101cc88fdf)
+GPU 0: NVIDIA H100 80GB HBM3 (UUID: GPU-2e7795d7-1812-84a6-45f2-39235aa53417)
+GPU 1: NVIDIA H100 80GB HBM3 (UUID: GPU-06d15961-ae0b-9032-9fd1-cc8aff1e2d04)
+GPU 2: NVIDIA H100 80GB HBM3 (UUID: GPU-ac759bb4-4efa-fc55-f234-008349e23a61)
+GPU 3: NVIDIA H100 80GB HBM3 (UUID: GPU-143bbd1f-b874-4f35-ba19-f7fccc806cc4)
+GPU 0: NVIDIA H100 80GB HBM3 (UUID: GPU-a916f7f4-5aeb-fbb2-9635-e8f3ec78706f)
+GPU 1: NVIDIA H100 80GB HBM3 (UUID: GPU-bcad3226-2580-54ca-6f3c-2fa8f13d27db)
+GPU 2: NVIDIA H100 80GB HBM3 (UUID: GPU-84f7036c-070c-7c9b-c772-fa7ba4d39269)
+GPU 3: NVIDIA H100 80GB HBM3 (UUID: GPU-deb3c4ed-5c9b-750a-65e8-d4b90787862d)
+[2026-08-17 13:27:14] [i25g0007.hpc.itc.rwth-aachen.de] Image-Kopie fertig und groessengeprueft (7921852416 bytes)
+[2026-08-17 13:27:14] [i25g0008.hpc.itc.rwth-aachen.de] Image-Kopie fertig und groessengeprueft (7921852416 bytes)
+[2026-08-17 13:27:15] [i25g0006.hpc.itc.rwth-aachen.de] Image-Kopie fertig und groessengeprueft (7921852416 bytes)
+[2026-08-17 13:27:15] [i25g0004.hpc.itc.rwth-aachen.de] Image-Kopie fertig und groessengeprueft (7921852416 bytes)
+[2026-08-17 13:27:15] [i25g0003.hpc.itc.rwth-aachen.de] Image-Kopie fertig und groessengeprueft (7921852416 bytes)
+[2026-08-17 13:27:15] [i25g0001.hpc.itc.rwth-aachen.de] Image-Kopie fertig und groessengeprueft (7921852416 bytes)
+[2026-08-17 13:27:15] [i25g0005.hpc.itc.rwth-aachen.de] Image-Kopie fertig und groessengeprueft (7921852416 bytes)
+[2026-08-17 13:27:16] [i25g0009.hpc.itc.rwth-aachen.de] Image-Kopie fertig und groessengeprueft (7921852416 bytes)
+[i25g0007.hpc.itc.rwth-aachen.de] vLLM-Version im Container: 0.1.dev19262+gb6bbf29dd.d20260727
+[i25g0008.hpc.itc.rwth-aachen.de] vLLM-Version im Container: 0.1.dev19262+gb6bbf29dd.d20260727
+[i25g0006.hpc.itc.rwth-aachen.de] vLLM-Version im Container: 0.1.dev19262+gb6bbf29dd.d20260727
+[i25g0003.hpc.itc.rwth-aachen.de] vLLM-Version im Container: 0.1.dev19262+gb6bbf29dd.d20260727
+[i25g0004.hpc.itc.rwth-aachen.de] vLLM-Version im Container: 0.1.dev19262+gb6bbf29dd.d20260727
+[i25g0001.hpc.itc.rwth-aachen.de] vLLM-Version im Container: 0.1.dev19262+gb6bbf29dd.d20260727
+[i25g0005.hpc.itc.rwth-aachen.de] vLLM-Version im Container: 0.1.dev19262+gb6bbf29dd.d20260727
+[i25g0009.hpc.itc.rwth-aachen.de] vLLM-Version im Container: 0.1.dev19262+gb6bbf29dd.d20260727
+[2026-08-17 13:27:27] Image-Kopie + Container-Smoke-Test auf allen Nodes abgeschlossen.
+[2026-08-17 13:27:27] $BEEOND = /mnt/beegfs
+[2026-08-17 13:27:27]   [df BEEOND] Filesystem      Size  Used Avail Use% Mounted on
+[2026-08-17 13:27:27]   [df BEEOND] /dev/nvme0n1p3   49G   19G   31G  39% /
+[2026-08-17 13:27:27] Kopiere Gewichte von /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569 nach /mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569 (10 parallele Worker, -L um Blob-Symlinks aufzuloesen)...
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00009-of-000096.safetensors': No space left on device
+cp: cp: cp: cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00081-of-000096.safetensors'error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00060-of-000096.safetensors'error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00004-of-000096.safetensors'error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00044-of-000096.safetensors': No space left on device: No space left on device: No space left on device: No space left on device
+
+
+
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00063-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00051-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00042-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00062-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00019-of-000096.safetensors': No space left on device
+cp: cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00094-of-000096.safetensors'cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00047-of-000096.safetensors': No space left on deviceerror writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00076-of-000096.safetensors': No space left on device
+: No space left on device
+
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00033-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00032-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00013-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00084-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00028-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00050-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00053-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00056-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00091-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00048-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00089-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00087-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00073-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00036-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00040-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00069-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00059-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00055-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00052-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00010-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00086-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00011-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00093-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00095-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00046-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00049-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00041-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00034-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00071-of-000096.safetensors': No space left on device
+cp: cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00092-of-000096.safetensors'error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00021-of-000096.safetensors': No space left on device: No space left on device
+
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00037-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00043-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00054-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00020-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00080-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00002-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00067-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00016-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00023-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00082-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00001-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model.safetensors.index.json': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00008-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00006-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00061-of-000096.safetensors': No space left on device
+cp: cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00012-of-000096.safetensors'error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00025-of-000096.safetensors': No space left on device
+: No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00027-of-000096.safetensors': No space left on device
+cp: cp: cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00074-of-000096.safetensors'error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00018-of-000096.safetensors'error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00096-of-000096.safetensors': No space left on device: No space left on device: No space left on device
+
+
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00024-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00007-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00035-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00083-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00030-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00014-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00075-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00078-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00022-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00026-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00070-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00068-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00066-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00079-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00005-of-000096.safetensors': No space left on device
+cp: cp: cannot create regular file '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00072-of-000096.safetensors'error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00038-of-000096.safetensors': No space left on device: No space left on device
+
+cp: cannot create regular file '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00088-of-000096.safetensors': No space left on device
+cp: cannot create regular file '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00031-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00090-of-000096.safetensors': No space left on device
+cp: cannot create regular file '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/media_utils.py': No space left on device
+cp: cp: cannot create regular file '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00065-of-000096.safetensors'cannot create regular file '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00085-of-000096.safetensors': No space left on device: No space left on device
+
+cp: cannot create regular file '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/tokenization_kimi.py': No space left on device
+cp: cannot create regular file '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00015-of-000096.safetensors': No space left on device
+cp: cannot create regular file '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00039-of-000096.safetensors': No space left on device
+cp: cannot create regular file '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/tiktoken.model': No space left on device
+cp: cannot create regular file '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00064-of-000096.safetensors': No space left on device
+cp: cannot create regular file '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00017-of-000096.safetensors': No space left on device
+cp: cannot create regular file '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00029-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00045-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00003-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00077-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00058-of-000096.safetensors': No space left on device
+cp: error writing '/mnt/beegfs/hf_home/hub/models--moonshotai--Kimi-K3/snapshots/9f62e4e9fffbd0a83ddd60e1c209d828994b3569/model-00057-of-000096.safetensors': No space left on device

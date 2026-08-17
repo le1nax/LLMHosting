@@ -1,0 +1,296 @@
+[monitor] 2026-07-15 13:52:55 Start: Job=1926058 Log=/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/log.heldrun.20260714_182741.txt Schwelle=60s Poll=15s
+[monitor] 2026-07-15 22:36:23 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260715_223623
+[monitor] 2026-07-15 22:36:28 [i25g0005] Snapshot fertig (PIDs: 475151,475152,475153,475154)
+[monitor] 2026-07-15 22:36:28 [i25g0004] Snapshot fertig (PIDs: 424184,424185,424186,424187)
+[monitor] 2026-07-15 22:36:30 [i25g0006] Snapshot fertig (PIDs: 495740,495741,495742,495743)
+[monitor] 2026-07-15 22:36:35 [i25g0003] Snapshot fertig (PIDs: 418116,418230,426695,426696,426697,426698)
+[monitor] 2026-07-15 22:36:35 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260715_223623
+[monitor] 2026-07-16 08:35:25 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-16 08:36:40 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260716_083640
+[monitor] 2026-07-16 08:36:45 [i25g0004] Snapshot fertig (PIDs: 424184,424185,424186,424187)
+[monitor] 2026-07-16 08:36:49 [i25g0006] Snapshot fertig (PIDs: 495740,495741,495742,495743)
+[monitor] 2026-07-16 08:36:49 [i25g0005] Snapshot fertig (PIDs: 475151,475152,475153,475154)
+[monitor] 2026-07-16 08:36:54 [i25g0003] Snapshot fertig (PIDs: 418116,418230,426695,426696,426697,426698)
+[monitor] 2026-07-16 08:36:54 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260716_083640
+[monitor] 2026-07-16 08:44:25 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-16 10:23:31 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260716_102331
+[monitor] 2026-07-16 10:23:36 [i25g0006] Snapshot fertig (PIDs: 495740,495741,495742,495743)
+[monitor] 2026-07-16 10:23:42 [i25g0005] Snapshot fertig (PIDs: 475151,475152,475153,475154)
+[monitor] 2026-07-16 10:23:42 [i25g0004] Snapshot fertig (PIDs: 424184,424185,424186,424187)
+[monitor] 2026-07-16 10:23:46 [i25g0003] Snapshot fertig (PIDs: 418116,418230,426695,426696,426697,426698)
+[monitor] 2026-07-16 10:23:46 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260716_102331
+[monitor] 2026-07-16 10:30:46 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-16 10:32:47 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260716_103247
+[monitor] 2026-07-16 10:32:54 [i25g0005] Snapshot fertig (PIDs: 475151,475152,475153,475154)
+[monitor] 2026-07-16 10:32:56 [i25g0006] Snapshot fertig (PIDs: 495740,495741,495742,495743)
+[monitor] 2026-07-16 10:32:58 [i25g0004] Snapshot fertig (PIDs: 424184,424185,424186,424187)
+[monitor] 2026-07-16 10:33:02 [i25g0003] Snapshot fertig (PIDs: 418116,418230,426695,426696,426697,426698)
+[monitor] 2026-07-16 10:33:02 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260716_103247
+[monitor] 2026-07-16 10:42:32 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-16 20:30:15 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260716_203015
+[monitor] 2026-07-16 20:30:25 [i25g0004] Snapshot fertig (PIDs: 424184,424185,424186,424187)
+[monitor] 2026-07-16 20:30:25 [i25g0006] Snapshot fertig (PIDs: 495740,495741,495742,495743)
+[monitor] 2026-07-16 20:30:25 [i25g0005] Snapshot fertig (PIDs: 475151,475152,475153,475154)
+[monitor] 2026-07-16 20:30:30 [i25g0003] Snapshot fertig (PIDs: 418116,418230,426695,426696,426697,426698)
+[monitor] 2026-07-16 20:30:30 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260716_203015
+[monitor] 2026-07-17 14:37:49 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-17 14:38:49 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260717_143849
+[monitor] 2026-07-17 14:38:56 [i25g0003] Snapshot fertig (PIDs: 418116,418230,426695,426696,426697,426698)
+[monitor] 2026-07-17 14:39:00 [i25g0006] Snapshot fertig (PIDs: 495740,495741,495742,495743)
+[monitor] 2026-07-17 14:39:00 [i25g0004] Snapshot fertig (PIDs: 424184,424185,424186,424187)
+[monitor] 2026-07-17 14:39:01 [i25g0005] Snapshot fertig (PIDs: 475151,475152,475153,475154)
+[monitor] 2026-07-17 14:39:01 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260717_143849
+[monitor] 2026-07-17 14:39:16 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-17 14:55:47 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260717_145547
+[monitor] 2026-07-17 14:55:53 [i25g0005] Snapshot fertig (PIDs: 475151,475152,475153,475154)
+[monitor] 2026-07-17 14:55:53 [i25g0004] Snapshot fertig (PIDs: 424184,424185,424186,424187)
+[monitor] 2026-07-17 14:55:55 [i25g0006] Snapshot fertig (PIDs: 495740,495741,495742,495743)
+[monitor] 2026-07-17 14:56:01 [i25g0003] Snapshot fertig (PIDs: 418116,418230,426695,426696,426697,426698)
+[monitor] 2026-07-17 14:56:01 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260717_145547
+[monitor] 2026-07-17 15:29:33 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-17 16:30:21 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260717_163021
+[monitor] 2026-07-17 16:30:32 [i25g0006] Snapshot fertig (PIDs: 495740,495741,495742,495743)
+[monitor] 2026-07-17 16:30:32 [i25g0005] Snapshot fertig (PIDs: 475151,475152,475153,475154)
+[monitor] 2026-07-17 16:30:32 [i25g0004] Snapshot fertig (PIDs: 424184,424185,424186,424187)
+[monitor] 2026-07-17 16:30:35 [i25g0003] Snapshot fertig (PIDs: 418116,418230,426695,426696,426697,426698)
+[monitor] 2026-07-17 16:30:35 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260717_163021
+[monitor] 2026-07-17 16:36:35 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-17 16:38:20 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260717_163820
+[monitor] 2026-07-17 16:38:28 [i25g0005] Snapshot fertig (PIDs: 475151,475152,475153,475154)
+[monitor] 2026-07-17 16:38:30 [i25g0004] Snapshot fertig (PIDs: 424184,424185,424186,424187)
+[monitor] 2026-07-17 16:38:31 [i25g0006] Snapshot fertig (PIDs: 495740,495741,495742,495743)
+[monitor] 2026-07-17 16:38:36 [i25g0003] Snapshot fertig (PIDs: 418116,418230,426695,426696,426697,426698)
+[monitor] 2026-07-17 16:38:36 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260717_163820
+[monitor] 2026-07-17 16:39:36 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-18 16:59:03 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260718_165903
+[monitor] 2026-07-18 16:59:11 [i25g0005] Snapshot fertig (PIDs: 475151,475152,475153,475154)
+[monitor] 2026-07-18 16:59:11 [i25g0004] Snapshot fertig (PIDs: 424184,424185,424186,424187)
+[monitor] 2026-07-18 16:59:14 [i25g0006] Snapshot fertig (PIDs: 495740,495741,495742,495743)
+[monitor] 2026-07-18 16:59:15 [i25g0003] Snapshot fertig (PIDs: 418116,418230,426695,426696,426697,426698)
+[monitor] 2026-07-18 16:59:15 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260718_165903
+[monitor] 2026-07-18 23:32:33 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-18 23:52:20 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260718_235220
+[monitor] 2026-07-18 23:52:29 [i25g0006] Snapshot fertig (PIDs: 279280,279281,279282,279283)
+[monitor] 2026-07-18 23:52:29 [i25g0004] Snapshot fertig (PIDs: 459092,459093,459094,459095)
+[monitor] 2026-07-18 23:52:30 [i25g0005] Snapshot fertig (PIDs: 258683,258684,258685,258686)
+[monitor] 2026-07-18 23:52:34 [i25g0003] Snapshot fertig (PIDs: 346042,346156,354644,354645,354646,354647)
+[monitor] 2026-07-18 23:52:34 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260718_235220
+[monitor] 2026-07-18 23:53:50 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-18 23:56:05 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260718_235605
+[monitor] 2026-07-18 23:56:10 [i25g0004] Snapshot fertig (PIDs: 459092,459093,459094,459095)
+[monitor] 2026-07-18 23:56:10 [i25g0006] Snapshot fertig (PIDs: 279280,279281,279282,279283)
+[monitor] 2026-07-18 23:56:16 [i25g0005] Snapshot fertig (PIDs: 258683,258684,258685,258686)
+[monitor] 2026-07-18 23:56:19 [i25g0003] Snapshot fertig (PIDs: 346042,346156,354644,354645,354646,354647)
+[monitor] 2026-07-18 23:56:19 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260718_235605
+[monitor] 2026-07-18 23:56:49 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-18 23:58:20 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260718_235820
+[monitor] 2026-07-18 23:58:24 [i25g0005] Snapshot fertig (PIDs: 258683,258684,258685,258686)
+[monitor] 2026-07-18 23:58:28 [i25g0004] Snapshot fertig (PIDs: 459092,459093,459094,459095)
+[monitor] 2026-07-18 23:58:28 [i25g0006] Snapshot fertig (PIDs: 279280,279281,279282,279283)
+[monitor] 2026-07-18 23:58:33 [i25g0003] Snapshot fertig (PIDs: 346042,346156,354644,354645,354646,354647)
+[monitor] 2026-07-18 23:58:33 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260718_235820
+[monitor] 2026-07-19 02:43:11 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-19 02:44:11 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260719_024411
+[monitor] 2026-07-19 02:44:19 [i25g0004] Snapshot fertig (PIDs: 459092,459093,459094,459095)
+[monitor] 2026-07-19 02:44:19 [i25g0006] Snapshot fertig (PIDs: 279280,279281,279282,279283)
+[monitor] 2026-07-19 02:44:19 [i25g0005] Snapshot fertig (PIDs: 258683,258684,258685,258686)
+[monitor] 2026-07-19 02:44:24 [i25g0003] Snapshot fertig (PIDs: 346042,346156,354644,354645,354646,354647)
+[monitor] 2026-07-19 02:44:24 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260719_024411
+[monitor] 2026-07-19 02:44:39 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-19 02:45:39 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260719_024539
+[monitor] 2026-07-19 02:45:39 [i25g0005] Snapshot fertig (PIDs: )
+[monitor] 2026-07-19 02:45:39 [i25g0004] Snapshot fertig (PIDs: )
+[monitor] 2026-07-19 02:45:39 [i25g0006] Snapshot fertig (PIDs: )
+[monitor] 2026-07-19 02:45:39 [i25g0003] Snapshot fertig (PIDs: )
+[monitor] 2026-07-19 02:45:39 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260719_024539
+[monitor] 2026-07-23 09:06:31 Start: Job=2165566 Log=/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/log.heldrun.20260723_090510.txt Schwelle=60s Poll=15s
+[monitor] 2026-07-23 09:07:31 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260723_090731
+[monitor] 2026-07-23 09:07:32 [i25g0006] Snapshot fertig (PIDs: )
+[monitor] 2026-07-23 09:07:32 [i25g0004] Snapshot fertig (PIDs: )
+[monitor] 2026-07-23 09:07:32 [i25g0005] Snapshot fertig (PIDs: )
+[monitor] 2026-07-23 09:07:32 [i25g0003] Snapshot fertig (PIDs: )
+[monitor] 2026-07-23 09:07:32 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260723_090731
+[monitor] 2026-07-23 09:16:48 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-23 09:37:19 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260723_093718
+[monitor] 2026-07-23 09:37:26 [i25g0005] Snapshot fertig (PIDs: 242218,242219,242220,242221)
+[monitor] 2026-07-23 09:37:30 [i25g0003] Snapshot fertig (PIDs: 236142,236295,244736,244737,244738,244739)
+[monitor] 2026-07-23 09:37:34 [i25g0004] Snapshot fertig (PIDs: 81579,81580,81581,81582)
+[monitor] 2026-07-23 09:37:34 [i25g0006] Snapshot fertig (PIDs: 158340,158341,158342,158343)
+[monitor] 2026-07-23 09:37:34 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260723_093718
+[monitor] 2026-07-23 09:38:49 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-23 10:12:21 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260723_101221
+[monitor] 2026-07-23 10:12:27 [i25g0006] Snapshot fertig (PIDs: 158340,158341,158342,158343)
+[monitor] 2026-07-23 10:12:28 [i25g0004] Snapshot fertig (PIDs: 81579,81580,81581,81582)
+[monitor] 2026-07-23 10:12:29 [i25g0005] Snapshot fertig (PIDs: 242218,242219,242220,242221)
+[monitor] 2026-07-23 10:12:33 [i25g0003] Snapshot fertig (PIDs: 236142,236295,244736,244737,244738,244739)
+[monitor] 2026-07-23 10:12:33 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260723_101221
+[monitor] 2026-07-23 10:20:48 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-23 10:21:48 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260723_102148
+[monitor] 2026-07-23 10:21:56 [i25g0006] Snapshot fertig (PIDs: 158340,158341,158342,158343)
+[monitor] 2026-07-23 10:22:01 [i25g0003] Snapshot fertig (PIDs: 236142,236295,244736,244737,244738,244739)
+[monitor] 2026-07-23 10:22:01 [i25g0005] Snapshot fertig (PIDs: 242218,242219,242220,242221)
+[monitor] 2026-07-23 10:22:01 [i25g0004] Snapshot fertig (PIDs: 81579,81580,81581,81582)
+[monitor] 2026-07-23 10:22:01 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260723_102148
+[monitor] 2026-07-23 10:23:01 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-23 10:24:01 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260723_102401
+[monitor] 2026-07-23 10:24:07 [i25g0004] Snapshot fertig (PIDs: 81579,81580,81581,81582)
+[monitor] 2026-07-23 10:24:07 [i25g0006] Snapshot fertig (PIDs: 158340,158341,158342,158343)
+[monitor] 2026-07-23 10:24:09 [i25g0005] Snapshot fertig (PIDs: 242218,242219,242220,242221)
+[monitor] 2026-07-23 10:24:15 [i25g0003] Snapshot fertig (PIDs: 236142,236295,244736,244737,244738,244739)
+[monitor] 2026-07-23 10:24:15 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260723_102401
+[monitor] 2026-07-23 10:25:00 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-24 12:09:29 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260724_120929
+[monitor] 2026-07-24 12:09:31 [i25g0006] Snapshot fertig (PIDs: )
+[monitor] 2026-07-24 12:09:32 [i25g0004] Snapshot fertig (PIDs: )
+[monitor] 2026-07-24 12:09:32 [i25g0005] Snapshot fertig (PIDs: )
+[monitor] 2026-07-24 12:09:37 [i25g0003] Snapshot fertig (PIDs: )
+[monitor] 2026-07-24 12:09:37 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260724_120929
+[monitor] 2026-07-24 12:09:52 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-24 12:43:24 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260724_124324
+[monitor] 2026-07-24 12:43:26 [i25g0005] Snapshot fertig (PIDs: )
+[monitor] 2026-07-24 12:43:26 [i25g0004] Snapshot fertig (PIDs: )
+[monitor] 2026-07-24 12:43:26 [i25g0006] Snapshot fertig (PIDs: )
+[monitor] 2026-07-24 12:43:26 [i25g0003] Snapshot fertig (PIDs: )
+[monitor] 2026-07-24 12:43:26 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260724_124324
+[monitor] 2026-07-24 12:44:41 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-24 13:23:14 Start: Job=2165566 Log=/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/log.heldrun.20260724_132314.txt Schwelle=60s Poll=15s
+[monitor] 2026-07-24 13:28:38 Start: Job=2210955 Log=/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/log.heldrun.20260724_132837.txt Schwelle=60s Poll=15s
+[monitor] 2026-07-24 13:28:45 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260724_132845
+[monitor] 2026-07-24 13:28:45 [i25g0004] Snapshot fertig (PIDs: )
+[monitor] 2026-07-24 13:28:45 [i25g0003] Snapshot fertig (PIDs: )
+[monitor] 2026-07-24 13:28:45 [i25g0006] Snapshot fertig (PIDs: )
+[monitor] 2026-07-24 13:28:45 [i25g0005] Snapshot fertig (PIDs: )
+[monitor] 2026-07-24 13:28:45 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260724_132845
+[monitor] 2026-07-24 13:30:08 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260724_133008
+[monitor] 2026-07-24 13:30:09 [i25g0004] Snapshot fertig (PIDs: )
+[monitor] 2026-07-24 13:30:10 [i25g0005] Snapshot fertig (PIDs: )
+[monitor] 2026-07-24 13:30:11 [i25g0006] Snapshot fertig (PIDs: )
+[monitor] 2026-07-24 13:30:16 [i25g0003] Snapshot fertig (PIDs: )
+[monitor] 2026-07-24 13:30:16 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260724_133008
+[monitor] 2026-07-24 13:56:33 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-24 14:02:48 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260724_140248
+[monitor] 2026-07-24 14:02:53 [i25g0004] Snapshot fertig (PIDs: 164789,164790,164791,164792)
+[monitor] 2026-07-24 14:02:57 [i25g0006] Snapshot fertig (PIDs: 241160,241161,241162,241163)
+[monitor] 2026-07-24 14:03:02 [i25g0005] Snapshot fertig (PIDs: 325604,325605,325606,325607)
+[monitor] 2026-07-24 14:03:05 [i25g0003] Snapshot fertig (PIDs: 147712,147830,156554,156555,156556,156557)
+[monitor] 2026-07-24 14:03:05 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260724_140248
+[monitor] 2026-07-24 14:03:20 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-24 14:06:50 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260724_140650
+[monitor] 2026-07-24 14:06:58 [i25g0004] Snapshot fertig (PIDs: 164789,164790,164791,164792)
+[monitor] 2026-07-24 14:06:58 [i25g0006] Snapshot fertig (PIDs: 241160,241161,241162,241163)
+[monitor] 2026-07-24 14:07:00 [i25g0005] Snapshot fertig (PIDs: 325604,325605,325606,325607)
+[monitor] 2026-07-24 14:07:03 [i25g0003] Snapshot fertig (PIDs: 147712,147830,156554,156555,156556,156557)
+[monitor] 2026-07-24 14:07:03 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260724_140650
+[monitor] 2026-07-24 14:07:18 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-24 14:09:03 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260724_140903
+[monitor] 2026-07-24 14:09:13 [i25g0005] Snapshot fertig (PIDs: 325604,325605,325606,325607)
+[monitor] 2026-07-24 14:09:16 [i25g0004] Snapshot fertig (PIDs: 164789,164790,164791,164792)
+[monitor] 2026-07-24 14:09:16 [i25g0006] Snapshot fertig (PIDs: 241160,241161,241162,241163)
+[monitor] 2026-07-24 14:09:19 [i25g0003] Snapshot fertig (PIDs: 147712,147830,156554,156555,156556,156557)
+[monitor] 2026-07-24 14:09:19 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260724_140903
+[monitor] 2026-07-24 14:09:34 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-24 14:37:20 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260724_143720
+[monitor] 2026-07-24 14:37:29 [i25g0004] Snapshot fertig (PIDs: 164789,164790,164791,164792)
+[monitor] 2026-07-24 14:37:29 [i25g0006] Snapshot fertig (PIDs: 241160,241161,241162,241163)
+[monitor] 2026-07-24 14:37:32 [i25g0005] Snapshot fertig (PIDs: 325604,325605,325606,325607)
+[monitor] 2026-07-24 14:37:33 [i25g0003] Snapshot fertig (PIDs: 147712,147830,156554,156555,156556,156557)
+[monitor] 2026-07-24 14:37:34 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260724_143720
+[monitor] 2026-07-24 14:38:49 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-25 13:46:44 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260725_134644
+[monitor] 2026-07-25 13:46:53 [i25g0006] Snapshot fertig (PIDs: 241160,241161,241162,241163)
+[monitor] 2026-07-25 13:46:53 [i25g0005] Snapshot fertig (PIDs: 325604,325605,325606,325607)
+[monitor] 2026-07-25 13:46:53 [i25g0004] Snapshot fertig (PIDs: 164789,164790,164791,164792)
+[monitor] 2026-07-25 13:46:57 [i25g0003] Snapshot fertig (PIDs: 147712,147830,156554,156555,156556,156557)
+[monitor] 2026-07-25 13:46:57 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260725_134644
+[monitor] 2026-07-25 13:47:12 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-25 18:51:26 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260725_185126
+[monitor] 2026-07-25 18:51:31 [i25g0004] Snapshot fertig (PIDs: 247952,247953,247954,247955)
+[monitor] 2026-07-25 18:51:35 [i25g0005] Snapshot fertig (PIDs: 409174,409175,409176,409177)
+[monitor] 2026-07-25 18:51:36 [i25g0006] Snapshot fertig (PIDs: 325209,325210,325211,325212)
+[monitor] 2026-07-25 18:51:40 [i25g0003] Snapshot fertig (PIDs: 82702,83199,91655,91656,91657,91658)
+[monitor] 2026-07-25 18:51:40 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260725_185126
+[monitor] 2026-07-25 18:52:55 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-25 18:54:25 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260725_185425
+[monitor] 2026-07-25 18:54:32 [i25g0004] Snapshot fertig (PIDs: 247952,247953,247954,247955)
+[monitor] 2026-07-25 18:54:36 [i25g0005] Snapshot fertig (PIDs: 409174,409175,409176,409177)
+[monitor] 2026-07-25 18:54:37 [i25g0006] Snapshot fertig (PIDs: 325209,325210,325211,325212)
+[monitor] 2026-07-25 18:54:39 [i25g0003] Snapshot fertig (PIDs: 82702,83199,91655,91656,91657,91658)
+[monitor] 2026-07-25 18:54:39 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260725_185425
+[monitor] 2026-07-25 18:54:54 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-25 23:43:38 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260725_234338
+[monitor] 2026-07-25 23:43:46 [i25g0005] Snapshot fertig (PIDs: 409174,409175,409176,409177)
+[monitor] 2026-07-25 23:43:46 [i25g0003] Snapshot fertig (PIDs: 82702,83199,91655,91656,91657,91658)
+[monitor] 2026-07-25 23:43:52 [i25g0004] Snapshot fertig (PIDs: 247952,247953,247954,247955)
+[monitor] 2026-07-25 23:43:52 [i25g0006] Snapshot fertig (PIDs: 325209,325210,325211,325212)
+[monitor] 2026-07-25 23:43:52 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260725_234338
+[monitor] 2026-07-25 23:44:07 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-26 04:24:05 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260726_042405
+[monitor] 2026-07-26 04:24:11 [i25g0006] Snapshot fertig (PIDs: 325209,325210,325211,325212)
+[monitor] 2026-07-26 04:24:15 [i25g0003] Snapshot fertig (PIDs: 82702,83199,91655,91656,91657,91658)
+[monitor] 2026-07-26 04:24:17 [i25g0005] Snapshot fertig (PIDs: 409174,409175,409176,409177)
+[monitor] 2026-07-26 04:24:17 [i25g0004] Snapshot fertig (PIDs: 247952,247953,247954,247955)
+[monitor] 2026-07-26 04:24:17 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260726_042405
+[monitor] 2026-07-26 04:24:32 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-26 08:38:28 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260726_083828
+[monitor] 2026-07-26 08:38:32 [i25g0005] Snapshot fertig (PIDs: 409174,409175,409176,409177)
+[monitor] 2026-07-26 08:38:34 [i25g0004] Snapshot fertig (PIDs: 247952,247953,247954,247955)
+[monitor] 2026-07-26 08:38:37 [i25g0006] Snapshot fertig (PIDs: 325209,325210,325211,325212)
+[monitor] 2026-07-26 08:38:43 [i25g0003] Snapshot fertig (PIDs: 82702,83199,91655,91656,91657,91658)
+[monitor] 2026-07-26 08:38:43 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260726_083828
+[monitor] 2026-07-26 08:38:58 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-26 13:43:57 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260726_134357
+[monitor] 2026-07-26 13:44:03 [i25g0004] Snapshot fertig (PIDs: 247952,247953,247954,247955)
+[monitor] 2026-07-26 13:44:08 [i25g0003] Snapshot fertig (PIDs: 82702,83199,91655,91656,91657,91658)
+[monitor] 2026-07-26 13:44:09 [i25g0005] Snapshot fertig (PIDs: 409174,409175,409176,409177)
+[monitor] 2026-07-26 13:44:09 [i25g0006] Snapshot fertig (PIDs: 325209,325210,325211,325212)
+[monitor] 2026-07-26 13:44:09 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260726_134357
+[monitor] 2026-07-26 13:44:24 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-26 17:47:22 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260726_174722
+[monitor] 2026-07-26 17:47:31 [i25g0004] Snapshot fertig (PIDs: 247952,247953,247954,247955)
+[monitor] 2026-07-26 17:47:31 [i25g0006] Snapshot fertig (PIDs: 325209,325210,325211,325212)
+[monitor] 2026-07-26 17:47:35 [i25g0005] Snapshot fertig (PIDs: 409174,409175,409176,409177)
+[monitor] 2026-07-26 17:47:36 [i25g0003] Snapshot fertig (PIDs: 82702,83199,91655,91656,91657,91658)
+[monitor] 2026-07-26 17:47:36 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260726_174722
+[monitor] 2026-07-26 17:47:51 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-26 23:44:55 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260726_234454
+[monitor] 2026-07-26 23:45:01 [i25g0006] Snapshot fertig (PIDs: 325209,325210,325211,325212)
+[monitor] 2026-07-26 23:45:03 [i25g0004] Snapshot fertig (PIDs: 247952,247953,247954,247955)
+[monitor] 2026-07-26 23:45:03 [i25g0005] Snapshot fertig (PIDs: 409174,409175,409176,409177)
+[monitor] 2026-07-26 23:45:07 [i25g0003] Snapshot fertig (PIDs: 82702,83199,91655,91656,91657,91658)
+[monitor] 2026-07-26 23:45:07 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260726_234454
+[monitor] 2026-07-26 23:45:22 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-27 04:48:22 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260727_044822
+[monitor] 2026-07-27 04:48:31 [i25g0005] Snapshot fertig (PIDs: 409174,409175,409176,409177)
+[monitor] 2026-07-27 04:48:32 [i25g0004] Snapshot fertig (PIDs: 247952,247953,247954,247955)
+[monitor] 2026-07-27 04:48:32 [i25g0006] Snapshot fertig (PIDs: 325209,325210,325211,325212)
+[monitor] 2026-07-27 04:48:35 [i25g0003] Snapshot fertig (PIDs: 82702,83199,91655,91656,91657,91658)
+[monitor] 2026-07-27 04:48:35 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260727_044822
+[monitor] 2026-07-27 04:48:50 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-28 14:38:54 Start: Job=2463491 Log=/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/log.heldrun.20260728_143853.txt Schwelle=60s Poll=15s
+[monitor] 2026-07-28 14:40:09 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260728_144009
+[monitor] 2026-07-28 14:40:10 [i25g0009] Snapshot fertig (PIDs: )
+[monitor] 2026-07-28 14:40:10 [i25g0006] Snapshot fertig (PIDs: )
+[monitor] 2026-07-28 14:40:12 [i25g0008] Snapshot fertig (PIDs: )
+[monitor] 2026-07-28 14:40:12 [i25g0005] Snapshot fertig (PIDs: )
+[monitor] 2026-07-28 14:40:12 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260728_144009
+[monitor] 2026-07-28 14:47:42 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-28 14:48:57 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260728_144857
+[monitor] 2026-07-28 14:49:00 [i25g0008] Snapshot fertig (PIDs: )
+[monitor] 2026-07-28 14:49:02 [i25g0006] Snapshot fertig (PIDs: )
+[monitor] 2026-07-28 14:49:02 [i25g0009] Snapshot fertig (PIDs: )
+[monitor] 2026-07-28 14:49:02 [i25g0005] Snapshot fertig (PIDs: )
+[monitor] 2026-07-28 14:49:02 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260728_144857
+[monitor] 2026-07-28 14:59:17 Start: Job=2463491 Log=/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/log.heldrun.20260728_145917.txt Schwelle=60s Poll=15s
+[monitor] 2026-07-28 15:00:32 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260728_150032
+[monitor] 2026-07-28 15:00:36 [i25g0009] Snapshot fertig (PIDs: )
+[monitor] 2026-07-28 15:00:36 [i25g0006] Snapshot fertig (PIDs: )
+[monitor] 2026-07-28 15:00:36 [i25g0008] Snapshot fertig (PIDs: )
+[monitor] 2026-07-28 15:00:36 [i25g0005] Snapshot fertig (PIDs: )
+[monitor] 2026-07-28 15:00:36 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260728_150032
+[monitor] 2026-07-28 15:00:51 Log waechst wieder -- Stillstand beendet.
+[monitor] 2026-07-28 15:01:51 Log seit >= 60s still -- Snapshot nach /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260728_150151
+[monitor] 2026-07-28 15:01:52 [i25g0005] Snapshot fertig (PIDs: )
+[monitor] 2026-07-28 15:01:52 [i25g0008] Snapshot fertig (PIDs: )
+[monitor] 2026-07-28 15:01:52 [i25g0009] Snapshot fertig (PIDs: )
+[monitor] 2026-07-28 15:01:52 [i25g0006] Snapshot fertig (PIDs: )
+[monitor] 2026-07-28 15:01:52 Snapshot komplett: /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/diagnostics/hang_20260728_150151

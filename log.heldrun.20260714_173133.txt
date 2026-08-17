@@ -1,0 +1,17 @@
+Haenge an Job 1926058 an: Nodes=i25g[0003-0006] NumNodes=4 CpusPerTask=128
+TMPDIR (node-lokal, alle Nodes): /w0/tmp/slurm_cs088267.1926058
+Kopiere venv + Interpreter auf node-lokales NVMe (alle Nodes)...
+[2026-07-14T17:31:34.584] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[2026-07-14T17:31:34.760] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[2026-07-14T17:31:34.769] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[2026-07-14T17:31:34.789] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[i25g0005.hpc.itc.rwth-aachen.de] venv-Kopie + Repoint fertig (python: /w0/tmp/slurm_cs088267.1926058/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+[i25g0004.hpc.itc.rwth-aachen.de] venv-Kopie + Repoint fertig (python: /w0/tmp/slurm_cs088267.1926058/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+srun: First task exited 5s ago
+srun: StepId=1926058.11 tasks 0,3: running
+srun: StepId=1926058.11 tasks 1-2: exited
+srun: Terminating StepId=1926058.11
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+[2026-07-14T17:32:55.171] error: *** STEP 1926058.11 ON i25g0003 CANCELLED AT 2026-07-14T17:32:55 DUE to SIGNAL Killed ***
+srun: error: i25g0003: task 0: Killed
+srun: error: i25g0006: task 3: Killed

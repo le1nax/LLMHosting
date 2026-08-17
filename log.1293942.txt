@@ -1,0 +1,13 @@
+Head: n25g0011 (134.61.53.226)
+[2026-06-23T15:40:34.195] error: execve(): ray: No such file or directory
+srun: error: n25g0011: task 0: Exited with exit code 2
+Worker: n25g0012
+[2026-06-23T15:40:49.187] error: execve(): ray: No such file or directory
+srun: error: n25g0012: task 0: Exited with exit code 2
+Worker: n25g0013
+[2026-06-23T15:40:54.168] error: execve(): ray: No such file or directory
+srun: error: n25g0013: task 0: Exited with exit code 2
+Worker: s25g0010
+[2026-06-23T15:40:59.192] error: execve(): ray: No such file or directory
+srun: error: s25g0010: task 0: Exited with exit code 2
+/var/spool/slurm/job1293942/slurm_script:51: command not found: ray

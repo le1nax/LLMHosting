@@ -1,0 +1,306 @@
+Kopiere venv + Interpreter auf node-lokales NVMe (alle Nodes)...
+[i25g0004.hpc.itc.rwth-aachen.de] venv-Kopie + Repoint fertig
+[i25g0005.hpc.itc.rwth-aachen.de] venv-Kopie + Repoint fertig
+[i25g0006.hpc.itc.rwth-aachen.de] venv-Kopie + Repoint fertig
+[i25g0003.hpc.itc.rwth-aachen.de] venv-Kopie + Repoint fertig
+venv-Kopie auf allen Nodes abgeschlossen.
+Head: i25g0003 (134.61.53.224)
+=== Versuch 1/3: Ray-Cluster + vLLM starten ===
+2026-07-14 15:17:28,734	INFO usage_lib.py:474 -- Usage stats collection is enabled by default without user confirmation because this terminal is detected to be non-interactive. To disable this, add `--disable-usage-stats` to the command that starts the cluster, or run the following command: `ray disable-usage-stats` before starting the cluster. See https://docs.ray.io/en/master/cluster/usage-stats.html for more details.
+2026-07-14 15:17:28,734	INFO scripts.py:940 -- [37mLocal node IP[39m: [1m134.61.53.224[22m
+2026-07-14 15:17:35,570	SUCC scripts.py:979 -- [32m--------------------[39m
+2026-07-14 15:17:35,570	SUCC scripts.py:980 -- [32mRay runtime started.[39m
+2026-07-14 15:17:35,570	SUCC scripts.py:981 -- [32m--------------------[39m
+2026-07-14 15:17:35,570	INFO scripts.py:983 -- [36mNext steps[39m
+2026-07-14 15:17:35,570	INFO scripts.py:986 -- To add another node to this Ray cluster, run
+2026-07-14 15:17:35,570	INFO scripts.py:989 -- [1m  ray start --address='134.61.53.224:6379'[22m
+2026-07-14 15:17:35,570	INFO scripts.py:1000 -- To connect to this Ray cluster:
+2026-07-14 15:17:35,571	INFO scripts.py:1002 -- [35mimport[39m[26m ray
+2026-07-14 15:17:35,571	INFO scripts.py:1003 -- ray[35m.[39m[26minit(_node_ip_address[35m=[39m[26m[33m'134.61.53.224'[39m[26m)
+2026-07-14 15:17:35,571	INFO scripts.py:1017 -- To submit a Ray job using the Ray Jobs CLI:
+2026-07-14 15:17:35,571	INFO scripts.py:1018 -- [1m  RAY_API_SERVER_ADDRESS='http://127.0.0.1:8265' ray job submit --working-dir . -- python my_script.py[22m
+2026-07-14 15:17:35,571	INFO scripts.py:1027 -- See https://docs.ray.io/en/latest/cluster/running-applications/job-submission/index.html 
+2026-07-14 15:17:35,571	INFO scripts.py:1031 -- for more information on submitting Ray jobs to the Ray cluster.
+2026-07-14 15:17:35,571	INFO scripts.py:1036 -- To terminate the Ray runtime, run
+2026-07-14 15:17:35,571	INFO scripts.py:1037 -- [1m  ray stop[22m
+2026-07-14 15:17:35,571	INFO scripts.py:1040 -- To view the status of the cluster, use
+2026-07-14 15:17:35,571	INFO scripts.py:1041 --   [1mray status[22m[26m
+2026-07-14 15:17:35,571	INFO scripts.py:1045 -- To monitor and debug Ray, view the dashboard at 
+2026-07-14 15:17:35,571	INFO scripts.py:1046 --   [1m127.0.0.1:8265[22m[26m
+2026-07-14 15:17:35,571	INFO scripts.py:1053 -- [4mIf connection to the dashboard fails, check your firewall settings and network configuration.[24m
+2026-07-14 15:17:35,571	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-07-14 15:17:35,571	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-07-14 15:17:35,571	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-07-14 15:17:35,571	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cs088267.1918835/ray/session_2026-07-14_15-17-28_734716_250601/logs/ray_process_exit.log[22m[26m
+Worker: i25g0004
+Worker: i25g0005
+2026-07-14 15:17:44,262	INFO scripts.py:1128 -- [37mLocal node IP[39m: [1m134.61.53.225[22m
+2026-07-14 15:17:47,936	SUCC scripts.py:1144 -- [32m--------------------[39m
+2026-07-14 15:17:47,936	SUCC scripts.py:1145 -- [32mRay runtime started.[39m
+2026-07-14 15:17:47,936	SUCC scripts.py:1146 -- [32m--------------------[39m
+2026-07-14 15:17:47,936	INFO scripts.py:1148 -- To terminate the Ray runtime, run
+2026-07-14 15:17:47,936	INFO scripts.py:1149 -- [1m  ray stop[22m
+2026-07-14 15:17:47,937	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-07-14 15:17:47,937	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-07-14 15:17:47,937	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-07-14 15:17:47,937	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cs088267.1918835/ray/session_2026-07-14_15-17-28_734716_250601/logs/ray_process_exit.log[22m[26m
+Worker: i25g0006
+2026-07-14 15:17:47,119	INFO scripts.py:1128 -- [37mLocal node IP[39m: [1m134.61.53.226[22m
+2026-07-14 15:17:49,749	SUCC scripts.py:1144 -- [32m--------------------[39m
+2026-07-14 15:17:49,749	SUCC scripts.py:1145 -- [32mRay runtime started.[39m
+2026-07-14 15:17:49,749	SUCC scripts.py:1146 -- [32m--------------------[39m
+2026-07-14 15:17:49,749	INFO scripts.py:1148 -- To terminate the Ray runtime, run
+2026-07-14 15:17:49,749	INFO scripts.py:1149 -- [1m  ray stop[22m
+2026-07-14 15:17:49,749	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-07-14 15:17:49,749	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-07-14 15:17:49,749	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-07-14 15:17:49,749	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cs088267.1918835/ray/session_2026-07-14_15-17-28_734716_250601/logs/ray_process_exit.log[22m[26m
+2026-07-14 15:17:51,525	INFO scripts.py:1128 -- [37mLocal node IP[39m: [1m134.61.53.227[22m
+2026-07-14 15:17:54,157	SUCC scripts.py:1144 -- [32m--------------------[39m
+2026-07-14 15:17:54,157	SUCC scripts.py:1145 -- [32mRay runtime started.[39m
+2026-07-14 15:17:54,157	SUCC scripts.py:1146 -- [32m--------------------[39m
+2026-07-14 15:17:54,157	INFO scripts.py:1148 -- To terminate the Ray runtime, run
+2026-07-14 15:17:54,157	INFO scripts.py:1149 -- [1m  ray stop[22m
+2026-07-14 15:17:54,157	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-07-14 15:17:54,157	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-07-14 15:17:54,157	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-07-14 15:17:54,157	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cs088267.1918835/ray/session_2026-07-14_15-17-28_734716_250601/logs/ray_process_exit.log[22m[26m
+======== Autoscaler status: 2026-07-14 15:18:10.246704 ========
+Node status
+---------------------------------------------------------------
+Active:
+ 1 node_576a5374346982698e6c49bff7f8849803735cbb10b83dc7a14c2bf3
+ 1 node_d6f71c878130a828db8a5c5b6d1fe7a10435ea9d88b826e3bea31b4a
+ 1 node_937dd3bad4f608f680d8edc34e347b0a7b6685b4ab1af925e103e86e
+ 1 node_caf7919dae9a0f242c43a9a9be151512d4917da3ce291fa00fdbe916
+Pending:
+ (no pending nodes)
+Recent failures:
+ (no failures)
+
+Resources
+---------------------------------------------------------------
+Total Usage:
+ 0.0/512.0 CPU
+ 0.0/16.0 GPU
+ 0B/2.18TiB memory
+ 0B/745.06GiB object_store_memory
+
+From request_resources:
+ (none)
+Pending Demands:
+ (no resource demands)
+(APIServer pid=252746) INFO 07-14 15:18:35 [api_utils.py:339] 
+(APIServer pid=252746) INFO 07-14 15:18:35 [api_utils.py:339]        █     █     █▄   ▄█
+(APIServer pid=252746) INFO 07-14 15:18:35 [api_utils.py:339]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.23.0
+(APIServer pid=252746) INFO 07-14 15:18:35 [api_utils.py:339]   █▄█▀ █     █     █     █  model   zai-org/GLM-5.2-FP8
+(APIServer pid=252746) INFO 07-14 15:18:35 [api_utils.py:339]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=252746) INFO 07-14 15:18:35 [api_utils.py:339] 
+(APIServer pid=252746) INFO 07-14 15:18:35 [api_utils.py:273] non-default args: {'model_tag': 'zai-org/GLM-5.2-FP8', 'enable_auto_tool_choice': True, 'tool_call_parser': 'glm47', 'host': '0.0.0.0', 'port': 52223, 'model': 'zai-org/GLM-5.2-FP8', 'trust_remote_code': True, 'max_model_len': 128000, 'served_model_name': ['glm-5.2-fp8'], 'reasoning_parser': 'glm45', 'distributed_executor_backend': 'ray', 'pipeline_parallel_size': 4, 'tensor_parallel_size': 4, 'disable_custom_all_reduce': True, 'gpu_memory_utilization': 0.83, 'kv_cache_dtype': 'fp8', 'mm_processor_cache_gb': 0.0, 'max_num_seqs': 64, 'structured_outputs_config': StructuredOutputsConfig(backend='xgrammar', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False)}
+(APIServer pid=252746) Traceback (most recent call last):
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/transformers/utils/hub.py", line 437, in cached_files
+(APIServer pid=252746)     hf_hub_download(
+(APIServer pid=252746)     ~~~~~~~~~~~~~~~^
+(APIServer pid=252746)         path_or_repo_id,
+(APIServer pid=252746)         ^^^^^^^^^^^^^^^^
+(APIServer pid=252746)     ...<10 lines>...
+(APIServer pid=252746)         tqdm_class=tqdm_class,
+(APIServer pid=252746)         ^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=252746)     )
+(APIServer pid=252746)     ^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+(APIServer pid=252746)     return fn(*args, **kwargs)
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/huggingface_hub/file_download.py", line 986, in hf_hub_download
+(APIServer pid=252746)     hf_headers = build_hf_headers(
+(APIServer pid=252746)         token=token,
+(APIServer pid=252746)     ...<3 lines>...
+(APIServer pid=252746)         headers=headers,
+(APIServer pid=252746)     )
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+(APIServer pid=252746)     return fn(*args, **kwargs)
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/huggingface_hub/utils/_headers.py", line 108, in build_hf_headers
+(APIServer pid=252746)     token_to_send = get_token_to_send(token)
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/huggingface_hub/utils/_headers.py", line 154, in get_token_to_send
+(APIServer pid=252746)     return get_token()
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/huggingface_hub/utils/_auth.py", line 82, in get_token
+(APIServer pid=252746)     or _get_token_from_file_refreshed()
+(APIServer pid=252746)        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/huggingface_hub/utils/_auth.py", line 243, in _get_token_from_file_refreshed
+(APIServer pid=252746)     token = _get_token_from_file()
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/huggingface_hub/utils/_auth.py", line 157, in _get_token_from_file
+(APIServer pid=252746)     return _clean_token(Path(constants.HF_TOKEN_PATH).read_text())
+(APIServer pid=252746)                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv-python313/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/pathlib/_local.py", line 546, in read_text
+(APIServer pid=252746)     return PathBase.read_text(self, encoding, errors, newline)
+(APIServer pid=252746)            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv-python313/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+(APIServer pid=252746)     with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+(APIServer pid=252746)          ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv-python313/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/pathlib/_local.py", line 537, in open
+(APIServer pid=252746)     return io.open(self, mode, buffering, encoding, errors, newline)
+(APIServer pid=252746)            ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=252746) PermissionError: [Errno 13] Permission denied: '/hpcwork/p0021834/workspace_patrick/hf_home/token'
+(APIServer pid=252746) 
+(APIServer pid=252746) The above exception was the direct cause of the following exception:
+(APIServer pid=252746) 
+(APIServer pid=252746) Traceback (most recent call last):
+(APIServer pid=252746)   File "/w0/tmp/slurm_cs088267.1918835/venv/bin/vllm", line 10, in <module>
+(APIServer pid=252746)     sys.exit(main())
+(APIServer pid=252746)              ~~~~^^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/vllm/entrypoints/cli/main.py", line 95, in main
+(APIServer pid=252746)     args.dispatch_function(args)
+(APIServer pid=252746)     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/vllm/entrypoints/cli/serve.py", line 148, in cmd
+(APIServer pid=252746)     uvloop.run(run_server(args))
+(APIServer pid=252746)     ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/uvloop/__init__.py", line 96, in run
+(APIServer pid=252746)     return __asyncio.run(
+(APIServer pid=252746)            ~~~~~~~~~~~~~^
+(APIServer pid=252746)         wrapper(),
+(APIServer pid=252746)         ^^^^^^^^^^
+(APIServer pid=252746)     ...<2 lines>...
+(APIServer pid=252746)         **run_kwargs
+(APIServer pid=252746)         ^^^^^^^^^^^^
+(APIServer pid=252746)     )
+(APIServer pid=252746)     ^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv-python313/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/asyncio/runners.py", line 195, in run
+(APIServer pid=252746)     return runner.run(main)
+(APIServer pid=252746)            ~~~~~~~~~~^^^^^^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv-python313/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/asyncio/runners.py", line 118, in run
+(APIServer pid=252746)     return self._loop.run_until_complete(task)
+(APIServer pid=252746)            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+(APIServer pid=252746)   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/uvloop/__init__.py", line 48, in wrapper
+(APIServer pid=252746)     return await main
+(APIServer pid=252746)            ^^^^^^^^^^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/vllm/entrypoints/openai/api_server.py", line 665, in run_server
+(APIServer pid=252746)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/vllm/entrypoints/openai/api_server.py", line 679, in run_server_worker
+(APIServer pid=252746)     async with build_async_engine_client(
+(APIServer pid=252746)                ~~~~~~~~~~~~~~~~~~~~~~~~~^
+(APIServer pid=252746)         args,
+(APIServer pid=252746)         ^^^^^
+(APIServer pid=252746)         client_config=client_config,
+(APIServer pid=252746)         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=252746)     ) as engine_client:
+(APIServer pid=252746)     ^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv-python313/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 214, in __aenter__
+(APIServer pid=252746)     return await anext(self.gen)
+(APIServer pid=252746)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/vllm/entrypoints/openai/api_server.py", line 99, in build_async_engine_client
+(APIServer pid=252746)     async with build_async_engine_client_from_engine_args(
+(APIServer pid=252746)                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+(APIServer pid=252746)         engine_args,
+(APIServer pid=252746)         ^^^^^^^^^^^^
+(APIServer pid=252746)         usage_context=usage_context,
+(APIServer pid=252746)         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=252746)         client_config=client_config,
+(APIServer pid=252746)         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=252746)     ) as engine:
+(APIServer pid=252746)     ^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv-python313/cpython-3.13.3-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 214, in __aenter__
+(APIServer pid=252746)     return await anext(self.gen)
+(APIServer pid=252746)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/vllm/entrypoints/openai/api_server.py", line 123, in build_async_engine_client_from_engine_args
+(APIServer pid=252746)     vllm_config = engine_args.create_engine_config(usage_context=usage_context)
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/vllm/engine/arg_utils.py", line 1725, in create_engine_config
+(APIServer pid=252746)     maybe_override_with_speculators(
+(APIServer pid=252746)     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+(APIServer pid=252746)         model=self.model,
+(APIServer pid=252746)         ^^^^^^^^^^^^^^^^^
+(APIServer pid=252746)     ...<4 lines>...
+(APIServer pid=252746)         hf_token=self.hf_token,
+(APIServer pid=252746)         ^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=252746)     )
+(APIServer pid=252746)     ^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/vllm/transformers_utils/config.py", line 660, in maybe_override_with_speculators
+(APIServer pid=252746)     config_dict, _ = PretrainedConfig.get_config_dict(
+(APIServer pid=252746)                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+(APIServer pid=252746)         model if gguf_model_repo is None else gguf_model_repo,
+(APIServer pid=252746)         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=252746)     ...<2 lines>...
+(APIServer pid=252746)         **without_trust_remote_code(kwargs),
+(APIServer pid=252746)         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=252746)     )
+(APIServer pid=252746)     ^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/transformers/configuration_utils.py", line 687, in get_config_dict
+(APIServer pid=252746)     config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+(APIServer pid=252746)                           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/transformers/configuration_utils.py", line 742, in _get_config_dict
+(APIServer pid=252746)     resolved_config_file = cached_file(
+(APIServer pid=252746)         pretrained_model_name_or_path,
+(APIServer pid=252746)     ...<9 lines>...
+(APIServer pid=252746)         _commit_hash=commit_hash,
+(APIServer pid=252746)     )
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/transformers/utils/hub.py", line 293, in cached_file
+(APIServer pid=252746)     file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+(APIServer pid=252746)   File "/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/lib/python3.13/site-packages/transformers/utils/hub.py", line 482, in cached_files
+(APIServer pid=252746)     raise OSError(
+(APIServer pid=252746)     ...<3 lines>...
+(APIServer pid=252746)     ) from e
+(APIServer pid=252746) OSError: PermissionError at /hpcwork/p0021834/workspace_patrick/hf_home/token when downloading zai-org/GLM-5.2-FP8. Check cache directory permissions. Common causes: 1) another user is downloading the same model (please wait); 2) a previous download was canceled and the lock file needs manual removal.
+vLLM serve beendet mit Exit-Code 1 (Versuch 1)
+Stoppe Ray auf allen Nodes...
+srun: Job 1918835 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1918835 step creation still disabled, retrying (Requested nodes are busy)
+[2026-07-14T16:24:20.060] error: *** STEP 1918835.3 ON i25g0004 CANCELLED AT 2026-07-14T16:24:20 DUE to SIGNAL Terminated ***
+[2026-07-14T16:24:20.060] error: *** JOB 1918835 ON i25g0003 CANCELLED AT 2026-07-14T16:24:20 DUE to SIGNAL Terminated ***
+[2026-07-14T16:24:20.060] error: *** STEP 1918835.4 ON i25g0005 CANCELLED AT 2026-07-14T16:24:20 DUE to SIGNAL Terminated ***
+[2026-07-14T16:24:20.061] error: *** STEP 1918835.2 ON i25g0003 CANCELLED AT 2026-07-14T16:24:20 DUE to SIGNAL Terminated ***
+[2026-07-14T16:24:20.061] error: *** STEP 1918835.5 ON i25g0006 CANCELLED AT 2026-07-14T16:24:20 DUE to SIGNAL Terminated ***

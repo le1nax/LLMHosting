@@ -1,0 +1,150 @@
+Head: n25g0009 (134.61.53.224)
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:53:05] RAM used=3% avail=728G/754G | shm: tmpfs 378G 4.0K 378G 1% /dev/shm
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:53:05] RAM used=3% avail=729G/754G | shm: tmpfs 378G 4.0K 378G 1% /dev/shm
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:53:05] RAM used=2% avail=735G/754G | shm: tmpfs 378G 4.0K 378G 1% /dev/shm
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:53:05]   264 MB  pmlogger
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:53:05]   163 MB  telegraf
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:53:05]   51 MB  icinga2
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:53:05]   43 MB  sssd_nss
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:53:05]   40 MB  cvmfs2
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:53:05]   270 MB  pmlogger
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:53:05]   192 MB  telegraf
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:53:05]   60 MB  pmcd
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:53:05]   42 MB  sssd_nss
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:53:05]   41 MB  icinga2
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:53:05]   270 MB  pmlogger
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:53:05]   182 MB  telegraf
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:53:05]   48 MB  icinga2
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:53:05]   47 MB  pmcd
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:53:05]   43 MB  sssd_nss
+Worker: n25g0010
+Worker: n25g0011
+Worker: n25g0012
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:53:35] RAM used=3% avail=728G/754G | shm: tmpfs 378G 4.0K 378G 1% /dev/shm
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:53:35] RAM used=3% avail=729G/754G | shm: tmpfs 378G 4.0K 378G 1% /dev/shm
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:53:35] RAM used=2% avail=735G/754G | shm: tmpfs 378G 4.0K 378G 1% /dev/shm
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:53:35]   264 MB  pmlogger
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:53:35]   163 MB  telegraf
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:53:35]   103 MB  ray
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:53:35]   51 MB  icinga2
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:53:35]   43 MB  sssd_nss
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:53:35]   270 MB  pmlogger
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:53:35]   192 MB  telegraf
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:53:35]   107 MB  ray
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:53:35]   60 MB  pmcd
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:53:35]   42 MB  sssd_nss
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:53:35]   270 MB  pmlogger
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:53:35]   182 MB  telegraf
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:53:35]   106 MB  ray
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:53:35]   48 MB  icinga2
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:53:35]   47 MB  pmcd
+2026-06-25 15:53:32,843	INFO usage_lib.py:474 -- Usage stats collection is enabled by default without user confirmation because this terminal is detected to be non-interactive. To disable this, add `--disable-usage-stats` to the command that starts the cluster, or run the following command: `ray disable-usage-stats` before starting the cluster. See https://docs.ray.io/en/master/cluster/usage-stats.html for more details.
+2026-06-25 15:53:32,851	INFO scripts.py:940 -- [37mLocal node IP[39m: [1m134.61.53.224[22m
+2026-06-25 15:53:49,041	SUCC scripts.py:979 -- [32m--------------------[39m
+2026-06-25 15:53:49,041	SUCC scripts.py:980 -- [32mRay runtime started.[39m
+2026-06-25 15:53:49,041	SUCC scripts.py:981 -- [32m--------------------[39m
+2026-06-25 15:53:49,041	INFO scripts.py:983 -- [36mNext steps[39m
+2026-06-25 15:53:49,042	INFO scripts.py:986 -- To add another node to this Ray cluster, run
+2026-06-25 15:53:49,042	INFO scripts.py:989 -- [1m  ray start --address='134.61.53.224:6379'[22m
+2026-06-25 15:53:49,042	INFO scripts.py:1000 -- To connect to this Ray cluster:
+2026-06-25 15:53:49,042	INFO scripts.py:1002 -- [35mimport[39m[26m ray
+2026-06-25 15:53:49,042	INFO scripts.py:1003 -- ray[35m.[39m[26minit(_node_ip_address[35m=[39m[26m[33m'134.61.53.224'[39m[26m)
+2026-06-25 15:53:49,042	INFO scripts.py:1017 -- To submit a Ray job using the Ray Jobs CLI:
+2026-06-25 15:53:49,042	INFO scripts.py:1018 -- [1m  RAY_API_SERVER_ADDRESS='http://127.0.0.1:8265' ray job submit --working-dir . -- python my_script.py[22m
+2026-06-25 15:53:49,042	INFO scripts.py:1027 -- See https://docs.ray.io/en/latest/cluster/running-applications/job-submission/index.html 
+2026-06-25 15:53:49,042	INFO scripts.py:1031 -- for more information on submitting Ray jobs to the Ray cluster.
+2026-06-25 15:53:49,042	INFO scripts.py:1036 -- To terminate the Ray runtime, run
+2026-06-25 15:53:49,042	INFO scripts.py:1037 -- [1m  ray stop[22m
+2026-06-25 15:53:49,042	INFO scripts.py:1040 -- To view the status of the cluster, use
+2026-06-25 15:53:49,042	INFO scripts.py:1041 --   [1mray status[22m[26m
+2026-06-25 15:53:49,042	INFO scripts.py:1045 -- To monitor and debug Ray, view the dashboard at 
+2026-06-25 15:53:49,042	INFO scripts.py:1046 --   [1m127.0.0.1:8265[22m[26m
+2026-06-25 15:53:49,042	INFO scripts.py:1053 -- [4mIf connection to the dashboard fails, check your firewall settings and network configuration.[24m
+2026-06-25 15:53:49,042	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-06-25 15:53:49,042	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-06-25 15:53:49,042	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-06-25 15:53:49,042	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cu829455.1366975/ray/session_2026-06-25_15-53-32_852672_339983/logs/ray_process_exit.log[22m[26m
+No cluster status. It may take a few seconds for the Ray internal services to start up.
+2026-06-25 15:53:32,850	INFO scripts.py:1128 -- [37mLocal node IP[39m: [1m134.61.53.226[22m
+2026-06-25 15:53:53,590	SUCC scripts.py:1144 -- [32m--------------------[39m
+2026-06-25 15:53:53,590	SUCC scripts.py:1145 -- [32mRay runtime started.[39m
+2026-06-25 15:53:53,590	SUCC scripts.py:1146 -- [32m--------------------[39m
+2026-06-25 15:53:53,590	INFO scripts.py:1148 -- To terminate the Ray runtime, run
+2026-06-25 15:53:53,590	INFO scripts.py:1149 -- [1m  ray stop[22m
+2026-06-25 15:53:53,590	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-06-25 15:53:53,590	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-06-25 15:53:53,590	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-06-25 15:53:53,590	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cu829455.1366975/ray/session_2026-06-25_15-53-32_852672_339983/logs/ray_process_exit.log[22m[26m
+2026-06-25 15:53:34,329	INFO scripts.py:1128 -- [37mLocal node IP[39m: [1m134.61.53.227[22m
+2026-06-25 15:53:54,258	SUCC scripts.py:1144 -- [32m--------------------[39m
+2026-06-25 15:53:54,258	SUCC scripts.py:1145 -- [32mRay runtime started.[39m
+2026-06-25 15:53:54,258	SUCC scripts.py:1146 -- [32m--------------------[39m
+2026-06-25 15:53:54,258	INFO scripts.py:1148 -- To terminate the Ray runtime, run
+2026-06-25 15:53:54,258	INFO scripts.py:1149 -- [1m  ray stop[22m
+2026-06-25 15:53:54,258	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-06-25 15:53:54,258	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-06-25 15:53:54,258	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-06-25 15:53:54,259	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cu829455.1366975/ray/session_2026-06-25_15-53-32_852672_339983/logs/ray_process_exit.log[22m[26m
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:54:05] RAM used=4% avail=722G/754G | shm: tmpfs 378G 16K 378G 1% /dev/shm
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:54:05] RAM used=3% avail=728G/754G | shm: tmpfs 378G 16K 378G 1% /dev/shm
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:54:05] RAM used=2% avail=735G/754G | shm: tmpfs 378G 16K 378G 1% /dev/shm
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:54:05]   1407 MB  gcs_server
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:54:05]   409 MB  raylet
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:54:05]   299 MB  ray-dashboard-R
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:54:05]   293 MB  python3
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:54:05]   292 MB  ray-dashboard-N
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:54:05]   375 MB  raylet
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:54:05]   268 MB  pmlogger
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:54:05]   192 MB  telegraf
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:54:05]   175 MB  python3
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:54:05]   126 MB  ray
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:54:05]   372 MB  raylet
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:54:05]   268 MB  pmlogger
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:54:05]   182 MB  telegraf
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:54:05]   180 MB  python3
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:54:05]   124 MB  ray
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:54:35] RAM used=4% avail=722G/754G | shm: tmpfs 378G 16K 378G 1% /dev/shm
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:54:35] RAM used=3% avail=728G/754G | shm: tmpfs 378G 16K 378G 1% /dev/shm
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:54:35] RAM used=2% avail=735G/754G | shm: tmpfs 378G 16K 378G 1% /dev/shm
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:54:35]   1409 MB  gcs_server
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:54:35]   442 MB  raylet
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:54:35]   299 MB  ray-dashboard-R
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:54:35]   292 MB  ray-dashboard-N
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:54:35]   291 MB  python3
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:54:35]   460 MB  raylet
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:54:35]   268 MB  pmlogger
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:54:35]   192 MB  telegraf
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:54:35]   175 MB  python3
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:54:35]   126 MB  ray
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:54:35]   455 MB  raylet
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:54:35]   268 MB  pmlogger
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:54:35]   182 MB  telegraf
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:54:35]   178 MB  python3
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:54:35]   124 MB  ray
+[2026-06-25T15:54:40.012] error: Prolog hung on node n25g0010
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:55:05] RAM used=4% avail=722G/754G | shm: tmpfs 378G 16K 378G 1% /dev/shm
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:55:05] RAM used=3% avail=728G/754G | shm: tmpfs 378G 16K 378G 1% /dev/shm
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:55:05] RAM used=2% avail=735G/754G | shm: tmpfs 378G 16K 378G 1% /dev/shm
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:55:05]   1410 MB  gcs_server
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:55:05]   447 MB  raylet
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:55:05]   314 MB  vllm
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:55:05]   298 MB  ray-dashboard-R
+[MEMMON n25g0009.hpc.itc.rwth-aachen.de 15:55:05]   298 MB  python3
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:55:05]   459 MB  raylet
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:55:05]   271 MB  pmlogger
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:55:05]   192 MB  telegraf
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:55:05]   175 MB  python3
+[MEMMON n25g0011.hpc.itc.rwth-aachen.de 15:55:05]   126 MB  ray
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:55:05]   455 MB  raylet
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:55:05]   271 MB  pmlogger
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:55:05]   182 MB  telegraf
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:55:05]   178 MB  python3
+[MEMMON n25g0012.hpc.itc.rwth-aachen.de 15:55:05]   124 MB  ray
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+[2026-06-25T15:55:05.784] error: *** STEP 1366975.4 ON n25g0011 CANCELLED AT 2026-06-25T15:55:05 DUE to SIGNAL Terminated ***
+[2026-06-25T15:55:05.784] error: *** JOB 1366975 ON n25g0009 CANCELLED AT 2026-06-25T15:55:05 DUE to SIGNAL Terminated ***
+[2026-06-25T15:55:05.784] error: *** STEP 1366975.5 ON n25g0012 CANCELLED AT 2026-06-25T15:55:05 DUE to SIGNAL Terminated ***
+[2026-06-25T15:55:05.785] error: *** STEP 1366975.1 ON n25g0009 CANCELLED AT 2026-06-25T15:55:05 DUE to SIGNAL Terminated ***
+[2026-06-25T15:55:05.786] error: *** STEP 1366975.2 ON n25g0009 CANCELLED AT 2026-06-25T15:55:05 DUE to SIGNAL Terminated ***

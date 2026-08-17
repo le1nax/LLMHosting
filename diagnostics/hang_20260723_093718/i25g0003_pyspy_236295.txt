@@ -1,0 +1,226 @@
+[2026-07-23T09:37:23.476] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+Process 236295: VLLM::EngineCore
+Python v3.13.3 (/w0/tmp/slurm_cs088267.2165566/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+
+Thread 236295 (idle): "MainThread"
+    get_objects (ray/_private/worker.py:995)
+        Arguments:
+            self: <Worker at 0x14ea28d96660>
+            object_refs: [<ray.ObjectRef at 0x14ea14143370>, <ray.ObjectRef at 0x14ea14143140>, <ray.ObjectRef at 0x14ea14143220>, ...]
+            timeout: None
+            return_exceptions: False
+            skip_deserialization: False
+            use_object_store: False
+        Locals:
+            object_ref: <ray.ObjectRef at 0x14e997106110>
+            timeout_ms: -1
+    get (ray/_private/worker.py:2980)
+        Arguments:
+            object_refs: [<ray.ObjectRef at 0x14ea14143370>, <ray.ObjectRef at 0x14ea14143140>, <ray.ObjectRef at 0x14ea14143220>, ...]
+        Locals:
+            timeout: None
+            _use_object_store: False
+            worker: <Worker at 0x14ea28d96660>
+            all_compiled_dag_refs: False
+            any_compiled_dag_refs: False
+            object_ref: <ray.ObjectRef at 0x14e997106110>
+            is_dag_ref: False
+            is_individual_id: False
+    wrapper (ray/_private/client_mode_hook.py:107)
+        Locals:
+            args: ([<ray.ObjectRef at 0x14ea14143370>, <ray.ObjectRef at 0x14ea14143140>, <ray.ObjectRef at 0x14ea14143220>, ...])
+            kwargs: {}
+    auto_init_wrapper (ray/_private/auto_init_hook.py:22)
+        Locals:
+            args: ([<ray.ObjectRef at 0x14ea14143370>, <ray.ObjectRef at 0x14ea14143140>, <ray.ObjectRef at 0x14ea14143220>, ...])
+            kwargs: {}
+    _init_executor (vllm/v1/executor/ray_executor_v2.py:398)
+        Arguments:
+            self: <RayExecutorV2 at 0x14ea28024590>
+        Locals:
+            placement_group: <PlacementGroup at 0x14ea21fdd7f0>
+            tp_size: 4
+            pp_size: 4
+            pcp_size: 1
+            bundle_to_node_id: [(8, "effbb7d5d4f8a4a0b84202b96e37d33f8fc96495b74f814cc751e609", "134.61.53.224"), (9, ...), (10, ...), (11, ...), ...]
+            bundle_assignments: [{"rank": 0, "bundle_id_idx": 8, "node_id": "effbb7d5d4f8a4a0b84202b96e37d33f8fc96495b74f814cc751e609", ...}, {...}, ...]
+            rank: 15
+            bundle_id_idx: 7
+            node_id: "f0794a205dab4ec3873e13be53f2127fb8a7d5f0abde5090b53822bb"
+            node_ip: "134.61.53.226"
+            dist_ip: "134.61.53.224"
+            distributed_init_method: "tcp://134.61.53.224:58219"
+            max_chunk_bytes: 16777216
+            n_local: 4
+            scheduler_output_handle: <Handle at 0x14ea21fdea50>
+            instance_id: "1784791062090567327"
+            runtime_env: {"env_vars": {"RAY_EXPERIMENTAL_NOSET_CUDA_VISIBLE_DEVICES": "1"}}
+            resource_kwargs: {"num_gpus": 1}
+            bundle_idx: 15
+            bundle: {"rank": 15, "bundle_id_idx": 7, "node_id": "f0794a205dab4ec3873e13be53f2127fb8a7d5f0abde5090b53822bb", ...}
+            is_driver_worker: False
+            is_driver_node: False
+            scheduling_strategy: <PlacementGroupSchedulingStrategy at 0x14ea080ec110>
+            actor_name: "vllm_Worker_1784791062090567327_TP3_PP3"
+            actor: <ActorHandle at 0x14ea14159fd0>
+            handle: <RayWorkerHandle at 0x14ea21f7eb10>
+            worker_node_and_gpu_ids: [("effbb7d5d4f8a4a0b84202b96e37d33f8fc96495b74f814cc751e609", [0]), (...), (...), (...), (...), (...), (...), (...), ...]
+            node_workers: {"effbb7d5d4f8a4a0b84202b96e37d33f8fc96495b74f814cc751e609": [0, 1, 2, 3], ...}
+            node_gpus: {"effbb7d5d4f8a4a0b84202b96e37d33f8fc96495b74f814cc751e609": [0, 1, 2, 3], ...}
+            i: 15
+            gpu_ids: [0, 1, 2, 3]
+            init_worker_refs: [<ray.ObjectRef at 0x14ea14143370>, <ray.ObjectRef at 0x14ea14143140>, <ray.ObjectRef at 0x14ea14143220>, ...]
+            _: [3]
+            local_rank: 3
+            worker_env_vars: {"CUDA_VISIBLE_DEVICES": "0,1,2,3"}
+    __init__ (vllm/v1/executor/abstract.py:109)
+        Arguments:
+            self: <RayExecutorV2 at 0x14ea28024590>
+            vllm_config: <VllmConfig at 0x14ea2c632510>
+    sync_wrapper (vllm/tracing/otel.py:178)
+        Locals:
+            args: (<RayExecutorV2 at 0x14ea28024590>, <VllmConfig at 0x14ea2c632510>)
+            kwargs: {}
+            tracer: <ProxyTracer at 0x14ea281d9950>
+            ctx: {}
+    __init__ (vllm/v1/executor/multiproc_executor.py:108)
+        Arguments:
+            self: <RayExecutorV2 at 0x14ea28024590>
+            vllm_config: <VllmConfig at 0x14ea2c632510>
+            monitor_workers: True
+    __init__ (vllm/v1/executor/ray_executor_v2.py:219)
+        Arguments:
+            self: <RayExecutorV2 at 0x14ea28024590>
+            vllm_config: <VllmConfig at 0x14ea2c632510>
+    __init__ (vllm/v1/engine/core.py:122)
+        Arguments:
+            self: <EngineCoreProc at 0x14eb14dd7e00>
+            vllm_config: <VllmConfig at 0x14ea2c632510>
+            executor_class: 0
+            log_stats: True
+            executor_fail_callback: <function at 0x14ea280156c0>
+            include_finished_set: False
+        Locals:
+            load_general_plugins: <function at 0x14ea341ac0e0>
+    __init__ (vllm/v1/engine/core.py:935)
+        Arguments:
+            self: <cell at 0x14ea281e3ca0>
+            vllm_config: <VllmConfig at 0x14ea2c632510>
+            local_client: True
+            handshake_address: "ipc:///w0/tmp/slurm_cs088267.2165566/383e1419-67bc-44a2-8ab0-b8104a198231"
+            executor_class: 0
+            log_stats: True
+            client_handshake_address: None
+            tensor_queue: None
+        Locals:
+            engine_index: 0
+            executor_fail_callback: <function at 0x14ea280156c0>
+            identity: <bytes at 0x14ea281e3c30>
+            addresses: <EngineZmqAddresses at 0x14ea28024050>
+            internal_dp_balancing: False
+    sync_wrapper (vllm/tracing/otel.py:178)
+        Locals:
+            args: (<EngineCoreProc at 0x14eb14dd7e00>)
+            kwargs: {"engine_index": 0, "vllm_config": <VllmConfig at 0x14ea2c632510>, "local_client": True, ...}
+            tracer: <ProxyTracer at 0x14ea28103770>
+            ctx: {}
+    run_engine_core (vllm/v1/engine/core.py:1164)
+        Locals:
+            dp_rank: 0
+            local_dp_rank: 0
+            args: ()
+            kwargs: {"vllm_config": <VllmConfig at 0x14ea2c632510>, "local_client": True, ...}
+            vllm_config: <VllmConfig at 0x14ea2c632510>
+            parallel_config: <ParallelConfig at 0x14ea28d97e00>
+            data_parallel: False
+            process_title: "EngineCore"
+    run (multiprocessing/process.py:108)
+        Arguments:
+            self: <SpawnProcess at 0x14eb14c9a3c0>
+    _bootstrap (multiprocessing/process.py:313)
+        Arguments:
+            self: <SpawnProcess at 0x14eb14c9a3c0>
+            parent_sentinel: 4
+        Locals:
+            util: <module at 0x14eb14b089a0>
+            context: <module at 0x14eb14c1d080>
+    _main (multiprocessing/spawn.py:135)
+        Arguments:
+            fd: 58
+            parent_sentinel: 4
+        Locals:
+            from_parent: <_io.BufferedReader at 0x14eb14b34f60>
+            preparation_data: {"log_to_stderr": False, "authkey": <AuthenticationString at 0x14eb14b59860>, "name": "EngineCore", "sys_path": [...], ...}
+            self: <SpawnProcess at 0x14eb14c9a3c0>
+    spawn_main (multiprocessing/spawn.py:122)
+        Arguments:
+            pipe_handle: 58
+            parent_pid: None
+            tracker_fd: 56
+        Locals:
+            fd: 58
+            parent_sentinel: 4
+            resource_tracker: <module at 0x14eb14b4f600>
+    <module> (<string>:1)
+Thread 244700 (idle): "PythonGCThread"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x14ea281ba4c0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x14ea280556d0>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14ea281beea0>
+            timeout: None
+        Locals:
+            signaled: False
+    run (ray/_private/gc_collect_manager.py:29)
+        Arguments:
+            self: <PythonGCThread at 0x14ea28025be0>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <PythonGCThread at 0x14ea28025be0>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <PythonGCThread at 0x14ea28025be0>
+Thread 244701 (idle): "ray_listen_error_messages"
+    listen_error_messages (ray/_private/worker.py:2452)
+        Arguments:
+            worker: <Worker at 0x14ea28d96660>
+            threads_stopped: <Event at 0x14ea28d85f90>
+        Locals:
+            error_message: None
+            expected_job_ids: <frozenset at 0x14ea28021d20>
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x14ea281db250>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x14ea281db250>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x14ea281db250>
+Thread 244703 (idle): "ray_print_logs"
+    print_logs (ray/_private/worker.py:1061)
+        Arguments:
+            self: <Worker at 0x14ea28d96660>
+        Locals:
+            subscriber: <ray._raylet.GcsLogSubscriber at 0x14ea23feb370>
+            exception_type: 0
+            localhost: "134.61.53.224"
+            last_polling_batch_size: 1
+            job_id_hex: "01000000"
+            data: {"ip": "134.61.53.224", "pid": "autoscaler", "job": "", "is_err": False, "actor_name": "", "task_name": "", ...}
+            lagging: False
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x14ea281db390>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x14ea281db390>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x14ea281db390>

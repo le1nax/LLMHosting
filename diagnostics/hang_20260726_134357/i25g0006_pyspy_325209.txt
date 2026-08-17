@@ -1,0 +1,182 @@
+[2026-07-26T13:43:58.040] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+Process 325209: ray::RayWorkerProc.run
+Python v3.13.3 (/w0/tmp/slurm_cs088267.2210955/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+
+Thread 325209 (idle): "MainThread"
+    poll (zmq/sugar/poll.py:106)
+        Arguments:
+            self: <Poller at 0x148ebc0d7680>
+            timeout: -1
+    poll (zmq/sugar/socket.py:1062)
+        Arguments:
+            self: <Socket at 0x148b88439ef0>
+            timeout: None
+            flags: 1
+        Locals:
+            p: <Poller at 0x148ebc0d7680>
+    recv (vllm/distributed/device_communicators/shm_broadcast.py:802)
+        Arguments:
+            socket: <Socket at 0x148b88439ef0>
+            timeout: None
+        Locals:
+            timeout_ms: None
+    dequeue (vllm/distributed/device_communicators/shm_broadcast.py:794)
+        Arguments:
+            self: <MessageQueue at 0x148bf81279d0>
+            timeout: None
+            indefinite: True
+    worker_busy_loop (vllm/v1/executor/multiproc_executor.py:973)
+        Arguments:
+            self: <RayWorkerProc at 0x148ebc24b620>
+        Locals:
+            method: "get_supported_tasks"
+            args: ()
+            kwargs: {}
+            output_rank: None
+            func: <method at 0x148a201c16c0>
+            output: ("generate")
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x148ebc24b620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    run (vllm/v1/executor/ray_executor_v2.py:197)
+        Arguments:
+            self: <RayWorkerProc at 0x148ebc24b620>
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x148ebc24b620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    actor_method_executor (ray/_private/function_manager.py:721)
+        Arguments:
+            _FunctionActorManager__ray_actor: <RayWorkerProc at 0x148ebc24b620>
+        Locals:
+            args: ()
+            kwargs: {}
+            is_bound: False
+    main_loop (ray/_private/worker.py:1039)
+        Arguments:
+            self: <Worker at 0x14bf0d8834d0>
+        Locals:
+            sigterm_handler: <function at 0x14bf0d6458a0>
+    <module> (ray/_private/workers/default_worker.py:323)
+Thread 325499 (idle): "PythonGCThread"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x14bf0d6defd0>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x148a20198350>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x14bf0d6deea0>
+            timeout: None
+        Locals:
+            signaled: False
+    run (ray/_private/gc_collect_manager.py:29)
+        Arguments:
+            self: <PythonGCThread at 0x14bf0d620d70>
+        Locals:
+            start: 1048264.199948768
+            num_freed: 0
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <PythonGCThread at 0x14bf0d620d70>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <PythonGCThread at 0x14bf0d620d70>
+Thread 326660 (idle): "tqdm_monitor"
+    wait (threading.py:363)
+        Arguments:
+            self: <Condition at 0x148c221d3ee0>
+            timeout: 10
+        Locals:
+            waiter: <_thread.lock at 0x1489810feb90>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x148c2225abe0>
+            timeout: 10
+        Locals:
+            signaled: False
+    run (tqdm/_monitor.py:69)
+        Arguments:
+            self: <TMonitor at 0x148c2228ea50>
+        Locals:
+            cur_t: 1785066230.3578882
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <TMonitor at 0x148c2228ea50>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <TMonitor at 0x148c2228ea50>
+Thread 344802 (idle): "WorkerAsyncOutputCopy"
+    wait (threading.py:359)
+        Arguments:
+            self: <Condition at 0x148bb4496d50>
+            timeout: None
+        Locals:
+            waiter: <_thread.lock at 0x148b1df54a10>
+            saved_state: None
+            gotit: False
+    get (queue.py:202)
+        Arguments:
+            self: <Queue at 0x148eb8c4fc50>
+            block: True
+            timeout: None
+    async_output_busy_loop (vllm/v1/executor/multiproc_executor.py:966)
+        Arguments:
+            self: <RayWorkerProc at 0x148ebc24b620>
+        Locals:
+            current_platform: <NvmlCudaPlatform at 0x148ef490b230>
+            output: ("generate")
+    _resume_span (ray/util/tracing/tracing_helper.py:461)
+        Arguments:
+            self: <RayWorkerProc at 0x148ebc24b620>
+        Locals:
+            _ray_trace_ctx: None
+            _args: ()
+            _kwargs: {}
+    run (threading.py:992)
+        Arguments:
+            self: <Thread at 0x148bf8127c50>
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <Thread at 0x148bf8127c50>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <Thread at 0x148bf8127c50>
+Thread 344858 (idle): "tqdm_monitor"
+    wait (threading.py:363)
+        Arguments:
+            self: <Condition at 0x148ac0dc1770>
+            timeout: 10
+        Locals:
+            waiter: <_thread.lock at 0x148bb44456d0>
+            saved_state: None
+            gotit: False
+    wait (threading.py:659)
+        Arguments:
+            self: <Event at 0x148b50576150>
+            timeout: 10
+        Locals:
+            signaled: False
+    run (tqdm/_monitor.py:69)
+        Arguments:
+            self: <TMonitor at 0x148b881ffb10>
+        Locals:
+            cur_t: 1785066230.3578632
+    _bootstrap_inner (threading.py:1041)
+        Arguments:
+            self: <TMonitor at 0x148b881ffb10>
+    _bootstrap (threading.py:1012)
+        Arguments:
+            self: <TMonitor at 0x148b881ffb10>

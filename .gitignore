@@ -1,9 +1,14 @@
 # Secrets
 vllm_api.key
 
-# SLURM logs / debug output
+# SLURM logs / debug output (existing logs at time of the JUPITER migration
+# were force-added as a historical snapshot; new ones stay ignored)
 log.*.txt
 log.debug.*.txt
 
 # Core dumps
 core.*
+
+# Python bytecode cache
+__pycache__/
+*.pyc

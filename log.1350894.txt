@@ -1,0 +1,78 @@
+Head: n25g0009 (134.61.53.224)
+Worker: n25g0010
+Worker: n25g0011
+Worker: n25g0012
+No cluster status. It may take a few seconds for the Ray internal services to start up.
+2026-06-25 08:04:15,447	INFO usage_lib.py:474 -- Usage stats collection is enabled by default without user confirmation because this terminal is detected to be non-interactive. To disable this, add `--disable-usage-stats` to the command that starts the cluster, or run the following command: `ray disable-usage-stats` before starting the cluster. See https://docs.ray.io/en/master/cluster/usage-stats.html for more details.
+2026-06-25 08:04:15,475	INFO scripts.py:940 -- [37mLocal node IP[39m: [1m134.61.53.224[22m
+2026-06-25 08:04:33,538	SUCC scripts.py:979 -- [32m--------------------[39m
+2026-06-25 08:04:33,538	SUCC scripts.py:980 -- [32mRay runtime started.[39m
+2026-06-25 08:04:33,538	SUCC scripts.py:981 -- [32m--------------------[39m
+2026-06-25 08:04:33,538	INFO scripts.py:983 -- [36mNext steps[39m
+2026-06-25 08:04:33,538	INFO scripts.py:986 -- To add another node to this Ray cluster, run
+2026-06-25 08:04:33,538	INFO scripts.py:989 -- [1m  ray start --address='134.61.53.224:6379'[22m
+2026-06-25 08:04:33,538	INFO scripts.py:1000 -- To connect to this Ray cluster:
+2026-06-25 08:04:33,539	INFO scripts.py:1002 -- [35mimport[39m[26m ray
+2026-06-25 08:04:33,539	INFO scripts.py:1003 -- ray[35m.[39m[26minit(_node_ip_address[35m=[39m[26m[33m'134.61.53.224'[39m[26m)
+2026-06-25 08:04:33,539	INFO scripts.py:1017 -- To submit a Ray job using the Ray Jobs CLI:
+2026-06-25 08:04:33,539	INFO scripts.py:1018 -- [1m  RAY_API_SERVER_ADDRESS='http://127.0.0.1:8265' ray job submit --working-dir . -- python my_script.py[22m
+2026-06-25 08:04:33,539	INFO scripts.py:1027 -- See https://docs.ray.io/en/latest/cluster/running-applications/job-submission/index.html 
+2026-06-25 08:04:33,539	INFO scripts.py:1031 -- for more information on submitting Ray jobs to the Ray cluster.
+2026-06-25 08:04:33,539	INFO scripts.py:1036 -- To terminate the Ray runtime, run
+2026-06-25 08:04:33,539	INFO scripts.py:1037 -- [1m  ray stop[22m
+2026-06-25 08:04:33,539	INFO scripts.py:1040 -- To view the status of the cluster, use
+2026-06-25 08:04:33,539	INFO scripts.py:1041 --   [1mray status[22m[26m
+2026-06-25 08:04:33,539	INFO scripts.py:1045 -- To monitor and debug Ray, view the dashboard at 
+2026-06-25 08:04:33,539	INFO scripts.py:1046 --   [1m127.0.0.1:8265[22m[26m
+2026-06-25 08:04:33,539	INFO scripts.py:1053 -- [4mIf connection to the dashboard fails, check your firewall settings and network configuration.[24m
+2026-06-25 08:04:33,539	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-06-25 08:04:33,539	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-06-25 08:04:33,539	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-06-25 08:04:33,539	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cu829455.1350894/ray/session_2026-06-25_08-04-15_475570_24221/logs/ray_process_exit.log[22m[26m
+2026-06-25 08:04:15,783	INFO scripts.py:1128 -- [37mLocal node IP[39m: [1m134.61.53.227[22m
+2026-06-25 08:04:39,219	SUCC scripts.py:1144 -- [32m--------------------[39m
+2026-06-25 08:04:39,219	SUCC scripts.py:1145 -- [32mRay runtime started.[39m
+2026-06-25 08:04:39,219	SUCC scripts.py:1146 -- [32m--------------------[39m
+2026-06-25 08:04:39,219	INFO scripts.py:1148 -- To terminate the Ray runtime, run
+2026-06-25 08:04:39,219	INFO scripts.py:1149 -- [1m  ray stop[22m
+2026-06-25 08:04:39,219	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-06-25 08:04:39,220	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-06-25 08:04:39,220	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-06-25 08:04:39,220	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cu829455.1350894/ray/session_2026-06-25_08-04-15_475570_24221/logs/ray_process_exit.log[22m[26m
+2026-06-25 08:04:15,474	INFO scripts.py:1128 -- [37mLocal node IP[39m: [1m134.61.53.226[22m
+2026-06-25 08:04:39,228	SUCC scripts.py:1144 -- [32m--------------------[39m
+2026-06-25 08:04:39,228	SUCC scripts.py:1145 -- [32mRay runtime started.[39m
+2026-06-25 08:04:39,228	SUCC scripts.py:1146 -- [32m--------------------[39m
+2026-06-25 08:04:39,228	INFO scripts.py:1148 -- To terminate the Ray runtime, run
+2026-06-25 08:04:39,228	INFO scripts.py:1149 -- [1m  ray stop[22m
+2026-06-25 08:04:39,228	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-06-25 08:04:39,228	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-06-25 08:04:39,228	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-06-25 08:04:39,228	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cu829455.1350894/ray/session_2026-06-25_08-04-15_475570_24221/logs/ray_process_exit.log[22m[26m
+[2026-06-25T08:05:21.063] error: Prolog hung on node n25g0010
+(APIServer pid=26407) INFO 06-25 08:07:40 [api_utils.py:339] 
+(APIServer pid=26407) INFO 06-25 08:07:40 [api_utils.py:339]        █     █     █▄   ▄█
+(APIServer pid=26407) INFO 06-25 08:07:40 [api_utils.py:339]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.23.0
+(APIServer pid=26407) INFO 06-25 08:07:40 [api_utils.py:339]   █▄█▀ █     █     █     █  model   zai-org/GLM-5.2-FP8
+(APIServer pid=26407) INFO 06-25 08:07:40 [api_utils.py:339]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=26407) INFO 06-25 08:07:40 [api_utils.py:339] 
+(APIServer pid=26407) INFO 06-25 08:07:40 [api_utils.py:273] non-default args: {'model_tag': 'zai-org/GLM-5.2-FP8', 'enable_auto_tool_choice': True, 'tool_call_parser': 'glm47', 'host': '0.0.0.0', 'port': 52223, 'model': 'zai-org/GLM-5.2-FP8', 'trust_remote_code': True, 'max_model_len': 128000, 'served_model_name': ['glm-5.2-fp8'], 'reasoning_parser': 'glm45', 'distributed_executor_backend': 'ray', 'pipeline_parallel_size': 4, 'tensor_parallel_size': 4, 'disable_custom_all_reduce': True, 'gpu_memory_utilization': 0.83, 'kv_cache_dtype': 'fp8', 'mm_processor_cache_gb': 0.0, 'max_num_seqs': 64, 'structured_outputs_config': StructuredOutputsConfig(backend='guidance', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False)}
+srun: error: slurm_receive_msgs: [n25g0010.hpc.itc.rwth-aachen.de:6818] failed: Socket timed out on send/recv operation
+srun: error: Task launch for StepId=1350894.2 failed on node n25g0010: Socket timed out on send/recv operation
+srun: error: Application launch failed: Socket timed out on send/recv operation
+srun: Job step aborted
+(APIServer pid=26407) INFO 06-25 08:08:19 [model.py:611] Resolved architecture: GlmMoeDsaForCausalLM
+(APIServer pid=26407) INFO 06-25 08:08:19 [model.py:1745] Using max model len 128000
+(APIServer pid=26407) INFO 06-25 08:08:25 [cache.py:269] Using fp8 data type to store kv cache. It reduces the GPU memory footprint and boosts the performance. Meanwhile, it may cause accuracy drop without a proper scaling factor
+(APIServer pid=26407) INFO 06-25 08:08:25 [scheduler.py:239] Chunked prefill is enabled with max_num_batched_tokens=8192.
+(APIServer pid=26407) INFO 06-25 08:08:25 [vllm.py:999] Asynchronous scheduling is enabled.
+(APIServer pid=26407) INFO 06-25 08:08:25 [kernel.py:270] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native'])
+(APIServer pid=26407) INFO 06-25 08:08:27 [compilation.py:321] Enabled custom fusions: norm_quant, act_quant
+(APIServer pid=26407) [transformers] The following generation flags are not valid and may be ignored: ['top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+[2026-06-25T08:08:36.985] error: *** STEP 1350894.3 ON n25g0011 CANCELLED AT 2026-06-25T08:08:36 DUE to SIGNAL Terminated ***
+[2026-06-25T08:08:36.985] error: *** STEP 1350894.4 ON n25g0012 CANCELLED AT 2026-06-25T08:08:36 DUE to SIGNAL Terminated ***
+[2026-06-25T08:08:36.986] error: *** JOB 1350894 ON n25g0009 CANCELLED AT 2026-06-25T08:08:36 DUE to SIGNAL Terminated ***
+[2026-06-25T08:08:36.988] error: *** STEP 1350894.1 ON n25g0009 CANCELLED AT 2026-06-25T08:08:36 DUE to SIGNAL Terminated ***

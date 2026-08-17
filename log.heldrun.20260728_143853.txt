@@ -1,0 +1,152 @@
+Haenge-Monitor gestartet (PID 46251), beobachtet /rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/log.heldrun.20260728_143853.txt, Snapshots nach diagnostics/
+Haenge an Job 2463491 an: Nodes=i25g[0005-0006,0008-0009] NumNodes=4 CpusPerTask=128
+TMPDIR (node-lokal, alle Nodes): /w0/tmp/slurm_cs088267.2463491
+Kopiere venv + Interpreter auf node-lokales NVMe (alle Nodes)...
+[2026-07-28T14:38:54.659] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[2026-07-28T14:38:54.688] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[2026-07-28T14:38:54.735] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[2026-07-28T14:38:54.864] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+cp: ‘/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/sympy/sets/__init__.py’: Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/sympy/sets/handlers': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/sympy/sets/setexpr.py': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/sympy/sets/ordinals.py': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/sympy/sets/__pycache__': Cannot send after transport endpoint shutdown
+cp: ‘/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/sympy/sets’: Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/sympy/tensor': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/sympy/logic': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/sympy/__pycache__': Cannot send after transport endpoint shutdown
+cp: ‘/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/sympy’: Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/cv2': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/opencv_python_headless-4.13.0.92.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/cuda_bindings-13.3.1.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/nvidia_cufile-1.15.1.6.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/setuptools': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/nvidia_nvshmem_cu13-3.4.5.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/nvidia_nvvm-13.2.78.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/tilelang-0.1.9.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/tilelang': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/transformers-5.12.1.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/numpy-2.4.6.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/numpy': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/distutils-precedence.pth': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/setuptools-80.10.2.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/pkg_resources': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/_distutils_hack': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/tiktoken': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/tiktoken-0.13.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/tiktoken_ext': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/rignore-0.7.6.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/rignore': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/sentry_sdk-2.63.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/sentry_sdk': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/safetensors': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/safetensors-0.8.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/pillow.libs': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/pillow-12.2.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/PIL': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/mpmath-1.3.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/mpmath': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/zmq': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/pyzmq.libs': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/pyzmq-27.1.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/openai': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/numpy.libs': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/flashinfer': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/sympy-1.14.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/isympy.py': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/openai-2.43.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/torch_c_dlpack_ext': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/build_backend.py': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/torch_c_dlpack_ext-0.1.5.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/huggingface_hub-1.20.1.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/huggingface_hub': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/tokenspeed_mla-0.1.2.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/tokenspeed_mla': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/pydantic-2.13.4.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/pydantic': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/pyyaml-6.0.3.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/yaml': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/_yaml': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/regex': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/regex-2026.5.9.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/httptools': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/httptools-0.8.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/torchvision-0.26.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/torchvision': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/torchvision.libs': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/fastar': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/fastar-0.11.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/distlib-0.4.3.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/distlib': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/cbor2': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/cbor2-6.1.2.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/msgpack-1.2.1.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/msgpack': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/jiter': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/jiter-0.15.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/rpds': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/rpds_py-2026.5.1.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/blake3-1.0.9.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/blake3': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/fastsafetensors-0.3.2.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/fastsafetensors': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/pygments': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/pygments-2.20.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/sentencepiece': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/sentencepiece-0.2.1.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/mistral_common': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/mistral_common-1.11.3.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/torchaudio': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/torchaudio-2.11.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/networkx': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/networkx-3.6.1.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/grpc': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/nvidia_cuda_cccl-13.3.3.3.1.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/aiohttp-3.14.1.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/aiohttp': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/grpcio-1.81.1.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/tokenspeed_triton-3.7.10.post20260531.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/tokenspeed_triton': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/nvidia_cusolver-12.0.4.66.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/nvidia_cufft-12.0.0.61.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/vllm-0.23.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/vllm': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/ray-2.55.1.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/ray': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/flashinfer_python-0.6.12.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/build_utils.py': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/nvidia_cutlass_dsl_libs_base-4.5.2.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/nvidia_cutlass_dsl': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/nvidia_cutlass_dsl_libs_cu13-4.5.2.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/nvidia_cutlass_dsl.pth': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/nvidia_cudnn_cu13-9.19.0.56.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/nvidia_cublas-13.1.0.3.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/torch': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/nvidia_cuda_nvrtc-13.0.88.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/triton-3.6.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/triton': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/nvidia_cusparse-12.6.3.3.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/nvidia_cusparselt_cu13-0.8.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/nvidia_nccl_cu13-2.28.9.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/flashinfer_cubin-0.6.12.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/flashinfer_cubin': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/functorch': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/torch-2.11.0.dist-info': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/torchgen': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages/__pycache__': Cannot send after transport endpoint shutdown
+cp: ‘/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13/site-packages’: Cannot send after transport endpoint shutdown
+cp: ‘/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib/python3.13’: Cannot send after transport endpoint shutdown
+cp: ‘/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./lib’: Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./bin/ninja': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./bin/z3': Cannot send after transport endpoint shutdown
+cp: cannot stat '/rwthfs/rz/cluster/hpcwork/p0021834/workspace_geiger/repos/runLargeLLMs/.venv/./bin/py-spy': Cannot send after transport endpoint shutdown
+srun: error: i25g0006: task 1: Exited with exit code 1
+srun: First task exited 5s ago
+srun: StepId=2463491.1 tasks 0,2-3: running
+srun: StepId=2463491.1 task 1: exited abnormally
+srun: Terminating StepId=2463491.1
+[2026-07-28T14:47:45.238] error: *** STEP 2463491.1 ON i25g0005 CANCELLED AT 2026-07-28T14:47:45 DUE to SIGNAL Killed ***
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+srun: error: i25g0009: task 3: Killed
+srun: error: i25g0005: task 0: Killed
+srun: error: i25g0008: task 2: Killed

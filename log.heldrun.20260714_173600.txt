@@ -1,0 +1,108 @@
+Haenge an Job 1926058 an: Nodes=i25g[0003-0006] NumNodes=4 CpusPerTask=128
+TMPDIR (node-lokal, alle Nodes): /w0/tmp/slurm_cs088267.1926058
+Kopiere venv + Interpreter auf node-lokales NVMe (alle Nodes)...
+[2026-07-14T17:36:01.010] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[2026-07-14T17:36:01.015] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[2026-07-14T17:36:01.046] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[2026-07-14T17:36:01.078] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+[i25g0005.hpc.itc.rwth-aachen.de] venv-Kopie + Repoint fertig (python: /w0/tmp/slurm_cs088267.1926058/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+[i25g0006.hpc.itc.rwth-aachen.de] venv-Kopie + Repoint fertig (python: /w0/tmp/slurm_cs088267.1926058/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+[i25g0003.hpc.itc.rwth-aachen.de] venv-Kopie + Repoint fertig (python: /w0/tmp/slurm_cs088267.1926058/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+[i25g0004.hpc.itc.rwth-aachen.de] venv-Kopie + Repoint fertig (python: /w0/tmp/slurm_cs088267.1926058/python313/cpython-3.13.3-linux-x86_64-gnu/bin/python3.13)
+venv-Kopie auf allen Nodes abgeschlossen.
+[2026-07-14T17:37:22.264] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+Head: i25g0003 (134.61.53.224)
+=== Versuch 1/3: Ray-Cluster + vLLM starten (auf gehaltenen Nodes von Job 1926058) ===
+[2026-07-14T17:37:22.475] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+2026-07-14 17:37:23,011	INFO usage_lib.py:474 -- Usage stats collection is enabled by default without user confirmation because this terminal is detected to be non-interactive. To disable this, add `--disable-usage-stats` to the command that starts the cluster, or run the following command: `ray disable-usage-stats` before starting the cluster. See https://docs.ray.io/en/master/cluster/usage-stats.html for more details.
+2026-07-14 17:37:23,012	INFO scripts.py:940 -- [37mLocal node IP[39m: [1m134.61.53.224[22m
+2026-07-14 17:37:32,014	SUCC scripts.py:979 -- [32m--------------------[39m
+2026-07-14 17:37:32,014	SUCC scripts.py:980 -- [32mRay runtime started.[39m
+2026-07-14 17:37:32,014	SUCC scripts.py:981 -- [32m--------------------[39m
+2026-07-14 17:37:32,014	INFO scripts.py:983 -- [36mNext steps[39m
+2026-07-14 17:37:32,014	INFO scripts.py:986 -- To add another node to this Ray cluster, run
+2026-07-14 17:37:32,014	INFO scripts.py:989 -- [1m  ray start --address='134.61.53.224:6379'[22m
+2026-07-14 17:37:32,014	INFO scripts.py:1000 -- To connect to this Ray cluster:
+2026-07-14 17:37:32,014	INFO scripts.py:1002 -- [35mimport[39m[26m ray
+2026-07-14 17:37:32,014	INFO scripts.py:1003 -- ray[35m.[39m[26minit(_node_ip_address[35m=[39m[26m[33m'134.61.53.224'[39m[26m)
+2026-07-14 17:37:32,014	INFO scripts.py:1017 -- To submit a Ray job using the Ray Jobs CLI:
+2026-07-14 17:37:32,014	INFO scripts.py:1018 -- [1m  RAY_API_SERVER_ADDRESS='http://127.0.0.1:8265' ray job submit --working-dir . -- python my_script.py[22m
+2026-07-14 17:37:32,014	INFO scripts.py:1027 -- See https://docs.ray.io/en/latest/cluster/running-applications/job-submission/index.html 
+2026-07-14 17:37:32,014	INFO scripts.py:1031 -- for more information on submitting Ray jobs to the Ray cluster.
+2026-07-14 17:37:32,014	INFO scripts.py:1036 -- To terminate the Ray runtime, run
+2026-07-14 17:37:32,014	INFO scripts.py:1037 -- [1m  ray stop[22m
+2026-07-14 17:37:32,014	INFO scripts.py:1040 -- To view the status of the cluster, use
+2026-07-14 17:37:32,014	INFO scripts.py:1041 --   [1mray status[22m[26m
+2026-07-14 17:37:32,014	INFO scripts.py:1045 -- To monitor and debug Ray, view the dashboard at 
+2026-07-14 17:37:32,014	INFO scripts.py:1046 --   [1m127.0.0.1:8265[22m[26m
+2026-07-14 17:37:32,014	INFO scripts.py:1053 -- [4mIf connection to the dashboard fails, check your firewall settings and network configuration.[24m
+2026-07-14 17:37:32,014	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-07-14 17:37:32,014	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-07-14 17:37:32,014	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-07-14 17:37:32,014	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cs088267.1926058/ray/session_2026-07-14_17-37-23_012395_389769/logs/ray_process_exit.log[22m[26m
+Worker: i25g0004
+[2026-07-14T17:37:37.455] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+2026-07-14 17:37:38,093	INFO scripts.py:1128 -- [37mLocal node IP[39m: [1m134.61.53.225[22m
+2026-07-14 17:37:41,748	SUCC scripts.py:1144 -- [32m--------------------[39m
+2026-07-14 17:37:41,748	SUCC scripts.py:1145 -- [32mRay runtime started.[39m
+2026-07-14 17:37:41,748	SUCC scripts.py:1146 -- [32m--------------------[39m
+2026-07-14 17:37:41,748	INFO scripts.py:1148 -- To terminate the Ray runtime, run
+2026-07-14 17:37:41,748	INFO scripts.py:1149 -- [1m  ray stop[22m
+2026-07-14 17:37:41,748	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-07-14 17:37:41,748	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-07-14 17:37:41,748	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-07-14 17:37:41,748	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cs088267.1926058/ray/session_2026-07-14_17-37-23_012395_389769/logs/ray_process_exit.log[22m[26m
+Worker: i25g0005
+[2026-07-14T17:37:42.456] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+2026-07-14 17:37:42,983	INFO scripts.py:1128 -- [37mLocal node IP[39m: [1m134.61.53.226[22m
+2026-07-14 17:37:46,559	SUCC scripts.py:1144 -- [32m--------------------[39m
+2026-07-14 17:37:46,559	SUCC scripts.py:1145 -- [32mRay runtime started.[39m
+2026-07-14 17:37:46,560	SUCC scripts.py:1146 -- [32m--------------------[39m
+2026-07-14 17:37:46,560	INFO scripts.py:1148 -- To terminate the Ray runtime, run
+2026-07-14 17:37:46,560	INFO scripts.py:1149 -- [1m  ray stop[22m
+2026-07-14 17:37:46,560	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-07-14 17:37:46,560	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-07-14 17:37:46,560	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-07-14 17:37:46,560	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cs088267.1926058/ray/session_2026-07-14_17-37-23_012395_389769/logs/ray_process_exit.log[22m[26m
+Worker: i25g0006
+[2026-07-14T17:37:47.493] error: Can't propagate RLIMIT_NOFILE of 245760 from submit host: Invalid argument
+2026-07-14 17:37:48,019	INFO scripts.py:1128 -- [37mLocal node IP[39m: [1m134.61.53.227[22m
+2026-07-14 17:37:51,659	SUCC scripts.py:1144 -- [32m--------------------[39m
+2026-07-14 17:37:51,659	SUCC scripts.py:1145 -- [32mRay runtime started.[39m
+2026-07-14 17:37:51,659	SUCC scripts.py:1146 -- [32m--------------------[39m
+2026-07-14 17:37:51,659	INFO scripts.py:1148 -- To terminate the Ray runtime, run
+2026-07-14 17:37:51,659	INFO scripts.py:1149 -- [1m  ray stop[22m
+2026-07-14 17:37:51,659	INFO scripts.py:1159 -- [36m[1m--block[22m[39m
+2026-07-14 17:37:51,659	INFO scripts.py:1160 -- This command will now block forever until terminated by a signal.
+2026-07-14 17:37:51,659	INFO scripts.py:1163 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+2026-07-14 17:37:51,659	INFO scripts.py:1168 -- Process exit logs will be saved to: [1m/w0/tmp/slurm_cs088267.1926058/ray/session_2026-07-14_17-37-23_012395_389769/logs/ray_process_exit.log[22m[26m
+srun: Job 1926058 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 1926058 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1926058 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1926058 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1926058 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1926058 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1926058 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1926058 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1926058 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1926058 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1926058 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 1926058 step creation still disabled, retrying (Requested nodes are busy)
+srun: forcing job termination
+srun: forcing job termination
+srun: Cancelled pending job step with signal 15
+srun: forcing job termination
+srun: forcing job termination
+srun: error: Unable to create step for job 1926058: Job/step already completing or completed
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+[2026-07-14T17:51:13.842] error: *** STEP 1926058.20 ON i25g0006 CANCELLED AT 2026-07-14T17:51:13 DUE to SIGNAL Killed ***
+[2026-07-14T17:51:13.843] error: *** STEP 1926058.17 ON i25g0003 CANCELLED AT 2026-07-14T17:51:13 DUE to SIGNAL Killed ***
+[2026-07-14T17:51:13.843] error: *** STEP 1926058.19 ON i25g0005 CANCELLED AT 2026-07-14T17:51:13 DUE to SIGNAL Killed ***
+[2026-07-14T17:51:13.843] error: *** STEP 1926058.18 ON i25g0004 CANCELLED AT 2026-07-14T17:51:13 DUE to SIGNAL Killed ***
+srun: error: i25g0005: task 0: Killed
+srun: error: i25g0006: task 0: Killed
+srun: error: i25g0004: task 0: Killed
+srun: error: i25g0003: task 0: Killed
